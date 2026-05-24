@@ -1,0 +1,51 @@
+# Project: Legal Talents Recruitment
+
+## Stack
+- Next.js 16 met App Router (NOOIT pages/ directory)
+- Turbopack als bundler
+- Tailwind CSS v4
+- MDX-bestanden in de repo voor vacaturecontent
+- Resend voor transactionele email
+- Deployed op Vercel
+
+## Architectuurprincipes
+- Server Components zijn default. "use client" alleen voor:
+  forms, interactieve UI, hooks (useState/useEffect), client-libs.
+- Data fetching gebeurt in Server Components met async/await.
+  Geen useEffect+fetch voor initial data.
+- Vacaturedata komt uit /content/vacatures/*.mdx via /src/lib/vacatures.ts.
+
+## File structuur
+- /app           - routes
+- /components    - UI componenten (PascalCase)
+- /lib           - utils, helpers
+- /content       - statische MDX content
+
+## SEO (CRITICAL - SEO is de business case)
+- Elke route exporteert generateMetadata (geen statische metadata
+  tenzij echt statisch). Geen next/head ooit.
+- JSON-LD structured data via een <Script type="application/ld+json">
+  in de page. Helpers in /lib/schema.ts.
+- Vacaturepagina's: JobPosting schema (Google for Jobs vereist).
+- Homepage: Organization + WebSite schema.
+- /app/sitemap.ts dynamisch genereren uit de MDX data layer.
+- /app/robots.ts. Niet vergeten.
+- Alle images via next/image met width + height. Alt tekst verplicht.
+- OG images via next/og (opengraph-image.tsx per route).
+- Canonical URLs in metadata.alternates.canonical.
+
+## Performance
+- Vacatures + content pages: generateStaticParams + revalidate
+  (ISR). Geen client-side fetching voor content.
+- Fonts via next/font (geen externe Google Fonts links).
+
+## Stijl
+- Geen utility-CSS classes mengen met componentlogica in props.
+- Componenten klein houden, één verantwoordelijkheid.
+- Geen barrel exports (index.ts re-exports) — direct importeren.
+
+## Wat NIET doen
+- Geen getServerSideProps / getStaticProps (oude API)
+- Geen client-side data fetching voor SEO-relevante content
+- Geen any types
+- Geen inline JSON-LD strings — altijd via helper

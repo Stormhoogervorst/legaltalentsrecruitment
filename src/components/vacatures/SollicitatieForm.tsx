@@ -1,0 +1,393 @@
+"use client";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  type BaseSyntheticEvent,
+  type ChangeEvent,
+  type DragEvent,
+  useId,
+  useRef,
+  useState,
+} from "react";
+import {
+  type FieldPath,
+  type SubmitHandler,
+  useForm,
+} from "react-hook-form";
+import { submitSollicitatie } from "@/app/actions/sollicitatie";
+import { SlashPill } from "@/components/home/primitives";
+import { cn } from "@/lib/utils";
+import {
+  acceptedCvTypes,
+  maxCvSize,
+  sollicitatieSchema,
+  type SollicitatieFormValues,
+} from "@/lib/validations/sollicitatie";
+
+const inputClass =
+  "w-full border-0 border-b border-[rgba(10,10,15,0.18)] bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-[#0A0A0F]";
+const labelClass =
+  "mb-2 block text-sm font-medium leading-[1.5] text-foreground-muted";
+const errorClass = "mt-2 text-xs font-medium text-red-700";
+
+type SollicitatieFormProps = {
+  vacatureSlug: string;
+  vacatureTitle: string;
+};
+
+function formatFileSize(size: number) {
+  return Math.round(size / 1024).toLocaleString("nl-NL");
+}
+
+function validateCvFile(file: File) {
+  if (!acceptedCvTypes.includes(file.type as (typeof acceptedCvTypes)[number])) {
+    return "Upload je CV als PDF- of Word-bestand.";
+  }
+
+  if (file.size > maxCvSize) {
+    return "Je CV mag maximaal 5MB zijn.";
+  }
+
+  return null;
+}
+
+export function SollicitatieForm({
+  vacatureSlug,
+  vacatureTitle,
+}: SollicitatieFormProps) {
+  const formId = useId();
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [serverError, setServerError] = useState<string | null>(null);
+  const [cvFile, setCvFile] = useState<File | null>(null);
+  const [cvError, setCvError] = useState<string | null>(null);
+
+  const {
+    formState: { errors },
+    handleSubmit,
+    register,
+    setError,
+  } = useForm<SollicitatieFormValues>({
+    resolver: zodResolver(sollicitatieSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      vacatureSlug,
+      vacatureTitle,
+      honeypot: "",
+    },
+  });
+
+  const selectCvFile = (file: File | null) => {
+    setCvError(null);
+
+    if (!file) {
+      setCvFile(null);
+      return;
+    }
+
+    const error = validateCvFile(file);
+
+    if (error) {
+      setCvFile(null);
+      setCvError(error);
+
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+
+      return;
+    }
+
+    setCvFile(file);
+  };
+
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    selectCvFile(event.target.files?.[0] ?? null);
+  };
+
+  const handleDrop = (event: DragEvent<HTMLLabelElement>) => {
+    event.preventDefault();
+    selectCvFile(event.dataTransfer.files?.[0] ?? null);
+  };
+
+  const removeCvFile = () => {
+    setCvFile(null);
+    setCvError(null);
+
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  const onSubmit: SubmitHandler<SollicitatieFormValues> = async (
+    values,
+    event?: BaseSyntheticEvent,
+  ) => {
+    if (cvError) {
+      setSubmitStatus("error");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setServerError(null);
+
+    const formData = new FormData();
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    formData.append("phone", values.phone);
+    formData.append("linkedin", values.linkedin ?? "");
+    formData.append("vacatureSlug", vacatureSlug);
+    formData.append("vacatureTitle", vacatureTitle);
+    formData.append("honeypot", values.honeypot ?? "");
+    const form = event?.currentTarget;
+    const website =
+      form instanceof HTMLFormElement
+        ? new FormData(form).get("website")?.toString() ?? ""
+        : "";
+
+    formData.append("website", website);
+
+    if (cvFile) {
+      formData.append("cv", cvFile, cvFile.name);
+    }
+
+    const result = await submitSollicitatie(formData);
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setSubmitStatus("success");
+      return;
+    }
+
+    if ("errors" in result && result.errors) {
+      Object.entries(result.errors).forEach(([field, messages]) => {
+        const message = messages?.[0];
+
+        if (message) {
+          setError(field as FieldPath<SollicitatieFormValues>, { message });
+        }
+      });
+    }
+
+    setServerError(
+      result.error ??
+        "Er ging iets mis. Probeer opnieuw of mail direct naar storm@legal-talents.nl.",
+    );
+    setSubmitStatus("error");
+  };
+
+  if (submitStatus === "success") {
+    return (
+      <div className="rounded-[24px] bg-background-secondary p-8 text-center md:p-12">
+        <SlashPill>/ BEDANKT</SlashPill>
+        <h2 className="display-md mt-8 text-foreground">
+          Sollicitatie ontvangen.
+        </h2>
+        <p className="mx-auto mt-6 max-w-[540px] text-[18px] leading-[1.5] text-foreground-secondary">
+          We hebben je sollicitatie voor {vacatureTitle} ontvangen. Je krijgt
+          binnen 5 werkdagen persoonlijk bericht van ons team.
+        </p>
+        <p className="mt-4 text-sm leading-[1.5] text-foreground-muted">
+          Een bevestigingsmail staat onderweg naar je inbox.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <SlashPill>/ SOLLICITEREN</SlashPill>
+      <h2 className="display-md mt-8">Solliciteer direct</h2>
+      <p className="mt-6 max-w-[540px] text-[18px] leading-[1.5] text-foreground-secondary">
+        Vul het formulier in. We reageren binnen 5 werkdagen — meestal sneller.
+        Vertrouwelijk en zonder verplichtingen.
+      </p>
+      <div className="mt-12">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="rounded-[24px] border border-[rgba(10,10,15,0.08)] bg-white p-8 md:p-12"
+          noValidate
+        >
+          {submitStatus === "error" ? (
+            <div
+              role="alert"
+              className="mb-8 rounded-[16px] border border-red-200 bg-red-50 px-5 py-4 text-sm font-medium text-red-700"
+            >
+              {serverError ??
+                "Er ging iets mis. Probeer opnieuw of mail direct naar storm@legal-talents.nl."}
+            </div>
+          ) : null}
+
+          <div className="space-y-8">
+            <div>
+              <label htmlFor={`${formId}-name`} className={labelClass}>
+                Naam
+              </label>
+              <input
+                id={`${formId}-name`}
+                type="text"
+                autoComplete="name"
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={errors.name ? `${formId}-name-error` : undefined}
+                className={inputClass}
+                {...register("name")}
+              />
+              {errors.name ? (
+                <p id={`${formId}-name-error`} className={errorClass}>
+                  {errors.name.message}
+                </p>
+              ) : null}
+            </div>
+
+            <div>
+              <label htmlFor={`${formId}-email`} className={labelClass}>
+                E-mailadres
+              </label>
+              <input
+                id={`${formId}-email`}
+                type="email"
+                autoComplete="email"
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={
+                  errors.email ? `${formId}-email-error` : undefined
+                }
+                className={inputClass}
+                {...register("email")}
+              />
+              {errors.email ? (
+                <p id={`${formId}-email-error`} className={errorClass}>
+                  {errors.email.message}
+                </p>
+              ) : null}
+            </div>
+
+            <div>
+              <label htmlFor={`${formId}-phone`} className={labelClass}>
+                Telefoonnummer
+              </label>
+              <input
+                id={`${formId}-phone`}
+                type="tel"
+                autoComplete="tel"
+                placeholder="+31 6 ..."
+                aria-invalid={Boolean(errors.phone)}
+                aria-describedby={
+                  errors.phone ? `${formId}-phone-error` : undefined
+                }
+                className={inputClass}
+                {...register("phone")}
+              />
+              {errors.phone ? (
+                <p id={`${formId}-phone-error`} className={errorClass}>
+                  {errors.phone.message}
+                </p>
+              ) : null}
+            </div>
+
+            <div>
+              <label htmlFor={`${formId}-linkedin`} className={labelClass}>
+                LinkedIn-profiel (optioneel)
+              </label>
+              <input
+                id={`${formId}-linkedin`}
+                type="url"
+                autoComplete="url"
+                placeholder="https://linkedin.com/in/..."
+                aria-invalid={Boolean(errors.linkedin)}
+                aria-describedby={
+                  errors.linkedin ? `${formId}-linkedin-error` : undefined
+                }
+                className={inputClass}
+                {...register("linkedin")}
+              />
+              {errors.linkedin ? (
+                <p id={`${formId}-linkedin-error`} className={errorClass}>
+                  {errors.linkedin.message}
+                </p>
+              ) : null}
+            </div>
+
+            <div>
+              <label htmlFor={`${formId}-cv`} className={labelClass}>
+                CV (optioneel, PDF of Word, max 5MB)
+              </label>
+              <label
+                htmlFor={`${formId}-cv`}
+                onDragOver={(event) => event.preventDefault()}
+                onDrop={handleDrop}
+                className={cn(
+                  "flex cursor-pointer items-center justify-center rounded-[12px] border border-dashed border-[rgba(10,10,15,0.18)] bg-[#FAFAFB] p-6 text-center text-[15px] leading-[1.5] text-foreground-secondary transition-colors hover:bg-[#F4F4F6]",
+                  cvError && "border-red-300",
+                )}
+              >
+                {cvFile ? (
+                  <span className="flex flex-wrap items-center justify-center gap-2">
+                    <span>
+                      {cvFile.name} ({formatFileSize(cvFile.size)} KB)
+                    </span>
+                    <button
+                      type="button"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        removeCvFile();
+                      }}
+                      className="rounded-full px-2 py-1 text-sm font-medium text-foreground underline decoration-foreground/25 underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
+                    >
+                      × Verwijderen
+                    </button>
+                  </span>
+                ) : (
+                  "Klik om CV te uploaden of sleep hier"
+                )}
+              </label>
+              <input
+                ref={fileInputRef}
+                id={`${formId}-cv`}
+                name="cv"
+                type="file"
+                accept={acceptedCvTypes.join(",")}
+                onChange={handleFileChange}
+                className="sr-only"
+                aria-invalid={Boolean(cvError)}
+                aria-describedby={cvError ? `${formId}-cv-error` : undefined}
+              />
+              {cvError ? (
+                <p id={`${formId}-cv-error`} className={errorClass}>
+                  {cvError}
+                </p>
+              ) : null}
+            </div>
+          </div>
+
+          <input type="hidden" {...register("vacatureSlug")} />
+          <input type="hidden" {...register("vacatureTitle")} />
+          <input type="hidden" {...register("honeypot")} />
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ display: "none" }}
+          />
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="mt-10 inline-flex rounded-full bg-foreground px-8 py-4 text-[15px] font-medium leading-none text-background transition-transform duration-300 ease-flatwhite hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:scale-100"
+          >
+            {isSubmitting ? "Versturen..." : "Verstuur sollicitatie →"}
+          </button>
+        </form>
+      </div>
+    </>
+  );
+}

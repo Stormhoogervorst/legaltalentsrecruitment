@@ -1,0 +1,526 @@
+{
+  "name": "FlatWhite Design System",
+  "version": "1.0.0",
+  "description": "Design system extracted from FlatWhite consulting site — minimalist, editorial, premium-consulting aesthetic with subtle motion graphics.",
+
+  "brand": {
+    "logo": {
+      "wordmark": "FlatWhite.",
+      "style": "Light/Regular weight sans-serif with terminating period as a brand accent",
+      "treatment": "Always lowercase 'lat' and 'hite' with capital F and W, period included"
+    },
+    "voice": "Premium, calm, declarative. Short sentences. Outcome-focused (growth, clarity, measurable results)."
+  },
+
+  "colors": {
+    "modes": {
+      "light": {
+        "background": {
+          "primary": "#FFFFFF",
+          "secondary": "#F4F4F6",
+          "tertiary": "#ECEDF1"
+        },
+        "foreground": {
+          "primary": "#0A0A0F",
+          "secondary": "#3A3A45",
+          "muted": "#8A8A95"
+        },
+        "border": "rgba(10, 10, 15, 0.08)",
+        "accent": {
+          "fill": "#0A0A0F",
+          "onAccent": "#FFFFFF"
+        }
+      },
+      "dark": {
+        "background": {
+          "primary": "#0A0A12",
+          "secondary": "#11111A",
+          "tertiary": "#161620"
+        },
+        "foreground": {
+          "primary": "#FFFFFF",
+          "secondary": "#D6D6DC",
+          "muted": "#9A9AA8"
+        },
+        "border": "rgba(255, 255, 255, 0.08)",
+        "accent": {
+          "fill": "#FFFFFF",
+          "onAccent": "#0A0A12"
+        }
+      },
+      "slate": {
+        "comment": "Used on Process and FAQ sections — desaturated blue-grey panels",
+        "background": {
+          "primary": "#6B7384",
+          "secondary": "#5E6678",
+          "tertiary": "#7A8294"
+        },
+        "foreground": {
+          "primary": "#FFFFFF",
+          "secondary": "#E4E6EC",
+          "muted": "#C0C4CE"
+        },
+        "border": "rgba(255, 255, 255, 0.18)",
+        "line": "rgba(255, 255, 255, 0.35)"
+      }
+    },
+    "semantic": {
+      "pill": {
+        "lightBg": "rgba(10, 10, 15, 0.06)",
+        "lightText": "#0A0A0F",
+        "darkBg": "rgba(255, 255, 255, 0.08)",
+        "darkText": "#FFFFFF",
+        "slateBg": "rgba(255, 255, 255, 0.12)",
+        "slateText": "#FFFFFF"
+      },
+      "button": {
+        "primaryBg": "#0A0A0F",
+        "primaryText": "#FFFFFF",
+        "secondaryBg": "transparent",
+        "secondaryBorder": "rgba(10, 10, 15, 0.18)",
+        "secondaryText": "#0A0A0F",
+        "onDarkPrimaryBg": "#FFFFFF",
+        "onDarkPrimaryText": "#0A0A12"
+      }
+    }
+  },
+
+  "typography": {
+    "fontFamilies": {
+      "display": {
+        "stack": "'Neue Haas Grotesk Display', 'Inter Display', 'Helvetica Neue', system-ui, sans-serif",
+        "comment": "Tight, geometric sans for headlines — slightly condensed feel"
+      },
+      "body": {
+        "stack": "'Inter', 'Helvetica Neue', system-ui, sans-serif"
+      },
+      "mono": {
+        "stack": "'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace",
+        "comment": "Used for index numbers like / 001, / 002"
+      }
+    },
+    "weights": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600
+    },
+    "scale": {
+      "display-xl": {
+        "size": "112px",
+        "lineHeight": "1.0",
+        "letterSpacing": "-0.03em",
+        "weight": 500,
+        "usage": "Hero headlines (Empowering companies to grow smarter and faster)"
+      },
+      "display-lg": {
+        "size": "88px",
+        "lineHeight": "1.02",
+        "letterSpacing": "-0.025em",
+        "weight": 500,
+        "usage": "Section heroes (Where strategy, operations and innovation meet measurable results)"
+      },
+      "display-md": {
+        "size": "64px",
+        "lineHeight": "1.05",
+        "letterSpacing": "-0.02em",
+        "weight": 500,
+        "usage": "Section titles (Straightforward answers, Unlock growth with strategic insights)"
+      },
+      "h1": {
+        "size": "48px",
+        "lineHeight": "1.1",
+        "letterSpacing": "-0.015em",
+        "weight": 500
+      },
+      "h2": {
+        "size": "36px",
+        "lineHeight": "1.15",
+        "letterSpacing": "-0.01em",
+        "weight": 500
+      },
+      "h3": {
+        "size": "28px",
+        "lineHeight": "1.2",
+        "letterSpacing": "-0.005em",
+        "weight": 500,
+        "usage": "Card headlines (Developing long-term plans...)"
+      },
+      "h4": {
+        "size": "22px",
+        "lineHeight": "1.3",
+        "weight": 500,
+        "usage": "Service rows (Strategic Planning, Operational Excellence)"
+      },
+      "body-lg": {
+        "size": "18px",
+        "lineHeight": "1.5",
+        "weight": 400
+      },
+      "body-md": {
+        "size": "16px",
+        "lineHeight": "1.6",
+        "weight": 400
+      },
+      "body-sm": {
+        "size": "14px",
+        "lineHeight": "1.5",
+        "weight": 400
+      },
+      "pill": {
+        "size": "12px",
+        "lineHeight": "1",
+        "letterSpacing": "0.08em",
+        "weight": 500,
+        "transform": "uppercase",
+        "usage": "Category pills (/ OUR EXPERTS, / FUTURE-READY BUSINESS, / WHAT WE OFFER)"
+      },
+      "index": {
+        "size": "14px",
+        "lineHeight": "1",
+        "letterSpacing": "0.04em",
+        "weight": 500,
+        "usage": "Numbered indices (/ 001, / 002, / 003)"
+      },
+      "nav": {
+        "size": "16px",
+        "lineHeight": "1",
+        "weight": 400,
+        "usage": "Top navigation links"
+      },
+      "button": {
+        "size": "15px",
+        "lineHeight": "1",
+        "weight": 500
+      }
+    }
+  },
+
+  "spacing": {
+    "scale": {
+      "0": "0",
+      "1": "4px",
+      "2": "8px",
+      "3": "12px",
+      "4": "16px",
+      "5": "20px",
+      "6": "24px",
+      "8": "32px",
+      "10": "40px",
+      "12": "48px",
+      "16": "64px",
+      "20": "80px",
+      "24": "96px",
+      "32": "128px",
+      "40": "160px",
+      "48": "192px"
+    },
+    "section": {
+      "paddingY": "120px",
+      "paddingYMobile": "64px",
+      "paddingX": "48px",
+      "paddingXMobile": "20px",
+      "maxWidth": "1440px"
+    }
+  },
+
+  "radii": {
+    "none": "0",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "pill": "999px",
+    "card": "20px",
+    "panel": "32px",
+    "comment": "Pills (nav buttons, category labels) are fully rounded. Cards use ~20px. Outer section panels use ~32px."
+  },
+
+  "borders": {
+    "hairline": "1px solid rgba(255,255,255,0.12)",
+    "hairlineLight": "1px solid rgba(10,10,15,0.08)",
+    "thin": "1px",
+    "medium": "1.5px"
+  },
+
+  "shadows": {
+    "none": "none",
+    "subtle": "0 1px 2px rgba(0,0,0,0.04)",
+    "card": "0 4px 24px rgba(0,0,0,0.06)",
+    "elevated": "0 12px 40px rgba(0,0,0,0.10)",
+    "comment": "Site is largely flat — shadows used sparingly. Depth comes from background contrast, not shadows."
+  },
+
+  "components": {
+    "nav": {
+      "height": "80px",
+      "background": "rgba(255,255,255,0.92)",
+      "backdropFilter": "blur(20px) saturate(1.1)",
+      "borderBottom": "1px solid rgba(10,10,15,0.06)",
+      "logoSize": "20px",
+      "linkGap": "32px",
+      "ctaGroup": {
+        "gap": "12px",
+        "secondary": {
+          "padding": "14px 24px",
+          "radius": "pill",
+          "border": "1px solid rgba(10,10,15,0.15)",
+          "background": "transparent"
+        },
+        "primary": {
+          "padding": "14px 24px",
+          "radius": "pill",
+          "background": "#0A0A0F",
+          "color": "#FFFFFF"
+        }
+      }
+    },
+    "pill": {
+      "padding": "8px 16px",
+      "radius": "pill",
+      "fontSize": "12px",
+      "letterSpacing": "0.08em",
+      "transform": "uppercase",
+      "prefix": "/ ",
+      "comment": "All section labels use a slash prefix — distinctive brand element"
+    },
+    "card": {
+      "default": {
+        "radius": "20px",
+        "padding": "32px",
+        "background": "var(--bg-secondary)",
+        "border": "1px solid var(--border)"
+      },
+      "team": {
+        "radius": "20px",
+        "padding": "32px",
+        "background": "#11111A",
+        "minHeight": "520px",
+        "layout": "title-top, portrait-top-right, bio-bottom",
+        "portrait": {
+          "size": "112px",
+          "radius": "16px"
+        }
+      },
+      "service": {
+        "radius": "20px",
+        "padding": "32px",
+        "background": "#F4F4F6",
+        "layout": "label-top, title-middle, description-bottom",
+        "labelStyle": "pill-white-bg"
+      },
+      "faq": {
+        "radius": "16px",
+        "padding": "24px 28px",
+        "background": "rgba(255,255,255,0.10)",
+        "border": "1px solid rgba(255,255,255,0.12)",
+        "trailingIcon": "plus-circle"
+      }
+    },
+    "button": {
+      "primary": {
+        "padding": "16px 32px",
+        "radius": "pill",
+        "background": "#0A0A0F",
+        "color": "#FFFFFF",
+        "hover": {
+          "transform": "scale(1.02)",
+          "transition": "all 280ms cubic-bezier(0.22, 1, 0.36, 1)"
+        }
+      },
+      "secondary": {
+        "padding": "16px 32px",
+        "radius": "pill",
+        "background": "#FFFFFF",
+        "color": "#0A0A0F",
+        "border": "1px solid rgba(10,10,15,0.10)"
+      }
+    },
+    "input": {
+      "newsletter": {
+        "container": {
+          "radius": "pill",
+          "padding": "8px 8px 8px 24px",
+          "border": "1px solid rgba(255,255,255,0.20)",
+          "background": "transparent"
+        },
+        "field": {
+          "background": "transparent",
+          "color": "#FFFFFF",
+          "placeholder": "rgba(255,255,255,0.45)"
+        },
+        "submit": {
+          "background": "#FFFFFF",
+          "color": "#0A0A0F",
+          "padding": "12px 24px",
+          "radius": "pill"
+        }
+      }
+    },
+    "processStep": {
+      "comment": "Each step is laid out diagonally across the slate panel, connected by the animated thin curving line",
+      "indexLabel": "/ 001, / 002, / 003 in pill",
+      "title": "h3 white",
+      "description": "body-md white-secondary",
+      "spacing": "Steps offset vertically — 001 right-bottom, 002 left-bottom, 003 right-middle"
+    }
+  },
+
+  "motion": {
+    "principles": [
+      "Slow, deliberate, editorial. Nothing bouncy.",
+      "Long durations (600–1400ms) with eased curves.",
+      "Scroll-driven reveals — content emerges as it enters the viewport.",
+      "Line drawing is the signature motion — used in the Process section to connect steps."
+    ],
+    "easings": {
+      "standard": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "comment-standard": "easeOutExpo-style — fast start, gentle settle. Used for most reveals.",
+      "smooth": "cubic-bezier(0.65, 0, 0.35, 1)",
+      "comment-smooth": "Symmetric ease for path drawing and continuous motion.",
+      "entrance": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "exit": "cubic-bezier(0.7, 0, 0.84, 0)"
+    },
+    "durations": {
+      "instant": "120ms",
+      "fast": "240ms",
+      "base": "400ms",
+      "medium": "700ms",
+      "slow": "1200ms",
+      "scroll-line": "1800ms"
+    },
+    "animations": {
+      "scrollLineDraw": {
+        "name": "Process section animated thin line",
+        "description": "A single 1px white/translucent line draws itself through the three process steps as the user scrolls. The line curves at each step's corner — straight horizontal, then a quarter-circle bend, then another straight, weaving between steps 001, 002, and 003.",
+        "implementation": {
+          "technique": "SVG path with stroke-dasharray + stroke-dashoffset animated via scroll progress",
+          "strokeWidth": "1px",
+          "strokeColor": "rgba(255,255,255,0.35)",
+          "strokeLinecap": "round",
+          "totalLength": "computed via path.getTotalLength()",
+          "driver": "scroll position within section bounding box (0 → 1)",
+          "mapping": "strokeDashoffset = totalLength * (1 - scrollProgress)",
+          "library": "Framer Motion useScroll + useTransform, or GSAP ScrollTrigger, or scroll-timeline CSS"
+        },
+        "exampleCode": {
+          "framerMotion": "const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', 'end start'] }); const pathLength = useTransform(scrollYProgress, [0.15, 0.85], [0, 1]); <motion.path d={d} style={{ pathLength }} stroke='rgba(255,255,255,0.35)' strokeWidth={1} fill='none' />",
+          "css": "@supports (animation-timeline: scroll()) { .line-path { animation: draw linear; animation-timeline: scroll(); stroke-dashoffset: 0; } @keyframes draw { from { stroke-dashoffset: var(--length); } to { stroke-dashoffset: 0; } } }"
+        },
+        "accents": {
+          "endpointDots": "Small 4px circles fade in at each step corner as the line reaches them",
+          "glow": "Optional subtle blur(8px) duplicate of the path at 20% opacity for premium feel"
+        }
+      },
+      "headlineReveal": {
+        "name": "Large headline word-by-word reveal",
+        "description": "Hero and section headlines reveal word-by-word from a slight Y-offset and 0 opacity.",
+        "stagger": "60ms per word",
+        "duration": "900ms",
+        "easing": "standard",
+        "transform": "translateY(40px) → 0, opacity 0 → 1",
+        "trigger": "in-view (once, threshold 0.3)"
+      },
+      "pillFadeIn": {
+        "duration": "600ms",
+        "easing": "entrance",
+        "transform": "translateY(12px) → 0, opacity 0 → 1",
+        "delay": "0ms (before headline)"
+      },
+      "cardStagger": {
+        "name": "Service / team / FAQ card stagger",
+        "duration": "700ms",
+        "stagger": "100ms",
+        "easing": "entrance",
+        "transform": "translateY(24px) → 0, opacity 0 → 1"
+      },
+      "buttonHover": {
+        "duration": "280ms",
+        "easing": "standard",
+        "scale": "1.0 → 1.02",
+        "background": "subtle lightening on dark / darkening on light"
+      },
+      "navBlurOnScroll": {
+        "description": "Header background opacity goes 0 → 0.92 with backdrop-blur as user scrolls past 64px",
+        "duration": "300ms"
+      },
+      "barChartGrow": {
+        "name": "Hero stat-bar chart growth",
+        "description": "The four labeled bars (ANALYSIS, MARKET, GROWTH, STRATEGY, PLANNING) grow from height 0 to final height with staggered timing on scroll-into-view.",
+        "duration": "1200ms",
+        "stagger": "120ms",
+        "easing": "standard",
+        "labelFade": "Bar labels fade in after their bar finishes growing (delay 200ms)"
+      },
+      "faqAccordionOpen": {
+        "duration": "400ms",
+        "easing": "standard",
+        "heightAuto": "animated via grid-template-rows: 0fr → 1fr trick, or framer-motion height auto",
+        "iconRotation": "Plus icon rotates 45° to become X over 250ms"
+      },
+      "marqueeTrustBar": {
+        "name": "Trusted-by avatars subtle drift",
+        "description": "The small grouped avatars next to '/ 5.0' can have a very subtle continuous horizontal drift (3px range over 4s ease-in-out infinite alternate)"
+      }
+    },
+    "scrollBehavior": {
+      "smoothing": "Lenis-style smooth scroll recommended (lerp 0.1)",
+      "comment": "Site benefits from inertia scrolling — pairs with the slow, drawn line animation."
+    }
+  },
+
+  "layout": {
+    "grid": {
+      "columns": 12,
+      "gutter": "24px",
+      "maxWidth": "1440px"
+    },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "sectionStructure": {
+      "patternA": "Pill-label (top) + large left-aligned headline (3 lines, dropped baseline) — used for hero and section openers",
+      "patternB": "Pill-label (top-left or centered) + center-aligned headline — used for FAQ",
+      "patternC": "Process layout: massive headline anchored top-left, three offset content blocks distributed diagonally, connected by the animated curving line"
+    }
+  },
+
+  "iconography": {
+    "style": "Outline, 1.5px stroke, rounded caps and joins",
+    "size": "16px (in pills), 20px (inline), 24px (controls)",
+    "library": "Lucide or Phosphor (regular weight)",
+    "commonIcons": ["plus-circle", "linkedin", "arrow-up-right", "chevron-down"]
+  },
+
+  "imagery": {
+    "portraits": {
+      "treatment": "Plain neutral background (#F2F2F2), business-casual subjects, soft natural lighting, slight desaturation",
+      "framing": "Tight upper-body, eyes-level, professional",
+      "radius": "16px",
+      "size": "112px square in team cards"
+    },
+    "hero": {
+      "treatment": "Top-down overhead shots of collaborative work scenes — warm wood tones, leather, laptops, plants. Cinematic, document-style.",
+      "overlay": "Slight darkening gradient (rgba(0,0,0,0.15) → 0) from center for text legibility"
+    }
+  },
+
+  "signaturePatterns": [
+    "Slash-prefixed pills (/ LABEL) used as section markers throughout",
+    "Numbered indices (/ 001, / 002) for sequential content — process steps and service rows",
+    "Massive type with tight tracking and generous line-height — editorial, slightly oversized",
+    "Slate-blue (#6B7384) panels as the secondary surface — adds tonal variation without color noise",
+    "Animated curving 1px line connecting process steps (the signature scroll-driven motion)",
+    "Pill-shaped CTAs in both filled (black) and outlined variants, always paired in the nav",
+    "Service list as expandable accordion rows with numbered indices and trailing plus icons"
+  ],
+
+  "implementationNotes": {
+    "recommendedStack": "Framer or Next.js + Framer Motion + Tailwind + Lenis for smooth scroll",
+    "criticalMotionElement": "The process-section scroll-driven line is THE signature interaction. Invest implementation time here — use SVG path with pathLength tied to useScroll for the cleanest result.",
+    "performance": "Avoid animating box-shadow or filter on scroll. Stick to transform and opacity. Use will-change sparingly."
+  }
+}

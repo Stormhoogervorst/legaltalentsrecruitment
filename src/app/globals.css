@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --background-secondary: #f4f4f6;
+  --background-tertiary: #ecedf1;
+  --foreground: #0a0a0f;
+  --foreground-secondary: #3a3a45;
+  --foreground-muted: #8a8a95;
+  --dark-background: #0a0a12;
+  --dark-background-secondary: #11111a;
+  --dark-foreground: #ffffff;
+  --dark-foreground-secondary: #d6d6dc;
+  --slate-background: #6b7384;
+  --slate-background-secondary: #5e6678;
+  --slate-foreground: #ffffff;
+  --slate-foreground-secondary: #e4e6ec;
+  --slate-line: rgba(255, 255, 255, 0.35);
+  --border-light: rgba(10, 10, 15, 0.08);
+  --border-strong: rgba(10, 10, 15, 0.18);
+  --pill-light: rgba(10, 10, 15, 0.06);
+  --pill-dark: rgba(255, 255, 255, 0.08);
+  --pill-slate: rgba(255, 255, 255, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-dark-background: var(--dark-background);
+  --color-dark-background-secondary: var(--dark-background-secondary);
+  --color-dark-foreground: var(--dark-foreground);
+  --color-dark-foreground-secondary: var(--dark-foreground-secondary);
+  --color-slate-background: var(--slate-background);
+  --color-slate-background-secondary: var(--slate-background-secondary);
+  --color-slate-foreground: var(--slate-foreground);
+  --color-slate-foreground-secondary: var(--slate-foreground-secondary);
+  --color-slate-line: var(--slate-line);
+  --color-border-light: var(--border-light);
+  --color-border-strong: var(--border-strong);
+  --color-pill-light: var(--pill-light);
+  --color-pill-dark: var(--pill-dark);
+  --color-pill-slate: var(--pill-slate);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-geist-sans);
+  --max-width-section: 1440px;
+  --ease-flatwhite: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Inter", "Helvetica Neue", system-ui,
+    sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.section-shell {
+  margin-inline: auto;
+  max-width: var(--max-width-section);
+  padding-inline: 20px;
+}
+
+@media (width >= 768px) {
+  .section-shell {
+    padding-inline: 48px;
+  }
+}
+
+.section-y {
+  padding-block: 64px;
+}
+
+@media (width >= 768px) {
+  .section-y {
+    padding-block: 120px;
+  }
+}
+
+.display-xl,
+.display-lg,
+.display-md,
+.display-h3 {
+  font-family: var(--font-geist-sans), "Neue Haas Grotesk Display",
+    "Inter Display", "Helvetica Neue", system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.display-xl {
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.display-lg {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.display-md {
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.display-h3 {
+  font-size: clamp(24px, 2.4vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+
+.trust-carousel {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.trust-carousel-track {
+  animation: trust-carousel 20s linear infinite;
+}
+
+@keyframes trust-carousel {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (width >= 48rem) {
+  .trust-carousel-track {
+    animation-duration: 24s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-carousel-track {
+    animation: none;
+  }
+}
