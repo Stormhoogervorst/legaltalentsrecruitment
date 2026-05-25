@@ -10,9 +10,15 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 
 const title =
-  "Juridisch Recruitment | Vaste Plaatsingen voor Juristen — Legal Talents";
+  "Legal Talents | Specialist in Juridische Werving & Selectie";
 const description =
-  "Persoonlijk juridisch recruitment voor vaste plaatsingen. Geen massadatabase — een netwerk. Voor advocaten, bedrijfsjuristen en in-house counsel.";
+  "Legal Talents verbindt vooraanstaande juristen en advocaten met de meest gerenommeerde kantoren. Persoonlijk plan op maat en altijd gericht op de lange termijn.";
+const socialImage = {
+  url: "/social%20preview.png",
+  width: 1024,
+  height: 1024,
+  alt: "Legal Recruitment, zoals het hoort.",
+};
 
 export const metadata: Metadata = {
   title,
@@ -26,6 +32,13 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: "Legal Talents Recruitment",
+    images: [socialImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [socialImage],
   },
 };
 

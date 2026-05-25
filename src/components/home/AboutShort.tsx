@@ -8,7 +8,7 @@ export function AboutShort() {
         <div className="max-w-4xl">
             <SlashPill>/ OVER ONS</SlashPill>
             <AnimatedHeadline
-              lines={["Persoonlijke aanpak", "is de norm."]}
+              lines={["Een plan op maat."]}
               className="display-md mt-8 max-w-xl"
             />
             <div className="mt-8 max-w-xl space-y-5 text-[16px] leading-[1.6] text-foreground-secondary">
