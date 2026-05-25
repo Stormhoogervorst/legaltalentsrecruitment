@@ -75,70 +75,227 @@ export function aboutPageSchema() {
   };
 }
 
-function employmentTypeFor(werkuren?: string) {
-  if (werkuren === "parttime") {
-    return "PART_TIME";
-  }
-
-  if (werkuren === "flexibel") {
-    return ["FULL_TIME", "PART_TIME"];
-  }
-
-  return "FULL_TIME";
-}
-
 function stripUndefined<T extends Record<string, unknown>>(value: T) {
   return Object.fromEntries(
     Object.entries(value).filter(([, entry]) => entry !== undefined),
   );
 }
 
+export function getRegionFromPlaats(plaats: string) {
+  const regions: Record<string, string> = {
+    amsterdam: "Noord-Holland",
+    rotterdam: "Zuid-Holland",
+    "den haag": "Zuid-Holland",
+    utrecht: "Utrecht",
+    eindhoven: "Noord-Brabant",
+    "den bosch": "Noord-Brabant",
+    tilburg: "Noord-Brabant",
+    breda: "Noord-Brabant",
+    nijmegen: "Gelderland",
+    arnhem: "Gelderland",
+    groningen: "Groningen",
+    leeuwarden: "Friesland",
+    zwolle: "Overijssel",
+    deventer: "Overijssel",
+    maastricht: "Limburg",
+    middelburg: "Zeeland",
+    almere: "Flevoland",
+    lelystad: "Flevoland",
+    assen: "Drenthe",
+  };
+
+  return regions[plaats.trim().toLowerCase()];
+}
+
+function getEmploymentType(plaatsing: string, werkuren: string) {
+  if (plaatsing === "ZZP") return "CONTRACTOR";
+  if (plaatsing === "Interim") return "TEMPORARY";
+  if (werkuren === "Parttime") return "PART_TIME";
+  if (werkuren === "Flexibel") return "PART_TIME";
+
+  return "FULL_TIME";
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function extractJobDescriptionMarkdown(body: string) {
+  const includedSections = new Set([
+    "over de functie",
+    "wat we vragen",
+    "wat we bieden",
+  ]);
+  const lines = body.split(/\r?\n/);
+  const descriptionLines: string[] = [];
+  let isIncludedSection = false;
+
+  for (const line of lines) {
+    const headingMatch = line.match(/^##\s+(.+)$/);
+
+    if (headingMatch) {
+      isIncludedSection = includedSections.has(
+        headingMatch[1].trim().toLowerCase(),
+      );
+    }
+
+    if (isIncludedSection) {
+      descriptionLines.push(line);
+    }
+  }
+
+  return descriptionLines.join("\n").trim();
+}
+
+function markdownToHtml(markdown: string) {
+  const html: string[] = [];
+  const paragraphLines: string[] = [];
+  let isListOpen = false;
+
+  function flushParagraph() {
+    if (paragraphLines.length === 0) return;
+
+    html.push(`<p>${escapeHtml(paragraphLines.join(" "))}</p>`);
+    paragraphLines.length = 0;
+  }
+
+  function closeList() {
+    if (!isListOpen) return;
+
+    html.push("</ul>");
+    isListOpen = false;
+  }
+
+  for (const line of markdown.split(/\r?\n/)) {
+    const trimmedLine = line.trim();
+
+    if (!trimmedLine) {
+      flushParagraph();
+      closeList();
+      continue;
+    }
+
+    const headingMatch = trimmedLine.match(/^#{2,3}\s+(.+)$/);
+    if (headingMatch) {
+      flushParagraph();
+      closeList();
+      html.push(`<h3>${escapeHtml(headingMatch[1])}</h3>`);
+      continue;
+    }
+
+    const bulletMatch = trimmedLine.match(/^[-*]\s+(.+)$/);
+    if (bulletMatch) {
+      flushParagraph();
+      if (!isListOpen) {
+        html.push("<ul>");
+        isListOpen = true;
+      }
+      html.push(`<li>${escapeHtml(bulletMatch[1])}</li>`);
+      continue;
+    }
+
+    closeList();
+    paragraphLines.push(trimmedLine);
+  }
+
+  flushParagraph();
+  closeList();
+
+  return html.join("");
+}
+
+function jobDescriptionHtml(vacature: Vacature) {
+  const descriptionMarkdown = extractJobDescriptionMarkdown(vacature.body);
+
+  return markdownToHtml(descriptionMarkdown || vacature.excerpt);
+}
+
+function normalizeSalaryNumber(value: string) {
+  const usesThousandsSeparator = /^[\d.,]+[,.]\d{3}$/.test(value);
+  const normalized = usesThousandsSeparator
+    ? value.replace(/[.,]/g, "")
+    : value.replace(/\./g, "").replace(",", ".");
+  const parsedValue = Number.parseFloat(normalized);
+
+  return Number.isFinite(parsedValue) ? parsedValue : undefined;
+}
+
+function parseSalaryRange(salarisIndicatie?: string) {
+  if (!salarisIndicatie) return undefined;
+
+  const rangeMatch = salarisIndicatie.match(
+    /€?\s*(\d[\d.,]*\s*k?)\s*(?:-|\u2013|\u2014|tot)\s*€?\s*(\d[\d.,]*\s*k?)/i,
+  );
+
+  if (!rangeMatch) return undefined;
+
+  const [, rawMin, rawMax] = rangeMatch;
+  const minUsesK = /k/i.test(rawMin);
+  const maxUsesK = /k/i.test(rawMax);
+  const minNumber = normalizeSalaryNumber(rawMin.replace(/k/i, "").trim());
+  const maxNumber = normalizeSalaryNumber(rawMax.replace(/k/i, "").trim());
+
+  if (minNumber === undefined || maxNumber === undefined) return undefined;
+
+  const parsedMin = Math.round(minUsesK ? minNumber * 1000 : minNumber);
+  const parsedMax = Math.round(maxUsesK ? maxNumber * 1000 : maxNumber);
+
+  if (parsedMin <= 0 || parsedMax <= 0 || parsedMin > parsedMax) {
+    return undefined;
+  }
+
+  return {
+    minValue: parsedMin,
+    maxValue: parsedMax,
+  };
+}
+
 export function jobPostingSchema(vacature: Vacature) {
-  const hiringOrganization =
-    vacature.opdrachtgeverVertrouwelijk || !vacature.opdrachtgeverNaam
-      ? {
-          "@type": "Organization",
-          name: "Legal Talents Recruitment",
-          sameAs: siteUrl,
-        }
-      : {
-          "@type": "Organization",
-          name: vacature.opdrachtgeverNaam,
-        };
+  const salaryRange = parseSalaryRange(vacature.salarisIndicatie);
 
   return stripUndefined({
     "@context": "https://schema.org",
     "@type": "JobPosting",
     title: vacature.title,
-    description: vacature.excerpt,
+    description: jobDescriptionHtml(vacature),
     datePosted: vacature.publishedAt,
-    validThrough: vacature.validThrough,
-    employmentType: employmentTypeFor(vacature.werkuren),
-    hiringOrganization,
+    validThrough: vacature.validThrough || undefined,
+    employmentType: getEmploymentType(vacature.plaatsing, vacature.werkuren),
+    hiringOrganization: stripUndefined({
+      "@type": "Organization",
+      name: vacature.opdrachtgeverVertrouwelijk
+        ? "Vertrouwelijk"
+        : vacature.opdrachtgeverNaam,
+      sameAs: vacature.opdrachtgeverVertrouwelijk ? undefined : siteUrl,
+    }),
     jobLocation: {
       "@type": "Place",
       address: stripUndefined({
         "@type": "PostalAddress",
-        streetAddress: vacature.adres?.straat,
-        postalCode: vacature.adres?.postcode,
         addressLocality: vacature.plaats,
-        addressCountry:
-          vacature.adres?.land === "Nederland"
-            ? "NL"
-            : (vacature.adres?.land ?? "NL"),
+        addressRegion: getRegionFromPlaats(vacature.plaats),
+        addressCountry: "NL",
       }),
     },
+    directApply: true,
     applicantLocationRequirements: {
       "@type": "Country",
-      name: "Nederland",
+      name: "Netherlands",
     },
-    baseSalary: vacature.salarisIndicatie
+    baseSalary: salaryRange
       ? {
           "@type": "MonetaryAmount",
           currency: "EUR",
           value: {
             "@type": "QuantitativeValue",
-            value: vacature.salarisIndicatie,
+            minValue: salaryRange.minValue,
+            maxValue: salaryRange.maxValue,
+            unitText: "YEAR",
           },
         }
       : undefined,
