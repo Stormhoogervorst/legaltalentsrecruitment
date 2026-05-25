@@ -62,7 +62,7 @@ export function WhatYouGet() {
             </p>
             <Link
               href="/algemene-voorwaarden"
-              className="mt-8 inline-flex text-[14px] leading-[1.5] text-foreground transition-colors hover:text-foreground-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4"
+              className="mt-8 inline-flex text-[14px] leading-[1.5] text-foreground underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4"
             >
               Lees onze voorwaarden →
             </Link>

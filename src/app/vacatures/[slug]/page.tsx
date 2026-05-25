@@ -100,7 +100,7 @@ const mdxComponents = {
         href={href}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noreferrer" : undefined}
-        className="underline decoration-foreground/25 underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+        className="underline decoration-foreground/25 underline-offset-4 transition-colors hover:decoration-accent"
       >
         {children}
       </a>

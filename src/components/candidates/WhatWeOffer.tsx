@@ -33,10 +33,7 @@ export function WhatWeOffer() {
           <div>
             <SlashPill>/ WAT WIJ JE BIEDEN</SlashPill>
             <div className="mt-8 max-w-[720px]">
-              <h2 className="display-md">
-                Geen recruiter. <br />
-                Een sparringpartner.
-              </h2>
+              <h2 className="display-md">Eerlijk advies.</h2>
             </div>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
               Wij investeren tijd in elkaar leren kennen. Dat betekent soms

@@ -45,7 +45,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className="text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4 focus-visible:ring-offset-background"
-                activeClassName="text-foreground"
+                activeClassName="text-foreground underline decoration-accent decoration-[1.5px] underline-offset-[6px]"
                 inactiveClassName="text-foreground/65 hover:text-foreground"
               >
                 {item.label}
@@ -56,7 +56,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background md:inline-flex"
+              className="hidden rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-[transform,box-shadow] duration-[240ms] hover:scale-[1.02] hover:shadow-[0_0_0_2px_rgba(88,125,254,0.20)] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background md:inline-flex"
             >
               Plan kennismaking
             </Link>

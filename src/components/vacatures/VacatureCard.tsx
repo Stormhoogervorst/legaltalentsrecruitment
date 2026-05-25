@@ -16,7 +16,7 @@ export function VacatureCard({ vacature }: { vacature: VacatureListItem }) {
   return (
     <Link
       href={`/vacatures/${vacature.slug}`}
-      className="group block rounded-[16px] bg-background-secondary p-6 transition-colors duration-[280ms] ease-flatwhite hover:bg-background-tertiary focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4 focus-visible:ring-offset-background md:p-8"
+      className="group block rounded-[16px] bg-background-secondary p-6 transition-colors duration-[280ms] ease-flatwhite hover:bg-background-tertiary md:p-8"
     >
       <article>
         <div className="flex items-center justify-between gap-6">

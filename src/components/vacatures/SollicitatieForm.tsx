@@ -25,7 +25,7 @@ import {
 } from "@/lib/validations/sollicitatie";
 
 const inputClass =
-  "w-full border-0 border-b border-[rgba(10,10,15,0.18)] bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-[#0A0A0F]";
+  "w-full border-0 border-b border-[rgba(10,10,15,0.18)] bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-accent";
 const labelClass =
   "mb-2 block text-sm font-medium leading-[1.5] text-foreground-muted";
 const errorClass = "mt-2 text-xs font-medium text-red-700";
@@ -339,7 +339,7 @@ export function SollicitatieForm({
                         event.preventDefault();
                         removeCvFile();
                       }}
-                      className="rounded-full px-2 py-1 text-sm font-medium text-foreground underline decoration-foreground/25 underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
+                      className="rounded-full px-2 py-1 text-sm font-medium text-foreground underline decoration-foreground/25 underline-offset-4 hover:decoration-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
                     >
                       × Verwijderen
                     </button>
@@ -382,7 +382,7 @@ export function SollicitatieForm({
           <button
             type="submit"
             disabled={isSubmitting}
-            className="mt-10 inline-flex rounded-full bg-foreground px-8 py-4 text-[15px] font-medium leading-none text-background transition-transform duration-300 ease-flatwhite hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:scale-100"
+            className="mt-10 inline-flex rounded-full bg-foreground px-8 py-4 text-[15px] font-medium leading-none text-background transition-[transform,box-shadow] duration-[240ms] ease-flatwhite hover:scale-[1.02] hover:shadow-[0_0_0_2px_rgba(88,125,254,0.20)] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:scale-100 disabled:hover:shadow-none"
           >
             {isSubmitting ? "Versturen..." : "Verstuur sollicitatie →"}
           </button>

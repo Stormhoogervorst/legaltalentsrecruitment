@@ -3,6 +3,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { AnimatedHeadline } from "@/components/home/AnimatedHeadline";
 import { PillButton, SectionShell, SlashPill } from "@/components/home/primitives";
+import { HandDrawnDot } from "@/components/ui/HandDrawnDot";
+import { HandDrawnUnderline } from "@/components/ui/HandDrawnUnderline";
 
 const flatWhiteEase = [0.22, 1, 0.36, 1] as const;
 
@@ -24,6 +26,22 @@ export function Hero() {
           as="h1"
           lines={["Specialist in legal recruitment"]}
           className="display-xl mt-10 max-w-6xl"
+          renderWord={(word) => {
+            if (word === "Specialist") {
+              return <HandDrawnUnderline delay={0.3}>{word}</HandDrawnUnderline>;
+            }
+
+            if (word === "recruitment") {
+              return (
+                <>
+                  {word}
+                  <HandDrawnDot delay={2.3} mobileOffset={8} />
+                </>
+              );
+            }
+
+            return word;
+          }}
         />
 
         <motion.div

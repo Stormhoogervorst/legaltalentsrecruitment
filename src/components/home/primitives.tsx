@@ -41,8 +41,9 @@ export function PillButton({
   return (
     <Link
       className={cn(
-        "inline-flex items-center justify-center rounded-full px-8 py-4 text-[15px] font-medium leading-none transition-transform duration-300 ease-flatwhite hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2",
-        variant === "primary" && "bg-foreground text-background",
+        "inline-flex items-center justify-center rounded-full px-8 py-4 text-[15px] font-medium leading-none transition-[transform,box-shadow] duration-[240ms] ease-flatwhite hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2",
+        variant === "primary" &&
+          "bg-foreground text-background hover:shadow-[0_0_0_2px_rgba(88,125,254,0.20)]",
         variant === "secondary" &&
           "border border-border-strong bg-transparent text-foreground",
         variant === "dark" && "bg-dark-foreground text-dark-background",

@@ -33,10 +33,6 @@ export function DiscretionPromise() {
           worden niet <br />
           gedeeld.
         </h2>
-        <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-          Voor juristen is vertrouwelijkheid niet een extra — het is de basis.
-          Hieronder hoe wij daarmee omgaan, concreet.
-        </p>
 
         <div className="mt-16 max-w-[540px]">
           {commitments.map((commitment) => (

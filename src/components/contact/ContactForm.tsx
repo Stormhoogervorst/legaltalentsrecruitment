@@ -16,7 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const inputClass =
-  "w-full border-0 border-b border-border-strong bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-foreground";
+  "w-full border-0 border-b border-border-strong bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-accent";
 const labelClass =
   "mb-2 block text-sm font-medium leading-[1.5] text-foreground-muted";
 const errorClass = "mt-2 text-xs font-medium text-red-700";
@@ -103,7 +103,10 @@ export function ContactForm() {
           className="rounded-[16px] border border-red-200 bg-red-50 px-5 py-4 text-sm font-medium text-red-700"
         >
           Er ging iets mis. Probeer opnieuw of mail direct naar{" "}
-          <a href="mailto:storm@legal-talents.nl" className="underline">
+          <a
+            href="mailto:storm@legal-talents.nl"
+            className="underline decoration-foreground/25 underline-offset-4 hover:decoration-accent"
+          >
             storm@legal-talents.nl
           </a>
         </div>
@@ -259,7 +262,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex rounded-full bg-foreground px-8 py-4 text-[15px] font-medium leading-none text-background transition-transform duration-300 ease-flatwhite hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:scale-100"
+        className="inline-flex rounded-full bg-foreground px-8 py-4 text-[15px] font-medium leading-none text-background transition-[transform,box-shadow] duration-[240ms] ease-flatwhite hover:scale-[1.02] hover:shadow-[0_0_0_2px_rgba(88,125,254,0.20)] focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:scale-100 disabled:hover:shadow-none"
       >
         {isSubmitting ? "Versturen..." : "Bericht versturen →"}
       </button>

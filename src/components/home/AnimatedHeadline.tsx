@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ElementType } from "react";
+import type { ElementType, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const flatWhiteEase = [0.22, 1, 0.36, 1] as const;
@@ -11,6 +11,7 @@ type AnimatedHeadlineProps = {
   lines: string[];
   className?: string;
   lineClassName?: string;
+  renderWord?: (word: string, index: number, line: string) => ReactNode;
 };
 
 export function AnimatedHeadline({
@@ -18,6 +19,7 @@ export function AnimatedHeadline({
   lines,
   className,
   lineClassName,
+  renderWord,
 }: AnimatedHeadlineProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -66,7 +68,7 @@ export function AnimatedHeadline({
                 className="inline-block pr-[0.18em]"
                 variants={word}
               >
-                {wordPart}
+                {renderWord ? renderWord(wordPart, index, line) : wordPart}
               </motion.span>
             ))}
           </span>
