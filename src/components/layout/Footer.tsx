@@ -8,6 +8,15 @@ const quickLinks = [
   { label: "Over Ons", href: "/over-ons" },
 ];
 
+const recruitmentLinks = [
+  { label: "Advocaat recruitment", href: "/recruitment/advocaat" },
+  { label: "Bedrijfsjurist recruitment", href: "/recruitment/bedrijfsjurist" },
+  {
+    label: "Compliance officer recruitment",
+    href: "/recruitment/compliance-officer",
+  },
+];
+
 const legalLinks = [
   { label: "Privacy", href: "/privacy" },
   { label: "Algemene voorwaarden", href: "/algemene-voorwaarden" },
@@ -31,7 +40,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-foreground/10 bg-background text-foreground">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-3 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-4 lg:px-12">
         <section aria-labelledby="footer-company">
           <Link
             href="/"
@@ -73,6 +82,27 @@ export function Footer() {
           </h2>
           <ul className="mt-4 space-y-3">
             {quickLinks.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-sm text-foreground/70 transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-label="Recruitment landingspagina's">
+          <h2
+            id="footer-recruitment-links"
+            className="text-sm font-semibold text-foreground"
+          >
+            Recruitment
+          </h2>
+          <ul className="mt-4 space-y-3">
+            {recruitmentLinks.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
