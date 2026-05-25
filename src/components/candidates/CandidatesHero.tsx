@@ -9,10 +9,7 @@ export function CandidatesHero() {
     <section className="bg-background py-16 text-foreground md:py-[120px]">
       <SectionShell>
         <SlashPill>/ VOOR JURIDISCH TALENT</SlashPill>
-        <h1 className="display-lg mt-8 max-w-5xl">
-          Jouw volgende stap. <br />
-          Op jouw tempo.
-        </h1>
+        <h1 className="display-lg mt-8 max-w-5xl">Wij helpen jou verder.</h1>
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
           Een gesprek hoeft niet meteen tot iets te leiden. Wij denken
           vrijblijvend mee over jouw loopbaan — vertrouwelijk, zonder druk, en
