@@ -71,8 +71,8 @@ export default function ContactPage() {
               <SlashPill>/ CONTACT</SlashPill>
               <h1 className="display-lg mt-8">Even contact?</h1>
               <p className="mt-8 max-w-[480px] text-[18px] leading-[1.5] text-foreground-secondary">
-                We reageren binnen 24 uur, meestal sneller. Bij voorkeur even
-                bellen of op een kopje koffie.
+                We reageren binnen 24 uur, meestal sneller. Je bent ook altijd
+                welkom voor een kop koffie.
               </p>
 
               <div className="mt-10 rounded-[16px] bg-background-secondary p-8">
@@ -116,9 +116,6 @@ export default function ContactPage() {
                 </Link>
               </div>
 
-              <p className="mt-6 text-sm leading-[1.5] text-foreground-muted">
-                KvK 98803093 · BTW NL868649818B01
-              </p>
             </div>
 
             <div className="rounded-[24px] border border-border-light bg-background p-6 sm:p-10 lg:p-12">

@@ -34,7 +34,7 @@ export function Hero() {
         >
           <p className="text-[18px] leading-[1.5] text-foreground-secondary">
             Vaste plaatsingen voor advocaten, bedrijfsjuristen en in-house
-            counsel. Geen massadatabase — een persoonlijk netwerk.
+            counsel.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
