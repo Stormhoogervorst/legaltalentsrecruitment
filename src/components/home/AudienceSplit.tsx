@@ -19,7 +19,7 @@ const cards = [
       "Discreet en vertrouwelijk",
     ],
     href: "/voor-kandidaten",
-    link: "Meer voor kandidaten →",
+    link: "Meer voor kandidaten",
   },
   {
     index: "/ 002",
@@ -31,7 +31,7 @@ const cards = [
       "Fee bij plaatsing",
     ],
     href: "/voor-opdrachtgevers",
-    link: "Meer voor opdrachtgevers →",
+    link: "Meer voor opdrachtgevers",
   },
 ];
 
