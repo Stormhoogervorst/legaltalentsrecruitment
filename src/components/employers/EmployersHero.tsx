@@ -16,7 +16,8 @@ export function EmployersHero() {
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
           Een persoonlijk netwerk in plaats van een database. Een shortlist in
           plaats van een stortvloed. Werving & selectie zoals het hoort —
-          gericht, transparant, no cure no pay.
+          gericht, transparant, no cure no pay. Wij bereiken maandelijks 40.000
+          juristen.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <PillButton href="/contact">Plan een intake →</PillButton>

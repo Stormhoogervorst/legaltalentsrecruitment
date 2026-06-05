@@ -16,7 +16,8 @@ export function AdvocaatHero() {
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
           Specialistisch recruitment voor de advocatuur. Van
           advocaat-stagiair tot partner-niveau, in alle rechtsgebieden.
-          Persoonlijk netwerk in plaats van database, no cure no pay.
+          Persoonlijk netwerk in plaats van database, no cure no pay. Wij
+          bereiken maandelijks 40.000 juristen.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <PillButton href="/contact">Plan een intake →</PillButton>

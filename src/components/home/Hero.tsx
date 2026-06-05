@@ -34,7 +34,7 @@ export function Hero() {
         >
           <p className="text-[18px] leading-[1.5] text-foreground-secondary">
             Vaste plaatsingen voor advocaten, bedrijfsjuristen en in-house
-            counsel.
+            counsel. Wij bereiken maandelijks 40.000 juristen.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">

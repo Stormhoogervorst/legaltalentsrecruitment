@@ -17,6 +17,7 @@ export function BedrijfsjuristHero() {
           Specialistisch recruitment voor in-house juridische functies. Van
           bedrijfsjurist tot head of legal en general counsel. Voor corporates
           en mid-market die een eigen juridische functie opbouwen of uitbreiden.
+          Wij bereiken maandelijks 40.000 juristen.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <PillButton href="/contact">Plan een intake →</PillButton>
