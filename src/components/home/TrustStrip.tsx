@@ -38,15 +38,15 @@ export function TrustStrip() {
                   {logoSet.map((logo) => (
                     <div
                       key={`${logo.src}-${setIndex}`}
-                      className="flex h-16 w-44 shrink-0 items-center justify-center sm:h-[72px] sm:w-52 md:h-20 md:w-[260px]"
+                      className="flex h-[72px] w-52 shrink-0 items-center justify-center sm:h-[72px] sm:w-52 md:h-20 md:w-[260px]"
                     >
                       <Image
                         src={logo.src}
                         alt={logo.alt}
                         width={360}
                         height={100}
-                        sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, 260px"
-                        className="h-auto max-h-16 w-full object-contain sm:max-h-[72px] md:max-h-20"
+                        sizes="(max-width: 768px) 208px, 260px"
+                        className="h-auto max-h-[72px] w-full object-contain sm:max-h-[72px] md:max-h-20"
                       />
                     </div>
                   ))}
