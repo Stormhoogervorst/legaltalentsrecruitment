@@ -62,15 +62,6 @@ export function aboutPageSchema() {
           name: "LLM Ondernemingsrecht",
         },
       },
-      {
-        "@type": "Person",
-        name: "Frits Haringa",
-        jobTitle: "Senior Legal Recruiter",
-        alumniOf: {
-          "@type": "EducationalOrganization",
-          name: "25+ jaar als Senior Recruiter, HR Manager en Recruitment Director",
-        },
-      },
     ],
   };
 }

@@ -26,14 +26,6 @@ const team = [
     image: "/justin-v2.jpg",
     linkedin: "https://www.linkedin.com/in/justin-bigler-0322071b4/",
   },
-  {
-    name: "Frits Haringa",
-    role: "Senior Legal Recruiter",
-    education: "25+ jaar als Senior Recruiter, HR Manager en Recruitment Director",
-    bio: "Weet als geen ander hoe je iemand écht aan de juiste baan helpt. Met 25 jaar ervaring de persoon die je wilt spreken als je een volgende stap zoekt in de juridische sector.",
-    image: "/frits-v2.jpg",
-    linkedin: "https://www.linkedin.com/in/fritsharinga/",
-  },
 ];
 
 function LinkedinIcon() {

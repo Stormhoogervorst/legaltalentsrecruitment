@@ -14,6 +14,10 @@ const logos = [
     src: "/logo law and pepper.svg",
     alt: "Law & Pepper",
   },
+  {
+    src: "/Simmons + Simmons logo.png",
+    alt: "Simmons + Simmons",
+  },
 ];
 
 const carouselLogoSets = [logos, logos];
