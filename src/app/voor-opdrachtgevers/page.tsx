@@ -9,6 +9,7 @@ import { EmployersHero } from "@/components/employers/EmployersHero";
 import { Pricing } from "@/components/employers/Pricing";
 import { WhatYouGet } from "@/components/employers/WhatYouGet";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
+import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title =
   "Voor Opdrachtgevers — Werving & Selectie van Juridisch Talent | Legal Talents";
@@ -95,6 +96,7 @@ export default function EmployersPage() {
   return (
     <>
       <EmployersHero />
+      <TrustStrip />
       <MeanderingProcess
         eyebrow="/ AANPAK"
         title="Vier stappen. / Eén match."

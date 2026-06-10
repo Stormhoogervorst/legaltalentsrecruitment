@@ -10,6 +10,7 @@ import { AdvocaatMarkt } from "@/components/landing/AdvocaatMarkt";
 import { AdvocaatPosities } from "@/components/landing/AdvocaatPosities";
 import { AdvocaatResultaat } from "@/components/landing/AdvocaatResultaat";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
+import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title =
   "Werving van Advocaten — Recruitment voor Advocatenkantoren | Legal Talents";
@@ -28,6 +29,11 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: "Legal Talents Recruitment",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 
@@ -85,6 +91,7 @@ export default function AdvocaatRecruitmentPage() {
   return (
     <>
       <AdvocaatHero />
+      <TrustStrip />
       <AdvocaatExpertise />
       <AdvocaatPosities />
       <div id="aanpak">

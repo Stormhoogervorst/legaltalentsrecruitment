@@ -9,10 +9,11 @@ import { PracticeAreas } from "@/components/home/PracticeAreas";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 
-const title =
-  "Legal Talents | Specialist in Juridische Werving & Selectie";
+const title = "Specialist in Juridische Werving & Selectie";
 const description =
-  "Legal Talents verbindt vooraanstaande juristen en advocaten met de meest gerenommeerde kantoren. Persoonlijk plan op maat en altijd gericht op de lange termijn.";
+  "Legal Talents Recruitment verbindt vooraanstaande juristen en advocaten met de meest gerenommeerde kantoren. Persoonlijk plan op maat en altijd gericht op de lange termijn.";
+const socialTitle =
+  "Legal Talents | Specialist in Juridische Werving & Selectie";
 const socialImage = {
   url: "/social%20preview.png",
   width: 1024,
@@ -29,14 +30,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "nl_NL",
-    title,
+    title: socialTitle,
     description,
     siteName: "Legal Talents Recruitment",
     images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
-    title,
+    title: socialTitle,
     description,
     images: [socialImage],
   },

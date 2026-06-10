@@ -10,6 +10,7 @@ import { BedrijfsjuristMarkt } from "@/components/landing/BedrijfsjuristMarkt";
 import { BedrijfsjuristPosities } from "@/components/landing/BedrijfsjuristPosities";
 import { BedrijfsjuristResultaat } from "@/components/landing/BedrijfsjuristResultaat";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
+import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title =
   "Werving van Bedrijfsjuristen — Recruitment voor Corporates | Legal Talents";
@@ -28,6 +29,11 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: "Legal Talents Recruitment",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 
@@ -85,6 +91,7 @@ export default function BedrijfsjuristRecruitmentPage() {
   return (
     <>
       <BedrijfsjuristHero />
+      <TrustStrip />
       <BedrijfsjuristExpertise />
       <BedrijfsjuristPosities />
       <div id="aanpak">

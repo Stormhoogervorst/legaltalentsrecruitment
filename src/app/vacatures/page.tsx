@@ -34,8 +34,9 @@ export default async function VacaturesPage() {
           <SlashPill>/ VACATURES</SlashPill>
           <h1 className="display-lg mt-8 max-w-5xl">Actuele vacatures.</h1>
           <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-            Een gerichte selectie van juridische posities. Allemaal via
-            persoonlijk netwerk, geen massa-shortlist.
+            Bekijk hier onze openstaande vacatures. Wel op zoek maar staat er
+            niets tussen? Wij zetten niet alle vacatures online, altijd slim om
+            ons even te benaderen dus!
           </p>
         </SectionShell>
       </section>

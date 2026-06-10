@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ElementType, ReactNode } from "react";
+import { Fragment, type ElementType, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const flatWhiteEase = [0.22, 1, 0.36, 1] as const;
@@ -57,22 +57,26 @@ export function AnimatedHeadline({
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-        {lines.map((line) => (
-          <span
-            key={line}
-            className={cn("mb-[-0.12em] block overflow-hidden pb-[0.12em]", lineClassName)}
-          >
-            {line.split(" ").map((wordPart, index) => (
-              <motion.span
-                key={`${line}-${wordPart}-${index}`}
-                className="inline-block pr-[0.18em]"
-                variants={word}
-              >
-                {renderWord ? renderWord(wordPart, index, line) : wordPart}
-              </motion.span>
-            ))}
-          </span>
-        ))}
+        {lines.map((line) => {
+          const words = line.split(" ");
+          return (
+            <span
+              key={line}
+              className={cn("mb-[-0.12em] block overflow-hidden pb-[0.12em]", lineClassName)}
+            >
+              {words.map((wordPart, index) => (
+                <Fragment key={`${line}-${wordPart}-${index}`}>
+                  <motion.span className="inline-block" variants={word}>
+                    {renderWord ? renderWord(wordPart, index, line) : wordPart}
+                  </motion.span>
+                  {index < words.length - 1 ? (
+                    <span className="inline-block w-[0.18em]">{" "}</span>
+                  ) : null}
+                </Fragment>
+              ))}
+            </span>
+          );
+        })}
       </motion.span>
     </Tag>
   );

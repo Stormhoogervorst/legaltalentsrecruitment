@@ -15,6 +15,14 @@ const recruitmentLinks = [
     label: "Compliance officer recruitment",
     href: "/recruitment/compliance-officer",
   },
+  {
+    label: "General counsel recruitment",
+    href: "/recruitment/general-counsel",
+  },
+  {
+    label: "Legal counsel recruitment",
+    href: "/recruitment/legal-counsel",
+  },
 ];
 
 const legalLinks = [

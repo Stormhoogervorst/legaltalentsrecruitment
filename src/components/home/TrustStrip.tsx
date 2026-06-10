@@ -3,15 +3,15 @@ import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const logos = [
   {
-    src: "/logo freshfields.svg",
+    src: "/Logo Freshfields.png",
     alt: "Freshfields",
   },
   {
-    src: "/logo legal mind.svg",
+    src: "/Logo Legal Mind.png",
     alt: "Legal Mind",
   },
   {
-    src: "/logo law and pepper.svg",
+    src: "/Law&Pepper.png",
     alt: "Law & Pepper",
   },
   {

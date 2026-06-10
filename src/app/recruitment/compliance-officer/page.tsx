@@ -10,6 +10,7 @@ import { ComplianceMarkt } from "@/components/landing/ComplianceMarkt";
 import { CompliancePosities } from "@/components/landing/CompliancePosities";
 import { ComplianceResultaat } from "@/components/landing/ComplianceResultaat";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
+import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title =
   "Werving Compliance & Privacy Officers — Recruitment in Regulated Markets | Legal Talents";
@@ -28,6 +29,11 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: "Legal Talents Recruitment",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 
@@ -85,6 +91,7 @@ export default function ComplianceOfficerRecruitmentPage() {
   return (
     <>
       <ComplianceHero />
+      <TrustStrip />
       <ComplianceExpertise />
       <CompliancePosities />
       <div id="aanpak">
