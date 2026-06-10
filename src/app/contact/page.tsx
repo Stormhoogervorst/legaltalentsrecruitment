@@ -80,7 +80,7 @@ export default function ContactPage() {
                   Storm Hoogervorst
                 </p>
                 <p className="mt-1 text-sm leading-[1.5] text-foreground-muted">
-                  Eigenaar & Legal Recruiter
+                  Eigenaar
                 </p>
 
                 <address className="mt-8 space-y-4 text-sm not-italic leading-[1.6] text-foreground-secondary">
