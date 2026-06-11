@@ -18,6 +18,10 @@ const logos = [
     src: "/Simmons + Simmons logo.png",
     alt: "Simmons + Simmons",
   },
+  {
+    src: "/Logo Elexer.png",
+    alt: "Elexer Advocaten",
+  },
 ];
 
 const carouselLogoSets = [logos, logos];
