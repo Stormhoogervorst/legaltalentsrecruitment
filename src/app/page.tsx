@@ -9,7 +9,7 @@ import { PracticeAreas } from "@/components/home/PracticeAreas";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 
-const title = "Specialist in Juridische Werving & Selectie";
+const title = "Legal Talents | Legal Recruitment Agency · 40.000+ Juristen";
 const description =
   "Legal Talents Recruitment verbindt vooraanstaande juristen en advocaten met de meest gerenommeerde kantoren. Persoonlijk plan op maat en altijd gericht op de lange termijn.";
 const socialTitle =
@@ -22,7 +22,9 @@ const socialImage = {
 };
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/",
