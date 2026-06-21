@@ -3,11 +3,11 @@ import { z } from "zod";
 const linkedinUrl = z
   .string()
   .trim()
-  .min(1, "Vul je LinkedIn-profiel in.")
-  .refine((value) => z.url().safeParse(value).success, {
+  .optional()
+  .refine((value) => !value || z.url().safeParse(value).success, {
     message: "Vul een geldige URL in.",
   })
-  .refine((value) => value.toLowerCase().includes("linkedin.com"), {
+  .refine((value) => !value || value.toLowerCase().includes("linkedin.com"), {
     message: "Vul een geldige LinkedIn-URL in.",
   });
 

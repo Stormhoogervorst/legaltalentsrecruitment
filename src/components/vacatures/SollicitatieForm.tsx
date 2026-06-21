@@ -76,7 +76,7 @@ export function SollicitatieForm({
       name: values.name,
       email: values.email,
       phone: values.phone,
-      linkedin: values.linkedin,
+      linkedin: values.linkedin ?? "",
       vacatureSlug,
       vacatureTitle,
     });
@@ -201,7 +201,7 @@ export function SollicitatieForm({
 
             <div>
               <label htmlFor={`${formId}-linkedin`} className={labelClass}>
-                LinkedIn-profiel
+                LinkedIn-profiel (optioneel)
               </label>
               <input
                 id={`${formId}-linkedin`}
