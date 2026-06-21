@@ -38,6 +38,8 @@ export async function submitSollicitatie(formData: FormData) {
   try {
     const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
+    console.log("W3F key present:", Boolean(process.env.WEB3FORMS_ACCESS_KEY));
+
     if (!accessKey) {
       throw new Error("Missing Web3Forms access key.");
     }
