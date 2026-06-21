@@ -5,7 +5,7 @@
 - Turbopack als bundler
 - Tailwind CSS v4
 - MDX-bestanden in de repo voor vacaturecontent
-- Resend voor transactionele email
+- Web3Forms voor formulierinzendingen (contact en sollicitatie)
 - Deployed op Vercel
 
 ## Architectuurprincipes

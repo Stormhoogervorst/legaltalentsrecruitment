@@ -1,14 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  type BaseSyntheticEvent,
-  type ChangeEvent,
-  type DragEvent,
-  useId,
-  useRef,
-  useState,
-} from "react";
+import { type BaseSyntheticEvent, useId, useState } from "react";
 import {
   type FieldPath,
   type SubmitHandler,
@@ -16,10 +9,7 @@ import {
 } from "react-hook-form";
 import { submitSollicitatie } from "@/app/actions/sollicitatie";
 import { SlashPill } from "@/components/home/primitives";
-import { cn } from "@/lib/utils";
 import {
-  acceptedCvTypes,
-  maxCvSize,
   sollicitatieSchema,
   type SollicitatieFormValues,
 } from "@/lib/validations/sollicitatie";
@@ -35,35 +25,16 @@ type SollicitatieFormProps = {
   vacatureTitle: string;
 };
 
-function formatFileSize(size: number) {
-  return Math.round(size / 1024).toLocaleString("nl-NL");
-}
-
-function validateCvFile(file: File) {
-  if (!acceptedCvTypes.includes(file.type as (typeof acceptedCvTypes)[number])) {
-    return "Upload je CV als PDF- of Word-bestand.";
-  }
-
-  if (file.size > maxCvSize) {
-    return "Je CV mag maximaal 5MB zijn.";
-  }
-
-  return null;
-}
-
 export function SollicitatieForm({
   vacatureSlug,
   vacatureTitle,
 }: SollicitatieFormProps) {
   const formId = useId();
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
   const [serverError, setServerError] = useState<string | null>(null);
-  const [cvFile, setCvFile] = useState<File | null>(null);
-  const [cvError, setCvError] = useState<string | null>(null);
 
   const {
     formState: { errors },
@@ -83,57 +54,10 @@ export function SollicitatieForm({
     },
   });
 
-  const selectCvFile = (file: File | null) => {
-    setCvError(null);
-
-    if (!file) {
-      setCvFile(null);
-      return;
-    }
-
-    const error = validateCvFile(file);
-
-    if (error) {
-      setCvFile(null);
-      setCvError(error);
-
-      if (fileInputRef.current) {
-        fileInputRef.current.value = "";
-      }
-
-      return;
-    }
-
-    setCvFile(file);
-  };
-
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    selectCvFile(event.target.files?.[0] ?? null);
-  };
-
-  const handleDrop = (event: DragEvent<HTMLLabelElement>) => {
-    event.preventDefault();
-    selectCvFile(event.dataTransfer.files?.[0] ?? null);
-  };
-
-  const removeCvFile = () => {
-    setCvFile(null);
-    setCvError(null);
-
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
-  };
-
   const onSubmit: SubmitHandler<SollicitatieFormValues> = async (
     values,
     event?: BaseSyntheticEvent,
   ) => {
-    if (cvError) {
-      setSubmitStatus("error");
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus("idle");
     setServerError(null);
@@ -142,7 +66,7 @@ export function SollicitatieForm({
     formData.append("name", values.name);
     formData.append("email", values.email);
     formData.append("phone", values.phone);
-    formData.append("linkedin", values.linkedin ?? "");
+    formData.append("linkedin", values.linkedin);
     formData.append("vacatureSlug", vacatureSlug);
     formData.append("vacatureTitle", vacatureTitle);
     formData.append("honeypot", values.honeypot ?? "");
@@ -153,10 +77,6 @@ export function SollicitatieForm({
         : "";
 
     formData.append("website", website);
-
-    if (cvFile) {
-      formData.append("cv", cvFile, cvFile.name);
-    }
 
     const result = await submitSollicitatie(formData);
 
@@ -189,14 +109,11 @@ export function SollicitatieForm({
       <div className="rounded-[24px] bg-background-secondary p-8 text-center md:p-12">
         <SlashPill>/ BEDANKT</SlashPill>
         <h2 className="display-md mt-8 text-foreground">
-          Sollicitatie ontvangen.
+          Bedankt voor je sollicitatie!
         </h2>
         <p className="mx-auto mt-6 max-w-[540px] text-[18px] leading-[1.5] text-foreground-secondary">
-          We hebben je sollicitatie voor {vacatureTitle} ontvangen. Je krijgt
-          binnen 5 werkdagen persoonlijk bericht van ons team.
-        </p>
-        <p className="mt-4 text-sm leading-[1.5] text-foreground-muted">
-          Een bevestigingsmail staat onderweg naar je inbox.
+          We hebben je sollicitatie voor {vacatureTitle} ontvangen en nemen
+          binnen enkele werkdagen contact met je op.
         </p>
       </div>
     );
@@ -294,13 +211,13 @@ export function SollicitatieForm({
 
             <div>
               <label htmlFor={`${formId}-linkedin`} className={labelClass}>
-                LinkedIn-profiel (optioneel)
+                LinkedIn-profiel
               </label>
               <input
                 id={`${formId}-linkedin`}
                 type="url"
                 autoComplete="url"
-                placeholder="https://linkedin.com/in/..."
+                placeholder="https://www.linkedin.com/in/..."
                 aria-invalid={Boolean(errors.linkedin)}
                 aria-describedby={
                   errors.linkedin ? `${formId}-linkedin-error` : undefined
@@ -311,57 +228,6 @@ export function SollicitatieForm({
               {errors.linkedin ? (
                 <p id={`${formId}-linkedin-error`} className={errorClass}>
                   {errors.linkedin.message}
-                </p>
-              ) : null}
-            </div>
-
-            <div>
-              <label htmlFor={`${formId}-cv`} className={labelClass}>
-                CV (optioneel, PDF of Word, max 5MB)
-              </label>
-              <label
-                htmlFor={`${formId}-cv`}
-                onDragOver={(event) => event.preventDefault()}
-                onDrop={handleDrop}
-                className={cn(
-                  "flex cursor-pointer items-center justify-center rounded-[12px] border border-dashed border-[rgba(10,10,15,0.18)] bg-[#FAFAFB] p-6 text-center text-[15px] leading-[1.5] text-foreground-secondary transition-colors hover:bg-[#F4F4F6]",
-                  cvError && "border-red-300",
-                )}
-              >
-                {cvFile ? (
-                  <span className="flex flex-wrap items-center justify-center gap-2">
-                    <span>
-                      {cvFile.name} ({formatFileSize(cvFile.size)} KB)
-                    </span>
-                    <button
-                      type="button"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        removeCvFile();
-                      }}
-                      className="rounded-full px-2 py-1 text-sm font-medium text-foreground underline decoration-foreground/25 underline-offset-4 hover:decoration-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
-                    >
-                      × Verwijderen
-                    </button>
-                  </span>
-                ) : (
-                  "Klik om CV te uploaden of sleep hier"
-                )}
-              </label>
-              <input
-                ref={fileInputRef}
-                id={`${formId}-cv`}
-                name="cv"
-                type="file"
-                accept={acceptedCvTypes.join(",")}
-                onChange={handleFileChange}
-                className="sr-only"
-                aria-invalid={Boolean(cvError)}
-                aria-describedby={cvError ? `${formId}-cv-error` : undefined}
-              />
-              {cvError ? (
-                <p id={`${formId}-cv-error`} className={errorClass}>
-                  {cvError}
                 </p>
               ) : null}
             </div>

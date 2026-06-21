@@ -67,7 +67,7 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Legal Talents Recruitment",
-    url: "https://legaltalentsrecruitment.nl",
+    url: "https://www.legaltalentsrecruitment.nl",
   },
   audience: "Financiële instellingen, tech, healthcare en regulated markets",
   areaServed: "NL",

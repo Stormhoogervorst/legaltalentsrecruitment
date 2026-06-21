@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LenisProvider } from "@/components/providers/LenisProvider";
+import { organizationSchema } from "@/lib/schema";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -18,7 +19,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://legaltalentsrecruitment.nl"),
+  metadataBase: new URL("https://www.legaltalentsrecruitment.nl"),
   title: {
     default: "Legal Talents Recruitment",
     template: "%s | Legal Talents Recruitment",
@@ -46,6 +47,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema()),
+          }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${jetBrainsMono.variable} min-h-screen flex flex-col antialiased`}
       >

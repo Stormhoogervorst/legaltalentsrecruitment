@@ -2,7 +2,7 @@ import { legalPracticeAreas } from "@/lib/legal";
 import type { Vacature } from "@/lib/vacatures";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://legaltalentsrecruitment.nl";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.legaltalentsrecruitment.nl";
 
 export function organizationSchema() {
   return {
@@ -10,9 +10,29 @@ export function organizationSchema() {
     "@type": "Organization",
     name: "Legal Talents Recruitment",
     url: siteUrl,
+    logo: `${siteUrl}/logo-lt.svg`,
+    email: "storm@legal-talents.nl",
+    telephone: "+31 6 85 68 09 98",
+    vatID: "NL868649818B01",
+    taxID: "98803093",
     areaServed: "NL",
     knowsAbout: legalPracticeAreas,
-    sameAs: [],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Sint Annastraat 198-C",
+      postalCode: "6531 HZ",
+      addressLocality: "Nijmegen",
+      addressCountry: "NL",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      telephone: "+31 6 85 68 09 98",
+      email: "storm@legal-talents.nl",
+      areaServed: "NL",
+      availableLanguage: ["nl", "en"],
+    },
+    sameAs: ["https://www.linkedin.com/company/legal-talents-recruitment"],
   };
 }
 
@@ -105,6 +125,36 @@ function getEmploymentType(plaatsing: string, werkuren: string) {
   if (werkuren === "Flexibel") return "PART_TIME";
 
   return "FULL_TIME";
+}
+
+function resolveValidThrough(publishedAt: string, validThrough?: string) {
+  if (validThrough) return validThrough;
+  if (!publishedAt) return undefined;
+
+  const datePosted = new Date(publishedAt);
+  if (Number.isNaN(datePosted.getTime())) return undefined;
+
+  datePosted.setDate(datePosted.getDate() + 30);
+
+  return datePosted.toISOString().slice(0, 10);
+}
+
+function hiringOrganizationSchema(vacature: Vacature) {
+  const recruiter = {
+    "@type": "Organization",
+    name: "Legal Talents Recruitment",
+    sameAs: siteUrl,
+  };
+
+  if (vacature.opdrachtgeverVertrouwelijk || !vacature.opdrachtgeverNaam) {
+    return recruiter;
+  }
+
+  return {
+    "@type": "Organization",
+    name: vacature.opdrachtgeverNaam,
+    recruiter,
+  };
 }
 
 function escapeHtml(value: string) {
@@ -255,22 +305,21 @@ export function jobPostingSchema(vacature: Vacature) {
     title: vacature.title,
     description: jobDescriptionHtml(vacature),
     datePosted: vacature.publishedAt,
-    validThrough: vacature.validThrough || undefined,
+    validThrough: resolveValidThrough(
+      vacature.publishedAt,
+      vacature.validThrough,
+    ),
     employmentType: getEmploymentType(vacature.plaatsing, vacature.werkuren),
-    hiringOrganization: stripUndefined({
-      "@type": "Organization",
-      name: vacature.opdrachtgeverVertrouwelijk
-        ? "Vertrouwelijk"
-        : vacature.opdrachtgeverNaam,
-      sameAs: vacature.opdrachtgeverVertrouwelijk ? undefined : siteUrl,
-    }),
+    hiringOrganization: hiringOrganizationSchema(vacature),
     jobLocation: {
       "@type": "Place",
       address: stripUndefined({
         "@type": "PostalAddress",
+        streetAddress: vacature.adres?.straat || undefined,
+        postalCode: vacature.adres?.postcode || undefined,
         addressLocality: vacature.plaats,
         addressRegion: getRegionFromPlaats(vacature.plaats),
-        addressCountry: "NL",
+        addressCountry: vacature.adres?.land || "NL",
       }),
     },
     directApply: true,

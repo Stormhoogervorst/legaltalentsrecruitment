@@ -52,7 +52,7 @@ const processSteps = [
   },
 ];
 
-const organizationId = "https://legaltalentsrecruitment.nl/#organization";
+const organizationId = "https://www.legaltalentsrecruitment.nl/#organization";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -62,7 +62,7 @@ const serviceSchema = {
     "@type": "Organization",
     "@id": organizationId,
     name: "Legal Talents Recruitment",
-    url: "https://legaltalentsrecruitment.nl",
+    url: "https://www.legaltalentsrecruitment.nl",
   },
   areaServed: "NL",
   description,

@@ -88,8 +88,10 @@ export function ContactForm() {
   if (submitStatus === "success") {
     return (
       <div className="rounded-[24px] bg-background-secondary p-8">
-        <p className="display-md text-foreground">
-          Bedankt — we nemen binnen 24 uur contact op.
+        <p className="display-md text-foreground">Bericht verzonden!</p>
+        <p className="mt-4 text-[18px] leading-[1.5] text-foreground-secondary">
+          We hebben je bericht ontvangen en nemen zo snel mogelijk contact met
+          je op.
         </p>
       </div>
     );

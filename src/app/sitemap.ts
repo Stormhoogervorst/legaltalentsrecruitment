@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllVacatures } from "@/lib/vacatures";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://legaltalentsrecruitment.nl";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.legaltalentsrecruitment.nl";
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [

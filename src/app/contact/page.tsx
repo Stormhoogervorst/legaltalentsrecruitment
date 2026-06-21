@@ -43,7 +43,7 @@ export default function ContactPage() {
     "@type": "ContactPage",
     name: title,
     description,
-    url: "https://legaltalentsrecruitment.nl/contact",
+    url: "https://www.legaltalentsrecruitment.nl/contact",
     mainEntity: {
       "@type": "Organization",
       name: "Legal Talents Recruitment",

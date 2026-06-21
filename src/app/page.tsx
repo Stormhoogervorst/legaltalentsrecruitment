@@ -7,13 +7,11 @@ import { HomeCTA } from "@/components/home/HomeCTA";
 import { HowWeWork } from "@/components/home/HowWeWork";
 import { PracticeAreas } from "@/components/home/PracticeAreas";
 import { TrustStrip } from "@/components/home/TrustStrip";
-import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { websiteSchema } from "@/lib/schema";
 
-const title = "Legal Talents | Legal Recruitment Agency · 40.000+ Juristen";
+const title = "Legal Recruitment | Legal Talents | Bereik 40.000+ Juristen";
 const description =
   "Legal Talents Recruitment verbindt vooraanstaande juristen en advocaten met de meest gerenommeerde kantoren. Persoonlijk plan op maat en altijd gericht op de lange termijn.";
-const socialTitle =
-  "Legal Talents | Specialist in Juridische Werving & Selectie";
 const socialImage = {
   url: "/social%20preview.png",
   width: 1024,
@@ -32,21 +30,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "nl_NL",
-    title: socialTitle,
+    title,
     description,
     siteName: "Legal Talents Recruitment",
     images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: socialTitle,
+    title,
     description,
     images: [socialImage],
   },
 };
 
 export default function Home() {
-  const jsonLd = [organizationSchema(), websiteSchema()];
+  const jsonLd = websiteSchema();
 
   return (
     <>
