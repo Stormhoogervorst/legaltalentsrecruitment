@@ -63,10 +63,31 @@ export async function submitSollicitatie(formData: FormData) {
       }),
     });
 
-    const result = await response.json();
+    const rawBody = await response.text();
 
-    if (!response.ok || !result.success) {
-      throw new Error(result.message ?? "Web3Forms submission error.");
+    let result: { success?: boolean; message?: string } | null = null;
+
+    try {
+      result = JSON.parse(rawBody);
+    } catch (parseError) {
+      console.error("Web3Forms response was not valid JSON.", {
+        status: response.status,
+        statusText: response.statusText,
+        contentType: response.headers.get("content-type"),
+        rawBody: rawBody.slice(0, 1000),
+        parseError,
+      });
+      throw new Error(
+        `Web3Forms returned non-JSON response (status ${response.status}).`,
+      );
+    }
+
+    if (!response.ok || !result?.success) {
+      console.error("Web3Forms submission rejected.", {
+        status: response.status,
+        result,
+      });
+      throw new Error(result?.message ?? "Web3Forms submission error.");
     }
 
     return { success: true };
