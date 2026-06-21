@@ -2,17 +2,13 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type BaseSyntheticEvent, useId, useState } from "react";
-import {
-  type FieldPath,
-  type SubmitHandler,
-  useForm,
-} from "react-hook-form";
-import { submitSollicitatie } from "@/app/actions/sollicitatie";
+import { type SubmitHandler, useForm } from "react-hook-form";
 import { SlashPill } from "@/components/home/primitives";
 import {
   sollicitatieSchema,
   type SollicitatieFormValues,
 } from "@/lib/validations/sollicitatie";
+import { submitToWeb3Forms } from "@/lib/web3forms";
 
 const inputClass =
   "w-full border-0 border-b border-[rgba(10,10,15,0.18)] bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-accent";
@@ -40,7 +36,6 @@ export function SollicitatieForm({
     formState: { errors },
     handleSubmit,
     register,
-    setError,
   } = useForm<SollicitatieFormValues>({
     resolver: zodResolver(sollicitatieSchema),
     defaultValues: {
@@ -58,27 +53,33 @@ export function SollicitatieForm({
     values,
     event?: BaseSyntheticEvent,
   ) => {
+    const form = event?.currentTarget;
+    const honeypot =
+      (form instanceof HTMLFormElement
+        ? new FormData(form).get("website")?.toString()
+        : "") ||
+      values.honeypot ||
+      "";
+
+    if (honeypot.trim()) {
+      setSubmitStatus("success");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus("idle");
     setServerError(null);
 
-    const formData = new FormData();
-    formData.append("name", values.name);
-    formData.append("email", values.email);
-    formData.append("phone", values.phone);
-    formData.append("linkedin", values.linkedin);
-    formData.append("vacatureSlug", vacatureSlug);
-    formData.append("vacatureTitle", vacatureTitle);
-    formData.append("honeypot", values.honeypot ?? "");
-    const form = event?.currentTarget;
-    const website =
-      form instanceof HTMLFormElement
-        ? new FormData(form).get("website")?.toString() ?? ""
-        : "";
-
-    formData.append("website", website);
-
-    const result = await submitSollicitatie(formData);
+    const result = await submitToWeb3Forms({
+      subject: `Nieuwe sollicitatie: ${vacatureTitle} — ${values.name}`,
+      from_name: "Legal Talents Sollicitatie",
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      linkedin: values.linkedin,
+      vacatureSlug,
+      vacatureTitle,
+    });
 
     setIsSubmitting(false);
 
@@ -87,19 +88,8 @@ export function SollicitatieForm({
       return;
     }
 
-    if ("errors" in result && result.errors) {
-      Object.entries(result.errors).forEach(([field, messages]) => {
-        const message = messages?.[0];
-
-        if (message) {
-          setError(field as FieldPath<SollicitatieFormValues>, { message });
-        }
-      });
-    }
-
     setServerError(
-      result.error ??
-        "Er ging iets mis. Probeer opnieuw of mail direct naar storm@legal-talents.nl.",
+      "Er ging iets mis. Probeer opnieuw of mail direct naar storm@legal-talents.nl.",
     );
     setSubmitStatus("error");
   };

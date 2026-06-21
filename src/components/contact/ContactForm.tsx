@@ -2,18 +2,13 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import {
-  type FieldPath,
-  type SubmitHandler,
-  useForm,
-  useWatch,
-} from "react-hook-form";
-import { submitContactForm } from "@/app/actions/contact";
+import { type SubmitHandler, useForm, useWatch } from "react-hook-form";
 import {
   contactFormSchema,
   type ContactFormValues,
 } from "@/lib/validations/contact";
 import { cn } from "@/lib/utils";
+import { submitToWeb3Forms } from "@/lib/web3forms";
 
 const inputClass =
   "w-full border-0 border-b border-border-strong bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-accent";
@@ -37,7 +32,6 @@ export function ContactForm() {
     formState: { errors },
     handleSubmit,
     register,
-    setError,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -56,13 +50,25 @@ export function ContactForm() {
   const selectedType = useWatch({ control, name: "type" });
 
   const onSubmit: SubmitHandler<ContactFormValues> = async (values) => {
+    if (values.website?.trim()) {
+      setSubmitStatus("success");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    const result = await submitContactForm({
-      ...values,
-      company: values.type === "opdrachtgever" ? values.company : "",
-      honeypot: values.website,
+    const company = values.type === "opdrachtgever" ? values.company ?? "" : "";
+
+    const result = await submitToWeb3Forms({
+      subject: `Nieuw contactbericht — ${values.name}`,
+      from_name: "Legal Talents Website",
+      name: values.name,
+      email: values.email,
+      phone: values.phone ?? "",
+      company,
+      type: values.type,
+      message: values.message,
     });
 
     setIsSubmitting(false);
@@ -70,16 +76,6 @@ export function ContactForm() {
     if (result.success) {
       setSubmitStatus("success");
       return;
-    }
-
-    if ("errors" in result && result.errors) {
-      Object.entries(result.errors).forEach(([field, messages]) => {
-        const message = messages?.[0];
-
-        if (message) {
-          setError(field as FieldPath<ContactFormValues>, { message });
-        }
-      });
     }
 
     setSubmitStatus("error");
