@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const marktItems = [
@@ -38,6 +39,15 @@ export function AdvocaatMarkt() {
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
             Wij brengen deze marktkennis in bij elke opdracht — zodat jullie
             weten waar jullie staan en wat realistisch is om aan te bieden.
+            Zoekt jullie kantoor juist iemand die recht en technologie
+            combineert? Bekijk onze werving van{" "}
+            <Link
+              href="/recruitment/legal-engineer"
+              className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
+            >
+              legal engineers
+            </Link>
+            .
           </p>
         </div>
       </SectionShell>

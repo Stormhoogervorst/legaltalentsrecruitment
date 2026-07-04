@@ -23,6 +23,10 @@ const recruitmentLinks = [
     label: "Legal counsel recruitment",
     href: "/recruitment/legal-counsel",
   },
+  {
+    label: "Legal engineer recruitment",
+    href: "/recruitment/legal-engineer",
+  },
 ];
 
 const legalLinks = [

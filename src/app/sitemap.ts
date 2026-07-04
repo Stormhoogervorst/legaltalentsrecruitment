@@ -22,6 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "compliance-officer",
     "general-counsel",
     "legal-counsel",
+    "legal-engineer",
   ];
   const recruitmentPages: MetadataRoute.Sitemap = recruitmentSlugs.map((slug) => ({
     url: `${baseUrl}/recruitment/${slug}`,

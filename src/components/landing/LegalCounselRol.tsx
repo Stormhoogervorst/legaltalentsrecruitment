@@ -25,6 +25,18 @@ export function LegalCounselRol() {
             juridische kennis — de business wil oplossingen, geen lange
             memo&apos;s.
           </p>
+          <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
+            Ligt de nadruk bij jullie meer op automatisering, contract
+            lifecycle management of legal tech dan op klassiek juridisch
+            advies? Bekijk dan onze werving van{" "}
+            <Link
+              href="/recruitment/legal-engineer"
+              className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
+            >
+              legal engineers
+            </Link>
+            .
+          </p>
         </div>
       </SectionShell>
     </section>
