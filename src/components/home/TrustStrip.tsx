@@ -22,6 +22,10 @@ const logos = [
     src: "/Logo Elexer.png",
     alt: "Elexer Advocaten",
   },
+  {
+    src: "/Logo BarentsKrans.png",
+    alt: "BarentsKrans",
+  },
 ];
 
 const carouselLogoSets = [logos, logos];
