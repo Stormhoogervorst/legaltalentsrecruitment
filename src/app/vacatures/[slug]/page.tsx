@@ -180,7 +180,15 @@ export default async function VacatureDetailPage({ params }: Props) {
           </Link>
 
           <div className="mt-12">
-            <SlashPill>/ VACATURE</SlashPill>
+            <div className="flex flex-wrap items-center gap-3">
+              <SlashPill>/ VACATURE</SlashPill>
+              {vacature.onHold ? (
+                <span className="inline-flex items-center gap-2 rounded-full border border-orange-300 bg-orange-50 px-3 py-1 font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-orange-700">
+                  <span className="size-2 rounded-full bg-orange-500" aria-hidden="true" />
+                  On hold
+                </span>
+              ) : null}
+            </div>
             {rechtsgebieden ? (
               <p className="mt-6 font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-foreground-muted">
                 {rechtsgebieden}
@@ -228,6 +236,20 @@ export default async function VacatureDetailPage({ params }: Props) {
         className="scroll-mt-[100px] bg-background-secondary py-16 text-foreground md:py-[120px]"
       >
         <SectionShell className="max-w-[760px]">
+          {vacature.onHold ? (
+            <div className="mb-8 flex gap-3 rounded-[12px] border border-orange-300 bg-orange-50 p-5 text-orange-900">
+              <span
+                className="mt-1.5 size-2 shrink-0 rounded-full bg-orange-500"
+                aria-hidden="true"
+              />
+              <p className="text-[16px] leading-[1.6]">
+                Deze vacature staat tijdelijk on hold. We verwachten over enkele
+                maanden weer te starten met de werving. Laat hieronder je
+                gegevens achter, dan houden we je op de hoogte zodra de vacature
+                opnieuw opent.
+              </p>
+            </div>
+          ) : null}
           <SollicitatieForm
             vacatureSlug={slug}
             vacatureTitle={vacature.title}

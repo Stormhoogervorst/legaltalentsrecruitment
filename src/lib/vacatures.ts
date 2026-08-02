@@ -15,6 +15,7 @@ interface VacatureFrontmatter {
   title: string;
   slug: string;
   status: VacatureStatus;
+  onHold?: boolean;
   publishedAt: string;
   validThrough?: string;
   niveau: string;
@@ -73,6 +74,7 @@ function parseVacature(fileContents: string, fallbackSlug: string): Vacature {
     title: normalizeString(data.title),
     slug,
     status: normalizeString(data.status) || "draft",
+    onHold: normalizeBoolean(data.onHold),
     publishedAt: normalizeString(data.publishedAt),
     validThrough: normalizeString(data.validThrough),
     niveau: normalizeString(data.niveau),
@@ -103,6 +105,7 @@ function toListItem(vacature: Vacature): VacatureListItem {
     title: vacature.title,
     slug: vacature.slug,
     status: vacature.status,
+    onHold: vacature.onHold,
     publishedAt: vacature.publishedAt,
     validThrough: vacature.validThrough,
     niveau: vacature.niveau,

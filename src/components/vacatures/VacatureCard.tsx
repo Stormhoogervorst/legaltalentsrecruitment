@@ -20,9 +20,17 @@ export function VacatureCard({ vacature }: { vacature: VacatureListItem }) {
     >
       <article>
         <div className="flex items-center justify-between gap-6">
-          <p className="font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-foreground-muted">
-            {getVacatureCode(vacature)}
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p className="font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-foreground-muted">
+              {getVacatureCode(vacature)}
+            </p>
+            {vacature.onHold ? (
+              <span className="inline-flex items-center gap-2 rounded-full border border-orange-300 bg-orange-50 px-3 py-1 font-mono text-[11px] font-medium uppercase leading-none tracking-[0.08em] text-orange-700">
+                <span className="size-1.5 rounded-full bg-orange-500" aria-hidden="true" />
+                On hold
+              </span>
+            ) : null}
+          </div>
           <ArrowUpRight
             className="size-5 shrink-0 transition-transform duration-[280ms] ease-flatwhite group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             strokeWidth={1.5}
