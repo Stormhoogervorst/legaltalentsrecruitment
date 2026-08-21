@@ -158,7 +158,20 @@ export function Footer() {
 
       <div className="border-t border-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-sm text-foreground/60 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
-          <p>&copy; {currentYear} Legal Talents Recruitment</p>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+            <p>&copy; {currentYear} Legal Talents Recruitment</p>
+            <p>
+              Website door{" "}
+              <a
+                href="https://neqst.nl/"
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                neqst
+              </a>
+            </p>
+          </div>
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-5">
             <span>KvK 98803093</span>
             <span>BTW NL868649818B01</span>
