@@ -168,7 +168,7 @@ export function Footer() {
                 rel="noreferrer"
                 className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                neqst
+                Neqst
               </a>
             </p>
           </div>
