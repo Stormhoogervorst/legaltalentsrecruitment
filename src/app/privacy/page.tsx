@@ -23,7 +23,7 @@ export default function PrivacyPage() {
     <LegalPageLayout
       eyebrow="/ PRIVACY"
       title="Privacybeleid"
-      lastUpdated="April 2026"
+      lastUpdated="September 2026"
     >
       <p>
         Legal Talents hecht grote waarde aan de bescherming van uw
@@ -180,7 +180,34 @@ export default function PrivacyPage() {
       </ul>
       <p>U kunt cookies beheren via uw browserinstellingen.</p>
 
-      <h2>11. Beveiliging</h2>
+      <h2>11. Hoe wij websitebezoekers identificeren</h2>
+      <p>
+        Wanneer u deze website bezoekt, gebruiken wij een trackingscript,
+        cookies en vergelijkbare technologieën om informatie over uw bezoek te
+        verzamelen. Dit betreft uw IP-adres, de pagina&apos;s die u bekijkt, de
+        website waarvandaan u op onze website bent gekomen en uw geschatte
+        locatie. Wij geven deze informatie door aan onze leverancier voor
+        bezoekersidentificatie. Deze leverancier vergelijkt de informatie met
+        zijn eigen database met zakelijke contactgegevens.
+      </p>
+      <p>
+        Wanneer er een overeenkomst wordt gevonden, ontvangen wij
+        persoonsgegevens over u die u niet rechtstreeks aan ons heeft verstrekt.
+        Dit zijn doorgaans uw naam, zakelijke e-mailadres, werkgever, functie en
+        links naar professionele profielen. Wij gebruiken deze gegevens om
+        contact met u op te nemen over onze producten en diensten en slaan ze op
+        in onze verkoop- en marketingsystemen.
+      </p>
+      <p>
+        Volgens sommige privacywetgeving kan dit worden beschouwd als de
+        &quot;verkoop&quot; of het &quot;delen&quot; van uw persoonsgegevens, of
+        als gerichte reclame. U kunt dit op elk moment stoppen. U kunt ons
+        verzoeken om inzage in, correctie of verwijdering van de persoonsgegevens
+        die wij over u bewaren via{" "}
+        <a href="mailto:storm@legal-talents.nl">storm@legal-talents.nl</a>.
+      </p>
+
+      <h2>12. Beveiliging</h2>
       <p>
         Legal Talents neemt passende technische en organisatorische maatregelen,
         waaronder:
@@ -192,25 +219,25 @@ export default function PrivacyPage() {
         <li>Interne controles en audits</li>
       </ul>
 
-      <h2>12. Internationale doorgifte</h2>
+      <h2>13. Internationale doorgifte</h2>
       <p>
         Indien persoonsgegevens buiten de EU worden verwerkt, zorgen wij voor
         passende waarborgen, zoals standaardcontractbepalingen.
       </p>
 
-      <h2>13. Datalekken</h2>
+      <h2>14. Datalekken</h2>
       <p>
         Bij een (vermoeden van een) datalek verzoeken wij u dit direct te melden
         via: storm@legal-talents.nl
       </p>
 
-      <h2>14. Wijzigingen</h2>
+      <h2>15. Wijzigingen</h2>
       <p>
         Legal Talents kan dit privacybeleid wijzigen. De meest actuele versie is
         altijd beschikbaar op onze website.
       </p>
 
-      <h2>15. Contact</h2>
+      <h2>16. Contact</h2>
       <p>Voor vragen, verzoeken of klachten kunt u contact opnemen met:</p>
       <p>
         Legal Talents · storm@legal-talents.nl · +31 6 85 68 09 98 · Sint
@@ -221,7 +248,7 @@ export default function PrivacyPage() {
         Persoonsgegevens.
       </p>
 
-      <h2>16. Privacy van derden</h2>
+      <h2>17. Privacy van derden</h2>
       <p>
         Onze website kan links bevatten naar externe websites. Wij zijn niet
         verantwoordelijk voor het privacybeleid van deze derden.
