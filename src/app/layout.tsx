@@ -49,6 +49,11 @@ export default function RootLayout({
     <html lang="nl">
       <head>
         <script
+          async
+          src="https://id.getleads.io/pixels/8dc5e76d-81d7-4781-b1d6-3b585fc86382/p.js"
+          data-key="8dc5e76d-81d7-4781-b1d6-3b585fc86382"
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema()),
