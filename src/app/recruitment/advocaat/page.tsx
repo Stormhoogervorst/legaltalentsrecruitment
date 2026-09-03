@@ -12,13 +12,14 @@ import { AdvocaatResultaat } from "@/components/landing/AdvocaatResultaat";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title =
-  "Werving van Advocaten — Recruitment voor Advocatenkantoren | Legal Talents";
+const title = "Werving van advocaten | Legal Talents Recruitment";
 const description =
   "Werving van advocaten op alle niveaus — van stagiair tot partner. Specialist in juridische recruitment. Persoonlijk netwerk, no cure no pay.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/recruitment/advocaat",

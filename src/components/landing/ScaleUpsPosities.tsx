@@ -25,7 +25,7 @@ const posities = [
     index: "004",
     title: "Privacy officer / DPO",
     body: "Voor scale-ups die met veel persoonsgegevens of gereguleerde data werken.",
-    href: "/recruitment/privacy-officer",
+    href: "/recruitment/compliance-officer",
   },
 ];
 

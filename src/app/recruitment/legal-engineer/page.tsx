@@ -12,13 +12,14 @@ import { LegalEngineerResultaat } from "@/components/landing/LegalEngineerResult
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title =
-  "Werving van Legal Engineers — Recruitment voor Juridische Innovatie | Legal Talents";
+const title = "Werving legal engineers | Legal Talents Recruitment";
 const description =
   "Werving van Legal Engineers — de brug tussen recht en technologie. Specialist in juridische recruitment. Persoonlijk netwerk, no cure no pay.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/recruitment/legal-engineer",

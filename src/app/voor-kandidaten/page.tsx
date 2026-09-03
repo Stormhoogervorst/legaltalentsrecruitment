@@ -10,12 +10,14 @@ import { DiscretionPromise } from "@/components/candidates/DiscretionPromise";
 import { WhatWeOffer } from "@/components/candidates/WhatWeOffer";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
 
-const title = "Voor Juridisch Werknemers | Legal Talents";
+const title = "Voor juridisch werknemers | Legal Talents Recruitment";
 const description =
-  "Op zoek naar een nieuwe juridische functie? Wij krijgen doorlopend vacatures binnen, staat er op dit moment niks online wat aansluit op jouw wensen? Laat dan je gegevens achter zodat wij contact kunnen opnemen als wij een nieuwe passende vacature hebben.";
+  "Op zoek naar een nieuwe juridische functie? Wij krijgen doorlopend vacatures binnen. Staat er nu niks passends online? Laat je gegevens achter.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/voor-kandidaten",

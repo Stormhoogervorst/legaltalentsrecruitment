@@ -11,13 +11,14 @@ import { WhatYouGet } from "@/components/employers/WhatYouGet";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title =
-  "Voor Opdrachtgevers — Werving & Selectie van Juridisch Talent | Legal Talents";
+const title = "Werving juridisch talent | Legal Talents Recruitment";
 const description =
   "Op zoek naar juridisch talent dat blijft? Werving & selectie via persoonlijk netwerk. No cure, no pay. Wij vinden de match die inhoudelijk én cultureel past.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/voor-opdrachtgevers",

@@ -12,13 +12,14 @@ import { ComplianceResultaat } from "@/components/landing/ComplianceResultaat";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title =
-  "Werving Compliance & Privacy Officers — Recruitment in Regulated Markets | Legal Talents";
+const title = "Werving compliance officers | Legal Talents Recruitment";
 const description =
-  "Specialistische werving van compliance officers, privacy officers, DPO's en AML-specialisten. Voor financiële instellingen, tech, healthcare en regulated markets. Persoonlijk netwerk, no cure no pay.";
+  "No cure, no pay. Werving van compliance officers en AML-specialisten voor financiële instellingen, tech, healthcare en regulated markets.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/recruitment/compliance-officer",

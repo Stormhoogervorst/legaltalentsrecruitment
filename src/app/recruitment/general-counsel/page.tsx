@@ -10,12 +10,14 @@ import {
 } from "@/components/landing/GeneralCounselFAQ";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title = "General Counsel werving & recruitment | Legal Talents";
+const title = "General Counsel werving | Legal Talents Recruitment";
 const description =
-  "Een general counsel werven die juridische strategie én directieverantwoordelijkheid combineert? Wij vinden de juiste persoon via persoonlijke search. No cure, no pay.";
+  "Een general counsel werven die juridische strategie én directieverantwoordelijkheid combineert? Persoonlijke search, no cure no pay.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/recruitment/general-counsel",

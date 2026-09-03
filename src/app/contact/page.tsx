@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
-const title = "Contact — Legal Talents Recruitment";
+const title = "Contact | Legal Talents Recruitment";
 const description =
-  "Plan een vrijblijvende kennismaking. Vertrouwelijk, persoonlijk, op locatie of digitaal.";
+  "Plan een vrijblijvende kennismaking met Legal Talents — vertrouwelijk, persoonlijk, op locatie of digitaal. Wij benaderen je huidige werkgever nooit.";
 
 export const metadata: Metadata = {
   title: {

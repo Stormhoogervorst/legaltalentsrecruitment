@@ -3,9 +3,9 @@ import { PillButton, SectionShell, SlashPill } from "@/components/home/primitive
 import { VacatureCard } from "@/components/vacatures/VacatureCard";
 import { getAllVacatures } from "@/lib/vacatures";
 
-const title = "Vacatures — Juridisch Recruitment | Legal Talents";
+const title = "Juridische vacatures | Legal Talents Recruitment";
 const description =
-  "Actuele juridische vacatures: advocatuur, in-house, bedrijfsjuridisch. Vast werk via persoonlijk recruitment.";
+  "Actuele juridische vacatures in de advocatuur en in-house. Vast werk via persoonlijk recruitment, met begeleiding tot en met je eerste werkdag.";
 
 export const metadata: Metadata = {
   title: {

@@ -9,9 +9,9 @@ import { PracticeAreas } from "@/components/home/PracticeAreas";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { websiteSchema } from "@/lib/schema";
 
-const title = "Legal Recruitment | Legal Talents | Bereik 40.000+ Juristen";
+const title = "Legal recruitment 40.000+ | Legal Talents Recruitment";
 const description =
-  "Legal Talents Recruitment verbindt vooraanstaande juristen en advocaten met de meest gerenommeerde kantoren. Persoonlijk plan op maat en altijd gericht op de lange termijn.";
+  "Legal recruitment via persoonlijke search: wij verbinden advocaten en juristen met kantoren en corporates die vooruit willen. No cure, no pay.";
 const socialImage = {
   url: "/social%20preview.png",
   width: 1024,

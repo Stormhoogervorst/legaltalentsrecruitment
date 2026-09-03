@@ -4,7 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 import { SlashPill } from "@/components/home/primitives";
 
 export const metadata: Metadata = {
-  title: "Pagina niet gevonden — Legal Talents Recruitment",
+  title: {
+    absolute: "Pagina niet gevonden | Legal Talents Recruitment",
+  },
   robots: {
     index: false,
     follow: false,

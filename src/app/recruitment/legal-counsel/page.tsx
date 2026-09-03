@@ -10,12 +10,14 @@ import {
 } from "@/components/landing/LegalCounselFAQ";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title = "Legal Counsel werving & recruitment | Legal Talents";
+const title = "Legal Counsel werving | Legal Talents Recruitment";
 const description =
-  "Een legal counsel werven die de dagelijkse juridische praktijk draagt — contracten, advies en compliance? Wij vinden de juiste jurist via persoonlijke search. No cure, no pay.";
+  "Een legal counsel werven voor contracten, advies en compliance? Wij vinden de juiste jurist via persoonlijke search. No cure, no pay.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/recruitment/legal-counsel",

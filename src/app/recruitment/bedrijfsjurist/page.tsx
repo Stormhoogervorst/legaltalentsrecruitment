@@ -12,13 +12,14 @@ import { BedrijfsjuristResultaat } from "@/components/landing/BedrijfsjuristResu
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title =
-  "Werving van Bedrijfsjuristen — Recruitment voor Corporates | Legal Talents";
+const title = "Werving bedrijfsjuristen | Legal Talents Recruitment";
 const description =
   "Werving van bedrijfsjuristen en in-house counsel. Specialist in juridische recruitment voor corporates en mid-market. Persoonlijk netwerk, no cure no pay.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/recruitment/bedrijfsjurist",

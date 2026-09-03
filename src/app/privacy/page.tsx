@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
 
-const title = "Privacybeleid — Legal Talents Recruitment";
-const description = "Hoe Legal Talents persoonsgegevens verwerkt onder de AVG.";
+const title = "Privacybeleid | Legal Talents Recruitment";
+const description =
+  "Hoe Legal Talents Recruitment persoonsgegevens verwerkt onder de AVG: welke gegevens, waarvoor, hoe lang en wat jouw rechten zijn.";
 
 export const metadata: Metadata = {
   title: {

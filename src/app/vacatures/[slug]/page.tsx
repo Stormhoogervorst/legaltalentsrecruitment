@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PillButton, SectionShell, SlashPill } from "@/components/home/primitives";
 import { SollicitatieForm } from "@/components/vacatures/SollicitatieForm";
+import { formatDocumentTitle, formatVacatureDocumentTitle } from "@/lib/metadata";
 import { jobPostingSchema } from "@/lib/schema";
 import {
   getAllVacatureSlugs,
@@ -120,7 +121,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!vacature) {
     return {
-      title: "Vacature niet gevonden | Legal Talents",
+      title: {
+        absolute: formatDocumentTitle("Vacature niet gevonden"),
+      },
       robots: {
         index: false,
         follow: false,
@@ -128,7 +131,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = vacature.metaTitle || `${vacature.title} — ${vacature.plaats} | Legal Talents`;
+  const title = formatVacatureDocumentTitle(
+    vacature.title,
+    vacature.plaats,
+    vacature.metaTitle,
+  );
   const description = vacature.metaDescription || vacature.excerpt;
 
   return {

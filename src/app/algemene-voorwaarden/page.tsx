@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
 
-const title = "Algemene Voorwaarden — Legal Talents Recruitment";
-const description = "De algemene voorwaarden van Legal Talents Recruitment.";
+const title = "Algemene Voorwaarden | Legal Talents Recruitment";
+const description =
+  "De algemene voorwaarden van Legal Talents Recruitment voor werving, selectie en bemiddeling van juridisch talent.";
 
 export const metadata: Metadata = {
   title: {

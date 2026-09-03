@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Legal Talents Recruitment",
   },
   description:
-    "Legal Talents Recruitment verbindt juridische professionals met toonaangevende werkgevers in de juridische sector.",
+    "Legal Talents Recruitment verbindt juridische professionals met werkgevers die vooruit willen. Persoonlijke search, no cure no pay.",
   alternates: {
     canonical: "/",
   },

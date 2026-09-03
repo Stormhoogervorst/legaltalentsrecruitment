@@ -12,12 +12,14 @@ import {
 import { ScaleUpsCTA } from "@/components/landing/ScaleUpsCTA";
 import { TrustStrip } from "@/components/home/TrustStrip";
 
-const title = "Legal recruitment voor startups & scale-ups | Legal Talents";
+const title = "Recruitment voor scale-ups | Legal Talents Recruitment";
 const description =
-  "Je eerste jurist of general counsel werven voor je scale-up? Wij vinden juridisch talent dat past bij de snelheid en cultuur van een groeiend bedrijf. No cure, no pay.";
+  "No cure, no pay. Je eerste jurist of general counsel werven voor je scale-up? Wij vinden talent dat past bij je snelheid en cultuur.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    absolute: title,
+  },
   description,
   alternates: {
     canonical: "/scale-ups",
