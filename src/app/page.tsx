@@ -10,7 +10,7 @@ import { PracticeAreas } from "@/components/home/PracticeAreas";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { websiteSchema } from "@/lib/schema";
 
-const title = "Legal recruitment 40.000+ | Legal Talents Recruitment";
+const title = "Legal Recruitment: bereik 40.000 juristen | Legal Talents";
 const description =
   "Legal recruitment via persoonlijke search: wij verbinden advocaten en juristen met kantoren en corporates die vooruit willen. No cure, no pay.";
 const socialImage = {
