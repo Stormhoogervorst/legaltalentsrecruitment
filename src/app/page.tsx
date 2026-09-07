@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AboutShort } from "@/components/home/AboutShort";
 import { AudienceSplit } from "@/components/home/AudienceSplit";
+import { BookingSection } from "@/components/home/BookingSection";
 import { FeaturedJobs } from "@/components/home/FeaturedJobs";
 import { Hero } from "@/components/home/Hero";
 import { HomeCTA } from "@/components/home/HomeCTA";
@@ -55,6 +56,7 @@ export default function Home() {
       <PracticeAreas />
       <FeaturedJobs />
       <AboutShort />
+      <BookingSection />
       <HomeCTA />
       <script
         type="application/ld+json"

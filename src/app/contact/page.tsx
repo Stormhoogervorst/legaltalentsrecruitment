@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CalBooking } from "@/components/contact/CalBooking";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
@@ -66,60 +67,79 @@ export default function ContactPage() {
     <>
       <section className="bg-background py-16 text-foreground md:py-[120px]">
         <SectionShell>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
-            <div>
-              <SlashPill>/ CONTACT</SlashPill>
-              <h1 className="display-lg mt-8">Even contact?</h1>
-              <p className="mt-8 max-w-[480px] text-[18px] leading-[1.5] text-foreground-secondary">
-                We reageren binnen 24 uur, meestal sneller. Je bent ook altijd
-                welkom voor een kop koffie.
-              </p>
+          <div className="max-w-4xl">
+            <SlashPill>/ CONTACT</SlashPill>
+            <h1 className="display-lg mt-8">Even contact?</h1>
+            <p className="mt-8 max-w-[560px] text-[18px] leading-[1.5] text-foreground-secondary">
+              Plan direct een vrijblijvend gesprek op een moment dat jou
+              uitkomt. Vertrouwelijk, persoonlijk en zonder verplichtingen.
+            </p>
+          </div>
 
-              <div className="mt-10 rounded-[16px] bg-background-secondary p-8">
-                <p className="text-[18px] font-medium leading-[1.4]">
-                  Storm Hoogervorst
+          <div className="mx-auto mt-12 max-w-6xl overflow-hidden rounded-[24px] border border-border-light bg-background-secondary p-2 sm:p-4">
+            <CalBooking />
+          </div>
+
+          <div className="mx-auto mt-16 max-w-6xl border-t border-border-light pt-16 md:mt-24 md:pt-24">
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+              <div>
+                <SlashPill>/ DIRECT CONTACT</SlashPill>
+                <h2 className="mt-8 font-display text-3xl font-medium leading-[1.1] tracking-[-0.015em]">
+                  Liever direct contact?
+                </h2>
+                <p className="mt-5 max-w-[440px] leading-[1.6] text-foreground-secondary">
+                  We reageren binnen 24 uur, meestal sneller. Je bent ook altijd
+                  welkom voor een kop koffie.
                 </p>
-                <p className="mt-1 text-sm leading-[1.5] text-foreground-muted">
-                  Eigenaar
-                </p>
 
-                <address className="mt-8 space-y-4 text-sm not-italic leading-[1.6] text-foreground-secondary">
-                  <p>
-                    <a
-                      href="mailto:storm@legal-talents.nl"
-                      className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
-                    >
-                      storm@legal-talents.nl
-                    </a>
+                <div className="mt-8 rounded-[16px] bg-background-secondary p-8">
+                  <p className="text-[18px] font-medium leading-[1.4]">
+                    Storm Hoogervorst
                   </p>
-                  <p>
-                    <a
-                      href="tel:+31685680998"
-                      className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
-                    >
-                      +31 6 85 68 09 98
-                    </a>
+                  <p className="mt-1 text-sm leading-[1.5] text-foreground-muted">
+                    Eigenaar
                   </p>
-                  <p>
-                    Sint Annastraat 198-C
-                    <br />
-                    6531 HZ Nijmegen
-                  </p>
-                </address>
 
-                <Link
-                  href="https://www.linkedin.com/company/legal-talents-recruitment"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full border border-border-strong px-5 py-3 text-sm font-medium leading-none transition-colors hover:bg-foreground hover:text-background focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
-                >
-                  <LinkedInIcon />
-                  LinkedIn
-                </Link>
+                  <address className="mt-8 space-y-4 text-sm not-italic leading-[1.6] text-foreground-secondary">
+                    <p>
+                      <a
+                        href="mailto:storm@legal-talents.nl"
+                        className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
+                      >
+                        storm@legal-talents.nl
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        href="tel:+31685680998"
+                        className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
+                      >
+                        +31 6 85 68 09 98
+                      </a>
+                    </p>
+                    <p>
+                      Sint Annastraat 198-C
+                      <br />
+                      6531 HZ Nijmegen
+                    </p>
+                  </address>
+
+                  <Link
+                    href="https://www.linkedin.com/company/legal-talents-recruitment"
+                    className="mt-8 inline-flex items-center gap-2 rounded-full border border-border-strong px-5 py-3 text-sm font-medium leading-none transition-colors hover:bg-foreground hover:text-background focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
+                  >
+                    <LinkedInIcon />
+                    LinkedIn
+                  </Link>
+                </div>
               </div>
 
-            </div>
-
-            <div className="rounded-[24px] border border-border-light bg-background p-6 sm:p-10 lg:p-12">
-              <ContactForm />
+              <div>
+                <SlashPill>/ BERICHT STUREN</SlashPill>
+                <div className="mt-8 rounded-[24px] border border-border-light bg-background p-6 sm:p-10 lg:p-12">
+                  <ContactForm />
+                </div>
+              </div>
             </div>
           </div>
         </SectionShell>
