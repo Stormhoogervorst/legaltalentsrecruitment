@@ -8,6 +8,7 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     name: "Legal Talents Recruitment",
     url: siteUrl,
     logo: `${siteUrl}/logo-lt.svg`,

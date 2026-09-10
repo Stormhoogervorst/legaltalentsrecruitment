@@ -1,0 +1,67 @@
+---
+# Verplicht. Ontbrekende title, description, coverAlt of author laat de build falen.
+title: "Titel van het artikel"
+# Optioneel, max 60 tekens. Anders wordt title gebruikt (plus title-template).
+seoTitle: "Korte SEO-titel"
+description: "Meta description, bij voorkeur 140–155 tekens, zonder merkachtervoegsel."
+# YYYY-MM-DD
+publishedAt: "2026-09-10"
+# Optioneel. Alleen tonen als deze afwijkt van publishedAt.
+updatedAt: ""
+# loopbaan | markt | advocatuur | in-house | recruitment
+# loopbaan/advocatuur/in-house = kandidaat-CTA
+# markt/recruitment = opdrachtgever-CTA
+category: "loopbaan"
+excerpt: "Korte inleiding onder de H1, ook gebruikt op de overzichtskaart."
+# Afbeelding 1200×630 in /public/blogs/[slug]/cover.png
+coverImage: "/blogs/slug-van-het-bestand/cover.png"
+coverAlt: "Beschrijvende alt-tekst van de cover."
+# true = verborgen in productie, zichtbaar in development
+draft: true
+# storm | max
+author: "storm"
+tags:
+  - voorbeeld
+relatedPages:
+  - "/vacatures"
+  - "/recruitment/advocaat"
+# Optioneel. Lege lijst of weglaten: geen FAQ-blok en geen FAQPage JSON-LD.
+faq:
+  - q: "Voorbeeldvraag?"
+    a: "Voorbeeldantwoord in gewone taal."
+---
+
+Inleiding. Geen H1 in de body — die staat al in de pagina-header.
+
+## Eerste kop
+
+Tekst. Interne links als `[Vacatures](/vacatures)`. Externe links krijgen automatisch een nieuw tabblad.
+
+<Callout type="tip">
+  Kernpunt of praktische tip.
+</Callout>
+
+<Callout type="let-op">
+  Waarschuwing of nuance.
+</Callout>
+
+## Tweede kop
+
+- Lijstitem
+- Lijstitem
+
+## Derde kop
+
+| Kolom | Kolom |
+| --- | --- |
+| Waarde | Waarde |
+
+> Citaat of kernzin.
+
+<CtaBlock variant="kandidaat" />
+
+## Vierde kop
+
+Afbeelding in de body (optioneel):
+
+![Beschrijving](/blogs/slug-van-het-bestand/inline.webp)
