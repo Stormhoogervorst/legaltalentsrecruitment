@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const audiences = [
@@ -29,7 +30,14 @@ export function ForWhom() {
             werken.
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-            Wij werken voor partijen die kwaliteit boven kwantiteit zetten. Of
+            Als{" "}
+            <Link
+              href="/juridisch-recruiter"
+              className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
+            >
+              juridisch recruiter
+            </Link>{" "}
+            werken wij voor partijen die kwaliteit boven kwantiteit zetten. Of
             het nu om één positie of een groeiend team gaat.
           </p>
         </div>
