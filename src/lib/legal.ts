@@ -7,4 +7,8 @@ export const legalPracticeAreas = [
   "Financieel recht",
   "Intellectueel eigendomsrecht",
   "Procesrecht",
+  "Personenschade",
+  "Bouw- en energierecht",
+  "Insolventie en aanbesteding",
+  "Legal tech",
 ];
