@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AnimatedHeadline } from "@/components/home/AnimatedHeadline";
 import { PillButton, SectionShell, SlashPill } from "@/components/home/primitives";
 
@@ -20,8 +21,14 @@ export function AboutShort() {
               </p>
               <p>
                 Met een achtergrond in de juridische wereld en een breed netwerk
-                van advocaten, bedrijfsjuristen en kantoren, begeleiden wij beide
-                kanten van de tafel.
+                van advocaten, bedrijfsjuristen en kantoren werken wij als{" "}
+                <Link
+                  href="/juridisch-recruiter"
+                  className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
+                >
+                  juridisch recruiter
+                </Link>{" "}
+                voor beide kanten van de tafel.
               </p>
             </div>
             <div className="mt-10">

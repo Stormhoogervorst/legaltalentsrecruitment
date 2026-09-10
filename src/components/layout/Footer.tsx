@@ -9,6 +9,7 @@ const quickLinks = [
 ];
 
 const recruitmentLinks = [
+  { label: "Juridisch recruiter", href: "/juridisch-recruiter" },
   { label: "Advocaat recruitment", href: "/recruitment/advocaat" },
   { label: "Bedrijfsjurist recruitment", href: "/recruitment/bedrijfsjurist" },
   {
