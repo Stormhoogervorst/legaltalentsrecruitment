@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/consent/GetLeadsConsent";
 
 const quickLinks = [
   { label: "Vacatures", href: "/vacatures" },
@@ -28,11 +29,6 @@ const recruitmentLinks = [
     label: "Legal engineer recruitment",
     href: "/recruitment/legal-engineer",
   },
-];
-
-const legalLinks = [
-  { label: "Privacy", href: "/privacy" },
-  { label: "Algemene voorwaarden", href: "/algemene-voorwaarden" },
 ];
 
 function LinkedInIcon() {
@@ -180,15 +176,19 @@ export function Footer() {
               className="flex flex-wrap gap-x-5 gap-y-2"
               aria-label="Juridische links"
             >
-              {legalLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              <Link
+                href="/privacy"
+                className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Privacy
+              </Link>
+              <CookieSettingsButton />
+              <Link
+                href="/algemene-voorwaarden"
+                className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Algemene voorwaarden
+              </Link>
             </nav>
           </div>
         </div>

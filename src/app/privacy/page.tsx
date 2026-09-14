@@ -182,6 +182,7 @@ export default function PrivacyPage() {
       <p>U kunt cookies beheren via uw browserinstellingen.</p>
 
       <h2>11. Hoe wij websitebezoekers identificeren</h2>
+      {/* TODO: Verwijs in deze tekst naar de cookie-instellingen: GetLeads wordt pas geladen na toestemming (cookie lt_consent). Bezoekers kunnen hun keuze wijzigen via "Cookie-instellingen" in de footer. */}
       <p>
         Wanneer u deze website bezoekt, gebruiken wij een trackingscript,
         cookies en vergelijkbare technologieën om informatie over uw bezoek te

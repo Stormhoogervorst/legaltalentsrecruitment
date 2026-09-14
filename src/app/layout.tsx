@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { GetLeadsConsent } from "@/components/consent/GetLeadsConsent";
 import { LenisProvider } from "@/components/providers/LenisProvider";
+import { CONSENT_COOKIE_NAME, parseConsentCookie } from "@/lib/consent";
 import { organizationSchema } from "@/lib/schema";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -40,19 +43,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const initialVisitorId = parseConsentCookie(
+    cookieStore.get(CONSENT_COOKIE_NAME)?.value,
+  );
+
   return (
     <html lang="nl">
       <head>
-        <script
-          async
-          src="https://id.getleads.io/pixels/8dc5e76d-81d7-4781-b1d6-3b585fc86382/p.js"
-          data-key="8dc5e76d-81d7-4781-b1d6-3b585fc86382"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -63,11 +66,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetBrainsMono.variable} min-h-screen flex flex-col antialiased`}
       >
-        <Header />
-        <LenisProvider>
-          <main className="min-h-screen">{children}</main>
-        </LenisProvider>
-        <Footer />
+        <GetLeadsConsent initialVisitorId={initialVisitorId}>
+          <Header />
+          <LenisProvider>
+            <main className="min-h-screen">{children}</main>
+          </LenisProvider>
+          <Footer />
+        </GetLeadsConsent>
       </body>
     </html>
   );
