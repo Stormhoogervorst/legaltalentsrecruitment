@@ -100,8 +100,11 @@ export default function BedrijfsjuristRecruitmentPage() {
           eyebrow="/ AANPAK"
           title="Vier stappen. / Eén match."
           steps={processSteps}
-          footerText="Zelf bedrijfsjurist en op zoek?"
-          footerLink={{ label: "Voor kandidaten", href: "/voor-kandidaten" }}
+          footerText="Zelf bedrijfsjurist en op zoek naar een vacature?"
+          footerLink={{
+            label: "Bedrijfsjurist vacature",
+            href: "/bedrijfsjurist-vacature",
+          }}
           background="slate"
         />
       </div>

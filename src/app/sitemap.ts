@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/blogs`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/voor-opdrachtgevers`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/juridisch-recruiter`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/bedrijfsjurist-vacature`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/scale-ups`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/voor-kandidaten`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/over-ons`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
