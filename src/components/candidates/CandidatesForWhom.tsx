@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const audiences = [
@@ -30,7 +31,14 @@ export function CandidatesForWhom() {
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
             Wij werken met juridisch talent op middel- tot senior niveau, in
-            alle rechtsgebieden en functies.
+            alle rechtsgebieden en functies. Specifiek op zoek naar een{" "}
+            <Link
+              href="/bedrijfsjurist-vacature"
+              className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
+            >
+              bedrijfsjurist vacature
+            </Link>
+            ? Daarvoor hebben we een aparte pagina.
           </p>
         </div>
 
