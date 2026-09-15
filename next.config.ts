@@ -20,6 +20,18 @@ const nextConfig: NextConfig = {
         destination: "https://www.legaltalentsrecruitment.nl/:path*",
         permanent: true,
       },
+      {
+        source: "/vacatures/advocaat-huurrecht-eindhoven",
+        destination:
+          "/vacatures/advocaat-financieel-en-ondernemingsrecht-eindhoven",
+        permanent: true,
+      },
+      {
+        source: "/vacatures/advocaat-huurrecht-senior-eindhoven",
+        destination:
+          "/vacatures/advocaat-financieel-en-ondernemingsrecht-senior-eindhoven",
+        permanent: true,
+      },
     ];
   },
 };

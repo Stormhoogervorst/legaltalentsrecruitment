@@ -7,18 +7,19 @@ export interface Rechtsgebied {
 
 export const rechtsgebieden: Rechtsgebied[] = [
   { slug: "ondernemingsrecht", title: "Ondernemingsrecht", order: 1 },
-  { slug: "arbeidsrecht", title: "Arbeidsrecht", order: 2 },
-  { slug: "vastgoed-bouw", title: "Vastgoed & Bouw", order: 3 },
-  { slug: "insolventie", title: "Insolventie", order: 4 },
-  { slug: "it-privacy", title: "IT & Privacy", order: 5 },
-  { slug: "familie-erfrecht", title: "Familie- en Erfrecht", order: 6 },
-  { slug: "fiscaal-recht", title: "Fiscaal Recht", order: 7 },
-  { slug: "strafrecht", title: "Strafrecht", order: 8 },
-  { slug: "litigation", title: "Litigation", order: 9 },
-  { slug: "personenschade", title: "Personenschade", order: 10 },
-  { slug: "bouw-energierecht", title: "Bouw- en energierecht", order: 11 },
-  { slug: "aanbesteding", title: "Aanbesteding", order: 12 },
-  { slug: "legal-tech", title: "Legal tech", order: 13 },
+  { slug: "financieel-recht", title: "Financieel Recht", order: 2 },
+  { slug: "arbeidsrecht", title: "Arbeidsrecht", order: 3 },
+  { slug: "vastgoed-bouw", title: "Vastgoed & Bouw", order: 4 },
+  { slug: "insolventie", title: "Insolventie", order: 5 },
+  { slug: "it-privacy", title: "IT & Privacy", order: 6 },
+  { slug: "familie-erfrecht", title: "Familie- en Erfrecht", order: 7 },
+  { slug: "fiscaal-recht", title: "Fiscaal Recht", order: 8 },
+  { slug: "strafrecht", title: "Strafrecht", order: 9 },
+  { slug: "litigation", title: "Litigation", order: 10 },
+  { slug: "personenschade", title: "Personenschade", order: 11 },
+  { slug: "bouw-energierecht", title: "Bouw- en energierecht", order: 12 },
+  { slug: "aanbesteding", title: "Aanbesteding", order: 13 },
+  { slug: "legal-tech", title: "Legal tech", order: 14 },
 ];
 
 export function getRechtsgebiedBySlug(slug: string): Rechtsgebied | undefined {
