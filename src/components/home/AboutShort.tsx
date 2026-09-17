@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatedHeadline } from "@/components/home/AnimatedHeadline";
 import { PillButton, SectionShell, SlashPill } from "@/components/home/primitives";
@@ -6,7 +7,8 @@ export function AboutShort() {
   return (
     <section className="section-y bg-background text-foreground">
       <SectionShell>
-        <div className="max-w-4xl">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
             <SlashPill>/ OVER ONS</SlashPill>
             <AnimatedHeadline
               lines={["Een plan op maat."]}
@@ -14,7 +16,7 @@ export function AboutShort() {
             />
             <div className="mt-8 max-w-xl space-y-5 text-[16px] leading-[1.6] text-foreground-secondary">
               <p>
-                Storm en Max richtte Legal Talents Recruitment op vanuit één
+                Storm en Max richtten Legal Talents Recruitment op vanuit één
                 overtuiging: Legal Recruitment aanbieden waarbij persoonlijke
                 aanpak, vertrouwen en kwaliteit ouderwets hoog in het vaandel
                 staat.
@@ -36,6 +38,18 @@ export function AboutShort() {
                 Lees ons verhaal →
               </PillButton>
             </div>
+          </div>
+
+          <div className="relative aspect-square overflow-hidden rounded-[24px] bg-background-secondary">
+            <Image
+              src="/stock-foto-1.webp"
+              alt="Twee mensen in gesprek aan tafel bij Legal Talents Recruitment"
+              fill
+              sizes="(max-width: 1024px) 92vw, 540px"
+              quality={90}
+              className="object-cover"
+            />
+          </div>
         </div>
       </SectionShell>
     </section>

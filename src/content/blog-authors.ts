@@ -4,7 +4,7 @@ export const blogAuthors = {
     name: "Storm Hoogervorst",
     role: "Eigenaar",
     bio: "Bouwde eerst ervaring op in recruitment en richtte daarna samen met Max Legal Talents op. Bouwt slimme processen met AI zodat er meer tijd is voor wat telt: in gesprek met mensen.",
-    image: "/storm-v2.jpg",
+    image: "/foto-storm.webp",
     linkedin: "https://www.linkedin.com/in/storm-hoogervorst-a35066290/",
   },
   max: {
@@ -12,7 +12,7 @@ export const blogAuthors = {
     name: "Max Endrizzi",
     role: "Eigenaar",
     bio: "Richtte Legal Talents op met één overtuiging: recruitment in de juridische sector kan scherper. Minder schuiven met CV's, meer focus op matches die ook over drie jaar nog kloppen.",
-    image: "/max-v2.png",
+    image: "/foto-max.webp",
     linkedin: "https://www.linkedin.com/in/max-endrizzi-135610305/",
   },
 } as const;

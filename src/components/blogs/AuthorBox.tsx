@@ -10,8 +10,9 @@ export function AuthorBox({ author }: { author: BlogAuthor }) {
         <Image
           src={author.image}
           alt={`Portretfoto van ${author.name}`}
-          width={96}
-          height={96}
+          width={160}
+          height={160}
+          quality={90}
           className="size-20 shrink-0 rounded-full object-cover"
         />
         <div>

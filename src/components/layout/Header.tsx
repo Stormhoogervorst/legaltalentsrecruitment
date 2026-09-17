@@ -33,8 +33,8 @@ export function Header() {
     getScrollSnapshot,
     () => false,
   );
-  const isHomepage = pathname === "/";
-  const isOverHero = isHomepage && !isScrolled;
+  const isHeroPage = pathname === "/" || pathname === "/over-ons";
+  const isOverHero = isHeroPage && !isScrolled;
 
   return (
     <>
@@ -126,7 +126,7 @@ export function Header() {
           </div>
         </div>
       </header>
-      {!isHomepage ? <div className="h-20" aria-hidden="true" /> : null}
+      {!isHeroPage ? <div className="h-20" aria-hidden="true" /> : null}
       <MobileMenu
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}

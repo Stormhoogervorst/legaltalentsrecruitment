@@ -68,10 +68,10 @@ export function AnimatedHeadline({
                 <Fragment key={`${line}-${wordPart}-${index}`}>
                   <motion.span className="inline-block" variants={word}>
                     {renderWord ? renderWord(wordPart, index, line) : wordPart}
+                    {index < words.length - 1 ? (
+                      <span className="inline-block w-[0.18em]">{" "}</span>
+                    ) : null}
                   </motion.span>
-                  {index < words.length - 1 ? (
-                    <span className="inline-block w-[0.18em]">{" "}</span>
-                  ) : null}
                 </Fragment>
               ))}
             </span>

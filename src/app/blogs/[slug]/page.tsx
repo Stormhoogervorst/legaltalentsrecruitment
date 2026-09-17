@@ -126,8 +126,9 @@ export default async function BlogArticlePage({ params }: Props) {
               <Image
                 src={author.image}
                 alt={`Portretfoto van ${author.name}`}
-                width={40}
-                height={40}
+                width={80}
+                height={80}
+                quality={90}
                 className="size-10 rounded-full object-cover"
               />
               <div>

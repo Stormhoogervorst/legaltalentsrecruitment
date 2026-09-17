@@ -67,17 +67,17 @@ export default function ContactPage() {
     <>
       <section className="bg-background py-16 text-foreground md:py-[120px]">
         <SectionShell>
-          <div className="max-w-4xl">
+          <div className="mx-auto w-full max-w-6xl">
             <SlashPill>/ CONTACT</SlashPill>
-            <h1 className="display-lg mt-8">Even contact?</h1>
-            <p className="mt-8 max-w-[560px] text-[18px] leading-[1.5] text-foreground-secondary">
+            <h1 className="display-lg mt-8 text-left">Even contact?</h1>
+            <p className="mt-8 max-w-[560px] text-left text-[18px] leading-[1.5] text-foreground-secondary">
               Plan direct een vrijblijvend gesprek op een moment dat jou
               uitkomt. Vertrouwelijk, persoonlijk en zonder verplichtingen.
             </p>
-          </div>
 
-          <div className="mx-auto mt-12 max-w-6xl overflow-hidden rounded-[24px] border border-border-light bg-background-secondary p-2 sm:p-4">
-            <CalBooking />
+            <div className="mt-12 overflow-hidden rounded-[24px] border border-border-light bg-background-secondary p-2 sm:p-4">
+              <CalBooking />
+            </div>
           </div>
 
           <div className="mx-auto mt-16 max-w-6xl border-t border-border-light pt-16 md:mt-24 md:pt-24">

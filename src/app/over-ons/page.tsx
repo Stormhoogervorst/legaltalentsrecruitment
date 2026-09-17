@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AboutCTA } from "@/components/about/AboutCTA";
+import { OurStory } from "@/components/about/OurStory";
 import { PageHero } from "@/components/about/PageHero";
 import { TeamGrid } from "@/components/about/TeamGrid";
 import { Values } from "@/components/about/Values";
@@ -7,7 +8,7 @@ import { aboutPageSchema } from "@/lib/schema";
 
 const title = "Over Ons | Legal Talents Recruitment";
 const description =
-  "Een compact team van juristen en recruiters dat legal recruitment persoonlijker en kwalitatiever maakt. Kwaliteit en vertrouwen boven volume.";
+  "Opgericht door twee rechtenstudenten, nu specialist in legal recruitment voor starters, medior en senior juristen én legal tech. Maak kennis met ons.";
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +25,11 @@ export const metadata: Metadata = {
     description,
     siteName: "Legal Talents Recruitment",
   },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function AboutPage() {
@@ -32,6 +38,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero />
+      <OurStory />
       <TeamGrid />
       <Values />
       <AboutCTA />

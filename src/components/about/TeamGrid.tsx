@@ -7,7 +7,7 @@ const team = [
     role: "Eigenaar",
     education: "LLM International and European Business Law",
     bio: "Richtte Legal Talents op met één overtuiging: recruitment in de juridische sector kan scherper. Minder schuiven met CV's, meer focus op matches die ook over drie jaar nog kloppen.",
-    image: "/max-v2.png",
+    image: "/foto-max.webp",
     linkedin: "https://www.linkedin.com/in/max-endrizzi-135610305/",
   },
   {
@@ -15,7 +15,7 @@ const team = [
     role: "Eigenaar",
     education: "LLB European Law School, BBA Business Economics",
     bio: "Bouwde eerst ervaring op in recruitment en richtte daarna samen met Max Legal Talents op. Bouwt slimme processen met AI zodat er meer tijd is voor wat telt: in gesprek met mensen.",
-    image: "/storm-v2.jpg",
+    image: "/foto-storm.webp",
     linkedin: "https://www.linkedin.com/in/storm-hoogervorst-a35066290/",
   },
   {
@@ -23,7 +23,7 @@ const team = [
     role: "Strategic Business Partner",
     education: "LLM Ondernemingsrecht",
     bio: "Koos na zijn master Ondernemingsrecht bewust niet voor de advocatuur maar voor het bedrijfsleven. Eerst als Head of Sales and Strategy, nu bij Legal Talents waar hij de strategie uitbouwt.",
-    image: "/justin-v2.jpg",
+    image: "/foto-justin.webp",
     linkedin: "https://www.linkedin.com/in/justin-bigler-0322071b4/",
   },
 ];
@@ -73,8 +73,10 @@ export function TeamGrid() {
               <Image
                 src={member.image}
                 alt={`Portretfoto van ${member.name}, ${member.role} bij Legal Talents`}
-                width={400}
-                height={400}
+                width={800}
+                height={800}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
+                quality={90}
                 className="aspect-square w-full object-cover"
                 priority={index < 2}
               />
