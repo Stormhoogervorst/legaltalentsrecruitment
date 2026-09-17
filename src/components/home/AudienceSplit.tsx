@@ -1,10 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { AnimatedHeadline } from "@/components/home/AnimatedHeadline";
-import { ArrowText, SectionShell, SlashPill } from "@/components/home/primitives";
+import { PillButton, SectionShell, SlashPill } from "@/components/home/primitives";
 
 const flatWhiteEase = [0.16, 1, 0.3, 1] as const;
 
@@ -19,7 +17,7 @@ const cards = [
       "Discreet en vertrouwelijk",
     ],
     href: "/voor-kandidaten",
-    link: "Meer voor kandidaten",
+    link: "Meer voor kandidaten →",
   },
   {
     index: "/ 002",
@@ -31,7 +29,7 @@ const cards = [
       "Fee bij plaatsing",
     ],
     href: "/voor-opdrachtgevers",
-    link: "Meer voor opdrachtgevers",
+    link: "Meer voor opdrachtgevers →",
   },
 ];
 
@@ -93,15 +91,14 @@ export function AudienceSplit() {
                   </li>
                 ))}
               </ul>
-              <Link
-                href={item.href}
-                className="mt-auto pt-10 text-foreground transition-colors hover:text-foreground-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4 focus-visible:ring-offset-background-secondary"
-              >
-                <ArrowText>
+              <div className="mt-auto pt-10">
+                <PillButton
+                  href={item.href}
+                  className="bg-foreground-secondary text-background"
+                >
                   {item.link}
-                  <ArrowUpRight className="size-4" strokeWidth={1.5} />
-                </ArrowText>
-              </Link>
+                </PillButton>
+              </div>
             </motion.article>
           ))}
         </motion.div>

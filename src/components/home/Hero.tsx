@@ -42,7 +42,7 @@ export function Hero() {
 
         <AnimatedHeadline
           as="h1"
-          lines={["Specialist in legal recruitment."]}
+          lines={["Legal recruitment voor de lange termijn."]}
           className="mt-8 max-w-5xl font-display text-[clamp(2.75rem,7vw,5.25rem)] font-light leading-[1.02] tracking-[-0.02em]"
         />
 

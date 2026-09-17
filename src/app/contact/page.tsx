@@ -69,7 +69,7 @@ export default function ContactPage() {
         <SectionShell>
           <div className="mx-auto w-full max-w-6xl">
             <SlashPill>/ CONTACT</SlashPill>
-            <h1 className="display-lg mt-8 text-left">Even contact?</h1>
+            <h1 className="display-lg mt-8 text-left">Iets inplannen?</h1>
             <p className="mt-8 max-w-[560px] text-left text-[18px] leading-[1.5] text-foreground-secondary">
               Plan direct een vrijblijvend gesprek op een moment dat jou
               uitkomt. Vertrouwelijk, persoonlijk en zonder verplichtingen.

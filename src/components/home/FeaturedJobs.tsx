@@ -1,12 +1,5 @@
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { AnimatedHeadline } from "@/components/home/AnimatedHeadline";
-import {
-  ArrowText,
-  PillButton,
-  SectionShell,
-  SlashPill,
-} from "@/components/home/primitives";
+import { PillButton, SectionShell, SlashPill } from "@/components/home/primitives";
 import { getAllVacatures } from "@/lib/vacatures";
 
 export async function FeaturedJobs() {
@@ -39,15 +32,14 @@ export async function FeaturedJobs() {
               <p className="mt-8 line-clamp-3 text-[16px] leading-[1.6] text-foreground-secondary">
                 {vacature.excerpt}
               </p>
-              <Link
-                href={`/vacatures/${vacature.slug}`}
-                className="mt-auto pt-10 text-foreground transition-colors hover:text-foreground-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4 focus-visible:ring-offset-background"
-              >
-                <ArrowText>
-                  Bekijk vacature
-                  <ArrowUpRight className="size-4" strokeWidth={1.5} />
-                </ArrowText>
-              </Link>
+              <div className="mt-auto pt-10">
+                <PillButton
+                  href={`/vacatures/${vacature.slug}`}
+                  className="bg-foreground-secondary text-background"
+                >
+                  Bekijk vacature →
+                </PillButton>
+              </div>
             </article>
           ))}
         </div>

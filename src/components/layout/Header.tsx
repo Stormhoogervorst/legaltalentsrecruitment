@@ -79,7 +79,7 @@ export function Header() {
                 activeClassName={
                   isOverHero
                     ? "text-white underline decoration-white/80 decoration-[1.5px] underline-offset-[6px]"
-                    : "text-foreground underline decoration-accent decoration-[1.5px] underline-offset-[6px]"
+                    : "text-foreground underline decoration-foreground-secondary decoration-[1.5px] underline-offset-[6px]"
                 }
                 inactiveClassName={
                   isOverHero

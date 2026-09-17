@@ -54,8 +54,8 @@ export default function Home() {
       <AudienceSplit />
       <HowWeWork />
       <PracticeAreas />
-      <FeaturedJobs />
       <AboutShort />
+      <FeaturedJobs />
       <BookingSection />
       <HomeCTA />
       <script
