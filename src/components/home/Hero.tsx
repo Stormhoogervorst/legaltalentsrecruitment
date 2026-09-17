@@ -18,7 +18,7 @@ export function Hero() {
         fill
         preload
         sizes="100vw"
-        className="-z-30 object-cover object-[22%_40%] lg:object-[center_42%]"
+        className="-z-30 object-cover object-[22%_40%] max-lg:origin-top max-lg:scale-[1.35] lg:object-[center_42%]"
       />
       <div
         className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.48)_48%,rgba(0,0,0,0.08)_100%)]"
