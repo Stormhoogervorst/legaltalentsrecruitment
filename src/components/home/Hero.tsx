@@ -13,12 +13,12 @@ export function Hero() {
   return (
     <section className="relative isolate min-h-[92svh] overflow-hidden bg-dark-background text-white">
       <Image
-        src="/hero.webp"
+        src="/stock-foto-6.webp"
         alt=""
         fill
         preload
         sizes="100vw"
-        className="-z-30 object-cover"
+        className="-z-30 object-cover object-[22%_40%] lg:object-[center_42%]"
       />
       <div
         className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.48)_48%,rgba(0,0,0,0.08)_100%)]"
