@@ -83,8 +83,8 @@ export function OurStory() {
 
           <div className="relative aspect-square overflow-hidden rounded-[24px] bg-background">
             <Image
-              src="/legal-talents-ons-verhaal.jpg"
-              alt="Juridische professionals in overleg bij Legal Talents Recruitment"
+              src="/stock-foto-5.jpg"
+              alt="Jong talent in gesprek met Legal Talents Recruitment"
               fill
               sizes="(max-width: 1024px) 92vw, 540px"
               quality={90}
