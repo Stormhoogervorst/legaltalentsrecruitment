@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BlogCard } from "@/components/blogs/BlogCard";
-import { PillButton, SectionShell, SlashPill } from "@/components/home/primitives";
+import { PillButton, SectionShell } from "@/components/home/primitives";
 import { getAllPosts } from "@/lib/blogs";
 
 const title = "Blog | Legal Talents";
@@ -88,8 +88,7 @@ export default async function BlogsPage() {
     <>
       <section className="bg-background pt-16 pb-8 text-foreground md:pt-[120px] md:pb-12">
         <SectionShell>
-          <SlashPill>/ BLOG</SlashPill>
-          <h1 className="display-lg mt-8 max-w-5xl">
+          <h1 className="display-lg max-w-5xl">
             Inzichten uit
             <br />
             de praktijk.

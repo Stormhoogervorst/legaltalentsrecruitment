@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { SlashPill } from "@/components/home/primitives";
 
 export const metadata: Metadata = {
   title: {
@@ -44,9 +43,7 @@ export default function NotFound() {
   return (
     <section className="bg-background py-[160px] text-foreground">
       <div className="mx-auto max-w-[640px] px-5 text-center md:px-0">
-        <SlashPill>/ 404</SlashPill>
-
-        <h1 className="display-lg mt-8">Deze pagina / bestaat niet.</h1>
+        <h1 className="display-lg">Deze pagina / bestaat niet.</h1>
 
         <p className="mx-auto mt-6 max-w-[480px] text-[18px] leading-[1.6] text-foreground-muted">
           De link die je volgde is verbroken of de pagina is verplaatst. Geen

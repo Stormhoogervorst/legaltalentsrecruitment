@@ -1,15 +1,13 @@
 import {
   PillButton,
   SectionShell,
-  SlashPill,
 } from "@/components/home/primitives";
 
 export function BedrijfsjuristHero() {
   return (
     <section className="bg-background py-16 text-foreground md:py-[120px]">
       <SectionShell>
-        <SlashPill>/ RECRUITMENT — IN-HOUSE LEGAL</SlashPill>
-        <h1 className="display-lg mt-8 max-w-5xl">
+        <h1 className="display-lg max-w-5xl">
           Werving van <br />
           bedrijfsjuristen.
         </h1>

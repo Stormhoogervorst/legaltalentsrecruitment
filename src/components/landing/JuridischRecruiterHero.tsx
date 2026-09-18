@@ -1,15 +1,13 @@
 import {
   PillButton,
   SectionShell,
-  SlashPill,
 } from "@/components/home/primitives";
 
 export function JuridischRecruiterHero() {
   return (
     <section className="bg-background py-16 text-foreground md:py-[120px]">
       <SectionShell>
-        <SlashPill>/ JURIDISCH RECRUITER</SlashPill>
-        <h1 className="display-lg mt-8 max-w-5xl">Juridisch recruiter</h1>
+        <h1 className="display-lg max-w-5xl">Juridisch recruiter</h1>
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
           Juridisch recruiter voor advocatenkantoren en inhouse legal teams.
           Wij werven gespecialiseerd talent — van advocaat tot general counsel

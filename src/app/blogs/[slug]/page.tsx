@@ -112,8 +112,7 @@ export default async function BlogArticlePage({ params }: Props) {
           <ArticleBreadcrumbs title={post.title} />
 
           <div className="mt-10">
-            <SlashPill>/ {category.title}</SlashPill>
-            <h1 className="mt-6 break-words hyphens-auto font-display text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
+            <h1 className="break-words hyphens-auto font-display text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
               {post.title}
             </h1>
             <p className="mt-6 max-w-[68ch] text-[18px] leading-[1.5] text-foreground-secondary">

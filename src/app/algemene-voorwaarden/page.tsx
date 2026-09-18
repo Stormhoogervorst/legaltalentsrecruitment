@@ -22,7 +22,6 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <LegalPageLayout
-      eyebrow="/ VOORWAARDEN"
       title="Algemene Voorwaarden"
       lastUpdated="April 2026"
     >

@@ -1,17 +1,14 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowLeft } from "lucide-react";
-import { SlashPill } from "@/components/home/primitives";
 
 type LegalPageLayoutProps = {
-  eyebrow: string;
   title: string;
   lastUpdated: string;
   children: ReactNode;
 };
 
 export function LegalPageLayout({
-  eyebrow,
   title,
   lastUpdated,
   children,
@@ -20,8 +17,7 @@ export function LegalPageLayout({
     <section className="bg-background px-5 py-12 text-foreground md:py-24">
       <div className="mx-auto max-w-[760px]">
         <header className="mb-16">
-          <SlashPill>{eyebrow}</SlashPill>
-          <h1 className="display-md mt-4">{title}</h1>
+          <h1 className="display-md">{title}</h1>
           <p className="mt-4 text-sm leading-[1.5] text-foreground-muted">
             Laatst bijgewerkt: {lastUpdated}
           </p>

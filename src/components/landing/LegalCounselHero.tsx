@@ -2,18 +2,16 @@ import { AnimatedHeadline } from "@/components/home/AnimatedHeadline";
 import {
   PillButton,
   SectionShell,
-  SlashPill,
 } from "@/components/home/primitives";
 
 export function LegalCounselHero() {
   return (
     <section className="bg-background py-16 text-foreground md:py-[120px]">
       <SectionShell>
-        <SlashPill>/ RECRUITMENT — LEGAL COUNSEL</SlashPill>
         <AnimatedHeadline
           as="h1"
           lines={["Werving van", "legal counsel."]}
-          className="display-lg mt-8 max-w-5xl"
+          className="display-lg max-w-5xl"
         />
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
           De legal counsel is de jurist die het werk doet. Contracten opstellen

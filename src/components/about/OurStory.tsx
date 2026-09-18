@@ -51,6 +51,11 @@ export function OurStory() {
             </h2>
             <div className="mt-8 max-w-xl space-y-5 text-[16px] leading-[1.6] text-foreground-secondary">
               <p>
+                Een jong en fris boutique legal recruitment agency waarbij
+                kwaliteit, service en vertrouwen nog ouderwets hoog in het
+                vaandel staan.
+              </p>
+              <p>
                 Legal Talents begon met twee rechtenstudenten en één overtuiging:
                 de beste manier om talent aan je organisatie te verbinden, is dat
                 talent al kennen vóórdat het afstudeert. Wij zaten zelf tussen de

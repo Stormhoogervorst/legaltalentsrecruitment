@@ -187,15 +187,12 @@ export default async function VacatureDetailPage({ params }: Props) {
           </Link>
 
           <div className="mt-12">
-            <div className="flex flex-wrap items-center gap-3">
-              <SlashPill>/ VACATURE</SlashPill>
-              {vacature.onHold ? (
-                <span className="inline-flex items-center gap-2 rounded-full border border-orange-300 bg-orange-50 px-3 py-1 font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-orange-700">
-                  <span className="size-2 rounded-full bg-orange-500" aria-hidden="true" />
-                  On hold
-                </span>
-              ) : null}
-            </div>
+            {vacature.onHold ? (
+              <span className="inline-flex items-center gap-2 rounded-full border border-orange-300 bg-orange-50 px-3 py-1 font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-orange-700">
+                <span className="size-2 rounded-full bg-orange-500" aria-hidden="true" />
+                On hold
+              </span>
+            ) : null}
             {rechtsgebieden ? (
               <p className="mt-6 font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-foreground-muted">
                 {rechtsgebieden}

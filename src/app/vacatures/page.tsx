@@ -31,8 +31,7 @@ export default async function VacaturesPage() {
     <>
       <section className="bg-background pt-16 pb-8 text-foreground md:pt-[120px] md:pb-12">
         <SectionShell>
-          <SlashPill>/ VACATURES</SlashPill>
-          <h1 className="display-lg mt-8 max-w-5xl">Actuele vacatures.</h1>
+          <h1 className="display-lg max-w-5xl">Actuele vacatures.</h1>
           <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
             Bekijk hier onze openstaande vacatures. Wel op zoek maar staat er
             niets tussen? Wij zetten niet alle vacatures online, altijd slim om

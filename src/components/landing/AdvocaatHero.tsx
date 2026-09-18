@@ -1,15 +1,10 @@
-import {
-  PillButton,
-  SectionShell,
-  SlashPill,
-} from "@/components/home/primitives";
+import { PillButton, SectionShell } from "@/components/home/primitives";
 
 export function AdvocaatHero() {
   return (
     <section className="bg-background py-16 text-foreground md:py-[120px]">
       <SectionShell>
-        <SlashPill>/ RECRUITMENT — ADVOCATUUR</SlashPill>
-        <h1 className="display-lg mt-8 max-w-5xl">
+        <h1 className="display-lg max-w-5xl">
           Werving van <br />
           advocaten.
         </h1>
