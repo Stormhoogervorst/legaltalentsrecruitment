@@ -5,7 +5,7 @@ import {
   employersFaqItems,
 } from "@/components/employers/EmployersFAQ";
 import { ForWhom } from "@/components/employers/ForWhom";
-import { EmployersHero } from "@/components/employers/EmployersHero";
+import { PageHero } from "@/components/shared/PageHero";
 import { Pricing } from "@/components/employers/Pricing";
 import { WhatYouGet } from "@/components/employers/WhatYouGet";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
@@ -96,7 +96,13 @@ const faqPageSchema = {
 export default function EmployersPage() {
   return (
     <>
-      <EmployersHero />
+      <PageHero
+        variant="light"
+        title={["Legal recruitment", "voor de lange termijn."]}
+        subtitle="Geen vijftig cv's, maar drie kandidaten die passen. Korte lijnen, en je betaalt pas bij een succesvolle plaatsing."
+        ctaLabel="Plan een intake →"
+        ctaHref="/contact"
+      />
       <TrustStrip />
       <MeanderingProcess
         eyebrow="/ AANPAK"

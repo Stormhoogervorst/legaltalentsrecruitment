@@ -5,7 +5,7 @@ import {
   candidatesFaqItems,
 } from "@/components/candidates/CandidatesFAQ";
 import { CandidatesForWhom } from "@/components/candidates/CandidatesForWhom";
-import { CandidatesHero } from "@/components/candidates/CandidatesHero";
+import { PageHero } from "@/components/shared/PageHero";
 import { DiscretionPromise } from "@/components/candidates/DiscretionPromise";
 import { WhatWeOffer } from "@/components/candidates/WhatWeOffer";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
@@ -87,7 +87,13 @@ const faqPageSchema = {
 export default function CandidatesPage() {
   return (
     <>
-      <CandidatesHero />
+      <PageHero
+        variant="light"
+        title="Wij helpen jou verder."
+        subtitle="Een gesprek hoeft niet meteen tot iets te leiden. Wij denken vrijblijvend mee over jouw loopbaan — vertrouwelijk, zonder druk, en alleen met functies die echt passen."
+        ctaLabel="Plan een gesprek →"
+        ctaHref="/contact"
+      />
       <MeanderingProcess
         eyebrow="/ ONZE AANPAK"
         title="Vier stappen. / Geen druk."

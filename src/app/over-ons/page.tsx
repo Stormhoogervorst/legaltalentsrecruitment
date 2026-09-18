@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { AboutCTA } from "@/components/about/AboutCTA";
 import { OurStory } from "@/components/about/OurStory";
-import { PageHero } from "@/components/about/PageHero";
+import { AboutPageHero } from "@/components/about/PageHero";
 import { TeamGrid } from "@/components/about/TeamGrid";
 import { Values } from "@/components/about/Values";
 import { aboutPageSchema } from "@/lib/schema";
@@ -37,7 +37,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <PageHero />
+      <AboutPageHero />
       <OurStory />
       <TeamGrid />
       <Values />
