@@ -4,7 +4,7 @@ const mismatchCards = [
   {
     index: "001",
     title: "De juiste mensen solliciteren niet",
-    body: "Op partner-, counsel- en GC-niveau zit talent zelden op een jobboard. Ze zijn in functie, vaak tevreden genoeg, en bewegen alleen als een headhunter juridisch hen persoonlijk en discreet benadert — met een rol die écht iets toevoegt.",
+    body: "Op partner-, counsel- en GC-niveau zit talent zelden op een jobboard. Ze zijn in functie, vaak tevreden genoeg, en bewegen alleen als een headhunter juridisch talent persoonlijk en discreet benadert — met een rol die écht iets toevoegt.",
   },
   {
     index: "002",
