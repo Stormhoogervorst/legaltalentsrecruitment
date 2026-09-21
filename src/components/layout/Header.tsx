@@ -16,7 +16,7 @@ const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
-const IMAGE_HERO_PATHS = new Set(["/", "/over-ons"]);
+const IMAGE_HERO_PATHS = new Set(["/", "/over-ons", "/headhunter-advocatuur"]);
 const LIGHT_HERO_PATHS = new Set([
   "/voor-opdrachtgevers",
   "/voor-kandidaten",
