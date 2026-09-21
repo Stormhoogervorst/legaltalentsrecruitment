@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const mismatchCards = [
@@ -22,18 +23,31 @@ export function HeadhunterAdvocatuurProbleem() {
   return (
     <section className="bg-background-secondary py-16 text-foreground md:py-24">
       <SectionShell>
-        <SlashPill>/ HET PROBLEEM</SlashPill>
-        <div className="mt-8 max-w-[720px]">
-          <h2 className="display-md">
-            Senior legal talent reageert{" "}
-            <span className="block">niet op een vacature.</span>
-          </h2>
-          <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-            Een advertentie of een generalistisch bureau bereikt zelden de
-            mensen die je écht nodig hebt. Partners, counsel en general
-            counsel zijn passief — en een slordige search is morgen gesprek
-            van de dag.
-          </p>
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <SlashPill>/ HET PROBLEEM</SlashPill>
+            <h2 className="display-md mt-8 max-w-[720px]">
+              Senior legal talent reageert{" "}
+              <span className="block">niet op een vacature.</span>
+            </h2>
+            <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
+              Een advertentie of een generalistisch bureau bereikt zelden de
+              mensen die je écht nodig hebt. Partners, counsel en general
+              counsel zijn passief — en een slordige search is morgen gesprek
+              van de dag.
+            </p>
+          </div>
+
+          <div className="relative aspect-square overflow-hidden rounded-[24px] bg-background">
+            <Image
+              src="/stock foto 3.jpg"
+              alt="Twee mensen in gesprek aan tafel bij Legal Talents Recruitment"
+              fill
+              sizes="(max-width: 1024px) 92vw, 540px"
+              quality={90}
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">

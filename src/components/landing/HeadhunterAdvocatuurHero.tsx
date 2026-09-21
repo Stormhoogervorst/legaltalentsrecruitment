@@ -1,27 +1,31 @@
-import {
-  PillButton,
-  SectionShell,
-} from "@/components/home/primitives";
+import { PageHero, type PageHeroImage } from "@/components/shared/PageHero";
+
+const image = {
+  mobile: {
+    avif: "/hero-mobile.avif",
+    webp: "/hero-mobile.webp",
+    width: 1280,
+    height: 2389,
+  },
+  desktop: {
+    avif: "/stock-foto-6.avif",
+    webp: "/stock-foto-6.webp",
+    width: 2560,
+    height: 1707,
+  },
+  imgClassName:
+    "size-full object-cover max-md:object-[center_28%] md:object-[22%_40%] md:max-lg:origin-top md:max-lg:scale-[1.35] lg:object-[center_42%]",
+} satisfies PageHeroImage;
 
 export function HeadhunterAdvocatuurHero() {
   return (
-    <section className="bg-background py-16 text-foreground md:py-[120px]">
-      <SectionShell>
-        <h1 className="display-lg max-w-5xl">Headhunter advocatuur</h1>
-        <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-          Headhunter voor advocatenkantoren en inhouse legal teams die senior
-          juridisch talent zoeken. Legal Talents is een juridisch headhunter:
-          legal executive search voor rollen die niet via een advertentie
-          binnenkomen — partner, counsel, general counsel, senior
-          bedrijfsjurist. Discreet, landelijk, no cure no pay.
-        </p>
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <PillButton href="/contact">Plan een gesprek →</PillButton>
-          <PillButton href="/voor-kandidaten" variant="secondary">
-            Voor kandidaten
-          </PillButton>
-        </div>
-      </SectionShell>
-    </section>
+    <PageHero
+      variant="image"
+      title="Headhunter advocatuur"
+      subtitle="Headhunter voor advocatenkantoren en inhouse legal teams die senior juridisch talent zoeken. Legal Talents is een juridisch headhunter: legal executive search voor rollen die niet via een advertentie binnenkomen — partner, counsel, general counsel, senior bedrijfsjurist. Discreet, landelijk, no cure no pay."
+      ctaLabel="Plan een gesprek →"
+      ctaHref="/contact"
+      image={image}
+    />
   );
 }
