@@ -2,6 +2,10 @@ export const CONSENT_COOKIE_NAME = "lt_consent";
 export const CONSENT_COOKIE_VERSION = 1;
 export const CONSENT_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 182;
 
+export const GETLEADS_PIXEL_SRC =
+  "https://id.getleads.io/pixels/8dc5e76d-81d7-4781-b1d6-3b585fc86382/p.js";
+export const GETLEADS_PIXEL_KEY = "8dc5e76d-81d7-4781-b1d6-3b585fc86382";
+
 export type VisitorIdChoice = "granted" | "denied";
 export type VisitorIdStatus = VisitorIdChoice | null;
 

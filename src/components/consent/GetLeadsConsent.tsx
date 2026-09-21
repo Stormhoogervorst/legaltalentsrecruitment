@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import Link from "next/link";
 import {
   createContext,
@@ -18,10 +17,6 @@ import {
   type VisitorIdStatus,
 } from "@/lib/consent";
 
-const GETLEADS_PIXEL_SRC =
-  "https://id.getleads.io/pixels/8dc5e76d-81d7-4781-b1d6-3b585fc86382/p.js";
-const GETLEADS_PIXEL_KEY = "8dc5e76d-81d7-4781-b1d6-3b585fc86382";
-
 const KNOWN_GETLEADS_COOKIE_NAMES = [
   "_delivr",
   "_delivr_id",
@@ -38,7 +33,11 @@ const KNOWN_GETLEADS_COOKIE_NAMES = [
 const GETLEADS_COOKIE_NAME_PATTERN = /getleads|delivr|sitelytics|dlvr/i;
 
 const bannerButtonClassName =
-  "inline-flex min-h-11 w-full cursor-pointer items-center justify-center rounded-full border border-border-strong bg-background px-4 text-sm font-medium leading-none text-foreground transition-colors hover:bg-background-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background";
+  "inline-flex min-h-11 w-full cursor-pointer items-center justify-center rounded-full px-4 text-sm font-medium leading-none transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background";
+
+const allowButtonClassName = `${bannerButtonClassName} border border-foreground bg-foreground text-background hover:bg-foreground/90`;
+
+const denyButtonClassName = `${bannerButtonClassName} border border-border-strong bg-background text-foreground hover:bg-background-secondary`;
 
 type ConsentContextValue = {
   bannerOpen: boolean;
@@ -102,17 +101,6 @@ function deleteKnownGetLeadsCookies() {
   }
 }
 
-function GetLeadsPixel() {
-  return (
-    <Script
-      id="getleads-pixel"
-      src={GETLEADS_PIXEL_SRC}
-      strategy="afterInteractive"
-      data-key={GETLEADS_PIXEL_KEY}
-    />
-  );
-}
-
 function VisitorIdBanner({
   onAllow,
   onDeny,
@@ -125,19 +113,19 @@ function VisitorIdBanner({
       id="visitor-id-consent-banner"
       role="region"
       aria-label="Toestemming voor bezoekersherkenning"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border-light bg-background"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-border-light bg-background shadow-[0_-8px_32px_rgba(0,0,0,0.08)]"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 sm:px-8 sm:py-5 md:flex-row md:items-end md:justify-between md:gap-8 lg:px-12">
         <div className="max-w-2xl">
           <h2 className="text-base font-medium leading-snug text-foreground">
-            Mogen we herkennen van welke organisatie je komt?
+            Mogen we zien van welke organisatie je komt?
           </h2>
           <p className="mt-2 text-sm leading-6 text-foreground-secondary">
-            Met je toestemming gebruiken we GetLeads. Dat kan herkennen van
-            welke organisatie je bezoek komt en soms wie je bent, zoals je naam,
-            zakelijk e-mailadres en functie. We gebruiken dit om contact met je
-            op te nemen. Zonder toestemming werkt de site gewoon. Lees meer in
-            ons{" "}
+            Dan kunnen we je sneller helpen met de juiste vacatures of
+            kandidaten. Hiervoor gebruiken we GetLeads, dat je organisatie
+            herkent en soms ook je naam, zakelijk e-mailadres en functie. We
+            gebruiken dit alleen om contact met je op te nemen. Zonder
+            toestemming werkt de site precies zo goed. Lees meer in ons{" "}
             <Link
               href="/privacy"
               className="underline underline-offset-4 transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -150,17 +138,17 @@ function VisitorIdBanner({
         <div className="grid grid-cols-2 gap-3 md:w-80 md:shrink-0">
           <button
             type="button"
-            className={bannerButtonClassName}
-            onClick={onAllow}
-          >
-            Toestaan
-          </button>
-          <button
-            type="button"
-            className={bannerButtonClassName}
+            className={denyButtonClassName}
             onClick={onDeny}
           >
             Niet toestaan
+          </button>
+          <button
+            type="button"
+            className={allowButtonClassName}
+            onClick={onAllow}
+          >
+            Toestaan
           </button>
         </div>
       </div>
@@ -189,6 +177,11 @@ export function GetLeadsConsent({
 
       if (previous === "granted" && next === "denied") {
         deleteKnownGetLeadsCookies();
+      }
+
+      // The pixel is server-rendered into <head> from the consent cookie, so
+      // starting or stopping it needs a fresh document.
+      if (previous !== next && (previous === "granted" || next === "granted")) {
         window.location.reload();
         return;
       }
@@ -210,7 +203,6 @@ export function GetLeadsConsent({
   return (
     <ConsentContext.Provider value={value}>
       {children}
-      {visitorId === "granted" ? <GetLeadsPixel /> : null}
       {bannerOpen ? (
         <VisitorIdBanner
           onAllow={() => choose("granted")}

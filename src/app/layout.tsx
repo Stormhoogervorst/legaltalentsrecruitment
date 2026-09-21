@@ -4,7 +4,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { GetLeadsConsent } from "@/components/consent/GetLeadsConsent";
 import { LenisProvider } from "@/components/providers/LenisProvider";
-import { CONSENT_COOKIE_NAME, parseConsentCookie } from "@/lib/consent";
+import {
+  CONSENT_COOKIE_NAME,
+  GETLEADS_PIXEL_KEY,
+  GETLEADS_PIXEL_SRC,
+  parseConsentCookie,
+} from "@/lib/consent";
 import { organizationSchema } from "@/lib/schema";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -62,6 +67,9 @@ export default async function RootLayout({
             __html: JSON.stringify(organizationSchema()),
           }}
         />
+        {initialVisitorId === "granted" ? (
+          <script async src={GETLEADS_PIXEL_SRC} data-key={GETLEADS_PIXEL_KEY} />
+        ) : null}
       </head>
       <body
         className={`${inter.variable} ${jetBrainsMono.variable} min-h-screen flex flex-col antialiased`}
