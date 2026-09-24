@@ -16,6 +16,8 @@ const blogsDirectory = path.join(process.cwd(), "content", "blogs");
 const WORDS_PER_MINUTE = 200;
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.legaltalentsrecruitment.nl";
+export const DEFAULT_BLOG_HERO_IMAGE = "/foto-lopend.jpg";
+export const DEFAULT_BLOG_HERO_ALT = "Juridisch professional onderweg";
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 
 const isoDate = z
@@ -47,6 +49,15 @@ const blogFrontmatterSchema = z.object({
   excerpt: z.string().trim().min(1),
   coverImage: optionalAsset,
   coverAlt: optionalAsset,
+  image: z.preprocess(
+    (value) => (value === "" || value == null ? undefined : value),
+    z
+      .string()
+      .trim()
+      .min(1)
+      .startsWith("/", "image moet een pad in /public zijn")
+      .optional(),
+  ),
   draft: z.boolean().default(false),
   author: z.string().trim().min(1, "author is verplicht"),
   tags: z.array(z.string().trim().min(1)).default([]),
@@ -340,6 +351,10 @@ export function resolveBlogAuthor(post: BlogPost): BlogAuthor | null {
 
 export function blogAuthorLabel(post: BlogPost): string {
   return resolveBlogAuthor(post)?.name ?? post.author;
+}
+
+export function blogHeroImage(post: Pick<BlogPost, "image">): string {
+  return post.image ?? DEFAULT_BLOG_HERO_IMAGE;
 }
 
 export function resolveBlogCategoryTitle(category: string): string {
