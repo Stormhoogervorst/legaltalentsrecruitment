@@ -17,7 +17,10 @@ import {
   blogBreadcrumbSchema,
   blogFaqSchema,
   blogAuthorLabel,
+  blogHeroImage,
   blogPostingSchema,
+  DEFAULT_BLOG_HERO_ALT,
+  DEFAULT_BLOG_HERO_IMAGE,
   formatBlogDate,
   getAllPostSlugs,
   getPostBySlug,
@@ -54,6 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = post.seoTitle ?? post.title;
   const canonical = `${siteUrl}/blogs/${slug}`;
   const modified = post.updatedAt ?? post.publishedAt;
+  const heroImage = blogHeroImage(post);
   const socialImage = post.coverImage
     ? {
         url: post.coverImage,
@@ -61,7 +65,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         height: 630,
         alt: post.coverAlt ?? post.title,
       }
-    : undefined;
+    : {
+        url: heroImage,
+        alt:
+          heroImage === DEFAULT_BLOG_HERO_IMAGE
+            ? DEFAULT_BLOG_HERO_ALT
+            : post.title,
+      };
 
   return {
     title,
@@ -80,13 +90,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       modifiedTime: modified,
       authors: [blogAuthorLabel(post)],
       tags: post.tags,
-      images: socialImage ? [socialImage] : undefined,
+      images: [socialImage],
     },
     twitter: {
-      card: socialImage ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title,
       description: post.description,
-      images: socialImage ? [socialImage] : undefined,
+      images: [socialImage],
     },
   };
 }
@@ -103,76 +113,52 @@ export default async function BlogArticlePage({ params }: Props) {
   const category = getBlogCategory(post.category);
   const headings = getPostHeadings(post.body);
   const relatedPosts = await getRelatedPosts(post, 3);
-  const showUpdated =
-    Boolean(post.updatedAt) && post.updatedAt !== post.publishedAt;
   const faqJsonLd = blogFaqSchema(post);
+  const heroImage = blogHeroImage(post);
+  const heroIsDefault = heroImage === DEFAULT_BLOG_HERO_IMAGE;
 
   return (
     <>
-      <section className="bg-background pt-16 pb-8 text-foreground md:pt-[120px] md:pb-12">
-        <SectionShell className="max-w-[920px]">
-          <ArticleBreadcrumbs title={post.title} />
-
-          <div className="mt-10">
-            <h1 className="break-words hyphens-auto font-display text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
+      <section className="relative min-h-[50vh] overflow-hidden text-white md:min-h-[60vh]">
+        <Image
+          src={heroImage}
+          alt={heroIsDefault ? DEFAULT_BLOG_HERO_ALT : ""}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          role={heroIsDefault ? undefined : "presentation"}
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/20"
+          aria-hidden="true"
+        />
+        <div className="relative flex min-h-[50vh] items-end md:min-h-[60vh]">
+          <SectionShell className="w-full pb-10 pt-8 md:pb-14">
+            <p className="font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-white">
+              / Blog
+            </p>
+            <div className="mt-5">
+              <ArticleBreadcrumbs title={post.title} tone="light" />
+            </div>
+            <h1 className="mt-5 max-w-[20ch] break-words font-display text-[clamp(2.25rem,4vw,4.5rem)] font-medium leading-[1.05] tracking-tight">
               {post.title}
             </h1>
-            <p className="mt-6 max-w-[68ch] text-[18px] leading-[1.5] text-foreground-secondary">
-              {post.excerpt}
+            <p className="mt-5 max-w-[60ch] text-[18px] leading-[1.5] text-white/85">
+              {post.description}
             </p>
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-3">
-              {author ? (
-                <Image
-                  src={author.image}
-                  alt={`Portretfoto van ${author.name}`}
-                  width={80}
-                  height={80}
-                  quality={90}
-                  className="size-10 rounded-full object-cover"
-                />
-              ) : null}
-              <div>
-                <p className="text-sm font-medium leading-[1.4]">
-                  {blogAuthorLabel(post)}
-                </p>
-                {author ? (
-                  <p className="text-sm leading-[1.4] text-foreground-muted">
-                    {author.role}
-                  </p>
-                ) : null}
-              </div>
-            </div>
-            <p className="text-sm leading-[1.5] text-foreground-muted">
+            <p className="mt-6 text-sm leading-[1.5] text-white/70">
+              {blogAuthorLabel(post)}
+              <span aria-hidden="true"> · </span>
               {formatBlogDate(post.publishedAt)}
-              {showUpdated ? (
-                <>
-                  <span aria-hidden="true"> · </span>
-                  Bijgewerkt op {formatBlogDate(post.updatedAt!)}
-                </>
-              ) : null}
               <span aria-hidden="true"> · </span>
               {post.readingTime} min lezen
             </p>
-          </div>
-
-          {post.coverImage ? (
-            <Image
-              src={post.coverImage}
-              alt={post.coverAlt ?? post.title}
-              width={1200}
-              height={630}
-              priority
-              sizes="(min-width: 920px) 920px, 100vw"
-              className="mt-10 h-auto w-full rounded-[16px]"
-            />
-          ) : null}
-        </SectionShell>
+          </SectionShell>
+        </div>
       </section>
 
-      <section className="bg-background pt-8 pb-16 text-foreground md:pt-12 md:pb-24">
+      <section className="bg-background pt-12 pb-16 text-foreground md:pt-20 md:pb-24">
         <SectionShell>
           <div
             className={
