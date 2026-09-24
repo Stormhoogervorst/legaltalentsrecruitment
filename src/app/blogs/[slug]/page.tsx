@@ -119,43 +119,42 @@ export default async function BlogArticlePage({ params }: Props) {
 
   return (
     <>
-      <section className="relative min-h-[50vh] overflow-hidden text-white md:min-h-[60vh]">
+      <section className="relative flex min-h-[50vh] flex-col justify-end overflow-hidden pt-20 text-white md:min-h-[60vh]">
         <Image
           src={heroImage}
           alt={heroIsDefault ? DEFAULT_BLOG_HERO_ALT : ""}
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover md:object-[70%_center]"
           role={heroIsDefault ? undefined : "presentation"}
         />
+        <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/20"
+          className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(0_0_0/0.6),rgb(0_0_0/0.35)_50%,rgb(0_0_0/0.85))]"
           aria-hidden="true"
         />
-        <div className="relative flex min-h-[50vh] items-end md:min-h-[60vh]">
-          <SectionShell className="w-full pb-10 pt-8 md:pb-14">
-            <p className="font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-white">
-              / Blog
-            </p>
-            <div className="mt-5">
-              <ArticleBreadcrumbs title={post.title} tone="light" />
-            </div>
-            <h1 className="mt-5 max-w-[20ch] break-words font-display text-[clamp(2.25rem,4vw,4.5rem)] font-medium leading-[1.05] tracking-tight">
-              {post.title}
-            </h1>
-            <p className="mt-5 max-w-[60ch] text-[18px] leading-[1.5] text-white/85">
-              {post.description}
-            </p>
-            <p className="mt-6 text-sm leading-[1.5] text-white/70">
-              {blogAuthorLabel(post)}
-              <span aria-hidden="true"> · </span>
-              {formatBlogDate(post.publishedAt)}
-              <span aria-hidden="true"> · </span>
-              {post.readingTime} min lezen
-            </p>
-          </SectionShell>
-        </div>
+        <SectionShell className="relative w-full pb-10 pt-8 md:pb-14">
+          <p className="font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-white">
+            / Blog
+          </p>
+          <div className="mt-5">
+            <ArticleBreadcrumbs title={post.title} tone="light" />
+          </div>
+          <h1 className="mt-5 max-w-[20ch] break-words font-display text-[clamp(2.25rem,4vw,4.5rem)] font-medium leading-[1.05] tracking-tight">
+            {post.title}
+          </h1>
+          <p className="mt-5 max-w-[60ch] text-[18px] leading-[1.5] text-white/85">
+            {post.description}
+          </p>
+          <p className="mt-6 text-sm leading-[1.5] text-white/70">
+            {blogAuthorLabel(post)}
+            <span aria-hidden="true"> · </span>
+            {formatBlogDate(post.publishedAt)}
+            <span aria-hidden="true"> · </span>
+            {post.readingTime} min lezen
+          </p>
+        </SectionShell>
       </section>
 
       <section className="bg-background pt-12 pb-16 text-foreground md:pt-20 md:pb-24">
