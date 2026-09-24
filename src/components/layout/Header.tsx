@@ -28,28 +28,36 @@ function subscribeToScroll(callback: () => void) {
 }
 
 function getScrollSnapshot() {
-  return window.scrollY > 16;
+  return window.scrollY;
 }
 
-export function Header() {
+type HeaderVariant = "default" | "transparent";
+
+export function Header({ variant = "default" }: { variant?: HeaderVariant }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isScrolled = useSyncExternalStore(
+  const scrollY = useSyncExternalStore(
     subscribeToScroll,
     getScrollSnapshot,
-    () => false,
+    () => 0,
   );
+  const isTransparentVariant = variant === "transparent";
+  const isScrolled = scrollY > (isTransparentVariant ? 80 : 16);
   const isImageHeroPage = IMAGE_HERO_PATHS.has(pathname);
   const isLightHeroPage = LIGHT_HERO_PATHS.has(pathname);
   const isHeroPage = isImageHeroPage || isLightHeroPage;
-  const isOverImageHero = isImageHeroPage && !isScrolled;
+  const isOverImageHero = !isTransparentVariant && isImageHeroPage && !isScrolled;
+  const isOverTransparentHero = isTransparentVariant && !isScrolled;
+  const isLightOnDark = isOverImageHero || isOverTransparentHero;
 
   return (
     <>
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-30 border-b transition-[background-color,border-color,color] duration-300",
-          isOverImageHero
+          isTransparentVariant &&
+            "shadow-none transition-[background-color,border-color,color] duration-200",
+          isLightOnDark
             ? "border-transparent bg-transparent text-white"
             : "border-foreground/10 bg-background/90 text-foreground backdrop-blur-xl",
         )}
@@ -59,7 +67,7 @@ export function Header() {
             href="/"
             className={cn(
               "inline-flex size-14 shrink-0 items-center justify-center transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-2",
-              isOverImageHero
+              isLightOnDark
                 ? "focus-visible:ring-offset-transparent"
                 : "focus-visible:ring-offset-background",
             )}
@@ -83,16 +91,23 @@ export function Header() {
               <ActiveLink
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+                className={cn(
+                  "text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4 focus-visible:ring-offset-background",
+                  isTransparentVariant && "duration-200",
+                )}
                 activeClassName={
-                  isOverImageHero
+                  isOverTransparentHero
                     ? "text-white underline decoration-white/80 decoration-[1.5px] underline-offset-[6px]"
-                    : "text-foreground underline decoration-foreground-secondary decoration-[1.5px] underline-offset-[6px]"
+                    : isOverImageHero
+                      ? "text-white underline decoration-white/80 decoration-[1.5px] underline-offset-[6px]"
+                      : "text-foreground underline decoration-foreground-secondary decoration-[1.5px] underline-offset-[6px]"
                 }
                 inactiveClassName={
-                  isOverImageHero
-                    ? "text-white/75 hover:text-white"
-                    : "text-foreground/65 hover:text-foreground"
+                  isOverTransparentHero
+                    ? "text-white hover:text-white/70"
+                    : isOverImageHero
+                      ? "text-white/75 hover:text-white"
+                      : "text-foreground/65 hover:text-foreground"
                 }
               >
                 {item.label}
@@ -105,7 +120,9 @@ export function Header() {
               href="/contact"
               className={cn(
                 "hidden rounded-full px-5 py-3 text-sm font-medium transition-[transform,box-shadow] duration-[240ms] hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 md:inline-flex",
-                isOverImageHero
+                isTransparentVariant &&
+                  "transition-[transform,box-shadow,background-color,color] duration-200",
+                isLightOnDark
                   ? "bg-white text-foreground hover:shadow-[0_0_0_2px_rgba(255,255,255,0.25)] focus-visible:ring-white focus-visible:ring-offset-transparent"
                   : "bg-foreground text-background hover:shadow-[0_0_0_2px_rgba(88,125,254,0.20)] focus-visible:ring-foreground focus-visible:ring-offset-background",
               )}
@@ -119,7 +136,8 @@ export function Header() {
               aria-expanded={isMenuOpen}
               className={cn(
                 "inline-flex size-11 items-center justify-center rounded-full border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 md:hidden",
-                isOverImageHero
+                isTransparentVariant && "duration-200",
+                isLightOnDark
                   ? "border-white/30 text-white hover:bg-white/10 focus-visible:ring-white focus-visible:ring-offset-transparent"
                   : "border-foreground/10 text-foreground hover:bg-foreground/5 focus-visible:ring-foreground focus-visible:ring-offset-background",
               )}
@@ -134,7 +152,9 @@ export function Header() {
           </div>
         </div>
       </header>
-      {!isHeroPage ? <div className="h-20" aria-hidden="true" /> : null}
+      {!isHeroPage && !isTransparentVariant ? (
+        <div className="h-20" aria-hidden="true" />
+      ) : null}
       <MobileMenu
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { Header } from "@/components/layout/Header";
+import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { GetLeadsConsent } from "@/components/consent/GetLeadsConsent";
 import { LenisProvider } from "@/components/providers/LenisProvider";
@@ -75,7 +75,7 @@ export default async function RootLayout({
         className={`${inter.variable} ${jetBrainsMono.variable} min-h-screen flex flex-col antialiased`}
       >
         <GetLeadsConsent initialVisitorId={initialVisitorId}>
-          <Header />
+          <SiteHeader />
           <LenisProvider>
             <main className="min-h-screen">{children}</main>
           </LenisProvider>
