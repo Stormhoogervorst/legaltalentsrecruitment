@@ -3,7 +3,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
-import { ArticleBreadcrumbs } from "@/components/blogs/ArticleBreadcrumbs";
 import { ArticleFaq } from "@/components/blogs/ArticleFaq";
 import { AudienceCta } from "@/components/blogs/AudienceCta";
 import { AuthorBox } from "@/components/blogs/AuthorBox";
@@ -138,15 +137,9 @@ export default async function BlogArticlePage({ params }: Props) {
           <p className="font-mono text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-white">
             / Blog
           </p>
-          <div className="mt-5">
-            <ArticleBreadcrumbs title={post.title} tone="light" />
-          </div>
           <h1 className="mt-5 max-w-[20ch] break-words font-display text-[clamp(2.25rem,4vw,4.5rem)] font-medium leading-[1.05] tracking-tight">
             {post.title}
           </h1>
-          <p className="mt-5 max-w-[60ch] text-[18px] leading-[1.5] text-white/85">
-            {post.description}
-          </p>
           <p className="mt-6 text-sm leading-[1.5] text-white/70">
             {blogAuthorLabel(post)}
             <span aria-hidden="true"> · </span>
