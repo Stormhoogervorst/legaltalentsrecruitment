@@ -16,6 +16,7 @@ import { getBlogCategory } from "@/content/blog-categories";
 import {
   blogBreadcrumbSchema,
   blogFaqSchema,
+  blogAuthorLabel,
   blogPostingSchema,
   formatBlogDate,
   getAllPostSlugs,
@@ -53,13 +54,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = post.seoTitle ?? post.title;
   const canonical = `${siteUrl}/blogs/${slug}`;
   const modified = post.updatedAt ?? post.publishedAt;
-  const author = resolveBlogAuthor(post);
-  const socialImage = {
-    url: post.coverImage,
-    width: 1200,
-    height: 630,
-    alt: post.coverAlt,
-  };
+  const socialImage = post.coverImage
+    ? {
+        url: post.coverImage,
+        width: 1200,
+        height: 630,
+        alt: post.coverAlt ?? post.title,
+      }
+    : undefined;
 
   return {
     title,
@@ -76,15 +78,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Legal Talents Recruitment",
       publishedTime: post.publishedAt,
       modifiedTime: modified,
-      authors: [author.name],
+      authors: [blogAuthorLabel(post)],
       tags: post.tags,
-      images: [socialImage],
+      images: socialImage ? [socialImage] : undefined,
     },
     twitter: {
-      card: "summary_large_image",
+      card: socialImage ? "summary_large_image" : "summary",
       title,
       description: post.description,
-      images: [socialImage],
+      images: socialImage ? [socialImage] : undefined,
     },
   };
 }
@@ -122,19 +124,25 @@ export default async function BlogArticlePage({ params }: Props) {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <div className="flex items-center gap-3">
-              <Image
-                src={author.image}
-                alt={`Portretfoto van ${author.name}`}
-                width={80}
-                height={80}
-                quality={90}
-                className="size-10 rounded-full object-cover"
-              />
+              {author ? (
+                <Image
+                  src={author.image}
+                  alt={`Portretfoto van ${author.name}`}
+                  width={80}
+                  height={80}
+                  quality={90}
+                  className="size-10 rounded-full object-cover"
+                />
+              ) : null}
               <div>
-                <p className="text-sm font-medium leading-[1.4]">{author.name}</p>
-                <p className="text-sm leading-[1.4] text-foreground-muted">
-                  {author.role}
+                <p className="text-sm font-medium leading-[1.4]">
+                  {blogAuthorLabel(post)}
                 </p>
+                {author ? (
+                  <p className="text-sm leading-[1.4] text-foreground-muted">
+                    {author.role}
+                  </p>
+                ) : null}
               </div>
             </div>
             <p className="text-sm leading-[1.5] text-foreground-muted">
@@ -150,15 +158,17 @@ export default async function BlogArticlePage({ params }: Props) {
             </p>
           </div>
 
-          <Image
-            src={post.coverImage}
-            alt={post.coverAlt}
-            width={1200}
-            height={630}
-            priority
-            sizes="(min-width: 920px) 920px, 100vw"
-            className="mt-10 h-auto w-full rounded-[16px]"
-          />
+          {post.coverImage ? (
+            <Image
+              src={post.coverImage}
+              alt={post.coverAlt ?? post.title}
+              width={1200}
+              height={630}
+              priority
+              sizes="(min-width: 920px) 920px, 100vw"
+              className="mt-10 h-auto w-full rounded-[16px]"
+            />
+          ) : null}
         </SectionShell>
       </section>
 
@@ -188,7 +198,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
               <div className="max-w-[68ch]">
                 <ArticleFaq items={post.faq} />
-                <AuthorBox author={author} />
+                {author ? <AuthorBox author={author} /> : null}
 
                 <section className="mt-16">
                   <SlashPill>/ VERDER</SlashPill>
