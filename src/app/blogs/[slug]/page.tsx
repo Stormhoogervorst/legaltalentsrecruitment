@@ -21,7 +21,6 @@ import {
   blogPostingSchema,
   DEFAULT_BLOG_HERO_ALT,
   DEFAULT_BLOG_HERO_IMAGE,
-  DEFAULT_BLOG_HERO_IMAGE_POSITION,
   formatBlogDate,
   getAllPostSlugs,
   getPostBySlug,
@@ -121,7 +120,8 @@ export default async function BlogArticlePage({ params }: Props) {
 
   return (
     <>
-      <section className="relative flex min-h-[50vh] flex-col justify-end overflow-hidden pt-20 text-white md:min-h-[60vh] lg:min-h-[70vh]">
+      <section className="blog-hero relative flex min-h-[50vh] flex-col justify-end overflow-hidden pt-20 text-white md:min-h-[60vh] lg:min-h-[70vh]">
+        <style>{`@media (min-width: 64rem) { .blog-hero { min-height: 70vh; } }`}</style>
         <Image
           src={heroImage}
           alt={heroIsDefault ? DEFAULT_BLOG_HERO_ALT : ""}
@@ -129,11 +129,7 @@ export default async function BlogArticlePage({ params }: Props) {
           priority
           sizes="100vw"
           className="object-cover object-[center_15%]"
-          style={
-            heroImagePosition === DEFAULT_BLOG_HERO_IMAGE_POSITION
-              ? undefined
-              : { objectPosition: heroImagePosition }
-          }
+          style={{ objectPosition: heroImagePosition }}
           role={heroIsDefault ? undefined : "presentation"}
         />
         <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
