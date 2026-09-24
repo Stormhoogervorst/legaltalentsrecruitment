@@ -18,6 +18,7 @@ const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.legaltalentsrecruitment.nl";
 export const DEFAULT_BLOG_HERO_IMAGE = "/foto-lopend.jpg";
 export const DEFAULT_BLOG_HERO_ALT = "Juridisch professional onderweg";
+export const DEFAULT_BLOG_HERO_IMAGE_POSITION = "center 15%";
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 
 const isoDate = z
@@ -57,6 +58,10 @@ const blogFrontmatterSchema = z.object({
       .min(1)
       .startsWith("/", "image moet een pad in /public zijn")
       .optional(),
+  ),
+  imagePosition: z.preprocess(
+    (value) => (value === "" || value == null ? undefined : value),
+    z.string().trim().min(1).default(DEFAULT_BLOG_HERO_IMAGE_POSITION),
   ),
   draft: z.boolean().default(false),
   author: z.string().trim().min(1, "author is verplicht"),
@@ -355,6 +360,12 @@ export function blogAuthorLabel(post: BlogPost): string {
 
 export function blogHeroImage(post: Pick<BlogPost, "image">): string {
   return post.image ?? DEFAULT_BLOG_HERO_IMAGE;
+}
+
+export function blogHeroImagePosition(
+  post: Pick<BlogPost, "imagePosition">,
+): string {
+  return post.imagePosition || DEFAULT_BLOG_HERO_IMAGE_POSITION;
 }
 
 export function resolveBlogCategoryTitle(category: string): string {
