@@ -7,6 +7,7 @@ const quickLinks = [
   { label: "Voor Kandidaten", href: "/voor-kandidaten" },
   { label: "Voor Opdrachtgevers", href: "/voor-opdrachtgevers" },
   { label: "Over Ons", href: "/over-ons" },
+  { label: "Blog", href: "/blogs" },
 ];
 
 const recruitmentLinks = [
