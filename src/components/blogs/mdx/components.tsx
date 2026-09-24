@@ -127,8 +127,8 @@ export const blogMdxComponents = {
     </blockquote>
   ),
   table: ({ children }: { children?: ReactNode }) => (
-    <div className="my-8 overflow-x-auto">
-      <table className="w-full min-w-[32rem] border-collapse text-left text-[15px] leading-[1.6] text-foreground-secondary">
+    <div className="my-8 max-w-full overflow-x-auto">
+      <table className="w-max min-w-full border-collapse text-left text-[15px] leading-[1.6] text-foreground-secondary">
         {children}
       </table>
     </div>

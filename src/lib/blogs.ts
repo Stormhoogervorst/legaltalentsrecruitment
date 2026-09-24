@@ -32,18 +32,23 @@ const optionalSeoTitle = z.preprocess(
   z.string().trim().max(60, "seoTitle mag maximaal 60 tekens zijn").optional(),
 );
 
+const optionalAsset = z.preprocess(
+  (value) => (value === "" || value == null ? undefined : value),
+  z.string().trim().min(1).optional(),
+);
+
 const blogFrontmatterSchema = z.object({
   title: z.string().trim().min(1, "title is verplicht"),
   description: z.string().trim().min(1, "description is verplicht"),
   seoTitle: optionalSeoTitle,
   publishedAt: isoDate,
   updatedAt: optionalIsoDate,
-  category: z.enum(blogCategorySlugs),
-  excerpt: z.string().trim().min(1, "excerpt is verplicht"),
-  coverImage: z.string().trim().min(1, "coverImage is verplicht"),
-  coverAlt: z.string().trim().min(1, "coverAlt is verplicht"),
+  category: z.enum(blogCategorySlugs).default("loopbaan"),
+  excerpt: z.string().trim().min(1),
+  coverImage: optionalAsset,
+  coverAlt: optionalAsset,
   draft: z.boolean().default(false),
-  author: z.enum(blogAuthorSlugs, { error: "author is verplicht" }),
+  author: z.string().trim().min(1, "author is verplicht"),
   tags: z.array(z.string().trim().min(1)).default([]),
   relatedPages: z.array(z.string().startsWith("/")).default([]),
   faq: z
@@ -113,8 +118,42 @@ export function getPostHeadings(body: string): BlogHeading[] {
   return headings;
 }
 
+function normalizeFrontmatter(data: unknown): unknown {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return data;
+
+  const raw = { ...(data as Record<string, unknown>) };
+
+  if (raw.publishedAt == null && typeof raw.date === "string") {
+    raw.publishedAt = raw.date;
+  }
+
+  if (raw.tags == null && Array.isArray(raw.keywords)) {
+    raw.tags = raw.keywords;
+  }
+
+  if (
+    (raw.excerpt == null || raw.excerpt === "") &&
+    typeof raw.description === "string"
+  ) {
+    raw.excerpt = raw.description;
+  }
+
+  if (Array.isArray(raw.faq)) {
+    raw.faq = raw.faq.map((item) => {
+      if (!item || typeof item !== "object") return item;
+      const row = item as Record<string, unknown>;
+      return {
+        q: row.q ?? row.question,
+        a: row.a ?? row.answer,
+      };
+    });
+  }
+
+  return raw;
+}
+
 function parseFrontmatter(data: unknown, slug: string): BlogFrontmatter {
-  const parsed = blogFrontmatterSchema.safeParse(data);
+  const parsed = blogFrontmatterSchema.safeParse(normalizeFrontmatter(data));
 
   if (!parsed.success) {
     const details = parsed.error.issues
@@ -223,30 +262,25 @@ export async function getRelatedPosts(
     .map(({ item }) => item);
 }
 
+const PUBLISHER_NAME = "Legal Talents Recruitment";
+
 export function blogPostingSchema(post: BlogArticle) {
-  const author = getBlogAuthor(post.author);
   const canonical = `${SITE_URL}/blogs/${post.slug}`;
 
   return {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
     headline: post.title,
-    description: post.description,
-    image: `${SITE_URL}${post.coverImage}`,
     datePublished: post.publishedAt,
-    dateModified: post.updatedAt ?? post.publishedAt,
     inLanguage: "nl-NL",
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": canonical,
-    },
+    mainEntityOfPage: canonical,
     author: {
-      "@type": "Person",
-      name: author.name,
-      sameAs: author.linkedin,
+      "@type": "Organization",
+      name: PUBLISHER_NAME,
     },
     publisher: {
       "@type": "Organization",
+      name: PUBLISHER_NAME,
       "@id": ORGANIZATION_ID,
     },
   };
@@ -296,8 +330,16 @@ export function blogFaqSchema(post: BlogPost) {
   };
 }
 
-export function resolveBlogAuthor(post: BlogPost): BlogAuthor {
-  return getBlogAuthor(post.author);
+export function resolveBlogAuthor(post: BlogPost): BlogAuthor | null {
+  if ((blogAuthorSlugs as readonly string[]).includes(post.author)) {
+    return getBlogAuthor(post.author);
+  }
+
+  return null;
+}
+
+export function blogAuthorLabel(post: BlogPost): string {
+  return resolveBlogAuthor(post)?.name ?? post.author;
 }
 
 export function resolveBlogCategoryTitle(category: string): string {
