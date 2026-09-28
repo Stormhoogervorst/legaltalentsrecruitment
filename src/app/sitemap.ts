@@ -14,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/juridisch-recruiter`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/headhunter-advocatuur`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/bedrijfsjurist-vacature`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/legal-counsel-vacature`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/scale-ups`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/voor-kandidaten`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/over-ons`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   PillButton,
   SectionShell,
@@ -20,9 +21,20 @@ export function LegalCounselAanpak() {
             overwegen. We spreken elke kandidaat zelf voordat we voordragen, en
             leveren een onderbouwde shortlist in plaats van een stapel cv&apos;s.
             Bij elke voordracht: wat brengt deze persoon mee, waarom past het
-            inhoudelijk én cultureel, en waar moet je op letten. Begeleiding tot
+            inhoudelijk én cultureel, en waar moet je op letten.             Begeleiding tot
             en met de eerste werkdag, en een vervangingsgarantie op aanvraag. No
             cure, no pay.
+          </p>
+          <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
+            Ben je zelf legal counsel en oriënteer je je op een volgende rol?
+            Die zoektocht staat op{" "}
+            <Link
+              href="/legal-counsel-vacature"
+              className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
+            >
+              legal counsel vacature
+            </Link>
+            .
           </p>
           <div className="mt-10">
             <PillButton href="/voor-opdrachtgevers">

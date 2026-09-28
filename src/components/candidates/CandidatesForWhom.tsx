@@ -37,8 +37,15 @@ export function CandidatesForWhom() {
               className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
             >
               bedrijfsjurist vacature
+            </Link>{" "}
+            of een{" "}
+            <Link
+              href="/legal-counsel-vacature"
+              className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
+            >
+              legal counsel vacature
             </Link>
-            ? Daarvoor hebben we een aparte pagina.
+            ? Daarvoor hebben we aparte pagina&apos;s.
           </p>
         </div>
 

@@ -14,6 +14,7 @@ const recruitmentLinks = [
   { label: "Juridisch recruiter", href: "/juridisch-recruiter" },
   { label: "Headhunter advocatuur", href: "/headhunter-advocatuur" },
   { label: "Bedrijfsjurist vacature", href: "/bedrijfsjurist-vacature" },
+  { label: "Legal counsel vacature", href: "/legal-counsel-vacature" },
   { label: "Advocaat recruitment", href: "/recruitment/advocaat" },
   { label: "Bedrijfsjurist recruitment", href: "/recruitment/bedrijfsjurist" },
   {
