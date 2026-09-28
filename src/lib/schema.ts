@@ -167,15 +167,26 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#39;");
 }
 
+function plainInlineMarkdown(value: string) {
+  return value
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+}
+
 function extractJobDescriptionMarkdown(body: string) {
   const includedSections = new Set([
     "over de functie",
     "wat we vragen",
     "wat we bieden",
+    "wat je doet",
+    "wat je meebrengt",
+    "wat wij je bieden",
+    "hoe het werkt",
+    "het soort opdrachten",
   ]);
   const lines = body.split(/\r?\n/);
   const descriptionLines: string[] = [];
-  let isIncludedSection = false;
+  let isIncludedSection = true;
 
   for (const line of lines) {
     const headingMatch = line.match(/^##\s+(.+)$/);
@@ -202,7 +213,7 @@ function markdownToHtml(markdown: string) {
   function flushParagraph() {
     if (paragraphLines.length === 0) return;
 
-    html.push(`<p>${escapeHtml(paragraphLines.join(" "))}</p>`);
+    html.push(`<p>${escapeHtml(plainInlineMarkdown(paragraphLines.join(" ")))}</p>`);
     paragraphLines.length = 0;
   }
 
@@ -226,7 +237,7 @@ function markdownToHtml(markdown: string) {
     if (headingMatch) {
       flushParagraph();
       closeList();
-      html.push(`<h3>${escapeHtml(headingMatch[1])}</h3>`);
+      html.push(`<h3>${escapeHtml(plainInlineMarkdown(headingMatch[1]))}</h3>`);
       continue;
     }
 
@@ -237,7 +248,7 @@ function markdownToHtml(markdown: string) {
         html.push("<ul>");
         isListOpen = true;
       }
-      html.push(`<li>${escapeHtml(bulletMatch[1])}</li>`);
+      html.push(`<li>${escapeHtml(plainInlineMarkdown(bulletMatch[1]))}</li>`);
       continue;
     }
 
