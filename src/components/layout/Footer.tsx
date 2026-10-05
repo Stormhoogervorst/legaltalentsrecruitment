@@ -15,6 +15,10 @@ const recruitmentLinks = [
   { label: "Headhunter advocatuur", href: "/headhunter-advocatuur" },
   { label: "Bedrijfsjurist vacature", href: "/bedrijfsjurist-vacature" },
   { label: "Legal counsel vacature", href: "/legal-counsel-vacature" },
+  {
+    label: "Compliance officer vacature",
+    href: "/compliance-officer-vacature",
+  },
   { label: "Advocaat recruitment", href: "/recruitment/advocaat" },
   { label: "Bedrijfsjurist recruitment", href: "/recruitment/bedrijfsjurist" },
   {

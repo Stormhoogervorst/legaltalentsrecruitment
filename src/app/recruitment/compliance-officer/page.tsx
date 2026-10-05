@@ -100,8 +100,11 @@ export default function ComplianceOfficerRecruitmentPage() {
           eyebrow="/ AANPAK"
           title="Vier stappen. / Eén match."
           steps={processSteps}
-          footerText="Zelf compliance specialist en op zoek?"
-          footerLink={{ label: "Voor kandidaten", href: "/voor-kandidaten" }}
+          footerText="Zelf compliance specialist en op zoek naar een vacature?"
+          footerLink={{
+            label: "Compliance officer vacature",
+            href: "/compliance-officer-vacature",
+          }}
           background="slate"
         />
       </div>
