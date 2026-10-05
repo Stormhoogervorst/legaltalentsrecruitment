@@ -336,7 +336,7 @@ export function SollicitatieForm({ vacatureTitle }: SollicitatieFormProps) {
                   {...register("gdprConsent")}
                 />
                 <span>
-                  Ik geef toestemming om mijn gegevens maximaal 1 jaar te
+                  Ik geef toestemming om mijn gegevens maximaal 2 jaar te
                   bewaren voor werving en selectie.{" "}
                   <Link
                     href="/privacy"

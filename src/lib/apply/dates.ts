@@ -9,10 +9,8 @@ function amsterdamToday(): string {
 
 function addYears(isoDate: string, years: number): string {
   const [year, month, day] = isoDate.split("-").map(Number);
+  // 29 februari in a non-leap year rolls forward to 1 maart.
   const shifted = new Date(Date.UTC(year + years, month - 1, day));
-  if (shifted.getUTCMonth() !== month - 1) {
-    return new Date(Date.UTC(year + years, month, 0)).toISOString().slice(0, 10);
-  }
   return shifted.toISOString().slice(0, 10);
 }
 
@@ -20,6 +18,6 @@ export function consentDates(): { gdprConsentDate: string; retainUntil: string }
   const gdprConsentDate = amsterdamToday();
   return {
     gdprConsentDate,
-    retainUntil: addYears(gdprConsentDate, 1),
+    retainUntil: addYears(gdprConsentDate, 2),
   };
 }

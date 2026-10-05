@@ -1,4 +1,5 @@
 import { CV_TOO_LARGE, CV_WRONG_TYPE, MAX_CV_BYTES } from "../src/lib/apply/constants";
+import { consentDates } from "../src/lib/apply/dates";
 import { serverCvError } from "../src/lib/apply/cv";
 import { normalizeDutchPhone } from "../src/lib/apply/phone";
 import { parseApplyFormData } from "../src/lib/apply/parse-form";
@@ -31,6 +32,38 @@ trailer<</Root 1 0 R>>
 % ${label}
 `;
   return new TextEncoder().encode(source);
+}
+
+function amsterdamToday(): string {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Amsterdam",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
+function plusTwoYears(isoDate: string): string {
+  const [year, month, day] = isoDate.split("-").map(Number);
+  return new Date(Date.UTC(year + 2, month - 1, day)).toISOString().slice(0, 10);
+}
+
+function printRetention() {
+  const today = amsterdamToday();
+  const expected = plusTwoYears(today);
+  const { gdprConsentDate, retainUntil } = consentDates();
+  console.log("\n=== Bewaartermijn ===");
+  console.log(`${gdprConsentDate} + 2 jaar -> ${retainUntil} (verwacht ${expected})`);
+  assert(gdprConsentDate === today, "toestemmingsdatum is niet vandaag");
+  assert(
+    retainUntil === expected,
+    `retainUntil verwacht ${expected}, kreeg ${retainUntil}`,
+  );
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(retainUntil), "retainUntil formaat");
+  assert(
+    plusTwoYears("2024-02-29") === "2026-03-01",
+    "29 februari moet 1 maart worden",
+  );
 }
 
 function printPhones() {
@@ -240,6 +273,7 @@ async function runTwenty() {
 
   const stored = await readBack(candidateId);
   console.log("Opgeslagen:", JSON.stringify(summarize(stored), null, 2));
+  assertRetainUntil(stored);
   console.log("cv:", JSON.stringify(stored.cv ?? null, null, 2));
   assert(stored.cv != null, "cv is null");
   assert(
@@ -368,7 +402,18 @@ function summarize(record: Record<string, unknown>) {
   };
 }
 
+function assertRetainUntil(record: Record<string, unknown>) {
+  const today = amsterdamToday();
+  const expected = plusTwoYears(today);
+  console.log("retainUntil:", record.retainUntil ?? null, "verwacht:", expected);
+  assert(
+    record.retainUntil === expected,
+    `retainUntil verwacht ${expected}, kreeg ${String(record.retainUntil)}`,
+  );
+}
+
 async function main() {
+  printRetention();
   printPhones();
   await printFiles();
   await runTwenty();
