@@ -10,7 +10,10 @@ import {
   objectPlural,
   quoteFilter,
 } from "../src/lib/twenty/client";
-import { syncApplicationToTwenty } from "../src/lib/twenty/apply";
+import {
+  syncApplicationToTwenty,
+  type TwentySyncResult,
+} from "../src/lib/twenty/apply";
 
 const stamp = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15);
 
@@ -228,13 +231,14 @@ async function runTwenty() {
     }),
   );
   console.log(JSON.stringify(first, null, 2));
-  assert(first.ok && first.candidateId && first.created, "nieuwe kandidaat");
+  assert(first.ok && first.created, "nieuwe kandidaat");
   assert(
     !first.warnings.some((warning) => warning.includes("CV-upload")),
     `CV-upload: ${first.warnings.join(" | ")}`,
   );
+  const { taskId, submissionId, candidateId } = requiredIds(first);
 
-  const stored = await readBack(first.candidateId!);
+  const stored = await readBack(candidateId);
   console.log("Opgeslagen:", JSON.stringify(summarize(stored), null, 2));
   console.log("cv:", JSON.stringify(stored.cv ?? null, null, 2));
   assert(stored.cv != null, "cv is null");
@@ -242,12 +246,7 @@ async function runTwenty() {
     Array.isArray(stored.cv) && stored.cv.length > 0,
     "cv hangt niet aan de kandidaat",
   );
-  assert(first.taskId && first.submissionId, "taak of submission ontbreekt");
-  await assertTwoTaskTargets(
-    first.taskId,
-    first.candidateId!,
-    first.submissionId,
-  );
+  await assertTwoTaskTargets(taskId, candidateId, submissionId);
 
   console.log("\n=== 2. Zelfde e-mail nogmaals ===");
   const second = await syncApplicationToTwenty(
@@ -262,27 +261,22 @@ async function runTwenty() {
   console.log(JSON.stringify(second, null, 2));
   assert(second.ok, "tweede sollicitatie");
   assert(second.created === false, "geen tweede kandidaat");
-  assert(second.candidateId === first.candidateId, "zelfde kandidaat-id");
-  if (first.submissionId && second.submissionId) {
-    assert(
-      second.submissionId === first.submissionId,
-      "geen dubbele submission",
-    );
-  }
+  const {
+    taskId: secondTaskId,
+    submissionId: secondSubmissionId,
+    candidateId: secondCandidateId,
+  } = requiredIds(second);
+  assert(secondCandidateId === candidateId, "zelfde kandidaat-id");
+  assert(secondSubmissionId === submissionId, "geen dubbele submission");
 
-  const after = await readBack(first.candidateId!);
+  const after = await readBack(candidateId);
   console.log("Na dubbele aanvraag:", JSON.stringify(summarize(after), null, 2));
   console.log("cv:", JSON.stringify(after.cv ?? null, null, 2));
   assert(after.cv != null, "cv is null na tweede aanvraag");
   assert(after.name === "TEST Kandidaat Nieuw", "naam niet overschreven");
   const files = Array.isArray(after.cv) ? after.cv : [];
   assert(files.length >= 2, "tweede CV toegevoegd");
-  assert(second.taskId && second.submissionId, "tweede taak of submission ontbreekt");
-  await assertTwoTaskTargets(
-    second.taskId,
-    first.candidateId!,
-    second.submissionId,
-  );
+  await assertTwoTaskTargets(secondTaskId, candidateId, secondSubmissionId);
 
   console.log("\n=== 3. Telefoon in drie notaties ===");
   const phones = [
@@ -300,19 +294,29 @@ async function runTwenty() {
         vacancy: `TEST vacature zonder match ${stamp}`,
       }),
     );
-    assert(result.ok && result.candidateId, `${name} niet aangemaakt`);
-    const record = await readBack(result.candidateId!);
+    assert(result.ok, `${name} niet aangemaakt`);
+    const { candidateId: phoneCandidateId } = result;
+    if (!phoneCandidateId) throw new Error(`${name} niet aangemaakt`);
+    const record = await readBack(phoneCandidateId);
     console.log(
       phone,
       "->",
       JSON.stringify({
-        id: result.candidateId,
+        id: phoneCandidateId,
         phone: record.phone ?? null,
         summary: record.summary ?? null,
         warnings: result.warnings,
       }),
     );
   }
+}
+
+function requiredIds(result: TwentySyncResult) {
+  const { taskId, submissionId, candidateId } = result;
+  if (!taskId || !submissionId || !candidateId) {
+    throw new Error("taak, submission of kandidaat ontbreekt");
+  }
+  return { taskId, submissionId, candidateId };
 }
 
 async function assertTwoTaskTargets(
