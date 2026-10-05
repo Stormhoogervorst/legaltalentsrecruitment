@@ -1,5 +1,19 @@
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
+function web3FormsData(
+  accessKey: string,
+  fields: Record<string, string>,
+  attachment: File,
+): FormData {
+  const form = new FormData();
+  form.append("access_key", accessKey);
+  for (const [key, value] of Object.entries(fields)) {
+    form.append(key, value);
+  }
+  form.append("attachment", attachment, attachment.name);
+  return form;
+}
+
 export type Web3FormsResult = {
   success: boolean;
   message?: string;
@@ -12,6 +26,7 @@ export type Web3FormsResult = {
  */
 export async function submitToWeb3Forms(
   fields: Record<string, string>,
+  attachment?: File | null,
 ): Promise<Web3FormsResult> {
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
@@ -23,11 +38,15 @@ export async function submitToWeb3Forms(
   try {
     const response = await fetch(WEB3FORMS_ENDPOINT, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ access_key: accessKey, ...fields }),
+      headers: attachment
+        ? { Accept: "application/json" }
+        : {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+      body: attachment
+        ? web3FormsData(accessKey, fields, attachment)
+        : JSON.stringify({ access_key: accessKey, ...fields }),
     });
 
     const rawBody = await response.text();

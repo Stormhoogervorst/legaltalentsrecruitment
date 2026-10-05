@@ -1,14 +1,17 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import { type BaseSyntheticEvent, useId, useState } from "react";
 import { type SubmitHandler, useForm } from "react-hook-form";
 import { SlashPill } from "@/components/home/primitives";
+import { APPLY_FAILURE_MESSAGE } from "@/lib/apply/constants";
+import { normalizeLinkedIn } from "@/lib/apply/linkedin";
+import { submitToWeb3Forms } from "@/lib/web3forms";
 import {
   sollicitatieSchema,
   type SollicitatieFormValues,
 } from "@/lib/validations/sollicitatie";
-import { submitToWeb3Forms } from "@/lib/web3forms";
 
 const inputClass =
   "w-full border-0 border-b border-[rgba(10,10,15,0.18)] bg-transparent px-0 py-3 text-[16px] leading-[1.5] text-foreground outline-none transition-colors placeholder:text-foreground-muted focus:border-accent";
@@ -17,14 +20,27 @@ const labelClass =
 const errorClass = "mt-2 text-xs font-medium text-red-700";
 
 type SollicitatieFormProps = {
-  vacatureSlug: string;
   vacatureTitle: string;
 };
 
-export function SollicitatieForm({
-  vacatureSlug,
-  vacatureTitle,
-}: SollicitatieFormProps) {
+type ApplyResponse = {
+  success?: boolean;
+  message?: string;
+  fieldErrors?: Partial<Record<keyof SollicitatieFormValues | "page", string>>;
+  channels?: { web3forms?: boolean; twenty?: boolean };
+};
+
+const fieldNames = [
+  "name",
+  "email",
+  "phone",
+  "linkedin",
+  "vacancy",
+  "gdprConsent",
+  "cv",
+] as const;
+
+export function SollicitatieForm({ vacatureTitle }: SollicitatieFormProps) {
   const formId = useId();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
@@ -36,6 +52,7 @@ export function SollicitatieForm({
     formState: { errors },
     handleSubmit,
     register,
+    setError,
   } = useForm<SollicitatieFormValues>({
     resolver: zodResolver(sollicitatieSchema),
     defaultValues: {
@@ -43,8 +60,8 @@ export function SollicitatieForm({
       email: "",
       phone: "",
       linkedin: "",
-      vacatureSlug,
-      vacatureTitle,
+      vacancy: vacatureTitle,
+      gdprConsent: false,
       honeypot: "",
     },
   });
@@ -53,10 +70,10 @@ export function SollicitatieForm({
     values,
     event?: BaseSyntheticEvent,
   ) => {
-    const form = event?.currentTarget;
+    const formElement = event?.currentTarget;
     const honeypot =
-      (form instanceof HTMLFormElement
-        ? new FormData(form).get("website")?.toString()
+      (formElement instanceof HTMLFormElement
+        ? new FormData(formElement).get("website")?.toString()
         : "") ||
       values.honeypot ||
       "";
@@ -66,31 +83,82 @@ export function SollicitatieForm({
       return;
     }
 
+    const file = values.cv?.item(0);
+    if (!file) {
+      setError("cv", { message: "Upload je CV." });
+      return;
+    }
+
+    const pagePath =
+      typeof window === "undefined"
+        ? ""
+        : `${window.location.pathname}${window.location.search}`;
+
     setIsSubmitting(true);
     setSubmitStatus("idle");
     setServerError(null);
 
-    const result = await submitToWeb3Forms({
-      subject: `Nieuwe sollicitatie: ${vacatureTitle} — ${values.name}`,
-      from_name: "Legal Talents Sollicitatie",
-      name: values.name,
-      email: values.email,
-      phone: values.phone,
-      linkedin: values.linkedin ?? "",
-      vacatureSlug,
-      vacatureTitle,
-    });
+    const payload = new FormData();
+    payload.set("name", values.name);
+    payload.set("email", values.email);
+    payload.set("phone", values.phone);
+    payload.set("linkedin", normalizeLinkedIn(values.linkedin));
+    payload.set("vacancy", vacatureTitle);
+    payload.set("page", pagePath);
+    payload.set("gdprConsent", values.gdprConsent ? "true" : "false");
+    payload.set("website", honeypot);
+    payload.set("cv", file, file.name);
+
+    let response: Response | null = null;
+    try {
+      response = await fetch("/api/apply", { method: "POST", body: payload });
+    } catch {
+      response = null;
+    }
+
+    const result = response ? await readApplyResponse(response) : null;
+    const savedOnServer = Boolean(response?.ok && result?.success);
+    const mailAlreadySent = result?.channels?.web3forms === true;
+    const shouldRetryMail =
+      !mailAlreadySent && (savedOnServer || !response || response.status >= 500);
+
+    let mailSent = mailAlreadySent;
+    if (shouldRetryMail) {
+      const mail = await submitToWeb3Forms(
+        {
+          subject: `Nieuwe sollicitatie: ${vacatureTitle} — ${values.name}`,
+          from_name: "Legal Talents Sollicitatie",
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          linkedin: normalizeLinkedIn(values.linkedin),
+          vacancy: vacatureTitle,
+          page: pagePath,
+        },
+        file,
+      );
+      mailSent = mail.success;
+    }
 
     setIsSubmitting(false);
 
-    if (result.success) {
+    if (savedOnServer || mailSent) {
       setSubmitStatus("success");
       return;
     }
 
-    setServerError(
-      "Er ging iets mis. Probeer opnieuw of mail direct naar storm@legal-talents.nl.",
-    );
+    if (result?.fieldErrors) {
+      let shown = false;
+      for (const field of fieldNames) {
+        const message = result.fieldErrors[field];
+        if (!message) continue;
+        setError(field, { message });
+        shown = true;
+      }
+      if (shown) return;
+    }
+
+    setServerError(result?.message || APPLY_FAILURE_MESSAGE);
     setSubmitStatus("error");
   };
 
@@ -102,8 +170,8 @@ export function SollicitatieForm({
           Bedankt voor je sollicitatie!
         </h2>
         <p className="mx-auto mt-6 max-w-[540px] text-[18px] leading-[1.5] text-foreground-secondary">
-          We hebben je sollicitatie voor {vacatureTitle} ontvangen en nemen
-          binnen enkele werkdagen contact met je op.
+          We hebben je sollicitatie voor {vacatureTitle} ontvangen. We reageren
+          binnen 5 werkdagen.
         </p>
       </div>
     );
@@ -128,8 +196,7 @@ export function SollicitatieForm({
               role="alert"
               className="mb-8 rounded-[16px] border border-red-200 bg-red-50 px-5 py-4 text-sm font-medium text-red-700"
             >
-              {serverError ??
-                "Er ging iets mis. Probeer opnieuw of mail direct naar storm@legal-talents.nl."}
+              {serverError ?? APPLY_FAILURE_MESSAGE}
             </div>
           ) : null}
 
@@ -143,7 +210,9 @@ export function SollicitatieForm({
                 type="text"
                 autoComplete="name"
                 aria-invalid={Boolean(errors.name)}
-                aria-describedby={errors.name ? `${formId}-name-error` : undefined}
+                aria-describedby={
+                  errors.name ? `${formId}-name-error` : undefined
+                }
                 className={inputClass}
                 {...register("name")}
               />
@@ -205,9 +274,10 @@ export function SollicitatieForm({
               </label>
               <input
                 id={`${formId}-linkedin`}
-                type="url"
+                type="text"
+                inputMode="url"
                 autoComplete="url"
-                placeholder="https://www.linkedin.com/in/..."
+                placeholder="linkedin.com/in/..."
                 aria-invalid={Boolean(errors.linkedin)}
                 aria-describedby={
                   errors.linkedin ? `${formId}-linkedin-error` : undefined
@@ -221,11 +291,79 @@ export function SollicitatieForm({
                 </p>
               ) : null}
             </div>
+
+            <div>
+              <label htmlFor={`${formId}-cv`} className={labelClass}>
+                CV
+              </label>
+              <input
+                id={`${formId}-cv`}
+                type="file"
+                accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                aria-invalid={Boolean(errors.cv)}
+                aria-describedby={
+                  errors.cv ? `${formId}-cv-error` : `${formId}-cv-hint`
+                }
+                className={`${inputClass} file:mr-4 file:rounded-full file:border-0 file:bg-foreground file:px-4 file:py-2 file:text-sm file:font-medium file:text-background`}
+                {...register("cv")}
+              />
+              <p
+                id={`${formId}-cv-hint`}
+                className="mt-2 text-xs leading-[1.5] text-foreground-muted"
+              >
+                PDF, DOC of DOCX, maximaal 5 MB.
+              </p>
+              {errors.cv ? (
+                <p id={`${formId}-cv-error`} className={errorClass}>
+                  {errors.cv.message}
+                </p>
+              ) : null}
+            </div>
+
+            <div>
+              <label
+                htmlFor={`${formId}-gdpr`}
+                className="flex items-start gap-3 text-[15px] leading-[1.5] text-foreground"
+              >
+                <input
+                  id={`${formId}-gdpr`}
+                  type="checkbox"
+                  className="mt-1 size-4 shrink-0 accent-foreground"
+                  aria-invalid={Boolean(errors.gdprConsent)}
+                  aria-describedby={
+                    errors.gdprConsent ? `${formId}-gdpr-error` : undefined
+                  }
+                  {...register("gdprConsent")}
+                />
+                <span>
+                  Ik geef toestemming om mijn gegevens maximaal 1 jaar te
+                  bewaren voor werving en selectie.{" "}
+                  <Link
+                    href="/privacy"
+                    className="underline underline-offset-2"
+                  >
+                    Privacyverklaring
+                  </Link>
+                </span>
+              </label>
+              {errors.gdprConsent ? (
+                <p id={`${formId}-gdpr-error`} className={errorClass}>
+                  {errors.gdprConsent.message}
+                </p>
+              ) : null}
+            </div>
           </div>
 
-          <input type="hidden" {...register("vacatureSlug")} />
-          <input type="hidden" {...register("vacatureTitle")} />
-          <input type="hidden" {...register("honeypot")} />
+          <input type="hidden" name="vacancy" value={vacatureTitle} />
+          <input
+            type="hidden"
+            name="page"
+            ref={(node) => {
+              if (node && typeof window !== "undefined") {
+                node.value = `${window.location.pathname}${window.location.search}`;
+              }
+            }}
+          />
           <input
             type="text"
             name="website"
@@ -246,4 +384,12 @@ export function SollicitatieForm({
       </div>
     </>
   );
+}
+
+async function readApplyResponse(response: Response): Promise<ApplyResponse | null> {
+  try {
+    return (await response.json()) as ApplyResponse;
+  } catch {
+    return null;
+  }
 }

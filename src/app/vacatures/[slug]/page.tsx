@@ -254,10 +254,7 @@ export default async function VacatureDetailPage({ params }: Props) {
               </p>
             </div>
           ) : null}
-          <SollicitatieForm
-            vacatureSlug={slug}
-            vacatureTitle={vacature.title}
-          />
+          <SollicitatieForm vacatureTitle={vacature.title} />
         </SectionShell>
       </section>
 

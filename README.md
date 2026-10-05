@@ -20,6 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Sollicitaties
+
+Het formulier op een vacaturepagina post naar `POST /api/apply`. Die route bewaart de sollicitatie in Twenty en probeert daarnaast Web3Forms. De kandidaat ziet een succesmelding als minstens één van de twee lukt. Faalt Twenty, dan staat de sollicitatie (zonder CV-inhoud) in de serverlog. Faalt Web3Forms op de server — Cloudflare blokkeert server-side calls vaak met 403 — dan stuurt de browser de mail alsnog, mét CV, via de bestaande publieke Web3Forms-sleutel.
+
+Zet in `.env.local` (lokaal) of in de hosting-omgeving, nooit in git:
+
+```bash
+WEB3FORMS_ACCESS_KEY=
+TWENTY_API_KEY=
+TWENTY_BASE_URL=
+```
+
+`TWENTY_BASE_URL` mag leeg blijven of `https://legal-talents.twenty.com` zijn. De cloud-API staat op `https://api.twenty.com`; de code valt daarop terug als het workspace-adres geen API serveert. `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` blijft nodig voor het contactformulier en als browser-fallback voor sollicitatiemail.
+
+Testen, met `TEST` in elke naam:
+
+```bash
+npx tsx --env-file=.env.local scripts/test-apply.ts
+```
+
+Zonder `TWENTY_API_KEY` draaien alleen de telefoon- en bestandschecks. Met de sleutel maakt het script kandidaten, een CV, een dubbele aanvraag en drie telefoonnotaties aan in Twenty. Die records kun je opruimen op de naam `TEST`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
