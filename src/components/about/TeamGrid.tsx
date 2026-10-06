@@ -11,12 +11,6 @@ const team: {
   linkedin?: string;
 }[] = [
   {
-    name: "Marcel Hoogervorst",
-    role: "Directeur",
-    bio: "Marcel brengt ruim 30 jaar ervaring in recruitment en HR met zich mee, waarvan 15 jaar als directeur binnen de werving & selectie en uitzendbranche. Deze unieke mix van branchekennis en strategisch leiderschap maakt hem een onmisbare partner voor onze klanten.",
-    image: "/marcel.jpg",
-  },
-  {
     name: "Max Endrizzi",
     role: "Oprichter / Operations",
     education: "LLM International and European Business Law",
@@ -39,6 +33,12 @@ const team: {
     bio: "Koos na zijn master Ondernemingsrecht bewust niet voor de advocatuur maar voor het bedrijfsleven. Eerst als Head of Sales and Strategy, nu bij Legal Talents waar hij de samenwerkingen verder uitbouwt.",
     image: "/foto-justin.webp",
     linkedin: "https://www.linkedin.com/in/justin-bigler-0322071b4/",
+  },
+  {
+    name: "Marcel Hoogervorst",
+    role: "Interim directeur",
+    bio: "Marcel brengt ruim 30 jaar ervaring in recruitment en HR met zich mee, waarvan 15 jaar als directeur binnen de werving & selectie en uitzendbranche. Deze unieke mix van branchekennis en strategisch leiderschap maakt hem een onmisbare partner voor onze klanten.",
+    image: "/marcel.jpg",
   },
 ];
 

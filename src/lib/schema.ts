@@ -60,7 +60,7 @@ export function aboutPageSchema() {
       {
         "@type": "Person",
         name: "Marcel Hoogervorst",
-        jobTitle: "Directeur",
+        jobTitle: "Interim directeur",
       },
       {
         "@type": "Person",
