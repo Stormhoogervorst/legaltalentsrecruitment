@@ -30,7 +30,7 @@ export function AboutPageHero() {
     <PageHero
       variant="image"
       title={["Specialisten in", "legal recruitment"]}
-      subtitle="Twee rechtenstudenten begonnen Legal Talents. Inmiddels een volwassen bedrijf dat bemiddelt binnen het gehele juridische werkveld."
+      subtitle="Twee rechtenstudenten begonnen Legal Talents. Het groeide uit tot een recruitment bureau dat bemiddelt binnen het gehele juridische werkveld."
       ctaLabel="Neem contact op →"
       ctaHref="/contact"
       image={image}

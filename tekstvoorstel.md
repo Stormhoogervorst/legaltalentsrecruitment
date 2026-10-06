@@ -467,7 +467,7 @@ SEO: zoekwoord "legal recruitment" staat in de H1 ("Specialisten in legal recrui
 
 **5.2 Hero: subtitel** · `PageHero.tsx`
 - Huidig: "Kwaliteit, service en vertrouwen staan bij ons nog ouderwets hoog in het vaandel."
-- Voorstel: "Twee rechtenstudenten begonnen Legal Talents. Inmiddels een volwassen bedrijf dat bemiddelt binnen het gehele juridische werkveld."
+- Voorstel: "Twee rechtenstudenten begonnen Legal Talents. Het groeide uit tot een recruitment bureau dat bemiddelt binnen het gehele juridische werkveld."
 - Waarom: Drietal en "ouderwets hoog in het vaandel" eruit. Het oprichtingsverhaal staat nu bovenaan en het zoekwoord in de eerste alinea.
 
 **5.3 Hero: knop** · `PageHero.tsx`
