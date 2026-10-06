@@ -142,7 +142,7 @@ SEO: zoekwoord "legal recruitment" staat in de H1 en blijft er staan. De eerste 
 **1.11 Rechtsgebieden: H2 en alinea** · `src/components/home/PracticeAreas.tsx`
 - Huidig H2: "Breed netwerk. Scherpe focus."
 - Huidig alinea: "Van advocatuur tot bedrijfsleven: wij verbinden juridische specialisten met vaste posities waar inhoud, cultuur en ambitie samenkomen."
-- Voorstel H2: "Van huurrecht tot legal AI."
+- Voorstel H2: "Van vastgoedrecht tot legal AI"
 - Voorstel alinea: "Van ondernemingsrecht tot privacy, bij kantoren en corporates. Daarnaast zoeken we bewust naar legal tech en legal AI: juristen en engineers die AI in de praktijk werkend krijgen."
 - Waarom: De home zei niets over legal tech en legal AI. "Breed netwerk, scherpe focus" is een tegenstelling zonder inhoud. Colon-opbouw en "inhoud, cultuur en ambitie" eruit. Eén dubbele punt blijft, omdat die hier uitlegt in plaats van een punchline.
 

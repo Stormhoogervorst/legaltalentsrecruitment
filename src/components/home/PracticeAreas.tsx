@@ -10,7 +10,7 @@ export function PracticeAreas() {
           <div>
             <SlashPill>/ RECHTSGEBIEDEN</SlashPill>
             <AnimatedHeadline
-              lines={["Van ondernemingsrecht", "tot legal AI"]}
+              lines={["Van vastgoedrecht", "tot legal AI"]}
               className="display-md mt-8 max-w-3xl max-[420px]:text-[clamp(30px,9.6vw,38px)]!"
             />
           </div>
