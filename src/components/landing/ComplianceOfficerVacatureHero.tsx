@@ -12,11 +12,11 @@ export function ComplianceOfficerVacatureHero() {
           <span className="block">Discreet gematcht.</span>
         </h1>
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-          Op zoek naar een compliance officer vacature — of een vacature
-          compliance officer die niet op een jobboard staat? Legal Talents
+          Voor wie een compliance officer vacature zoekt, of een vacature
+          compliance officer die niet op een jobboard staat. Legal Talents
           matcht compliance professionals discreet met rollen die vaak niet op
-          Indeed of LinkedIn staan. Vertrouwelijk, landelijk, en alleen een
-          voorstel na jouw toestemming. Kennismaking is kosteloos.
+          Indeed of LinkedIn staan. Vertrouwelijk, landelijk en alleen een
+          voorstel met jouw toestemming. Kennismaking is kosteloos.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <PillButton href="/contact">Plan een kennismaking →</PillButton>

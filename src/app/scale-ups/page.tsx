@@ -14,7 +14,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Recruitment voor scale-ups | Legal Talents Recruitment";
 const description =
-  "No cure, no pay. Je eerste jurist of general counsel werven voor je scale-up? Wij vinden talent dat past bij je snelheid en cultuur.";
+  "Recruitment voor scale-ups: jullie eerste jurist of general counsel. We toetsen op tempo en cultuur en spreken elke kandidaat zelf. No cure, no pay.";
 
 export const metadata: Metadata = {
   title: {

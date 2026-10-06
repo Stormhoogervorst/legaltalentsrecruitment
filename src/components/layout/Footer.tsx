@@ -4,9 +4,9 @@ import { CookieSettingsButton } from "@/components/consent/GetLeadsConsent";
 
 const quickLinks = [
   { label: "Vacatures", href: "/vacatures" },
-  { label: "Voor Kandidaten", href: "/voor-kandidaten" },
-  { label: "Voor Opdrachtgevers", href: "/voor-opdrachtgevers" },
-  { label: "Over Ons", href: "/over-ons" },
+  { label: "Voor kandidaten", href: "/voor-kandidaten" },
+  { label: "Voor opdrachtgevers", href: "/voor-opdrachtgevers" },
+  { label: "Over ons", href: "/over-ons" },
   { label: "Blog", href: "/blogs" },
 ];
 
@@ -76,8 +76,9 @@ export function Footer() {
             Bedrijf
           </h2>
           <p className="mt-4 max-w-sm text-sm leading-6 text-foreground/70">
-            Legal Talents Recruitment verbindt juridische professionals met
-            werkgevers die vooruit willen.
+            Legal Talents Recruitment werkt voor werkgevers die juristen zoeken
+            die blijven, en voor juristen die vertrouwelijk willen praten over
+            hun volgende stap.
           </p>
           <nav className="mt-6" aria-label="Sociale media">
             <Link
@@ -151,10 +152,10 @@ export function Footer() {
             </p>
             <p>
               <a
-                href="mailto:storm@legal-talents.nl"
+                href="mailto:marcel@legal-talents.nl"
                 className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                storm@legal-talents.nl
+                marcel@legal-talents.nl
               </a>
             </p>
           </address>

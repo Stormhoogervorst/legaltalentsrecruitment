@@ -6,7 +6,7 @@ export const generalCounselFaqItems = [
     question:
       "Wat is het verschil tussen een general counsel en een legal counsel?",
     answer:
-      "Een general counsel is juridisch eindverantwoordelijk en opereert op directieniveau — strategie, governance en aansturing van het legal-team. Een legal counsel is doorgaans uitvoerend: de jurist die de dagelijkse juridische praktijk draagt. Veel organisaties beginnen met een legal counsel en groeien later naar een general counsel.",
+      "Een general counsel is juridisch eindverantwoordelijk en opereert op directieniveau: strategie, governance en aansturing van het legal-team. Een legal counsel is doorgaans uitvoerend: de jurist die de dagelijkse juridische praktijk draagt. Veel organisaties beginnen met een legal counsel en groeien later naar een general counsel.",
   },
   {
     question:

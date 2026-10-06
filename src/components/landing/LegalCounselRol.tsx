@@ -22,7 +22,7 @@ export function LegalCounselRol() {
             bij juridische vragen, het bewaken van compliance, en het aansturen
             van externe advocaten bij specialistische kwesties. Het is een rol
             waarin zelfstandigheid en pragmatisme net zo belangrijk zijn als
-            juridische kennis — de business wil oplossingen, geen lange
+            juridische kennis. De business wil oplossingen, geen lange
             memo&apos;s.
           </p>
           <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">

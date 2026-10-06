@@ -11,7 +11,7 @@ const audiences = [
   {
     index: "/ 001",
     title: "Voor kandidaten",
-    body: "Junior, medior of senior bedrijfsjurist — of advocaat die naar inhouse wil. Wij helpen je oriënteren op vacatures voor bedrijfsjurist die bij jouw niveau, vak en cultuur passen. Zonder druk, zonder cv-dump.",
+    body: "Junior, medior of senior bedrijfsjurist, of advocaat die naar inhouse wil. We helpen je oriënteren op vacatures voor bedrijfsjurist die bij jouw niveau, vak en cultuur passen. Zonder druk en zonder cv-dump.",
     bullets: [
       "Openstaande én stille inhouse-opdrachten",
       "Kosteloos en vrijblijvend",
@@ -26,11 +26,11 @@ const audiences = [
   {
     index: "/ 002",
     title: "Voor opdrachtgevers",
-    body: "Organisaties die een bedrijfsjurist zoeken: de eerste jurist, een versterking van het legal team, of een senior counsel. Wij werven gericht — niet via een stapel reacties op een advertentie.",
+    body: "Organisaties die een bedrijfsjurist zoeken: de eerste jurist, een versterking van het legal team, of een senior counsel. We werven gericht, niet via een stapel reacties op een advertentie.",
     bullets: [
       "Corporates, mid-market en groeiende teams",
-      "Search via netwerk, niet alleen jobboards",
-      "Kandidaten die wij zelf hebben gesproken",
+      "Search via netwerk, ook buiten jobboards",
+      "Kandidaten die we zelf hebben gesproken",
     ],
     primary: { label: "Plan een opdrachtgesprek →", href: "/contact" },
     secondary: {
@@ -50,7 +50,7 @@ export function BedrijfsjuristVacatureVoorWie() {
           dezelfde tafel.
         </h2>
         <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-          Deze pagina is voor juristen die een bedrijfsjurist vacature zoeken —
+          Deze pagina is voor juristen die een bedrijfsjurist vacature zoeken,
           en voor opdrachtgevers die die rol willen invullen. Dezelfde
           marktkennis, dezelfde discretie.
         </p>

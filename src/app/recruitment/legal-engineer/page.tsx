@@ -14,7 +14,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Werving legal engineers | Legal Talents Recruitment";
 const description =
-  "Werving van Legal Engineers — de brug tussen recht en technologie. Specialist in juridische recruitment. Persoonlijk netwerk, no cure no pay.";
+  "Werving van legal engineers en legal AI-specialisten, de brug tussen recht en technologie. Persoonlijk netwerk. No cure, no pay.";
 
 export const metadata: Metadata = {
   title: {
@@ -46,22 +46,22 @@ const processSteps = [
   {
     index: "001",
     title: "Intake & profiel",
-    body: "Bij voorkeur op locatie — om te begrijpen welke tools, processen en teamsamenstelling er al zijn, en waar de behoefte aan legal engineering vandaan komt. Automatisering, contract lifecycle, legal design of tooling?",
+    body: "Bij voorkeur op locatie, zodat we zien welke tools, processen en teamsamenstelling er al zijn en waar de behoefte aan legal engineering vandaan komt: automatisering, contract lifecycle, legal design of tooling.",
   },
   {
     index: "002",
     title: "Gerichte search",
-    body: "Geen massa-outreach. Wij benaderen het zeldzame hybride talent dat vaak niet als 'recruitmentbaar' op vacaturesites staat — juristen met technische affiniteit, developers met juridische interesse, legal ops-specialisten.",
+    body: "We benaderen hybride talent dat niet op vacaturesites staat: juristen met technische affiniteit, developers met juridische interesse en legal ops-specialisten.",
   },
   {
     index: "003",
     title: "Persoonlijke voordracht",
-    body: "Alleen kandidaten die wij zelf gesproken hebben. Bij elke voordracht een onderbouwing: technische en juridische fit, motivatie voor de overstap, aandachtspunten.",
+    body: "Alleen kandidaten die we zelf hebben gesproken. Bij elke voordracht leggen we uit hoe de kandidaat technisch en juridisch past, waarom die wil overstappen en wat de aandachtspunten zijn.",
   },
   {
     index: "004",
     title: "Begeleiding tot indiensttreding",
-    body: "Van eerste gesprek tot het tekenen van de overeenkomst — en tijdens de eerste maanden. Onboarding, garantieregeling en evaluatie.",
+    body: "We begeleiden van het eerste gesprek tot het tekenen van de overeenkomst en tijdens de eerste maanden: onboarding, evaluatie en, als vooraf afgesproken, de garantieregeling.",
   },
 ];
 

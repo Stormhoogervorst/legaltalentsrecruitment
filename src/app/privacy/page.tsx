@@ -205,7 +205,7 @@ export default function PrivacyPage() {
         als gerichte reclame. U kunt dit op elk moment stoppen. U kunt ons
         verzoeken om inzage in, correctie of verwijdering van de persoonsgegevens
         die wij over u bewaren via{" "}
-        <a href="mailto:storm@legal-talents.nl">storm@legal-talents.nl</a>.
+        <a href="mailto:marcel@legal-talents.nl">marcel@legal-talents.nl</a>.
       </p>
 
       <h2>12. Beveiliging</h2>
@@ -229,7 +229,7 @@ export default function PrivacyPage() {
       <h2>14. Datalekken</h2>
       <p>
         Bij een (vermoeden van een) datalek verzoeken wij u dit direct te melden
-        via: storm@legal-talents.nl
+        via: marcel@legal-talents.nl
       </p>
 
       <h2>15. Wijzigingen</h2>
@@ -241,7 +241,7 @@ export default function PrivacyPage() {
       <h2>16. Contact</h2>
       <p>Voor vragen, verzoeken of klachten kunt u contact opnemen met:</p>
       <p>
-        Legal Talents · storm@legal-talents.nl · +31 6 85 68 09 98 · Sint
+        Legal Talents · marcel@legal-talents.nl · +31 6 85 68 09 98 · Sint
         Annastraat 198-C, 6531 HZ Nijmegen
       </p>
       <p>

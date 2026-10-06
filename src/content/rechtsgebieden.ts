@@ -19,7 +19,7 @@ export const rechtsgebieden: Rechtsgebied[] = [
   { slug: "personenschade", title: "Personenschade", order: 11 },
   { slug: "bouw-energierecht", title: "Bouw- en energierecht", order: 12 },
   { slug: "aanbesteding", title: "Aanbesteding", order: 13 },
-  { slug: "legal-tech", title: "Legal tech", order: 14 },
+  { slug: "legal-tech", title: "Legal tech en legal AI", order: 14 },
 ];
 
 export function getRechtsgebiedBySlug(slug: string): Rechtsgebied | undefined {

@@ -3,10 +3,10 @@ import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const marktItems = [
   "Hybride skills zijn schaars. Weinig juristen combineren sterke juridische inhoud met technische vaardigheid — en andersom zijn er weinig technologen die de juridische praktijk echt begrijpen.",
-  "Legal tech-adoptie versnelt. AI en automatisering veranderen in hoog tempo wat er mogelijk is, waardoor de vraag naar legal engineers sneller groeit dan het aanbod.",
-  "De rol trekt ander talent. Legal engineers kiezen vaker voor impact, autonomie en vernieuwing dan voor een hoger salaris — werkgevers die dat niet bieden, vallen af.",
-  "Definities lopen uiteen. Wat een legal engineer precies doet, verschilt sterk per organisatie. Scherp krijgen wat jullie écht zoeken is de eerste stap naar een goede match.",
-  "Zichtbaar innovatie-DNA weegt zwaar. Kandidaten kijken kritisch naar hoe serieus een organisatie investeert in legal tech — vage ambities overtuigen niet.",
+  "Legal tech-adoptie neemt toe. AI en automatisering veranderen wat er mogelijk is, en er zijn weinig legal engineers om dat werkend te krijgen.",
+  "De rol trekt ander talent. Legal engineers kiezen vaker voor impact en autonomie dan voor een hoger salaris. Werkgevers die dat niet bieden, vallen af.",
+  "Definities lopen uiteen. Wat een legal engineer precies doet, verschilt sterk per organisatie. Scherp krijgen wat jullie zoeken is de eerste stap naar een goede match.",
+  "Zichtbare investering in legal tech weegt zwaar. Kandidaten kijken kritisch naar hoe serieus een organisatie daarin investeert. Vage ambities overtuigen niet.",
 ];
 
 export function LegalEngineerMarkt() {
@@ -20,10 +20,9 @@ export function LegalEngineerMarkt() {
             talent schaars en gewild is.
           </h2>
           <p className="mt-8 text-[18px] leading-[1.5] text-foreground-secondary">
-            De opkomst van legal tech en AI verandert de juridische sector in
-            hoog tempo. Organisaties die vooroplopen zoeken niet langer alleen
-            juristen, maar mensen die het recht kunnen vertalen naar
-            systemen, tools en processen.
+            Legal tech en AI veranderen hoe juridisch werk wordt gedaan.
+            Organisaties die daar werk van maken, zoeken mensen die het recht
+            kunnen vertalen naar systemen, tools en processen.
           </p>
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
             Wat dat in de praktijk betekent voor werving:
@@ -39,17 +38,16 @@ export function LegalEngineerMarkt() {
             ))}
           </ul>
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
-            Wij brengen deze marktkennis in bij elke opdracht — zodat jullie
-            weten waar jullie staan en wat realistisch is om aan te bieden.
-            Zo begeleidden wij recent de plaatsing van een{" "}
+            We brengen deze marktkennis in bij elke opdracht, zodat jullie
+            weten waar jullie staan en wat realistisch is om aan te bieden. Een
+            voorbeeld van het soort rol waarvoor we zoeken is de{" "}
             <Link
               href="/vacatures/legal-engineer-amsterdam"
               className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
             >
               Legal Engineer in Amsterdam
-            </Link>{" "}
-            — een goed voorbeeld van het soort profiel en rol waar wij voor
-            werven.
+            </Link>
+            .
           </p>
         </div>
       </SectionShell>

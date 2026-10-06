@@ -9,7 +9,7 @@ const includedItems = [
   "Shortlist met onderbouwing per kandidaat",
   "Coördinatie en planning gesprekken",
   "Begeleiding tot indiensttreding",
-  "Vervangingsgarantie (op aanvraag)",
+  "Vervangingsgarantie, als vooraf schriftelijk afgesproken",
 ];
 
 export function WhatYouGet() {
@@ -18,7 +18,7 @@ export function WhatYouGet() {
       <SectionShell>
         <SlashPill>/ INBEGREPEN</SlashPill>
         <div className="mt-8 max-w-[720px]">
-          <h2 className="display-md">Wat je krijgt.</h2>
+          <h2 className="display-md">Wat jullie krijgen.</h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
             Geen verborgen extras, geen losse fees voor zaken die erbij horen.
           </p>
@@ -51,10 +51,9 @@ export function WhatYouGet() {
               Geen losse facturen voor wat erbij hoort.
             </h3>
             <p className="mt-4 text-[16px] leading-[1.6] text-foreground-secondary">
-              Bij Legal Talents zit alles wat je nodig hebt voor een succesvolle
-              plaatsing in het honorarium. Geen aparte facturen voor
-              intake-gesprekken, screening, of coördinatie. Geen verrassingen
-              achteraf.
+              Alles wat jullie nodig hebben voor een succesvolle plaatsing zit
+              in het honorarium. Geen aparte facturen voor de intake, de
+              screening of de coördinatie.
             </p>
             <p className="mt-4 text-[16px] leading-[1.6] text-foreground-secondary">
               Eventuele specifieke wervingscampagnes of assessments worden

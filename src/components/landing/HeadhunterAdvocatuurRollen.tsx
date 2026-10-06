@@ -11,7 +11,7 @@ const rollen: Array<{
   {
     index: "001",
     title: "Partner / laterale partner",
-    body: "Vertrouwelijke partner-search: portefeuille, cultuur, timing. Zelden publiek — bijna altijd mapping en een-op-een benadering.",
+    body: "Vertrouwelijke partner-search: portefeuille, cultuur, timing. Zelden publiek, bijna altijd mapping en een-op-een benadering.",
     href: "/recruitment/advocaat",
   },
   {
@@ -35,13 +35,13 @@ const rollen: Array<{
   {
     index: "005",
     title: "Compliance-leiding",
-    body: "Head of compliance en aanpalende governance-rollen. Leiding, oordeel en stakeholdermanagement — niet alleen policy schrijven.",
+    body: "Head of compliance en aanpalende governance-rollen. Leiding, oordeel en stakeholdermanagement, meer dan policy schrijven.",
     href: "/recruitment/compliance-officer",
   },
   {
     index: "006",
     title: "Head of legal",
-    body: "De juridische functie leiden of op senior niveau opzetten. Vraagt vakinhoud én organisatiegevoel — een klassieke executive-search-opdracht.",
+    body: "De juridische functie leiden of op senior niveau opzetten. Vraagt vakinhoud en organisatiegevoel. Een klassieke executive-search-opdracht.",
   },
 ];
 
@@ -56,7 +56,7 @@ export function HeadhunterAdvocatuurRollen() {
             headhunting zinvol is.
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-            Legal executive search voor senior juridische posities — niet voor
+            Legal executive search voor senior juridische posities, niet voor
             elke vacature. Junior tot medior werving loopt vaak via onze{" "}
             <Link
               href="/juridisch-recruiter"

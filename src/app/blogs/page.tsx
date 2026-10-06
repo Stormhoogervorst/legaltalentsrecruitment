@@ -3,15 +3,15 @@ import { BlogCard } from "@/components/blogs/BlogCard";
 import { PillButton, SectionShell } from "@/components/home/primitives";
 import { getAllPosts } from "@/lib/blogs";
 
-const title = "Blog | Legal Talents";
+const title = "Blog over legal recruitment | Legal Talents";
 const description =
-  "Artikelen over legal recruitment, de advocatuur en in-house carrières. Inzichten van Legal Talents voor juristen en werkgevers die verder willen.";
+  "Artikelen over legal recruitment, de advocatuur, in-house carrières en legal tech. Voor juristen en werkgevers.";
 const canonical = "https://www.legaltalentsrecruitment.nl/blogs";
 const socialImage = {
   url: "/social%20preview.png",
-  width: 1024,
-  height: 1024,
-  alt: "Legal Recruitment, zoals het hoort.",
+  width: 1200,
+  height: 1200,
+  alt: "Legal recruitment voor de lange termijn.",
 };
 
 export const metadata: Metadata = {
@@ -94,8 +94,8 @@ export default async function BlogsPage() {
             de praktijk.
           </h1>
           <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-            Wat we zien in de juridische markt — van advocatuur tot in-house.
-            Korte artikelen voor juristen en werkgevers die verder willen.
+            Wat we zien in de juridische markt, van advocatuur tot in-house en
+            legal tech. Korte artikelen voor juristen en werkgevers.
           </p>
         </SectionShell>
       </section>

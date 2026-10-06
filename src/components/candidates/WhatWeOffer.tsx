@@ -19,7 +19,7 @@ const offerStats = [
   {
     index: "003",
     title: "Vertrouwelijk",
-    body: "Jouw zoektocht blijft tussen ons — altijd, en zonder uitzondering",
+    body: "Jouw zoektocht blijft tussen ons. We stellen je alleen voor met jouw toestemming.",
   },
 ];
 
@@ -36,13 +36,13 @@ export function WhatWeOffer() {
               <h2 className="display-md">Eerlijk advies.</h2>
             </div>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wij investeren tijd in elkaar leren kennen. Dat betekent soms
-              maanden contact voordat er iets passends voorbij komt. En als wij
-              niks goeds hebben, zeggen we dat ook eerlijk — beter geen voorstel
+              We investeren tijd in elkaar leren kennen. Dat betekent soms
+              maanden contact voordat er iets passends voorbij komt. En als we
+              niks goeds hebben, zeggen we dat eerlijk. Beter geen voorstel
               dan een mismatch.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Voor jou is dit kosteloos. Wij worden betaald door opdrachtgevers,
+              Voor jou is dit kosteloos. We worden betaald door opdrachtgevers,
               niet door kandidaten. Onze rol is matchmaker, niet verkoper.
             </p>
           </div>

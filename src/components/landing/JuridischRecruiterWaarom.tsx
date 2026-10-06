@@ -5,22 +5,22 @@ const reasons = [
   {
     index: "001",
     title: "Alleen legal",
-    body: "Wij werven geen finance of IT erbij. Onze aandacht zit bij advocaten, juristen en legal teams — en bij de cultuur waarin zij moeten landen.",
+    body: "We werven geen finance of IT erbij. Onze aandacht zit bij advocaten, juristen en legal teams, en bij de cultuur waarin zij terechtkomen.",
   },
   {
     index: "002",
     title: "Netwerk in plaats van database",
-    body: "Search loopt via persoonlijke benadering en een netwerk in de Nederlandse advocatuur en inhouse praktijk. Geen massa-outreach, geen ATS-shortcuts.",
+    body: "Search loopt via persoonlijke benadering en een netwerk in de Nederlandse advocatuur en inhouse praktijk.",
   },
   {
     index: "003",
     title: "Tweezijdig, dus scherper",
-    body: "Omdat wij beide kanten van de tafel kennen, toetsen we eerder of een overstap écht past — inhoudelijk, cultureel en in tempo.",
+    body: "Omdat we beide kanten van de tafel kennen, merken we sneller of een overstap past: inhoudelijk, cultureel en qua tempo.",
   },
   {
     index: "004",
     title: "Landelijk, korte lijnen",
-    body: "Onze basis is Nijmegen; we werken als legal recruiter in Nederland landelijk. Intake het liefst op locatie. No cure, no pay: je betaalt bij plaatsing.",
+    body: "Onze basis is Nijmegen, maar we werken als legal recruiter landelijk. De intake doen we het liefst op locatie. No cure, no pay: jullie betalen bij plaatsing.",
   },
 ];
 
@@ -32,19 +32,18 @@ export function JuridischRecruiterWaarom() {
           <div>
             <SlashPill>/ WAAROM LEGAL TALENTS</SlashPill>
             <h2 className="display-md mt-8">
-              Positionering <br />
-              zonder volume-praat.
+              Kwaliteit <br />
+              boven volume.
             </h2>
             <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
               Legal Talents is een compact bureau van mensen met een juridische
-              achtergrond. Wij beloven geen fabricagecijfers — wel een
-              werkwijze die kwaliteit, discretie en een duurzame match voorop
-              zet.
+              achtergrond. We beloven geen cijfers, wel een werkwijze:
+              kwaliteit, discretie en een match voor de lange termijn.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wat je wél mag verwachten: kandidaten die wij zelf hebben
-              gesproken, een shortlist met onderbouwing, en begeleiding tot
-              voorbij de eerste werkdag. Meer over wie wij zijn staat op onze{" "}
+              Wat je mag verwachten: kandidaten die we zelf hebben gesproken,
+              een shortlist met onderbouwing en begeleiding tot na de eerste
+              werkdag. Meer over wie we zijn staat op onze{" "}
               <Link
                 href="/over-ons"
                 className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"

@@ -6,9 +6,9 @@ import { TeamGrid } from "@/components/about/TeamGrid";
 import { Values } from "@/components/about/Values";
 import { aboutPageSchema } from "@/lib/schema";
 
-const title = "Over Ons | Legal Talents Recruitment";
+const title = "Over ons | Legal Talents Recruitment";
 const description =
-  "Opgericht door twee rechtenstudenten, nu specialist in legal recruitment voor starters, medior en senior juristen én legal tech. Maak kennis met ons.";
+  "Twee rechtenstudenten begonnen Legal Talents. Nu doen we legal recruitment voor juristen, legal engineers en legal AI-specialisten. Maak kennis met ons.";
 
 export const metadata: Metadata = {
   title: {

@@ -7,7 +7,7 @@ export function GeneralCounselRol() {
         <div className="max-w-[760px]">
           <SlashPill>/ DE ROL</SlashPill>
           <h2 className="display-md mt-8">
-            Wat een general counsel doet — en waarom de rol zo lastig in te
+            Wat een general counsel doet, en waarom de rol zo lastig in te
             vullen is
           </h2>
           <p className="mt-8 text-[18px] leading-[1.5] text-foreground-secondary">
@@ -21,7 +21,7 @@ export function GeneralCounselRol() {
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
             Die combinatie is schaars. De beste kandidaten zitten al op een goede
             plek, zijn niet actief op zoek, en wegen een overstap zorgvuldig af.
-            Een vacature uitzetten levert ze niet op — gerichte, persoonlijke
+            Een vacature uitzetten levert ze niet op. Gerichte, persoonlijke
             benadering wel.
           </p>
         </div>

@@ -8,9 +8,9 @@ import { X } from "lucide-react";
 
 const menuItems = [
   { label: "Vacatures", href: "/vacatures" },
-  { label: "Voor Kandidaten", href: "/voor-kandidaten" },
-  { label: "Voor Opdrachtgevers", href: "/voor-opdrachtgevers" },
-  { label: "Over Ons", href: "/over-ons" },
+  { label: "Voor kandidaten", href: "/voor-kandidaten" },
+  { label: "Voor opdrachtgevers", href: "/voor-opdrachtgevers" },
+  { label: "Over ons", href: "/over-ons" },
   { label: "Contact", href: "/contact" },
 ];
 

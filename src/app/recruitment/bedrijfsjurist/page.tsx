@@ -14,7 +14,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Werving bedrijfsjuristen | Legal Talents Recruitment";
 const description =
-  "Werving van bedrijfsjuristen en in-house counsel. Specialist in juridische recruitment voor corporates en mid-market. Persoonlijk netwerk, no cure no pay.";
+  "Werving van bedrijfsjuristen en in-house counsel voor corporates en mid-market. Intake op locatie, alleen kandidaten die we zelf spraken. No cure, no pay.";
 
 export const metadata: Metadata = {
   title: {
@@ -42,22 +42,22 @@ const processSteps = [
   {
     index: "001",
     title: "Intake & business context",
-    body: "Bij voorkeur op kantoor — om jullie organisatie, fase en juridische uitdagingen écht te leren kennen. Welke business-context, welke rol binnen het team, welke groei-ambitie?",
+    body: "Bij voorkeur op kantoor, zodat we jullie organisatie, fase en juridische uitdagingen zelf zien. We bespreken de business-context, de rol binnen het team en de groei-ambitie.",
   },
   {
     index: "002",
     title: "Gerichte search in beide markten",
-    body: "Wij benaderen zowel in-house juristen die open staan voor een overstap, als advocaten die naar de business-kant willen. Geen vacaturesite, maar persoonlijke één-op-één outreach.",
+    body: "We benaderen in-house juristen die openstaan voor een overstap en advocaten die naar de business-kant willen, persoonlijk en één-op-één. Geen vacaturesite.",
   },
   {
     index: "003",
     title: "Voordracht met business-onderbouwing",
-    body: "Bij elke kandidaat een onderbouwing: vakinhoudelijke fit, business-sensitiviteit, motivatie voor in-house, persoonlijke vergelijking met andere kandidaten in het traject.",
+    body: "Bij elke kandidaat leggen we uit hoe die vakinhoudelijk past, hoe die met de business omgaat, waarom die in-house wil werken en hoe die zich verhoudt tot de andere kandidaten. We stellen alleen kandidaten voor die we zelf hebben gesproken.",
   },
   {
     index: "004",
     title: "Begeleiding tot start",
-    body: "Van eerste gesprek tot ondertekening, en tijdens de eerste maanden. Bij in-house posities — vooral bij de eerste jurist — is een goede landing crucial. Wij blijven betrokken.",
+    body: "We begeleiden van het eerste gesprek tot ondertekening en tijdens de eerste maanden. Bij in-house posities, vooral bij de eerste jurist, is een goede landing belangrijk. We blijven betrokken.",
   },
 ];
 

@@ -10,13 +10,13 @@ export const legalCounselVacatureFaqItems = [
   {
     question: "Wat is een legal counsel vacature via een recruiter?",
     answer:
-      "Een legal counsel vacature via een recruiter is geen openbare advertentie waarop je zelf reageert. Je maakt kennis, we begrijpen niveau, vak en wat je zoekt, en we brengen alleen rollen ter sprake die daarbij passen — openstaand of via stille search. Je huidige werkgever benaderen we nooit. Een voorstel volgt alleen na jouw toestemming.",
+      "Een legal counsel vacature via een recruiter is geen openbare advertentie waarop je zelf reageert. Je maakt kennis, we begrijpen niveau, vak en wat je zoekt, en we bespreken alleen rollen die daarbij passen, openstaand of via stille search. Je huidige werkgever benaderen we nooit. Een voorstel volgt alleen na jouw toestemming.",
     answerNode: (
       <>
         Een legal counsel vacature via een recruiter is geen openbare
         advertentie waarop je zelf reageert. Je maakt kennis, we begrijpen
-        niveau, vak en wat je zoekt, en we brengen alleen rollen ter sprake die
-        daarbij passen — openstaand of via stille search. Je huidige werkgever
+        niveau, vak en wat je zoekt, en we bespreken alleen rollen die daarbij
+        passen, openstaand of via stille search. Je huidige werkgever
         benaderen we nooit. Meer over die werkwijze staat op{" "}
         <Link href="/voor-kandidaten" className={linkClassName}>
           voor kandidaten
@@ -28,7 +28,7 @@ export const legalCounselVacatureFaqItems = [
   {
     question: "Wat is het verschil tussen legal counsel en bedrijfsjurist?",
     answer:
-      "In de praktijk overlappen de rollen: beide zijn inhouse juristen die de dagelijkse juridische praktijk draaien. Legal counsel is de internationalere titel en kom je vaker tegen bij scale-ups en organisaties met Engels als voertaal. Bedrijfsjurist is de Nederlandse term. Wij matchen beide, maar houden de profielen uit elkaar.",
+      "In de praktijk overlappen de rollen: beide zijn inhouse juristen die de dagelijkse juridische praktijk draaien. Legal counsel is de internationalere titel en kom je vaker tegen bij scale-ups en organisaties met Engels als voertaal. Bedrijfsjurist is de Nederlandse term. We matchen beide, maar houden de profielen uit elkaar.",
     answerNode: (
       <>
         In de praktijk overlappen de rollen: beide zijn inhouse juristen die de
@@ -39,18 +39,18 @@ export const legalCounselVacatureFaqItems = [
         <Link href="/bedrijfsjurist-vacature" className={linkClassName}>
           bedrijfsjurist vacature
         </Link>
-        . Wij matchen beide, maar houden de profielen uit elkaar.
+        . We matchen beide, maar houden de profielen uit elkaar.
       </>
     ) as ReactNode,
   },
   {
     question: "Kost een kennismaking iets?",
     answer:
-      "Nee. Kandidaten betalen niets. Een kennismaking is kosteloos en vrijblijvend. Wij worden betaald door opdrachtgevers, alleen bij een succesvolle plaatsing.",
+      "Nee. Kandidaten betalen niets. Een kennismaking is kosteloos en vrijblijvend. We worden betaald door opdrachtgevers, alleen bij een succesvolle plaatsing.",
     answerNode: (
       <>
         Nee. Kandidaten betalen niets. Een kennismaking is kosteloos en
-        vrijblijvend. Wij worden betaald door opdrachtgevers, alleen bij een
+        vrijblijvend. We worden betaald door opdrachtgevers, alleen bij een
         succesvolle plaatsing. Plan het via{" "}
         <Link href="/contact" className={linkClassName}>
           contact
@@ -67,7 +67,7 @@ export const legalCounselVacatureFaqItems = [
   {
     question: "Wat is het verschil tussen een open en een stille search?",
     answer:
-      "Een open legal counsel vacature mag publiek en kan ook op een jobboard staan. Een stille search is een opdracht die de opdrachtgever niet op Indeed of LinkedIn zet — bijvoorbeeld omdat de zittende jurist het nog niet weet, of omdat de rol vertrouwelijk is. Die rollen bereik je via een recruiter, niet via een open sollicitatieformulier.",
+      "Een open legal counsel vacature mag publiek en kan ook op een jobboard staan. Een stille search is een opdracht die de opdrachtgever niet op Indeed of LinkedIn zet, bijvoorbeeld omdat de zittende jurist het nog niet weet, of omdat de rol vertrouwelijk is. Die rollen bereik je via een recruiter, niet via een open sollicitatieformulier.",
     answerNode: (
       <>
         Een open legal counsel vacature mag publiek en kan ook op een jobboard
@@ -76,7 +76,7 @@ export const legalCounselVacatureFaqItems = [
           vacatures
         </Link>
         . Een stille search is een opdracht die de opdrachtgever niet op Indeed
-        of LinkedIn zet — bijvoorbeeld omdat de zittende jurist het nog niet
+        of LinkedIn zet, bijvoorbeeld omdat de zittende jurist het nog niet
         weet, of omdat de rol vertrouwelijk is. Die rollen bereik je via een
         recruiter, niet via een open sollicitatieformulier.
       </>

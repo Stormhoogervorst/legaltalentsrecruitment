@@ -4,17 +4,17 @@ const mismatchCards = [
   {
     index: "001",
     title: "De serieuze rollen staan zelden open",
-    body: "Veel inhouse search loopt discreet: een eerste jurist, een opvolger voor de GC, of een stille uitbreiding. Jobboards tonen wat publiek mag — niet wat opdrachtgevers écht zoeken. Wie alleen scrollt, mist het grootste deel van de markt.",
+    body: "Veel inhouse search loopt discreet: een eerste jurist, een opvolger voor de GC, of een stille uitbreiding. Jobboards tonen wat publiek mag, niet wat opdrachtgevers zoeken. Wie alleen scrollt, mist het grootste deel van de markt.",
   },
   {
     index: "002",
     title: "Titel zegt weinig over de baan",
-    body: "“Bedrijfsjurist” dekt junior tot head of legal. De ene rol is contracten draaien in een groot team, de andere is als enige jurist sparren met de directie. Vacaturesites filteren dat nauwelijks — cultuur, autonomie en tempo blijven buiten beeld.",
+    body: "“Bedrijfsjurist” dekt junior tot head of legal. De ene rol is contracten draaien in een groot team, de andere is als enige jurist sparren met de directie. Vacaturesites filteren dat nauwelijks, dus cultuur, autonomie en tempo blijven buiten beeld.",
   },
   {
     index: "003",
     title: "Niveau en timing kloppen vaak niet",
-    body: "Solliciteren op een te zware of te lichte rol kost energie en reputatie. En wie nog in dienst is, wil geen openbare sollicitatie. Wij toetsen eerst of een overstap past — inhoudelijk, in seniority en in moment — voordat er een introductie volgt.",
+    body: "Solliciteren op een te zware of te lichte rol kost energie en reputatie. En wie nog in dienst is, wil geen openbare sollicitatie. We toetsen eerst of een overstap past, inhoudelijk, in seniority en qua moment, voordat er een introductie volgt.",
   },
 ];
 

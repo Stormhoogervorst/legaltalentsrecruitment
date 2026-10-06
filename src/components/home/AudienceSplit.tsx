@@ -10,11 +10,11 @@ const cards = [
   {
     index: "/ 001",
     title: "Voor juridisch talent",
-    body: "Op zoek naar een nieuwe juridische uitdaging? Wij begeleiden je vertrouwelijk en persoonlijk naar de juiste positie.",
+    body: "Wil je vertrouwelijk praten over je volgende stap? Dat kan. We spreken je eerst zelf en stellen je alleen voor als jij dat wilt.",
     bullets: [
-      "Vaste posities op niveau",
-      "Persoonlijke begeleiding",
-      "Discreet en vertrouwelijk",
+      "Functies die niet altijd online staan",
+      "Alleen voorgesteld met jouw akkoord",
+      "Begeleiding tot na je eerste werkdag",
     ],
     href: "/voor-kandidaten",
     link: "Meer voor kandidaten →",
@@ -22,10 +22,10 @@ const cards = [
   {
     index: "/ 002",
     title: "Voor opdrachtgevers",
-    body: "Op zoek naar juridisch talent dat blijft? Wij vinden de match die zowel inhoudelijk als cultureel past.",
+    body: "Jullie zoeken juristen die blijven. We komen eerst bij jullie langs om de cultuur te leren kennen en stellen alleen kandidaten voor die we zelf uitgebreid spraken.",
     bullets: [
-      "Persoonlijk netwerk",
-      "Brede dekking alle rechtsgebieden",
+      "Intake bij jullie op locatie",
+      "Alleen kandidaten die we zelf spraken",
       "Fee bij plaatsing",
     ],
     href: "/voor-opdrachtgevers",
@@ -59,7 +59,7 @@ export function AudienceSplit() {
       <SectionShell>
         <SlashPill>/ VOOR WIE</SlashPill>
         <AnimatedHeadline
-          lines={["Voor werkgever of werknemer."]}
+          lines={["Voor juristen en voor werkgevers."]}
           className="display-md mt-8 max-w-3xl"
         />
 

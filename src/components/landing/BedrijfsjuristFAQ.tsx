@@ -5,32 +5,32 @@ export const bedrijfsjuristFaqItems = [
   {
     question: "Wat is het verschil tussen een bedrijfsjurist en een advocaat?",
     answer:
-      "Een advocaat werkt voor cliënten vanuit een kantoor en is ingeschreven bij de orde. Een bedrijfsjurist werkt in dienst bij één organisatie en is daar de juridische adviseur. Veel bedrijfsjuristen komen vanuit de advocatuur — die overstap is in Nederland gangbaar en wettelijk geregeld.",
+      "Een advocaat werkt voor cliënten vanuit een kantoor en is ingeschreven bij de orde. Een bedrijfsjurist werkt in dienst bij één organisatie en is daar de juridische adviseur. Veel bedrijfsjuristen komen vanuit de advocatuur. Die overstap is in Nederland gangbaar en wettelijk geregeld.",
   },
   {
-    question: "Wij zoeken onze eerste bedrijfsjurist — waar te beginnen?",
+    question: "Wij zoeken onze eerste bedrijfsjurist: waar te beginnen?",
     answer:
-      "De eerste in-house jurist is een sleutelmoment. Het profiel verschilt fundamenteel van een 'gewone' jurist: deze persoon bouwt de juridische functie op, schrijft beleid, kiest tools en bewerkt processen. Wij begeleiden dit proces vanaf nul — inclusief sparren over wat het functieprofiel moet inhouden.",
+      "De eerste in-house jurist is een sleutelmoment. Het profiel verschilt fundamenteel van een 'gewone' jurist: deze persoon bouwt de juridische functie op, schrijft beleid, kiest tools en bewerkt processen. We begeleiden dit proces vanaf nul, inclusief sparren over wat het functieprofiel moet inhouden.",
   },
   {
     question: "Hoeveel verdient een bedrijfsjurist gemiddeld?",
     answer:
-      "Sterk afhankelijk van ervaring, industrie en regio. Een medior bedrijfsjurist (2-5 jaar) in NL verdient gemiddeld tussen €65k en €95k. Senior en head of legal posities gaan vanaf €95k tot ruim €150k. General counsel in grote organisaties: €150k en hoger met bonus. Bij de intake brengen we benchmarks die specifiek zijn voor jullie sector en grootte.",
+      "Dat hangt af van ervaring, sector, regio en hoe zwaar de rol is. In de intake bespreken we wat marktconform is voor jullie sector en grootte, op basis van recente trajecten.",
   },
   {
     question: "Werken jullie ook voor scale-ups en kleinere bedrijven?",
     answer:
-      "Ja. Het verschil tussen werving voor een corporate en een scale-up zit niet in de moeite, maar in het profiel. Bij scale-ups zoeken we vaak juristen met ondernemerschap, brede skills en risicotolerantie. Bij corporates met specialisme, processdiscipline en stakeholdermanagement. Wij weten beide markten.",
+      "Ja. Het verschil tussen werving voor een corporate en een scale-up zit niet in de moeite, maar in het profiel. Bij scale-ups zoeken we vaak juristen met ondernemerschap, brede skills en risicotolerantie. Bij corporates met specialisme, processdiscipline en stakeholdermanagement. We weten beide markten.",
   },
   {
     question: "Is een advocaat geschikt voor een in-house rol?",
     answer:
-      "Vaak wel — maar niet altijd. Goede advocaten zijn vakinhoudelijk sterk maar moeten zich aanpassen aan de in-house rol: minder uurtjes-schrijven, meer business-context, meer commerciële trade-offs. Bij elke voordracht beoordelen wij of een advocaat klaar is voor deze overgang. Niet iedereen is dat — en dat is een belangrijke filter.",
+      "Vaak wel, maar niet altijd. Goede advocaten zijn vakinhoudelijk sterk maar moeten zich aanpassen aan de in-house rol: minder uurtjes-schrijven, meer business-context, meer commerciële trade-offs. Bij elke voordracht beoordelen we of een advocaat klaar is voor deze overgang. Niet iedereen is dat, en dat is een belangrijke filter.",
   },
   {
     question: "Hoe gaan jullie om met vertrouwelijkheid voor onze kant?",
     answer:
-      "Wij delen jullie bedrijfsnaam en specifieke functie-eisen alleen met kandidaten na overleg met jullie. In de zoekfase werken we vaak met een algemene profielomschrijving (bijvoorbeeld 'middelgrote technologie-organisatie in regio Utrecht') om jullie zoektocht discreet te houden — zeker als jullie nog geen externe communicatie willen.",
+      "We delen jullie bedrijfsnaam en specifieke functie-eisen alleen met kandidaten na overleg met jullie. In de zoekfase werken we vaak met een algemene profielomschrijving (bijvoorbeeld 'middelgrote technologie-organisatie in regio Utrecht') om jullie zoektocht discreet te houden, zeker als jullie nog geen externe communicatie willen.",
   },
 ];
 

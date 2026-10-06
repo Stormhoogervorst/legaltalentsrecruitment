@@ -14,7 +14,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Juridisch recruiter voor legal professionals | Legal Talents";
 const description =
-  "Op zoek naar een juridisch recruiter? Legal Talents werft advocaten en juristen voor kantoren en inhouse teams. Specialistisch, landelijk, no cure no pay.";
+  "Juridisch recruiter voor kantoren en legal teams. Intake op locatie, elke kandidaat zelf gesproken, begeleiding na de eerste werkdag. No cure, no pay.";
 
 export const metadata: Metadata = {
   title: {
@@ -42,17 +42,17 @@ const processSteps = [
   {
     index: "001",
     title: "Intake",
-    body: "Bij voorkeur op locatie: organisatie, cultuur, team en het echte profiel. Wat moet deze persoon kunnen, en wat moet het juist niet worden?",
+    body: "Bij voorkeur op locatie: organisatie, cultuur, team en het echte profiel. We bespreken wat deze persoon moet kunnen en wat de rol juist niet moet worden.",
   },
   {
     index: "002",
     title: "Search en mapping",
-    body: "Gerichte search via netwerk en persoonlijke benadering. We mappen waar relevant talent zit — vaak passief beschikbaar, zelden op een vacaturesite.",
+    body: "Gerichte search via netwerk en persoonlijke benadering. We mappen waar relevant talent zit, vaak passief beschikbaar en zelden op een vacaturesite.",
   },
   {
     index: "003",
     title: "Selectie",
-    body: "Wij spreken kandidaten zelf. Vakinhoud, motivatie voor een overstap en cultuurfit wegen even zwaar als het cv. Alleen wie past, gaat door.",
+    body: "We spreken kandidaten zelf. Vakinhoud, motivatie voor een overstap en cultuurfit wegen even zwaar als het cv. Alleen wie past, gaat door.",
   },
   {
     index: "004",
@@ -62,7 +62,7 @@ const processSteps = [
   {
     index: "005",
     title: "Begeleiding",
-    body: "Van eerste gesprek tot indiensttreding — en daarna. Planning, feedback beide kanten op, en betrokkenheid tijdens de eerste periode.",
+    body: "Van eerste gesprek tot indiensttreding, en daarna. We plannen, geven feedback beide kanten op en blijven betrokken tijdens de eerste periode.",
   },
 ];
 

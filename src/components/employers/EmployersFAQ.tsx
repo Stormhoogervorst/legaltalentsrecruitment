@@ -10,7 +10,7 @@ export const employersFaqItems = [
   {
     question: "Welke posities vervullen jullie?",
     answer:
-      "Alle juridische posities op middel- tot senior niveau, in alle rechtsgebieden. Van advocaat-stagiair tot partner, van bedrijfsjurist tot general counsel.",
+      "Alle juridische posities, in alle rechtsgebieden: van advocaat-stagiair tot partner en van bedrijfsjurist tot general counsel. Ook legal engineers en legal AI-specialisten.",
   },
   {
     question: "Hoe lang duurt een gemiddeld traject?",
@@ -20,17 +20,17 @@ export const employersFaqItems = [
   {
     question: "Wat als de geplaatste kandidaat snel weer vertrekt?",
     answer:
-      "Bij een schriftelijk overeengekomen garantieregeling werven wij eenmalig en kosteloos een vervangende kandidaat, mits het vertrek niet voortkomt uit reorganisatie, fusie, faillissement of een wezenlijke wijziging van de functie.",
+      "Als we vooraf schriftelijk een garantie hebben afgesproken, zetten we ons in om eenmalig en kosteloos een vervangende kandidaat te vinden. Dat geldt niet bij reorganisatie, fusie, faillissement of een wezenlijke wijziging van de functie.",
   },
   {
     question: "Kunnen wij ook met meerdere bureaus tegelijk werken?",
     answer:
-      "Dat kan, maar we werken het liefst exclusief. Dat geeft ons de ruimte om er écht voor te gaan en zorgt voor de beste matches. Bij niet-exclusieve opdrachten hanteren we soms aangepaste voorwaarden.",
+      "Dat kan, maar we werken het liefst exclusief. Dan kunnen we de tijd nemen voor de intake en voor gesprekken met kandidaten, en hoeven we niet te racen tegen andere bureaus. Bij niet-exclusieve opdrachten hanteren we soms andere voorwaarden.",
   },
   {
     question: "Hoe gaan jullie om met vertrouwelijkheid?",
     answer:
-      "Discretie is uitgangspunt, niet optie. Kandidaatgegevens delen we alleen na expliciete toestemming. Andersom delen wij jullie zoekopdracht of bedrijfsnaam pas met kandidaten na overleg met jullie.",
+      "Discretie is het uitgangspunt. We delen kandidaatgegevens alleen met toestemming van de kandidaat. Jullie zoekopdracht en bedrijfsnaam delen we pas met kandidaten na overleg met jullie.",
   },
 ];
 

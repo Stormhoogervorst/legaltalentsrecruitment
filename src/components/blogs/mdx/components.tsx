@@ -71,7 +71,10 @@ function MdxImage({
       alt={alt || ""}
       width={Number(width) || 1200}
       height={Number(height) || 630}
-      sizes="(min-width: 768px) 680px, 100vw"
+      // w-full h-auto: de afbeelding vult de artikelkolom, geen object-cover.
+      // Kolombreedte = max-w-[68ch] = 686px (gemeten in de productiebuild op 1440px
+      // breed) vanaf md; kleiner dan 768px is dat 100vw - 2×20px paginapadding.
+      sizes="(min-width: 768px) 686px, calc(100vw - 40px)"
       className="my-8 h-auto w-full rounded-[16px]"
     />
   );

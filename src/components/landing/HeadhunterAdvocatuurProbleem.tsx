@@ -4,17 +4,17 @@ const mismatchCards = [
   {
     index: "001",
     title: "De juiste mensen solliciteren niet",
-    body: "Op partner-, counsel- en GC-niveau zit talent zelden op een jobboard. Ze zijn in functie, vaak tevreden genoeg, en bewegen alleen als een headhunter juridisch talent persoonlijk en discreet benadert — met een rol die écht iets toevoegt.",
+    body: "Op partner-, counsel- en GC-niveau zit talent zelden op een jobboard. Ze zijn in functie, vaak tevreden genoeg, en bewegen alleen als een headhunter juridisch talent persoonlijk en discreet benadert, met een rol die iets toevoegt.",
   },
   {
     index: "002",
     title: "Algemene werving mist het vak",
-    body: "Een generalist die ook finance of IT doet, herkent het verschil tussen een corporate counsel en een partner ondernemingsrecht zelden. Bij senior legal search is vakinhoud, track record en cultuurfit het hele werk — niet een extra filter achteraf.",
+    body: "Een generalist die ook finance of IT doet, herkent het verschil tussen een corporate counsel en een partner ondernemingsrecht zelden. Bij senior legal search is vakinhoud, track record en cultuurfit het hele werk, geen extra filter achteraf.",
   },
   {
     index: "003",
     title: "Volume schaadt in een kleine markt",
-    body: "De Nederlandse advocatuur en inhouse-gemeenschap is compact. Vijftig cv’s rondsturen is geen search; het is ruis. Een headhunter advocatuur werkt met mapping en een korte shortlist — kandidaten die wij zelf hebben gesproken.",
+    body: "De Nederlandse advocatuur en inhouse-gemeenschap is compact. Vijftig cv’s rondsturen is geen search; het is ruis. Een headhunter advocatuur werkt met mapping en een korte shortlist van kandidaten die we zelf hebben gesproken.",
   },
 ];
 
@@ -30,8 +30,8 @@ export function HeadhunterAdvocatuurProbleem() {
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
             Een advertentie of een generalistisch bureau bereikt zelden de
-            mensen die je écht nodig hebt. Partners, counsel en general
-            counsel zijn passief — en een slordige search is morgen gesprek
+            mensen die jullie nodig hebben. Partners, counsel en general
+            counsel zijn passief, en een slordige search is morgen gesprek
             van de dag.
           </p>
         </div>

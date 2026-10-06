@@ -5,7 +5,7 @@ const audiences = [
   {
     index: "001",
     title: "Advocatuur",
-    body: "Van advocaat-stagiair tot senior medewerker en partner. Alle rechtsgebieden — van ondernemingsrecht tot familierecht.",
+    body: "Van advocaat-stagiair tot senior medewerker en partner. Alle rechtsgebieden, van ondernemingsrecht tot familierecht.",
   },
   {
     index: "002",
@@ -15,7 +15,7 @@ const audiences = [
   {
     index: "003",
     title: "Specialismen",
-    body: "Compliance officers, privacy specialisten, contractmanagers, en andere rollen waar diepe juridische kennis nodig is.",
+    body: "Compliance officers, privacyspecialisten en contractmanagers. Daarnaast legal engineers en legal AI-specialisten, die AI in de praktijk werkend krijgen bij kantoren en corporates.",
   },
 ];
 
@@ -26,19 +26,20 @@ export function CandidatesForWhom() {
         <SlashPill>/ VOOR WIE</SlashPill>
         <div className="mt-8 max-w-[720px]">
           <h2 className="display-md">
-            Voor welke <br />
-            juristen?
+            Voor deze <br />
+            juristen.
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-            Wij werken met juridisch talent op middel- tot senior niveau, in
-            alle rechtsgebieden en functies. Specifiek op zoek naar een{" "}
+            We werken met juristen van advocaat-stagiair tot partner en van
+            bedrijfsjurist tot general counsel, in alle rechtsgebieden. Zoek je
+            een{" "}
             <Link
               href="/bedrijfsjurist-vacature"
               className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
             >
               bedrijfsjurist vacature
-            </Link>{" "}
-            of een{" "}
+            </Link>
+            , een{" "}
             <Link
               href="/legal-counsel-vacature"
               className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
@@ -52,7 +53,7 @@ export function CandidatesForWhom() {
             >
               compliance officer vacature
             </Link>
-            ? Daarvoor hebben we aparte pagina&apos;s.
+            ? Daar hebben we aparte pagina&apos;s voor.
           </p>
         </div>
 

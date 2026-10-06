@@ -6,15 +6,14 @@ export function AboutCTA() {
       <SectionShell>
         <SlashPill variant="dark">/ KENNISMAKEN</SlashPill>
         <h2 className="display-lg mx-auto mt-8 max-w-4xl">
-          Even kennismaken?
+          Kom langs voor een kop koffie.
         </h2>
         <p className="mx-auto mt-8 max-w-[480px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-          Bij voorkeur op locatie, op een kopje koffie. Vrijblijvend en
-          vertrouwelijk.
+          Bij voorkeur op locatie. Vrijblijvend en vertrouwelijk.
         </p>
         <div className="mt-10">
           <PillButton href="/contact" variant="dark">
-            Plan een afspraak →
+            Plan een kennismaking →
           </PillButton>
         </div>
       </SectionShell>

@@ -13,9 +13,9 @@ const audiences = [
     title: "Voor opdrachtgevers",
     body: "Advocatenkantoren en inhouse legal teams die juridisch personeel zoeken dat blijft. Van boutique tot mid-market, van de eerste jurist tot een groeiend team.",
     bullets: [
-      "Advocatenkantoren — stagiair tot partner",
+      "Advocatenkantoren, van stagiair tot partner",
       "Inhouse: bedrijfsjurist, counsel, GC",
-      "Compliance, privacy en legal engineer",
+      "Compliance, privacy, legal engineer en legal AI",
     ],
     primary: { label: "Plan een opdrachtgesprek →", href: "/contact" },
     secondary: {
@@ -26,7 +26,7 @@ const audiences = [
   {
     index: "/ 002",
     title: "Voor kandidaten",
-    body: "Advocaten, bedrijfsjuristen, legal counsel, general counsel, compliance officers en legal engineers die discreet willen oriënteren — zonder druk, zonder cv-dump.",
+    body: "Advocaten, bedrijfsjuristen, legal counsel, general counsel, compliance officers, legal engineers en legal AI-specialisten die discreet willen oriënteren, zonder druk en zonder cv-dump.",
     bullets: [
       "Actuele vacatures en stille opdrachten",
       "Kosteloos en vrijblijvend",
@@ -47,8 +47,8 @@ export function JuridischRecruiterVoorWie() {
           dezelfde tafel.
         </h2>
         <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-          Legal Talents is tweezijdig: wij werven voor opdrachtgevers en
-          begeleiden kandidaten. Dezelfde marktkennis, dezelfde discretie.
+          Legal Talents werkt voor beide kanten: we werven voor opdrachtgevers
+          en begeleiden kandidaten. Dezelfde marktkennis, dezelfde discretie.
         </p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">

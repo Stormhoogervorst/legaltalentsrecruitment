@@ -55,7 +55,7 @@ export const legalEngineerFaqItems = [
   {
     question: "Hoe gaan jullie om met exclusiviteit?",
     answer:
-      "Wij werken het liefst exclusief — dat geeft ons de ruimte om de beperkte pool van hybride talent optimaal te benutten zonder dat kandidaten via meerdere bureaus tegelijk worden benaderd. Niet-exclusieve opdrachten kunnen wel, maar dan hanteren we soms aangepaste voorwaarden.",
+      "We werken het liefst exclusief. Zo benaderen we de beperkte pool van hybride talent netjes, zonder dat kandidaten via meerdere bureaus tegelijk worden gebeld. Niet-exclusieve opdrachten kunnen wel, maar dan hanteren we soms andere voorwaarden.",
   },
 ];
 

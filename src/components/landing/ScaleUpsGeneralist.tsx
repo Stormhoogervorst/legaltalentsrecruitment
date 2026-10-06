@@ -7,17 +7,18 @@ export function ScaleUpsGeneralist() {
         <div className="max-w-[760px]">
           <SlashPill>/ EERSTE LEGAL HIRE</SlashPill>
           <h2 className="display-md mt-8">
-            Generalist of specialist? <br />
-            Je eerste legal hire
+            Je eerste legal hire <br />
+            is een generalist.
           </h2>
           <p className="mt-8 text-[18px] leading-[1.5] text-foreground-secondary">
-            De eerste jurist in een scale-up is bijna nooit een specialist. Je
-            zoekt een brede generalist die contracten, arbeidsrecht, privacy en
-            commerciële vraagstukken aankan en die comfortabel is met onzekerheid
-            en tempo. Specialisten — een privacy officer, een M&A-jurist — komen
-            later, als het team groeit en de vraagstukken dieper worden. Wij
-            helpen je bepalen wat je in deze fase echt nodig hebt, in plaats van
-            een te zware (en te dure) hire te plaatsen die zich gaat vervelen.
+            De eerste jurist in een scale-up is bijna nooit een specialist.
+            Jullie zoeken een brede generalist die contracten, arbeidsrecht,
+            privacy en commerciële vraagstukken aankan en die comfortabel is met
+            onzekerheid en tempo. Specialisten, zoals een privacy officer of een
+            M&A-jurist, komen later, als het team groeit en de vraagstukken
+            dieper worden. We helpen bepalen wat jullie in deze fase nodig
+            hebben, zodat jullie geen te zware en te dure hire doen die zich
+            gaat vervelen.
           </p>
         </div>
       </SectionShell>

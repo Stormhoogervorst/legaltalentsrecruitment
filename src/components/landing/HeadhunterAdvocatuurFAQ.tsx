@@ -11,7 +11,7 @@ export const headhunterAdvocatuurFaqItems = [
     question:
       "Wat is het verschil tussen een headhunter en een juridisch recruiter?",
     answer:
-      "Een juridisch recruiter werft breder: van stagiair tot GC, vaak met een mix van netwerk, search en — waar het past — een open vacature. Een headhunter advocatuur, of juridisch headhunter, richt zich op rollen die moeilijk open te zetten zijn: senior, discreet, passief talent. Legal executive search betekent mapping van de markt, persoonlijke benadering en een korte shortlist. Voor junior tot medior is recruiter-werk vaak voldoende; voor partner, GC of een stille opvolging is headhunting het passende instrument.",
+      "Een juridisch recruiter werft breder: van stagiair tot GC, vaak met een mix van netwerk, search en, waar het past, een open vacature. Een headhunter advocatuur, of juridisch headhunter, richt zich op rollen die moeilijk open te zetten zijn: senior, discreet, passief talent. Legal executive search betekent mapping van de markt, persoonlijke benadering en een korte shortlist. Voor junior tot medior is recruiter-werk vaak voldoende; voor partner, GC of een stille opvolging is headhunting het passende instrument.",
     answerNode: (
       <>
         Een{" "}
@@ -19,7 +19,7 @@ export const headhunterAdvocatuurFaqItems = [
           juridisch recruiter
         </Link>{" "}
         werft breder: van stagiair tot GC, vaak met een mix van netwerk, search
-        en — waar het past — een open vacature. Een headhunter advocatuur, of
+        en, waar het past, een open vacature. Een headhunter advocatuur, of
         juridisch headhunter, richt zich op rollen die moeilijk open te zetten
         zijn: senior, discreet, passief talent. Legal executive search betekent
         mapping van de markt, persoonlijke benadering en een korte shortlist.
@@ -36,7 +36,7 @@ export const headhunterAdvocatuurFaqItems = [
   {
     question: "Voor welke sectoren en rollen werven jullie?",
     answer:
-      "Advocatenkantoren — boutique tot mid-market — en inhouse legal teams bij corporates, mid-market en groeiende organisaties. Rollen: partner, counsel, general counsel, senior bedrijfsjurist, head of legal en compliance-leiding. Landelijk in Nederland. Niet elke juridische vacature vraagt executive search; dat zeggen we ook als het niet zo is.",
+      "Advocatenkantoren, van boutique tot mid-market, en inhouse legal teams bij corporates, mid-market en groeiende organisaties. Rollen: partner, counsel, general counsel, senior bedrijfsjurist, head of legal en compliance-leiding. Landelijk in Nederland. Niet elke juridische vacature vraagt executive search; dat zeggen we ook als het niet zo is.",
   },
   {
     question: "Werken jullie landelijk?",
@@ -69,15 +69,15 @@ export const headhunterAdvocatuurFaqItems = [
   {
     question: "Hoe discreet is de aanpak?",
     answer:
-      "Discretie is het uitgangspunt, niet een extra. Wij delen jullie naam en de specifieke opdracht alleen met kandidaten na overleg. In de mappingfase werken we vaak met een algemene profielomschrijving, zodat de zoektocht niet in de markt ligt. Kandidaten introduceren we alleen na hun expliciete toestemming. Jullie huidige team en de markt horen het niet via ons.",
+      "Discretie is het uitgangspunt. We delen jullie naam en de specifieke opdracht alleen met kandidaten na overleg. In de mappingfase werken we vaak met een algemene profielomschrijving, zodat de zoektocht niet in de markt ligt. Kandidaten introduceren we alleen na hun expliciete toestemming. Jullie huidige team en de markt horen het niet via ons.",
   },
   {
     question: "Wat kunnen kandidaten verwachten?",
     answer:
-      "Een vertrouwelijke, vrijblijvende kennismaking. Wij worden betaald door opdrachtgevers, niet door kandidaten. We benaderen je huidige werkgever nooit. Alleen een voorstel na jouw toestemming, met context over de rol voordat je in gesprek gaat. Staat er niets passends open, dan zeggen we dat eerlijk.",
+      "Een vertrouwelijke, vrijblijvende kennismaking. We worden betaald door opdrachtgevers, niet door kandidaten. We benaderen je huidige werkgever nooit. Alleen een voorstel na jouw toestemming, met context over de rol voordat je in gesprek gaat. Staat er niets passends open, dan zeggen we dat eerlijk.",
     answerNode: (
       <>
-        Een vertrouwelijke, vrijblijvende kennismaking. Wij worden betaald door
+        Een vertrouwelijke, vrijblijvende kennismaking. We worden betaald door
         opdrachtgevers, niet door kandidaten. We benaderen je huidige werkgever
         nooit. Alleen een voorstel na jouw toestemming, met context over de rol
         voordat je in gesprek gaat. Bekijk{" "}

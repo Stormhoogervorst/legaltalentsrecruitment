@@ -11,8 +11,9 @@ export function organizationSchema() {
     "@id": `${siteUrl}/#organization`,
     name: "Legal Talents Recruitment",
     url: siteUrl,
-    logo: `${siteUrl}/logo-lt.svg`,
-    email: "storm@legal-talents.nl",
+    // PNG 512×512, gerenderd uit public/logo lt.svg. (/logo-lt.svg bestond niet: 404.)
+    logo: `${siteUrl}/logo-lt.png`,
+    email: "marcel@legal-talents.nl",
     telephone: "+31 6 85 68 09 98",
     vatID: "NL868649818B01",
     taxID: "98803093",
@@ -29,7 +30,7 @@ export function organizationSchema() {
       "@type": "ContactPoint",
       contactType: "customer support",
       telephone: "+31 6 85 68 09 98",
-      email: "storm@legal-talents.nl",
+      email: "marcel@legal-talents.nl",
       areaServed: "NL",
       availableLanguage: ["nl", "en"],
     },
@@ -58,8 +59,13 @@ export function aboutPageSchema() {
     employee: [
       {
         "@type": "Person",
+        name: "Marcel Hoogervorst",
+        jobTitle: "Directeur",
+      },
+      {
+        "@type": "Person",
         name: "Max Endrizzi",
-        jobTitle: "Eigenaar",
+        jobTitle: "Oprichter / Operations",
         alumniOf: {
           "@type": "EducationalOrganization",
           name: "LLM International and European Business Law",
@@ -68,7 +74,7 @@ export function aboutPageSchema() {
       {
         "@type": "Person",
         name: "Storm Hoogervorst",
-        jobTitle: "Eigenaar",
+        jobTitle: "Oprichter / Recruiter",
         alumniOf: {
           "@type": "EducationalOrganization",
           name: "LLB European Law School, BBA Business Economics",
@@ -77,7 +83,7 @@ export function aboutPageSchema() {
       {
         "@type": "Person",
         name: "Justin Bigler",
-        jobTitle: "Strategic Business Partner",
+        jobTitle: "Business Development",
         alumniOf: {
           "@type": "EducationalOrganization",
           name: "LLM Ondernemingsrecht",

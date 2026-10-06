@@ -9,10 +9,10 @@ export function AdvocaatHero() {
           advocaten.
         </h1>
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-          Specialistisch recruitment voor de advocatuur. Van
-          advocaat-stagiair tot partner-niveau, in alle rechtsgebieden.
-          Persoonlijk netwerk in plaats van database, no cure no pay. Wij
-          bereiken maandelijks 40.000 juristen.
+          Werving van advocaten, van advocaat-stagiair tot partner, in alle
+          rechtsgebieden. We komen voor de intake bij het kantoor langs en
+          stellen alleen kandidaten voor die we zelf hebben gesproken. No cure,
+          no pay.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <PillButton href="/contact">Plan een intake →</PillButton>

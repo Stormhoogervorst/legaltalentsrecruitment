@@ -14,12 +14,12 @@ const outcomeCards = [
   {
     index: "002",
     title: "Snelheid",
-    body: "Schaarse markt vraagt om actieve, gerichte search — geen lange wachttijden op sollicitaties",
+    body: "Schaarse markt vraagt om actieve, gerichte search, geen lange wachttijden op sollicitaties",
   },
   {
     index: "003",
     title: "Discretie",
-    body: "Compliance-werving raakt vaak interne reorganisatie of audit-bevindingen — volledige vertrouwelijkheid is uitgangspunt",
+    body: "Compliance-werving raakt vaak interne reorganisatie of audit-bevindingen. Volledige vertrouwelijkheid is uitgangspunt",
   },
 ];
 
@@ -33,24 +33,24 @@ export function ComplianceResultaat() {
           <div>
             <SlashPill>/ RESULTAAT</SlashPill>
             <h2 className="display-md mt-8">
-              Wat jullie krijgen — <br />
-              specialisme dat klopt.
+              Wat jullie krijgen. <br />
+              Specialisme dat klopt.
             </h2>
             <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
               Een verkeerd ingevulde compliance-positie heeft directe
               consequenties. Een MLRO die de Wwft niet doorgrondt, een DPO
               zonder healthcare-ervaring bij een ziekenhuis, een AML-officer die
-              geen ervaring heeft met crypto-payments — het kost niet alleen
-              tijd maar ook reputatie richting toezichthouders.
+              geen ervaring heeft met crypto-payments: het kost tijd en
+              reputatie bij toezichthouders.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wij plaatsen alleen kandidaten waarvan wij hebben gecontroleerd dat
-              de sectorale kennis klopt. Geen &apos;compliance is
-              compliance&apos; — wel specifieke ervaring met jullie regulatory
+              We stellen alleen kandidaten voor van wie we hebben gecontroleerd
+              dat de sectorkennis klopt. Dus geen &apos;compliance is
+              compliance&apos;, maar specifieke ervaring met jullie regulatory
               framework.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Voor opdrachtgevers in regulated markets brengen wij naast werving
+              Voor opdrachtgevers in regulated markets brengen we naast werving
               ook context mee: welke compliance-functie-structuren werken bij
               vergelijkbare organisaties, welke salarissen redelijk zijn, en
               welke profielen &apos;op papier&apos; lijken maar in praktijk niet

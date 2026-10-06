@@ -19,8 +19,8 @@ const pricingStats = [
   },
   {
     index: "003",
-    title: "No risk",
-    body: "Vervangingsgarantie op aanvraag — bij voortijdig vertrek werven wij kosteloos opnieuw of crediteren wij de fee.",
+    title: "Garantie",
+    body: "Vervangingsgarantie als vooraf schriftelijk afgesproken. Bij voortijdig vertrek zetten we ons in om kosteloos een vervanger te vinden.",
   },
 ];
 
@@ -35,8 +35,7 @@ export function Pricing() {
             <div className="lg:sticky lg:top-24">
               <SlashPill>/ HONORARIUM</SlashPill>
               <h2 className="display-md mt-8 max-w-4xl">
-                No cure, no pay. <br />
-                Helder en eerlijk.
+                No cure, no pay.
               </h2>
 
               <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
@@ -50,9 +49,9 @@ export function Pricing() {
                 complexiteit en exclusiviteit van de opdracht.
               </p>
               <p className="mt-6 text-[16px] leading-[1.6] text-foreground-secondary">
-                Alle afspraken — percentage, minimum-honorarium, garantieperiode
-                — leggen we voor de start vast in een schriftelijke
-                opdrachtbevestiging. Geen verrassingen, geen kleine lettertjes.
+                Alle afspraken, zoals het percentage, het minimum-honorarium en
+                de garantieperiode, leggen we voor de start vast in een
+                schriftelijke opdrachtbevestiging.
               </p>
               <Link
                 href="/algemene-voorwaarden"

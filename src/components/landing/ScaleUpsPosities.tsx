@@ -40,7 +40,7 @@ export function ScaleUpsPosities() {
             wij invullen voor scale-ups
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-            Van de eerste generalist tot een volwassen legal-team — wij werven op
+            Van de eerste generalist tot een volwassen legal-team: we werven op
             elk niveau dat bij jullie groeifase past.
           </p>
         </div>

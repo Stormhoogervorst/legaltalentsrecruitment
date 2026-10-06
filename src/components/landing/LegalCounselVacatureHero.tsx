@@ -12,11 +12,11 @@ export function LegalCounselVacatureHero() {
           <span className="block">Discreet gematcht.</span>
         </h1>
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-          Op zoek naar een legal counsel vacature — of een vacature legal
-          counsel die niet op een jobboard staat? Legal Talents is een
-          specialistisch legal recruiter. Wij matchen legal professionals met
+          Voor wie een legal counsel vacature zoekt, of een vacature legal
+          counsel die niet op een jobboard staat. Legal Talents is een
+          specialistisch legal recruiter. We matchen legal professionals met
           inhouse-rollen die vaak niet op Indeed of LinkedIn staan.
-          Vertrouwelijk, landelijk, en alleen een voorstel na jouw toestemming.
+          Vertrouwelijk, landelijk en alleen een voorstel met jouw toestemming.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <PillButton href="/contact">Plan een kennismaking →</PillButton>

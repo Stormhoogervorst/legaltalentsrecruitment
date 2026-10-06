@@ -5,7 +5,7 @@ const expertiseCards = [
   {
     index: "001",
     title: "Hybride profiel is schaars",
-    body: "Iemand die zowel juridisch inhoudelijk sterk is als technisch kan denken, is zeldzaam. Wij herkennen welke juristen dit profiel écht hebben — en welke het alleen op hun CV zetten.",
+    body: "Iemand die zowel juridisch inhoudelijk sterk is als technisch kan denken, is zeldzaam. We herkennen welke juristen dit profiel hebben en welke het alleen op hun cv zetten.",
   },
   {
     index: "002",

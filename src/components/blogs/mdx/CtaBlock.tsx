@@ -6,12 +6,12 @@ const copy: Record<BlogAudience, { eyebrow: string; title: string; body: string 
   {
     kandidaat: {
       eyebrow: "/ VOLGENDE STAP",
-      title: "Op zoek naar een nieuwe rol?",
-      body: "Wij denken vrijblijvend mee — vertrouwelijk, en alleen met functies die passen.",
+      title: "Een nieuwe rol? Praat eerst met ons.",
+      body: "We denken vrijblijvend met je mee, en alleen over functies die passen.",
     },
     opdrachtgever: {
       eyebrow: "/ VOLGENDE STAP",
-      title: "Op zoek naar juridisch talent?",
+      title: "Juridisch talent werven dat blijft.",
       body: "Geen lijst met vijftig cv's, maar kandidaten die inhoudelijk en cultureel passen.",
     },
   };

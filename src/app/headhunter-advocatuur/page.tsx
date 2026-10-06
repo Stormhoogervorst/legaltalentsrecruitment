@@ -14,7 +14,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Headhunter advocatuur | Legal Talents Recruitment";
 const description =
-  "Headhunter advocatuur voor kantoren en inhouse teams. Legal executive search voor senior juridisch talent — discreet, landelijk, no cure no pay.";
+  "Headhunter advocatuur voor kantoren en inhouse teams. Legal executive search voor senior juridisch talent. Discreet en landelijk. No cure, no pay.";
 
 export const metadata: Metadata = {
   title: {
@@ -47,12 +47,12 @@ const processSteps = [
   {
     index: "002",
     title: "Mapping en search",
-    body: "Wij mappen waar relevant talent zit — kantoren, inhouse teams, vaak passief. Gerichte, persoonlijke benadering. Geen massa-outreach, geen openbare advertentie tenzij jullie dat willen.",
+    body: "We mappen waar relevant talent zit: kantoren, inhouse teams, vaak passief. Gerichte, persoonlijke benadering. Geen openbare advertentie tenzij jullie dat willen.",
   },
   {
     index: "003",
     title: "Selectie",
-    body: "Wij spreken kandidaten zelf. Vakinhoud, motivatie voor een overstap en cultuurfit wegen even zwaar als het cv. Alleen wie past — en wie écht in beweging is — gaat door.",
+    body: "We spreken kandidaten zelf. Vakinhoud, motivatie voor een overstap en cultuurfit wegen even zwaar als het cv. Alleen wie past en wie in beweging is, gaat door.",
   },
   {
     index: "004",
@@ -62,7 +62,7 @@ const processSteps = [
   {
     index: "005",
     title: "Begeleiding",
-    body: "Van eerste gesprek tot indiensttreding — en daarna. Planning, feedback beide kanten op, en betrokkenheid tijdens de eerste periode. Discretie blijft tot het einde.",
+    body: "Van eerste gesprek tot indiensttreding, en daarna. We plannen, geven feedback beide kanten op en blijven betrokken tijdens de eerste periode. Discretie blijft tot het einde.",
   },
 ];
 

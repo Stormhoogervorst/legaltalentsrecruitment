@@ -14,7 +14,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Legal counsel vacature | Legal Talents Recruitment";
 const description =
-  "Op zoek naar een legal counsel vacature? Legal Talents matcht discreet met inhouse-rollen, vaak buiten Indeed en LinkedIn. Kennismaking kosteloos.";
+  "Legal counsel vacature zoeken? We spreken je eerst en stellen je alleen voor met jouw akkoord. Ook rollen buiten Indeed en LinkedIn. Kosteloos.";
 
 export const metadata: Metadata = {
   title: {
@@ -42,17 +42,17 @@ const processSteps = [
   {
     index: "001",
     title: "Intake",
-    body: "Een vrijblijvend gesprek: achtergrond, rechtsgebied, seniority en wat voor jou telt in team en cultuur. Geen cv-intake-machinerie — we willen jou begrijpen voordat we over een legal counsel vacature praten.",
+    body: "Een vrijblijvend gesprek: achtergrond, rechtsgebied, seniority en wat voor jou telt in team en cultuur. We willen je begrijpen voordat we over een legal counsel vacature praten.",
   },
   {
     index: "002",
     title: "Matching",
-    body: "Pas als we elkaar goed begrijpen, brengen we relevante counsel-rollen ter sprake — openstaand of via stille search. Alleen functies die passen bij niveau, vak en moment.",
+    body: "Pas als we elkaar goed begrijpen, bespreken we relevante counsel-rollen, openstaand of via stille search. Alleen functies die passen bij niveau, vak en moment.",
   },
   {
     index: "003",
     title: "Introductie",
-    body: "Wij stellen je alleen voor na expliciete toestemming. Vooraf bespreken we wat de opdrachtgever zoekt, wat zij bieden, en hoe de cultuur voelt. Jij beslist of we doorzetten.",
+    body: "We stellen je alleen voor met jouw toestemming. Vooraf vertellen we wat de opdrachtgever zoekt, wat ze bieden en hoe de cultuur is. Dat weten we omdat we er op locatie zijn geweest. Jij beslist of we doorzetten.",
   },
   {
     index: "004",

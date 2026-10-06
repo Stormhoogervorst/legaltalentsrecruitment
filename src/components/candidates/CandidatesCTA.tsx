@@ -11,11 +11,11 @@ export function CandidatesCTA() {
         <SlashPill variant="dark">/ KENNISMAKEN</SlashPill>
         <h2 className="display-lg mx-auto mt-8 max-w-4xl">
           Even <br />
-          oriënteren?
+          oriënteren kan.
         </h2>
         <p className="mx-auto mt-8 max-w-[480px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-          Een gesprek hoeft tot niks te leiden. Vrijblijvend, vertrouwelijk, en
-          op jouw moment.
+          Een gesprek hoeft tot niks te leiden. Vrijblijvend, vertrouwelijk en
+          op een moment dat jou uitkomt.
         </p>
         <div className="mt-10">
           <PillButton href="/contact" variant="dark">

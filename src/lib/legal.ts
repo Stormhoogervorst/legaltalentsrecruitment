@@ -10,5 +10,5 @@ export const legalPracticeAreas = [
   "Personenschade",
   "Bouw- en energierecht",
   "Insolventie en aanbesteding",
-  "Legal tech",
+  "Legal tech en legal AI",
 ];

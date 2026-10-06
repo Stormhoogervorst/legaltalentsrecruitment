@@ -4,7 +4,7 @@ const mismatchCards = [
   {
     index: "001",
     title: "Veel ruis, weinig rol",
-    body: "Compliance vacatures op jobboards lopen uiteen van een junior instap tot een bijzaak naast een andere functie. De titel compliance officer zegt zelden welk werk je echt doet: beleid, monitoring, advies, of een operationele controle.",
+    body: "Compliance vacatures op jobboards lopen uiteen van een junior instap tot een bijzaak naast een andere functie. De titel compliance officer zegt zelden welk werk je doet: beleid, monitoring, advies, of een operationele controle.",
   },
   {
     index: "002",
@@ -14,7 +14,7 @@ const mismatchCards = [
   {
     index: "003",
     title: "Openbaar zoeken kost discretie",
-    body: "Wie nog in dienst is, wil geen openbare sollicitatie. Serieuze compliance officer vacatures, zeker in de financiële sector, lopen vaak discreet. Wij toetsen eerst of niveau, sector en moment kloppen, en introduceren je alleen na expliciete toestemming.",
+    body: "Wie nog in dienst is, wil geen openbare sollicitatie. Serieuze compliance officer vacatures, zeker in de financiële sector, lopen vaak discreet. We toetsen eerst of niveau, sector en moment kloppen, en stellen je alleen voor met jouw toestemming.",
   },
 ];
 

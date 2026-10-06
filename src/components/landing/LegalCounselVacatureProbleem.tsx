@@ -4,17 +4,17 @@ const mismatchCards = [
   {
     index: "001",
     title: "De serieuze rollen staan zelden open",
-    body: "Mid- en senior legal counsel search loopt vaak discreet: een uitbreiding van het team, een opvolger, of een stille hire bij een scale-up. Jobboards tonen wat publiek mag — niet de opdracht die een organisatie liever uit het netwerk haalt.",
+    body: "Mid- en senior legal counsel search loopt vaak discreet: een uitbreiding van het team, een opvolger, of een stille hire bij een scale-up. Jobboards tonen wat publiek mag, niet de opdracht die een organisatie liever uit het netwerk haalt.",
   },
   {
     index: "002",
     title: "Titel zegt weinig over cultuurfit",
-    body: "“Legal counsel” dekt corporate counsel, commercial counsel en de generalist in een groeiend team. Vacaturesites filteren nauwelijks op autonomie, tempo, sector en hoe het team écht werkt. Zonder die context is solliciteren gokken.",
+    body: "“Legal counsel” dekt corporate counsel, commercial counsel en de generalist in een groeiend team. Vacaturesites filteren nauwelijks op autonomie, tempo, sector en hoe het team werkt. Zonder die context is solliciteren gokken.",
   },
   {
     index: "003",
     title: "Openbaar zoeken kost discretie",
-    body: "Wie nog in dienst is, wil geen openbare sollicitatie. Een cv dat rondgaat, kost reputatie. Wij toetsen eerst of niveau, vak en moment kloppen — en introduceren je alleen na expliciete toestemming.",
+    body: "Wie nog in dienst is, wil geen openbare sollicitatie. Een cv dat rondgaat, kost reputatie. We toetsen eerst of niveau, vak en moment kloppen en stellen je alleen voor met jouw toestemming.",
   },
 ];
 

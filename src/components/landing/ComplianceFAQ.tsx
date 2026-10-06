@@ -5,32 +5,32 @@ export const complianceFaqItems = [
   {
     question: "Wat is het verschil tussen een compliance officer en een privacy officer?",
     answer:
-      "Een compliance officer ziet toe op alle wet- en regelgeving die op de organisatie van toepassing is — vaak sectorspecifiek (financieel, healthcare, etc). Een privacy officer (vaak DPO genoemd onder de AVG) richt zich specifiek op de verwerking van persoonsgegevens. In kleinere organisaties is dit één rol, in grotere organisaties zijn het aparte functies met eigen specialisaties.",
+      "Een compliance officer ziet toe op alle wet- en regelgeving die op de organisatie van toepassing is, vaak sectorspecifiek (financieel, healthcare, etc). Een privacy officer (vaak DPO genoemd onder de AVG) richt zich specifiek op de verwerking van persoonsgegevens. In kleinere organisaties is dit één rol, in grotere organisaties zijn het aparte functies met eigen specialisaties.",
   },
   {
-    question: "Wij zoeken een DPO — wat is realistisch qua profiel?",
+    question: "Wij zoeken een DPO: wat is realistisch qua profiel?",
     answer:
-      "Een goede DPO combineert juridische kennis (AVG), informatiebeveiliging-affiniteit en stakeholder management. Bij kleinere organisaties kan een part-time of externe DPO volstaan. Bij grote of risicovolle organisaties (healthcare, financiële sector, tech-platforms) is een full-time specialist nodig. Wij brengen vooraf in kaart welk profiel bij jullie risico-omvang past.",
+      "Een goede DPO combineert juridische kennis (AVG), informatiebeveiliging-affiniteit en stakeholder management. Bij kleinere organisaties kan een part-time of externe DPO volstaan. Bij grote of risicovolle organisaties (healthcare, financiële sector, tech-platforms) is een full-time specialist nodig. We brengen vooraf in kaart welk profiel bij jullie risico-omvang past.",
   },
   {
     question: "Wat verdienen compliance officers gemiddeld?",
     answer:
-      "Sterk afhankelijk van sector en seniority. Een medior compliance officer (3-5 jaar) zit in NL gemiddeld tussen €65k en €90k. Senior posities en MLRO's vanaf €85k tot €120k. Head of compliance gaat vanaf €110k tot ruim €170k, afhankelijk van bedrijfsomvang. Sectoren met hogere risico's (banken, crypto, healthcare) betalen aan de bovenkant van de range.",
+      "Dat hangt af van sector, seniority en de zwaarte van de rol. In de intake bespreken we wat marktconform is voor jullie sector en grootte, op basis van recente trajecten.",
   },
   {
     question: "Hoe lang duurt een gemiddeld traject?",
     answer:
-      "Voor compliance officer-rollen op medior tot senior niveau rekenen we 8 tot 14 weken — vanwege de schaarste van goede kandidaten en lange opzegtermijnen in regulated markets. Head of compliance of MLRO-rollen kunnen 12 tot 20 weken vragen. Wij geven bij de intake een realistische inschatting op basis van jullie specifieke profiel en sector.",
+      "Voor compliance officer-rollen op medior tot senior niveau rekenen we 8 tot 14 weken, vanwege de schaarste van goede kandidaten en lange opzegtermijnen in regulated markets. Head of compliance of MLRO-rollen kunnen 12 tot 20 weken vragen. We geven bij de intake een realistische inschatting op basis van jullie specifieke profiel en sector.",
   },
   {
     question: "Werken jullie ook voor toezichthouders of overheidsorganisaties?",
     answer:
-      "Het meeste van ons werk is in de private sector. Voor toezichthouders en overheidsorganisaties zijn andere bureaus vaak beter ingericht — denk aan publiekrechtelijke salarisstructuren en specifieke procedures. Wij verwijzen graag door als dat een betere fit is voor jullie.",
+      "Het meeste van ons werk is in de private sector. Voor toezichthouders en overheidsorganisaties zijn andere bureaus vaak beter ingericht, denk aan publiekrechtelijke salarisstructuren en specifieke procedures. We verwijzen graag door als dat een betere fit is voor jullie.",
   },
   {
     question: "Hoe gaan jullie om met persoonlijke aansprakelijkheid van rollen zoals MLRO?",
     answer:
-      "MLRO's en sommige andere compliance-rollen hebben persoonlijke meldingsplicht en aansprakelijkheid richting toezichthouders. Dat maakt deze rollen risicovoller voor kandidaten — en vraagt om transparantie tijdens de werving. Wij bespreken openlijk met kandidaten welke verantwoordelijkheden de rol meebrengt en welke governance-structuren jullie hebben ingericht. Geen verrassingen bij start.",
+      "MLRO's en sommige andere compliance-rollen hebben persoonlijke meldingsplicht en aansprakelijkheid richting toezichthouders. Dat maakt deze rollen risicovoller voor kandidaten, en vraagt om transparantie tijdens de werving. We bespreken openlijk met kandidaten welke verantwoordelijkheden de rol meebrengt en welke governance-structuren jullie hebben ingericht. Geen verrassingen bij start.",
   },
 ];
 

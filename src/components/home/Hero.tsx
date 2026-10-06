@@ -24,11 +24,11 @@ export function Hero() {
       title={["Legal recruitment", "voor de lange termijn."]}
       subtitle={
         <>
-          Vaste plaatsingen voor advocaten, bedrijfsjuristen en in-house
-          counsel.
+          Vaste plaatsingen voor advocaten, bedrijfsjuristen en legal
+          AI-specialisten.
           <span className="max-md:hidden">
             {" "}
-            Wij bereiken maandelijks 40.000 juristen.
+            Bij ons staat een persoonlijke aanpak en vertrouwen centraal
           </span>
         </>
       }

@@ -45,10 +45,10 @@ export function ComplianceOfficerVacatureRollen() {
         <div className="mt-8 max-w-[720px]">
           <h2 className="display-md">
             Welke compliance-rollen <br />
-            wij begeleiden.
+            we begeleiden.
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-            Geen verzonnen vacaturelijst: dit zijn de typen rollen die wij
+            Geen verzonnen vacaturelijst: dit zijn de typen rollen die we
             meestal matchen, van junior tot lead en van eerste tot tweede lijn.
             Actuele openstaande posities staan bij{" "}
             <Link href="/vacatures" className={linkClassName}>

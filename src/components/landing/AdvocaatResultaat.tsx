@@ -8,8 +8,8 @@ const flatWhiteEase = [0.22, 1, 0.36, 1] as const;
 const outcomeCards = [
   {
     index: "001",
-    title: "Lange retentie",
-    body: "Gemiddelde verblijftijd van geplaatste advocaten ruim boven het marktgemiddelde",
+    title: "Intake op locatie",
+    body: "We hebben jullie kantoor gezien voordat we kandidaten voorstellen",
   },
   {
     index: "002",
@@ -19,7 +19,7 @@ const outcomeCards = [
   {
     index: "003",
     title: "Discreet proces",
-    body: "Zowel naar kandidaten als naar de bredere markt — geen ruis rondom jullie zoektocht",
+    body: "Zowel naar kandidaten als naar de bredere markt, geen ruis rondom jullie zoektocht",
   },
 ];
 
@@ -37,19 +37,18 @@ export function AdvocaatResultaat() {
               krijgen.
             </h2>
             <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
-              De waarde van specialistisch recruitment zit niet in volume —
-              maar in fit, duurzaamheid en discretie.
+              Wij kiezen voor fit, duurzaamheid en discretie boven volume.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Een match die past geeft langetermijn-rendement: minder turnover,
-              betere teamintegratie, productieve eerste maanden zonder lange
-              inwerktijd. Een mismatch kost het kantoor minimaal 6 maanden
-              productiviteit plus reputatieschade richting cliënten.
+              Een match die past betekent minder verloop, een beter
+              geïntegreerd team en een productieve start. Een mismatch kost het
+              kantoor maanden aan productiviteit en kan reputatieschade bij
+              cliënten opleveren.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wij selecteren minder kandidaten dan generieke bureaus, maar de
-              plaatsingen die wij doen blijven gemiddeld langer staan. Dat is
-              geen toeval — dat is het verschil tussen werven en matchen.
+              We stellen minder kandidaten voor dan generieke bureaus, omdat we
+              ze eerst zelf spreken. Dat is het verschil tussen werven en
+              matchen.
             </p>
           </div>
 

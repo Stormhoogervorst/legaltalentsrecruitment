@@ -4,7 +4,7 @@ const mismatchCards = [
   {
     index: "001",
     title: "CV is niet hetzelfde als fit",
-    body: "Een advocaat-ondernemingsrecht is geen bedrijfsjurist, en een legal counsel is geen compliance officer. Generalisten sturen cv’s die op papier lijken te kloppen — zonder te toetsen op dossier, seniority en de cultuur van kantoor of legal team.",
+    body: "Een advocaat-ondernemingsrecht is geen bedrijfsjurist, en een legal counsel is geen compliance officer. Generalisten sturen cv’s die op papier lijken te kloppen, zonder te toetsen op dossier, seniority en de cultuur van kantoor of legal team.",
   },
   {
     index: "002",
@@ -14,7 +14,7 @@ const mismatchCards = [
   {
     index: "003",
     title: "Volume kost tijd en reputatie",
-    body: "Vijftig cv’s beoordelen is geen search. Het belast partners, GC’s en HR, en het signaal naar de markt is slordig. Wij komen met een korte, onderbouwde shortlist — kandidaten die wij zelf hebben gesproken.",
+    body: "Vijftig cv’s beoordelen is geen search. Het belast partners, GC’s en HR, en het signaal naar de markt is slordig. We komen met een korte, onderbouwde shortlist van kandidaten die we zelf hebben gesproken.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function JuridischRecruiterProbleem() {
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
             Juridische werving draait om vakinhoud, discretie en cultuur. Een
             algemeen bureau dat ook IT of finance doet, heeft die context
-            zelden — en dat merk je in de shortlist.
+            zelden, en dat merk je in de shortlist.
           </p>
         </div>
 

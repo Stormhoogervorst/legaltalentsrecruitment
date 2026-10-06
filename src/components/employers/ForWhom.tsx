@@ -5,7 +5,7 @@ const audiences = [
   {
     index: "001",
     title: "Advocatenkantoren",
-    body: "Van boutique tot middelgroot. We vervullen posities op alle niveaus — van advocaat-stagiair tot partner — in alle rechtsgebieden.",
+    body: "Van boutique tot middelgroot. We vervullen posities op alle niveaus, van advocaat-stagiair tot partner, in alle rechtsgebieden.",
   },
   {
     index: "002",
@@ -15,7 +15,7 @@ const audiences = [
   {
     index: "003",
     title: "Specialistische posities",
-    body: "Compliance, privacy officers, contractmanagers en andere juridisch-aanpalende rollen waar juridische kennis nodig is.",
+    body: "Compliance officers, privacy officers en contractmanagers. Daarnaast legal engineers en legal AI-specialisten, die AI bij jullie in de praktijk werkend krijgen.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function ForWhom() {
         <SlashPill>/ VOOR WIE</SlashPill>
         <div className="mt-8 max-w-[720px]">
           <h2 className="display-md">
-            Met wie wij <br />
+            Met wie we <br />
             werken.
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
@@ -37,8 +37,8 @@ export function ForWhom() {
             >
               juridisch recruiter
             </Link>{" "}
-            werken wij voor partijen die kwaliteit boven kwantiteit zetten. Of
-            het nu om één positie of een groeiend team gaat.
+            werken we voor kantoren en bedrijven die juristen zoeken die
+            blijven. Voor één positie of voor een groeiend team.
           </p>
         </div>
 

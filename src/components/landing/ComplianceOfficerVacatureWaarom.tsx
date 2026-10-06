@@ -5,7 +5,7 @@ const reasons = [
   {
     index: "001",
     title: "Legal én compliance",
-    body: "Wij werven geen finance of IT erbij. Onze aandacht zit bij legal professionals en compliance officers — en bij de cultuur waarin zij moeten landen.",
+    body: "We werven geen finance of IT erbij. Onze aandacht zit bij legal professionals en compliance officers, en bij de cultuur waarin zij terechtkomen.",
   },
   {
     index: "002",
@@ -40,13 +40,12 @@ export function ComplianceOfficerVacatureWaarom() {
             </h2>
             <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
               Legal Talents is een compact bureau van mensen met een juridische
-              achtergrond. Wij beloven geen fabricagecijfers — wel een
-              werkwijze die kwaliteit, discretie en een duurzame match voorop
-              zet.
+              achtergrond. We beloven geen cijfers, wel een werkwijze:
+              kwaliteit, discretie en een match voor de lange termijn.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wat je wél mag verwachten: een serieuze intake, context bij elke
-              compliance-rol, en begeleiding tot voorbij de eerste werkdag. Hoe
+              Wat je mag verwachten: een uitgebreid gesprek vooraf, context bij
+              elke compliance-rol en begeleiding tot na de eerste werkdag. Hoe
               dat eruitziet voor kandidaten staat op{" "}
               <Link href="/voor-kandidaten" className={linkClassName}>
                 voor kandidaten

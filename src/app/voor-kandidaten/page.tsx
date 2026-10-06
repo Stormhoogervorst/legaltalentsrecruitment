@@ -10,9 +10,9 @@ import { DiscretionPromise } from "@/components/candidates/DiscretionPromise";
 import { WhatWeOffer } from "@/components/candidates/WhatWeOffer";
 import { MeanderingProcess } from "@/components/shared/MeanderingProcess";
 
-const title = "Voor juridisch werknemers | Legal Talents Recruitment";
+const title = "Nieuwe juridische functie zoeken | Legal Talents Recruitment";
 const description =
-  "Op zoek naar een nieuwe juridische functie? Wij krijgen doorlopend vacatures binnen. Staat er nu niks passends online? Laat je gegevens achter.";
+  "Nieuwe juridische functie? We spreken je eerst, bespreken alleen posities die passen en stellen je alleen voor met jouw akkoord. Kosteloos, vertrouwelijk.";
 
 export const metadata: Metadata = {
   title: {
@@ -35,22 +35,22 @@ const processSteps = [
   {
     index: "001",
     title: "Kennismaking",
-    body: "Een vrijblijvend gesprek — telefonisch, digitaal of op locatie. We willen jou leren kennen: wat je achtergrond is, waar je naartoe wilt, wat voor jou écht belangrijk is in werk en cultuur.",
+    body: "Een vrijblijvend gesprek, telefonisch, digitaal of op locatie. We willen weten waar je vandaan komt en waar je naartoe wilt, en wat je belangrijk vindt in werk en cultuur.",
   },
   {
     index: "002",
     title: "Match",
-    body: "Pas als we elkaar goed begrijpen, brengen wij relevante posities ter sprake — uit ons netwerk of via gerichte search. Geen massa-mailing met losse vacatures. Alleen functies die passen bij wat we hebben besproken.",
+    body: "Pas als we elkaar goed begrijpen, bespreken we posities, uit ons netwerk of via gerichte search. Geen massamailing met losse vacatures. Alleen functies die passen bij wat we hebben besproken.",
   },
   {
     index: "003",
     title: "Voorstellen",
-    body: "Wij introduceren je alleen na expliciete toestemming. Vooraf bespreken we wat de opdrachtgever zoekt, wat zij bieden, en wat de cultuur is. Jij beslist of we doorzetten.",
+    body: "We stellen je alleen voor met jouw toestemming. Vooraf vertellen we wat de opdrachtgever zoekt, wat ze bieden en hoe de cultuur is. Dat weten we omdat we bij hen op locatie zijn geweest. Jij beslist of we doorzetten.",
   },
   {
     index: "004",
     title: "Begeleiding",
-    body: "Van eerste gesprek tot ondertekening, en daarna. We helpen bij voorbereiding, salarisonderhandeling en de eerste maanden in de nieuwe functie. Ook als het tegen verwachting niet klikt: eerlijke feedback, beide kanten op.",
+    body: "We begeleiden je van het eerste gesprek tot na je eerste werkdag: bij de voorbereiding, de salarisonderhandeling en de eerste maanden in de nieuwe functie. Klikt het toch niet, dan geven we eerlijke feedback, beide kanten op.",
   },
 ];
 
@@ -89,8 +89,8 @@ export default function CandidatesPage() {
     <>
       <PageHero
         variant="light"
-        title="Wij helpen jou verder."
-        subtitle="Een gesprek hoeft niet meteen tot iets te leiden. Wij denken vrijblijvend mee over jouw loopbaan — vertrouwelijk, zonder druk, en alleen met functies die echt passen."
+        title="Je volgende juridische functie, vertrouwelijk besproken."
+        subtitle="Een gesprek hoeft niet tot iets te leiden. We denken vrijblijvend met je mee over je loopbaan en bespreken alleen juridische functies die passen. Wat je vertelt, blijft bij ons."
         ctaLabel="Plan een gesprek →"
         ctaHref="/contact"
       />

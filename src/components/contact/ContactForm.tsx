@@ -86,8 +86,8 @@ export function ContactForm() {
       <div className="rounded-[24px] bg-background-secondary p-8">
         <p className="display-md text-foreground">Bericht verzonden!</p>
         <p className="mt-4 text-[18px] leading-[1.5] text-foreground-secondary">
-          We hebben je bericht ontvangen en nemen zo snel mogelijk contact met
-          je op.
+          We hebben je bericht ontvangen en reageren binnen 24 uur, meestal
+          sneller.
         </p>
       </div>
     );
@@ -102,10 +102,10 @@ export function ContactForm() {
         >
           Er ging iets mis. Probeer opnieuw of mail direct naar{" "}
           <a
-            href="mailto:storm@legal-talents.nl"
+            href="mailto:marcel@legal-talents.nl"
             className="underline decoration-foreground/25 underline-offset-4 hover:decoration-accent"
           >
-            storm@legal-talents.nl
+            marcel@legal-talents.nl
           </a>
         </div>
       ) : null}

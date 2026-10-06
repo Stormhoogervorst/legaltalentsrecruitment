@@ -16,10 +16,10 @@ export function ScaleUpsZuidas() {
             cultuur is anders, de zekerheid is anders, en de manier van werken is
             anders. Tegelijk willen juist veel goede juristen weg uit de
             uren-cultuur, op zoek naar inhoud, impact en een plek waar ze het
-            verschil maken. Die mensen vind je niet op vacaturesites; ze zitten
-            passief in een netwerk. Wij benaderen ze één-op-één en beoordelen
-            vooraf of iemand de overstap echt wil maken en bij jullie fase past,
-            zodat je geen plaatsing krijgt die binnen een jaar weer vertrekt.
+            verschil maken. Die mensen vind je niet op vacaturesites. Ze zitten
+            passief in een netwerk. We benaderen ze één-op-één en beoordelen
+            vooraf of iemand de overstap wil maken en bij jullie fase past. Zo
+            verkleinen we de kans op een vroeg vertrek.
           </p>
         </div>
       </SectionShell>

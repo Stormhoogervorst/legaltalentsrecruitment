@@ -8,8 +8,8 @@ const flatWhiteEase = [0.22, 1, 0.36, 1] as const;
 const outcomeCards = [
   {
     index: "001",
-    title: "Lange retentie",
-    body: "Gemiddelde verblijftijd van geplaatste legal engineers ruim boven het marktgemiddelde",
+    title: "Intake op locatie",
+    body: "We hebben jullie team en tools gezien voordat we kandidaten voorstellen",
   },
   {
     index: "002",
@@ -37,22 +37,20 @@ export function LegalEngineerResultaat() {
               krijgen.
             </h2>
             <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
-              De waarde van specialistisch recruitment zit niet in volume —
-              maar in fit tussen de juridische en technische wereld, snelheid
-              van implementatie en discretie.
+              Wij kiezen voor fit tussen de juridische en technische wereld,
+              snelheid van implementatie en discretie boven volume.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
               Een match die past geeft langetermijn-rendement: minder
               mislukte tool-adoptie, snellere implementatie van legal tech, en
               een legal engineer die zowel door het juridische team als door
-              IT wordt vertrouwd. Een mismatch kost tijd, budget en draagvlak
-              — vaak met een tool die uiteindelijk niet wordt gebruikt.
+              IT wordt vertrouwd. Een mismatch kost tijd, budget en draagvlak,
+              vaak met een tool die uiteindelijk niet wordt gebruikt.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wij selecteren minder kandidaten dan generieke bureaus, maar de
-              plaatsingen die wij doen blijven gemiddeld langer staan — en
-              leveren sneller resultaat op. Dat is geen toeval — dat is het
-              verschil tussen werven en matchen.
+              We stellen minder kandidaten voor dan generieke bureaus, omdat we
+              ze eerst zelf spreken. Dat is het verschil tussen werven en
+              matchen.
             </p>
           </div>
 

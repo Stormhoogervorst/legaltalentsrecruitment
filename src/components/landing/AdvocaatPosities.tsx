@@ -4,7 +4,7 @@ const posities = [
   {
     index: "001",
     title: "Advocaat-stagiair",
-    body: "Beroepsopleiding-stagiairs voor kantoren die structureel werving doen — vaak met focus op specifiek rechtsgebied of een interne doorgroei-track.",
+    body: "Beroepsopleiding-stagiairs voor kantoren die structureel werving doen, vaak met focus op specifiek rechtsgebied of een interne doorgroei-track.",
   },
   {
     index: "002",
@@ -19,17 +19,17 @@ const posities = [
   {
     index: "004",
     title: "Counsel en associate partner",
-    body: "Posities tussen senior advocaat en partner — een groeiende categorie. Vaak gericht op specifieke marktsegmenten of strategische dossiers.",
+    body: "Posities tussen senior advocaat en partner, een groeiende categorie. Vaak gericht op specifieke marktsegmenten of strategische dossiers.",
   },
   {
     index: "005",
     title: "Partner-werving",
-    body: "Lateral partner moves zijn vrijwel altijd vertrouwelijk en strategisch. Wij begeleiden zowel uitkomende als binnenkomende partners — discreet en met aandacht voor portefeuille-overdracht.",
+    body: "Lateral partner moves zijn vrijwel altijd vertrouwelijk en strategisch. We begeleiden zowel uitgaande als binnenkomende partners, discreet en met aandacht voor portefeuille-overdracht.",
   },
   {
     index: "006",
     title: "Boutique en specialistische posities",
-    body: "Voor kantoren met een specifieke specialisatie (bouwrecht, mededinging, IP, fiscaal) zoeken wij de zeldzame profielen die zowel inhoudelijk als cultureel passen.",
+    body: "Voor kantoren met een specifieke specialisatie (bouwrecht, mededinging, IP, fiscaal) zoeken we de zeldzame profielen die zowel inhoudelijk als cultureel passen.",
   },
 ];
 

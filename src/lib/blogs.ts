@@ -17,6 +17,7 @@ const WORDS_PER_MINUTE = 200;
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.legaltalentsrecruitment.nl";
 export const DEFAULT_BLOG_HERO_IMAGE = "/foto-lopend.jpg";
+export const DEFAULT_BLOG_HERO_SIZE = { width: 2400, height: 1411 } as const;
 export const DEFAULT_BLOG_HERO_ALT = "Juridisch professional onderweg";
 export const DEFAULT_BLOG_HERO_IMAGE_POSITION = "center 15%";
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
@@ -35,11 +36,6 @@ const optionalSeoTitle = z.preprocess(
   z.string().trim().max(60, "seoTitle mag maximaal 60 tekens zijn").optional(),
 );
 
-const optionalAsset = z.preprocess(
-  (value) => (value === "" || value == null ? undefined : value),
-  z.string().trim().min(1).optional(),
-);
-
 const blogFrontmatterSchema = z.object({
   title: z.string().trim().min(1, "title is verplicht"),
   description: z.string().trim().min(1, "description is verplicht"),
@@ -48,8 +44,6 @@ const blogFrontmatterSchema = z.object({
   updatedAt: optionalIsoDate,
   category: z.enum(blogCategorySlugs).default("loopbaan"),
   excerpt: z.string().trim().min(1),
-  coverImage: optionalAsset,
-  coverAlt: optionalAsset,
   image: z.preprocess(
     (value) => (value === "" || value == null ? undefined : value),
     z
@@ -288,6 +282,8 @@ export function blogPostingSchema(post: BlogArticle) {
     "@type": "Article",
     headline: post.title,
     datePublished: post.publishedAt,
+    // Zelfde afbeelding als de hero en og:image/twitter:image.
+    image: `${SITE_URL}${blogHeroImage(post)}`,
     inLanguage: "nl-NL",
     mainEntityOfPage: canonical,
     author: {
@@ -360,6 +356,18 @@ export function blogAuthorLabel(post: BlogPost): string {
 
 export function blogHeroImage(post: Pick<BlogPost, "image">): string {
   return post.image ?? DEFAULT_BLOG_HERO_IMAGE;
+}
+
+// og:image, twitter:image en Article-schema verwijzen altijd naar de hero van de post.
+export function blogSocialImage(post: Pick<BlogPost, "image" | "title">) {
+  const url = blogHeroImage(post);
+  const isDefault = url === DEFAULT_BLOG_HERO_IMAGE;
+
+  return {
+    url,
+    ...(isDefault ? DEFAULT_BLOG_HERO_SIZE : {}),
+    alt: isDefault ? DEFAULT_BLOG_HERO_ALT : post.title,
+  };
 }
 
 export function blogHeroImagePosition(

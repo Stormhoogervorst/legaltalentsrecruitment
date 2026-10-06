@@ -5,7 +5,7 @@ import { getAllVacatures } from "@/lib/vacatures";
 
 const title = "Juridische vacatures | Legal Talents Recruitment";
 const description =
-  "Actuele juridische vacatures in de advocatuur en in-house. Vast werk via persoonlijk recruitment, met begeleiding tot en met je eerste werkdag.";
+  "Actuele juridische vacatures voor advocaten, juristen en legal engineers. We spreken je eerst en begeleiden je tot en na je eerste werkdag.";
 
 export const metadata: Metadata = {
   title: {
@@ -33,9 +33,9 @@ export default async function VacaturesPage() {
         <SectionShell>
           <h1 className="display-lg max-w-5xl">Actuele vacatures.</h1>
           <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-            Bekijk hier onze openstaande vacatures. Wel op zoek maar staat er
-            niets tussen? Wij zetten niet alle vacatures online, altijd slim om
-            ons even te benaderen dus!
+            Dit zijn onze openstaande vacatures. We zetten niet alles online.
+            Staat er niets tussen, neem dan contact met ons op: we hebben vaak
+            posities die nergens staan.
           </p>
         </SectionShell>
       </section>
@@ -55,8 +55,8 @@ export default async function VacaturesPage() {
           ) : (
             <div className="mt-8 rounded-[16px] bg-background-secondary p-8 md:p-10">
               <p className="max-w-[680px] text-[16px] leading-[1.6] text-foreground-muted">
-                Op dit moment geen open posities. Stuur ons je profiel — wij
-                brengen je op de hoogte zodra er iets past.
+                Op dit moment geen open posities. Stuur ons je profiel, dan
+                laten we het weten zodra er iets past.
               </p>
               <div className="mt-8">
                 <PillButton href="/contact" variant="secondary">
@@ -75,8 +75,8 @@ export default async function VacaturesPage() {
             Stuur ons je profiel.
           </h2>
           <p className="mx-auto mt-6 max-w-[480px] text-[16px] leading-[1.6] text-foreground-secondary">
-            Wij hebben vaak posities die niet publiek staan. Een gesprek is
-            altijd vrijblijvend.
+            We hebben vaak posities die niet online staan. Een gesprek is
+            vrijblijvend en vertrouwelijk.
           </p>
           <div className="mt-10">
             <PillButton href="/contact">Plan een gesprek →</PillButton>

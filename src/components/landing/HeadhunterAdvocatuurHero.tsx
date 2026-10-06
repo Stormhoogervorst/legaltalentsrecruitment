@@ -22,7 +22,7 @@ export function HeadhunterAdvocatuurHero() {
     <PageHero
       variant="image"
       title="Headhunter advocatuur"
-      subtitle="Headhunter voor advocatenkantoren en inhouse legal teams die senior juridisch talent zoeken. Legal Talents is een juridisch headhunter: legal executive search voor rollen die niet via een advertentie binnenkomen — partner, counsel, general counsel, senior bedrijfsjurist. Discreet, landelijk, no cure no pay."
+      subtitle="Headhunter advocatuur voor kantoren en inhouse legal teams die senior juridisch talent zoeken. Legal executive search voor rollen die niet via een advertentie binnenkomen: partner, counsel, general counsel, senior bedrijfsjurist. We komen voor de briefing bij jullie langs, werken discreet en landelijk, en jullie betalen alleen bij plaatsing."
       ctaLabel="Plan een gesprek →"
       ctaHref="/contact"
       image={image}

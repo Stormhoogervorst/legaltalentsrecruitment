@@ -11,13 +11,12 @@ export function HeadhunterAdvocatuurCTA() {
         <div className="text-center">
           <SlashPill variant="dark">/ VOLGENDE STAP</SlashPill>
           <h2 className="display-lg mx-auto mt-8 max-w-4xl">
-            Klaar voor <br />
-            een gesprek?
+            Een gesprek <br />
+            kost niets.
           </h2>
           <p className="mx-auto mt-8 max-w-[520px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-            Vrijblijvend, vertrouwelijk, zonder verplichtingen — of je nu een
-            senior legal search wilt starten of zelf discreet wilt
-            oriënteren.
+            Vrijblijvend en vertrouwelijk, voor wie een senior legal search
+            wil starten en voor wie zelf discreet wil oriënteren.
           </p>
         </div>
 
@@ -29,7 +28,7 @@ export function HeadhunterAdvocatuurCTA() {
             <h3 className="display-h3 mt-6">Een search bespreken</h3>
             <p className="mt-4 text-[16px] leading-[1.6] text-dark-foreground-secondary">
               Vertel waar jullie kantoor of legal team naar zoekt. We denken
-              mee of headhunting hier het juiste instrument is — en hoe de
+              mee of headhunting hier het juiste instrument is en hoe de
               mapping eruitziet.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -52,7 +51,7 @@ export function HeadhunterAdvocatuurCTA() {
             </p>
             <h3 className="display-h3 mt-6">Oriënteren of kennismaken</h3>
             <p className="mt-4 text-[16px] leading-[1.6] text-dark-foreground-secondary">
-              Bekijk openstaande posities of plan een kennismaking. Wij
+              Bekijk openstaande posities of plan een kennismaking. We
               benaderen je huidige werkgever nooit.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

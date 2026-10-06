@@ -11,11 +11,11 @@ const audiences = [
   {
     index: "/ 001",
     title: "Advocatenkantoren",
-    body: "Boutique tot mid-market, Zuidas tot regio. Partner-search, counsel of een laterale versterking van een sectie. Wij mappen de markt zonder dat de zoektocht morgen in de wandelgangen ligt.",
+    body: "Boutique tot mid-market, Zuidas tot regio. Partner-search, counsel of een laterale versterking van een sectie. We mappen de markt zonder dat de zoektocht morgen in de wandelgangen ligt.",
     bullets: [
-      "Headhunter voor advocatenkantoren — discreet en gericht",
+      "Headhunter voor advocatenkantoren, discreet en gericht",
       "Partner, counsel en laterale moves",
-      "Secties die je niet openbaar wilt zetten",
+      "Secties die jullie niet openbaar willen zetten",
     ],
     primary: { label: "Plan een opdrachtgesprek →", href: "/contact" },
     secondary: {
@@ -26,11 +26,11 @@ const audiences = [
   {
     index: "/ 002",
     title: "Inhouse legal teams",
-    body: "General counsel, senior bedrijfsjurist, head of legal, compliance-leiding. Vaak een stille opvolging of uitbreiding. Wij zoeken mensen die de business begrijpen, niet alleen het dossier.",
+    body: "General counsel, senior bedrijfsjurist, head of legal, compliance-leiding. Vaak een stille opvolging of uitbreiding. We zoeken mensen die verder kijken dan het dossier.",
     bullets: [
       "GC, senior counsel en head of legal",
       "Stille opvolging of teamuitbreiding",
-      "Kandidaten die wij zelf hebben gesproken",
+      "Kandidaten die we zelf hebben gesproken",
     ],
     primary: { label: "Plan een opdrachtgesprek →", href: "/contact" },
     secondary: {
@@ -51,8 +51,8 @@ export function HeadhunterAdvocatuurVoorWie() {
         </h2>
         <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
           Deze pagina is voor opdrachtgevers: een legal headhunter voor
-          advocatenkantoren én voor legal teams in bedrijven. Dezelfde
-          mapping, dezelfde discretie — een ander type opdracht.
+          advocatenkantoren en voor legal teams in bedrijven. Dezelfde
+          mapping, dezelfde discretie, een ander type opdracht.
         </p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -103,7 +103,7 @@ export function HeadhunterAdvocatuurVoorWie() {
               Liever zelf door een headhunter benaderd worden?
             </h3>
             <p className="mt-4 text-[16px] leading-[1.6] text-foreground-secondary">
-              Passieve juristen die discreet willen oriënteren: wij benaderen
+              Passieve juristen die discreet willen oriënteren: we benaderen
               je huidige werkgever nooit. Een kennismaking is kosteloos en
               vrijblijvend.
             </p>

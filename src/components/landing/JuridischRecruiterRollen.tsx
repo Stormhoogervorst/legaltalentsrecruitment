@@ -37,7 +37,7 @@ const rollen = [
   {
     index: "006",
     title: "Legal engineer",
-    body: "Het snijvlak van recht, proces en technologie.",
+    body: "Het snijvlak van recht, proces en technologie, inclusief legal AI.",
     href: "/recruitment/legal-engineer",
   },
 ];
@@ -53,8 +53,8 @@ export function JuridischRecruiterRollen() {
             wij werven.
           </h2>
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
-            Specialistische pagina’s per profiel — plus de rechtsgebieden
-            waarin wij structureel search doen. Bouw je de eerste legal hire
+            Specialistische pagina’s per profiel, plus de rechtsgebieden
+            waarin we structureel search doen. Bouw je de eerste legal hire
             in een groeiend bedrijf? Bekijk ook{" "}
             <Link
               href="/scale-ups"

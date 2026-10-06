@@ -4,22 +4,22 @@ const commitments = [
   {
     label: "/ COMMITMENT 01",
     title: "Geen onaangekondigde voorstellen",
-    body: "Wij introduceren je nooit bij een opdrachtgever zonder jouw expliciete toestemming per voorstel.",
+    body: "We stellen je nooit voor aan een opdrachtgever zonder jouw toestemming, per voorstel.",
   },
   {
     label: "/ COMMITMENT 02",
-    title: "Geen netwerken van werkgevers",
-    body: "Wij delen jouw zoektocht niet binnen ons eigen netwerk — niet met collega's, niet met andere kantoren, niet 'in vertrouwen' met derden.",
+    title: "Niet in ons netwerk",
+    body: "We delen je zoektocht niet in ons netwerk: niet met collega's, niet met andere kantoren, ook niet 'in vertrouwen' met derden.",
   },
   {
     label: "/ COMMITMENT 03",
-    title: "Geen sporen in je systemen",
-    body: "Voorkeur voor digitale of telefonische gesprekken buiten kantooruren? Geen probleem. We werken naar jouw situatie, niet andersom.",
+    title: "Gesprekken buiten kantooruren",
+    body: "Liever digitaal of telefonisch, buiten kantooruren? Geen probleem. We werken naar jouw situatie, niet andersom.",
   },
   {
     label: "/ COMMITMENT 04",
     title: "Recht om weg te lopen",
-    body: "Op elk moment kan je het traject stoppen. Wij verwijderen je gegevens op verzoek direct — geen wachttijd, geen procedure.",
+    body: "Je kunt het traject op elk moment stoppen. Op verzoek verwijderen we je gegevens.",
   },
 ];
 

@@ -15,8 +15,8 @@ export function ScaleUpsAanpak() {
             Persoonlijke search, geen database-shortcuts. Een onderbouwde
             shortlist met alleen kandidaten die we zelf hebben gesproken.
             Begeleiding tot en met de eerste werkdag, en een vervangingsgarantie
-            op aanvraag. No cure, no pay: je betaalt alleen bij een succesvolle
-            plaatsing.
+            als die vooraf schriftelijk is afgesproken. No cure, no pay: jullie
+            betalen alleen bij een succesvolle plaatsing.
           </p>
           <div className="mt-10">
             <PillButton href="/voor-opdrachtgevers" variant="secondary">

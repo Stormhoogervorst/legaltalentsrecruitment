@@ -42,22 +42,22 @@ const processSteps = [
   {
     index: "001",
     title: "Intake & regulatory context",
-    body: "Bij voorkeur op kantoor — om jullie sector, regulatory exposure en governance-structuur écht te leren kennen. Welke toezichthouder, welke meldingsplicht, welke board-dynamiek?",
+    body: "Bij voorkeur op kantoor, zodat we jullie sector, regulatory exposure en governance-structuur zelf zien. We bespreken welke toezichthouder, welke meldingsplicht en welke board-dynamiek erbij horen.",
   },
   {
     index: "002",
     title: "Gerichte search in een schaarse markt",
-    body: "Wij benaderen compliance-specialisten één-op-één — vrijwel altijd passief beschikbaar talent. Vaak vanuit een Big Four-achtergrond, een toezichthouder of een vergelijkbare regulated organisatie.",
+    body: "We benaderen compliance-specialisten één-op-één, vrijwel altijd talent dat niet actief zoekt. Vaak met een Big Four-achtergrond, bij een toezichthouder of bij een vergelijkbare regulated organisatie.",
   },
   {
     index: "003",
     title: "Voordracht met sectorale onderbouwing",
-    body: "Bij elke kandidaat een onderbouwing: vakinhoudelijke fit met jullie sector, ervaring met relevante toezichthouder, beoordeling van seniority versus de complexiteit van jullie organisatie.",
+    body: "Bij elke kandidaat leggen we uit hoe die vakinhoudelijk past bij jullie sector, welke ervaring die heeft met de relevante toezichthouder en hoe senior die is ten opzichte van de complexiteit van jullie organisatie. We stellen alleen kandidaten voor die we zelf hebben gesproken.",
   },
   {
     index: "004",
     title: "Begeleiding tot start",
-    body: "Compliance-rollen zijn vaak onder tijdsdruk in te vullen (toezichthouder-deadlines, audit-bevindingen). Wij blijven betrokken tot indiensttreding en tijdens de eerste maanden.",
+    body: "Compliance-rollen zijn vaak onder tijdsdruk in te vullen (toezichthouder-deadlines, audit-bevindingen). We blijven betrokken tot indiensttreding en tijdens de eerste maanden.",
   },
 ];
 

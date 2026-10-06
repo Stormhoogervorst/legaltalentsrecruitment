@@ -4,17 +4,17 @@ const expertiseCards = [
   {
     index: "001",
     title: "Twee arbeidsmarkten in één",
-    body: "Bedrijfsjuristen komen vaak vanuit de advocatuur. Werven betekent zowel het in-house netwerk kennen als de advocaat-markt waar potentiële overstappers zitten. Algemene recruiters dekken één van beide — wij beide.",
+    body: "Bedrijfsjuristen komen vaak vanuit de advocatuur. Werven betekent zowel het in-house netwerk kennen als de advocaat-markt waar potentiële overstappers zitten. Algemene recruiters dekken één van beide. Wij kennen beide.",
   },
   {
     index: "002",
-    title: "Salarisbenchmarks per industrie",
-    body: "Een head of legal bij een tech scale-up verschilt salarismatig fundamenteel van dezelfde functietitel bij een familiebedrijf. Wij brengen actuele benchmarks per industrie en bedrijfsfase mee.",
+    title: "Salaris per industrie",
+    body: "Een head of legal bij een tech scale-up verdient anders dan dezelfde functie bij een familiebedrijf. In de intake bespreken we wat marktconform is voor jullie industrie en bedrijfsfase.",
   },
   {
     index: "003",
     title: "Cultuurfit weegt zwaarder dan papieren CV",
-    body: "In kleine in-house teams (1-5 juristen) bepaalt de persoon achter het diploma het succes. Wij screenen op zelfstandigheid, business-affinity en communicatieve kracht — niet alleen op vakinhoud.",
+    body: "In kleine in-house teams (1-5 juristen) bepaalt de persoon achter het diploma het succes. We screenen op zelfstandigheid, business-affinity en communicatieve kracht, naast vakinhoud.",
   },
 ];
 

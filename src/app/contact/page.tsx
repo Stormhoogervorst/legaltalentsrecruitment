@@ -6,7 +6,7 @@ import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const title = "Contact | Legal Talents Recruitment";
 const description =
-  "Plan een vrijblijvende kennismaking met Legal Talents — vertrouwelijk, persoonlijk, op locatie of digitaal. Wij benaderen je huidige werkgever nooit.";
+  "Plan een kennismaking met Legal Talents, telefonisch, digitaal of op locatie. Vertrouwelijk: we benaderen je huidige werkgever nooit.";
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +48,7 @@ export default function ContactPage() {
     mainEntity: {
       "@type": "Organization",
       name: "Legal Talents Recruitment",
-      email: "storm@legal-talents.nl",
+      email: "marcel@legal-talents.nl",
       telephone: "+31 6 85 68 09 98",
       address: {
         "@type": "PostalAddress",
@@ -68,10 +68,10 @@ export default function ContactPage() {
       <section className="bg-background py-16 text-foreground md:py-[120px]">
         <SectionShell>
           <div className="mx-auto w-full max-w-6xl">
-            <h1 className="display-lg text-left">Iets inplannen?</h1>
+            <h1 className="display-lg text-left">Plan een kennismaking.</h1>
             <p className="mt-8 max-w-[560px] text-left text-[18px] leading-[1.5] text-foreground-secondary">
-              Plan direct een vrijblijvend gesprek op een moment dat jou
-              uitkomt. Vertrouwelijk, persoonlijk en zonder verplichtingen.
+              Kies een moment dat jou uitkomt. Het gesprek is vrijblijvend en
+              vertrouwelijk, telefonisch, digitaal of bij jullie op locatie.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[24px] border border-border-light bg-background-secondary p-2 sm:p-4">
@@ -93,19 +93,19 @@ export default function ContactPage() {
 
                 <div className="mt-8 rounded-[16px] bg-background-secondary p-8">
                   <p className="text-[18px] font-medium leading-[1.4]">
-                    Storm Hoogervorst
+                    Marcel Hoogervorst
                   </p>
                   <p className="mt-1 text-sm leading-[1.5] text-foreground-muted">
-                    Eigenaar
+                    Directeur
                   </p>
 
                   <address className="mt-8 space-y-4 text-sm not-italic leading-[1.6] text-foreground-secondary">
                     <p>
                       <a
-                        href="mailto:storm@legal-talents.nl"
+                        href="mailto:marcel@legal-talents.nl"
                         className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
                       >
-                        storm@legal-talents.nl
+                        marcel@legal-talents.nl
                       </a>
                     </p>
                     <p>

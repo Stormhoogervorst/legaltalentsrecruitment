@@ -1,10 +1,10 @@
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const signalen = [
-  "Je tekent regelmatig contracten die niemand intern juridisch beoordeelt.",
-  "Een funding-ronde of overname komt eraan en je leunt volledig op externe advocaten.",
-  "Privacy en compliance (AVG, en afhankelijk van je sector ook DORA, NIS2 of AI Act) vragen structureel aandacht.",
-  "Je legal-kosten bij externe kantoren lopen op tot het punt waarop een vaste jurist goedkoper is.",
+  "Jullie tekenen regelmatig contracten die niemand intern juridisch beoordeelt.",
+  "Een funding-ronde of overname komt eraan en jullie leunen volledig op externe advocaten.",
+  "Privacy en compliance (AVG, en afhankelijk van jullie sector ook DORA, NIS2 of AI Act) vragen structureel aandacht.",
+  "Jullie legal-kosten bij externe kantoren lopen op tot het punt waarop een vaste jurist goedkoper is.",
 ];
 
 export function ScaleUpsWanneer() {
@@ -14,7 +14,7 @@ export function ScaleUpsWanneer() {
         <div className="max-w-[760px]">
           <SlashPill>/ HET MOMENT</SlashPill>
           <h2 className="display-md mt-8">
-            Wanneer heeft je scale-up <br />
+            Wanneer heeft een scale-up <br />
             een eigen jurist nodig?
           </h2>
           <p className="mt-8 text-[18px] leading-[1.5] text-foreground-secondary">
@@ -26,7 +26,7 @@ export function ScaleUpsWanneer() {
             voor een eigen jurist gekomen.
           </p>
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
-            Herkenbare signalen dat je toe bent aan een eerste legal hire:
+            Herkenbare signalen dat jullie toe zijn aan een eerste legal hire:
           </p>
           <ul className="mt-6 list-disc space-y-4 pl-5">
             {signalen.map((item) => (

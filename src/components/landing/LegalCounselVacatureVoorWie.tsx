@@ -13,7 +13,7 @@ const audiences = [
     title: "Voor kandidaten",
     body: "Junior tot senior legal counsel, corporate counsel, of specialist in commercieel recht, IP, of privacy en compliance als aanpalend vak. Je zoekt de volgende inhouse-stap — dit is geen pagina voor alleen stagiaires.",
     bullets: [
-      "Junior, medior en senior, niet alleen starters",
+      "Junior, medior en senior",
       "Openstaande én stille inhouse-opdrachten",
       "Kosteloos, en alleen een voorstel na jouw toestemming",
     ],
@@ -29,8 +29,8 @@ const audiences = [
     body: "Organisaties die een legal counsel willen werven: de eerste jurist, versterking van het team, of een senior counsel. Die werving heeft een eigen pagina. Hier lezen kandidaten hoe matching werkt.",
     bullets: [
       "Corporates, scale-ups en groeiende legal teams",
-      "Search via netwerk, niet alleen jobboards",
-      "Kandidaten die wij zelf hebben gesproken",
+      "Search via netwerk, ook buiten jobboards",
+      "Kandidaten die we zelf hebben gesproken",
     ],
     primary: { label: "Legal counsel werven →", href: "/recruitment/legal-counsel" },
     secondary: {

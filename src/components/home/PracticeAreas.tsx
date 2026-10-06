@@ -10,14 +10,14 @@ export function PracticeAreas() {
           <div>
             <SlashPill>/ RECHTSGEBIEDEN</SlashPill>
             <AnimatedHeadline
-              lines={["Breed netwerk.", "Scherpe focus."]}
+              lines={["Van huurrecht", "tot legal AI."]}
               className="display-md mt-8 max-w-3xl"
             />
           </div>
           <p className="max-w-xl text-[18px] leading-[1.5] text-foreground-secondary lg:justify-self-end">
-            Van advocatuur tot bedrijfsleven: wij verbinden juridische
-            specialisten met vaste posities waar inhoud, cultuur en ambitie
-            samenkomen.
+            Van ondernemingsrecht tot privacy, bij kantoren en corporates.
+            Daarnaast zoeken we bewust naar legal tech en legal AI: juristen en
+            engineers die AI in de praktijk werkend krijgen.
           </p>
         </div>
 

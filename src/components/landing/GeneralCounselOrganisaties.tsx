@@ -19,7 +19,7 @@ export function GeneralCounselOrganisaties() {
             >
               scale-ups
             </Link>{" "}
-            die hun eerste juridisch eindverantwoordelijke aannemen, én voor
+            die hun eerste juridisch eindverantwoordelijke aannemen, en voor
             corporates en mid-market bedrijven die een bestaand legal-team willen
             versterken of opvolgen.
           </p>

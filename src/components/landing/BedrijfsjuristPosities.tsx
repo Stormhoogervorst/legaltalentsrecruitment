@@ -4,7 +4,7 @@ const posities = [
   {
     index: "001",
     title: "De eerste bedrijfsjurist",
-    body: "Voor bedrijven die hun eerste jurist in dienst nemen — vaak een schaalvergrotingsmoment. Vraagt om iemand die zelfstandig de juridische functie opzet, met sterke business-sensitiviteit.",
+    body: "Voor bedrijven die hun eerste jurist in dienst nemen, vaak een schaalvergrotingsmoment. Vraagt om iemand die zelfstandig de juridische functie opzet, met sterke business-sensitiviteit.",
   },
   {
     index: "002",
@@ -24,7 +24,7 @@ const posities = [
   {
     index: "005",
     title: "General counsel",
-    body: "C-level positie voor grote organisaties. Veel meer dan juridisch — risk management, governance, M&A, regulatory affairs en sparring met board. Werving op dit niveau is altijd vertrouwelijk en strategisch.",
+    body: "C-level positie voor grote organisaties. Veel meer dan juridisch: risk management, governance, M&A, regulatory affairs en sparring met board. Werving op dit niveau is altijd vertrouwelijk en strategisch.",
   },
   {
     index: "006",

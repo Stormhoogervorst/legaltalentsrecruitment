@@ -13,7 +13,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Werving juridisch talent | Legal Talents Recruitment";
 const description =
-  "Op zoek naar juridisch talent dat blijft? Werving & selectie via persoonlijk netwerk. No cure, no pay. Wij vinden de match die inhoudelijk én cultureel past.";
+  "Werving juridisch talent dat blijft. Intake bij jullie op locatie, alleen kandidaten die we zelf uitgebreid spraken. No cure, no pay.";
 
 export const metadata: Metadata = {
   title: {
@@ -36,22 +36,22 @@ const processSteps = [
   {
     index: "001",
     title: "Intake",
-    body: "Bij voorkeur op locatie, om jullie organisatie en cultuur écht te leren kennen. We bespreken de functie, het profiel, wat goed werkt en wat niet — en wat een nieuwe collega van jullie kant kan verwachten.",
+    body: "Bij voorkeur op locatie, zodat we jullie organisatie en cultuur zelf zien. We bespreken de functie en het profiel, wat goed werkt en wat niet, en wat een nieuwe collega bij jullie mag verwachten.",
   },
   {
     index: "002",
     title: "Search",
-    body: "Gericht via ons netwerk en actieve, persoonlijke search. We benaderen kandidaten één-op-één, vaak passief beschikbaar talent dat niet op vacaturesites zit. Geen massa-outreach, geen ATS-shortcuts.",
+    body: "Gericht via ons netwerk en actieve, persoonlijke search. We benaderen kandidaten één-op-één, vaak passief beschikbaar talent dat niet op vacaturesites zit.",
   },
   {
     index: "003",
     title: "Voorstellen",
-    body: "Alleen kandidaten die wij zelf hebben gesproken en die passen. Bij elke voordracht een onderbouwing: wat brengt deze persoon mee, waarom past het inhoudelijk én cultureel, wat zijn aandachtspunten.",
+    body: "Alleen kandidaten die we zelf hebben gesproken en die passen. Bij elke voordracht leggen we uit wat deze persoon meebrengt, waarom het inhoudelijk en cultureel past en wat de aandachtspunten zijn.",
   },
   {
     index: "004",
     title: "Begeleiding",
-    body: "Van eerste gesprek tot de eerste werkdag — en daarna. We blijven betrokken bij onboarding en houden contact gedurende de garantieperiode. Plaatsen is een begin, geen einde.",
+    body: "We begeleiden van het eerste gesprek tot na de eerste werkdag. We blijven betrokken bij de onboarding en houden contact, ook als er een garantieperiode is afgesproken.",
   },
 ];
 
@@ -98,8 +98,8 @@ export default function EmployersPage() {
     <>
       <PageHero
         variant="light"
-        title={["Legal recruitment", "voor de lange termijn."]}
-        subtitle="Geen vijftig cv's, maar drie kandidaten die passen. Korte lijnen, en je betaalt pas bij een succesvolle plaatsing."
+        title={["Werving van", "juridisch talent."]}
+        subtitle="Juristen die blijven. Geen vijftig cv's, maar drie kandidaten die passen. We komen bij jullie langs voor de intake en jullie betalen pas bij een succesvolle plaatsing."
         ctaLabel="Plan een intake →"
         ctaHref="/contact"
       />

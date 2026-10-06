@@ -11,13 +11,13 @@ export function ComplianceOfficerVacatureCTA() {
         <div className="text-center">
           <SlashPill variant="dark">/ VOLGENDE STAP</SlashPill>
           <h2 className="display-lg mx-auto mt-8 max-w-4xl">
-            Klaar voor <br />
-            een gesprek?
+            Een gesprek <br />
+            kost niets.
           </h2>
           <p className="mx-auto mt-8 max-w-[520px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-            Vrijblijvend en vertrouwelijk — of je nu een compliance officer
-            vacature zoekt, of als opdrachtgever een compliance officer wilt
-            werven.
+            Vrijblijvend en vertrouwelijk, voor wie een compliance officer
+            vacature zoekt en voor opdrachtgevers die een compliance officer
+            willen werven.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export function ComplianceOfficerVacatureCTA() {
             </p>
             <h3 className="display-h3 mt-6">Kennismaken of solliciteren</h3>
             <p className="mt-4 text-[16px] leading-[1.6] text-dark-foreground-secondary">
-              Plan een kennismaking of bekijk openstaande posities. Wij
+              Plan een kennismaking of bekijk openstaande posities. We
               benaderen je huidige werkgever nooit.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -54,7 +54,7 @@ export function ComplianceOfficerVacatureCTA() {
             </h3>
             <p className="mt-4 text-[16px] leading-[1.6] text-dark-foreground-secondary">
               De wervingspagina is voor organisaties die een compliance officer
-              zoeken. Vertel daar welk profiel, welke sector en welk tempo — of
+              zoeken. Vertel daar welk profiel, welke sector en welk tempo, of
               plan direct een gesprek.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

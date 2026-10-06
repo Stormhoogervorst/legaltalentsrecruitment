@@ -4,17 +4,17 @@ const expertiseCards = [
   {
     index: "001",
     title: "Sectorkennis is doorslaggevend",
-    body: "Een compliance officer bij een bank doet ander werk dan dezelfde titel bij een tech-scale-up of asset manager. Wij kennen de specifieke regelkaders per sector — van Wft tot Wwft, van GDPR tot NIS2 tot DORA — en weten welke achtergrond past.",
+    body: "Een compliance officer bij een bank doet ander werk dan dezelfde titel bij een tech-scale-up of asset manager. We kennen de specifieke regelkaders per sector, van Wft tot Wwft, van GDPR tot NIS2 tot DORA, en weten welke achtergrond past.",
   },
   {
     index: "002",
     title: "Schaarste vraagt actieve search",
-    body: "De pool gekwalificeerde compliance- en privacy-specialisten is klein. Het meeste talent is passief beschikbaar of werkt al voor de schaarse aantal kantoren die deze rollen invullen. Wachten op sollicitaties werkt niet.",
+    body: "De pool gekwalificeerde compliance- en privacy-specialisten is klein. Het meeste talent is passief beschikbaar of werkt al bij een van de weinige organisaties die deze rollen invullen. Wachten op sollicitaties werkt niet.",
   },
   {
     index: "003",
     title: "Wettelijke verplichting versterkt de markt",
-    body: "Veel organisaties zijn wettelijk verplicht een MLRO, DPO of compliance officer aan te stellen. Dat geeft sterke onderhandelingspositie aan kandidaten en vraagt om snelheid en discretie van opdrachtgevers.",
+    body: "Veel organisaties zijn wettelijk verplicht een MLRO, DPO of compliance officer aan te stellen. Dat geeft kandidaten een sterke onderhandelingspositie en vraagt om snelheid en discretie van opdrachtgevers.",
   },
 ];
 

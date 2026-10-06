@@ -1,28 +1,42 @@
 import Image from "next/image";
 import { SectionShell, SlashPill } from "@/components/home/primitives";
 
-const team = [
+const team: {
+  name: string;
+  role: string;
+  education?: string;
+  bio: string;
+  image: string;
+  imageClassName?: string;
+  linkedin?: string;
+}[] = [
+  {
+    name: "Marcel Hoogervorst",
+    role: "Directeur",
+    bio: "Marcel brengt ruim 30 jaar ervaring in recruitment en HR met zich mee, waarvan 15 jaar als directeur binnen de werving & selectie en uitzendbranche. Deze unieke mix van branchekennis en strategisch leiderschap maakt hem een onmisbare partner voor onze klanten.",
+    image: "/marcel.jpg",
+  },
   {
     name: "Max Endrizzi",
-    role: "Eigenaar",
+    role: "Oprichter / Operations",
     education: "LLM International and European Business Law",
-    bio: "Richtte Legal Talents op met één overtuiging: recruitment in de juridische sector kan scherper. Minder schuiven met CV's, meer focus op matches die ook over drie jaar nog kloppen.",
+    bio: "Richtte Legal Talents tijdens zijn studie op, met een idee: recruitment in de juridische sector kan scherper. Minder schuiven met cv's, meer focus op matches die ook over drie jaar nog kloppen.",
     image: "/foto-max.webp",
     linkedin: "https://www.linkedin.com/in/max-endrizzi-135610305/",
   },
   {
     name: "Storm Hoogervorst",
-    role: "Eigenaar",
+    role: "Oprichter / Recruiter",
     education: "LLB European Law School, BBA Business Economics",
-    bio: "Bouwde eerst ervaring op in recruitment en richtte daarna samen met Max Legal Talents op. Bouwt slimme processen met AI zodat er meer tijd is voor wat telt: in gesprek met mensen.",
+    bio: "Bouwde ervaring op in recruitment en richtte daarna samen met Max Legal Talents op. Zet AI in voor de processen eromheen, zodat er meer tijd is voor wat telt: in gesprek met mensen.",
     image: "/foto-storm.webp",
     linkedin: "https://www.linkedin.com/in/storm-hoogervorst-a35066290/",
   },
   {
     name: "Justin Bigler",
-    role: "Strategic Business Partner",
+    role: "Business Development",
     education: "LLM Ondernemingsrecht",
-    bio: "Koos na zijn master Ondernemingsrecht bewust niet voor de advocatuur maar voor het bedrijfsleven. Eerst als Head of Sales and Strategy, nu bij Legal Talents waar hij de strategie uitbouwt.",
+    bio: "Koos na zijn master Ondernemingsrecht bewust niet voor de advocatuur maar voor het bedrijfsleven. Eerst als Head of Sales and Strategy, nu bij Legal Talents waar hij de samenwerkingen verder uitbouwt.",
     image: "/foto-justin.webp",
     linkedin: "https://www.linkedin.com/in/justin-bigler-0322071b4/",
   },
@@ -59,13 +73,12 @@ export function TeamGrid() {
         </h2>
         <p className="mt-6 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
           Geen accountmanagers, geen tussenlagen. De persoon die je spreekt,
-          werkt ook aan jouw opdracht. In overleg met de opdrachtgever maken we
-          een plan op maat. Wij schuiven niet met CV&apos;s, we werken samen met
-          jou om de functie zo goed mogelijk te vervullen.
+          werkt ook aan jouw opdracht. We schuiven niet met cv&apos;s: we vullen
+          de functie samen met jou zo goed mogelijk in.
         </p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {team.map((member, index) => (
+          {team.map((member) => (
             <article
               key={member.name}
               className="overflow-hidden rounded-2xl border border-border-light bg-background"
@@ -75,23 +88,30 @@ export function TeamGrid() {
                 alt={`Portretfoto van ${member.name}, ${member.role} bij Legal Talents`}
                 width={800}
                 height={800}
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
-                quality={90}
-                className="aspect-square w-full object-cover"
-                priority={index < 2}
+                // Bronnen zijn staand (0,75 / 0,90 / 0,75) en het kader is vierkant:
+                // de breedte bepaalt de schaal (hoogte wordt afgesneden), dus nodig = kaderbreedte.
+                // Kaderbreedte = (min(vw, 1440px) - 2×48px padding - gaps) / kolommen
+                //   ≥1440px (4 kol): (1440 - 96 - 3×24) / 4 = 318px
+                //   1280-1439px (4 kol): (100vw - 96px - 72px) / 4 = 25vw - 42px
+                //   768-1279px (2 kol): (100vw - 96px - 24px) / 2 = 50vw - 60px
+                //   <768px (1 kol): 100vw - 2×20px = 100vw - 40px
+                sizes="(min-width: 1440px) 318px, (min-width: 1280px) calc(25vw - 42px), (min-width: 768px) calc(50vw - 60px), calc(100vw - 40px)"
+                className={`aspect-square w-full object-cover ${member.imageClassName ?? ""}`}
               />
               <div className="p-5">
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="font-display text-[22px] font-medium leading-[1.3]">
                     {member.name}
                   </h3>
-                  <a
-                    href={member.linkedin}
-                    aria-label={`${member.name} op LinkedIn`}
-                    className="mt-1 inline-flex size-8 shrink-0 items-center justify-center rounded-full text-foreground transition-colors hover:bg-pill-light focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  >
-                    <LinkedinIcon />
-                  </a>
+                  {member.linkedin ? (
+                    <a
+                      href={member.linkedin}
+                      aria-label={`${member.name} op LinkedIn`}
+                      className="mt-1 inline-flex size-8 shrink-0 items-center justify-center rounded-full text-foreground transition-colors hover:bg-pill-light focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    >
+                      <LinkedinIcon />
+                    </a>
+                  ) : null}
                 </div>
                 <p className="mt-1 text-[14px] leading-[1.5] text-foreground-muted">
                   {member.role}

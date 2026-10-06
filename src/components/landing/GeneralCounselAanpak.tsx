@@ -15,17 +15,17 @@ export function GeneralCounselAanpak() {
             counsels werven
           </h2>
           <p className="mt-8 text-[18px] leading-[1.5] text-foreground-secondary">
-            Op dit niveau werkt massa-werving niet. We benaderen kandidaten
-            één-op-één via ons netwerk — ervaren juristen, bedrijfsjuristen en
-            advocaten die toe zijn aan eindverantwoordelijkheid of de overstap
-            naar een nieuwe organisatie overwegen. We screenen niet alleen op
-            juridische kwaliteit, maar op of iemand past bij jullie fase, cultuur
-            en directie.
+            We beginnen met een intake bij jullie op locatie. Op dit niveau
+            werkt massa-werving niet: we benaderen kandidaten één-op-één via ons
+            netwerk, ervaren juristen, bedrijfsjuristen en advocaten die toe
+            zijn aan eindverantwoordelijkheid of de overstap naar een nieuwe
+            organisatie overwegen. We screenen op juridische kwaliteit en op de
+            vraag of iemand past bij jullie fase, cultuur en directie.
           </p>
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
             Elke voordracht komt met onderbouwing: wat brengt deze persoon mee,
             waarom past het, en wat zijn de aandachtspunten. Discreet, want op dit
-            niveau is vertrouwelijkheid geen optie maar uitgangspunt.
+            niveau is vertrouwelijkheid het uitgangspunt.
           </p>
           <div className="mt-10">
             <PillButton href="/voor-opdrachtgevers">

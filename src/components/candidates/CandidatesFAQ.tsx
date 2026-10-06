@@ -5,37 +5,37 @@ export const candidatesFaqItems = [
   {
     question: "Kost dit mij iets?",
     answer:
-      "Nee. Onze dienstverlening richting jou is volledig kosteloos. Wij worden betaald door opdrachtgevers bij een succesvolle plaatsing, niet door kandidaten.",
+      "Nee. Voor jou is het kosteloos. We worden betaald door opdrachtgevers bij een succesvolle plaatsing, niet door kandidaten.",
   },
   {
-    question: "Blijft mijn zoektocht echt vertrouwelijk?",
+    question: "Blijft mijn zoektocht vertrouwelijk?",
     answer:
-      "Ja, altijd. Wij delen niets met huidige werkgevers, en introduceren je alleen na expliciete toestemming. Op verzoek werken we volledig anoniem in de eerste fase — bijvoorbeeld via versleutelde communicatie of buiten kantooruren.",
+      "Ja. We delen niets met je huidige werkgever en stellen je alleen voor met jouw toestemming. Op verzoek werken we in de eerste fase volledig anoniem, bijvoorbeeld via versleutelde communicatie of buiten kantooruren.",
   },
   {
     question: "Wat als ik nog niet zeker weet of ik wil overstappen?",
     answer:
-      "Geen probleem. Veel van onze gesprekken beginnen oriënterend. We brengen pas concrete posities ter sprake als we elkaar goed begrijpen en als er iets passends voorbij komt — dat kan weken of maanden duren. Geen druk.",
+      "Geen probleem. Veel van onze gesprekken beginnen oriënterend. We bespreken pas posities als we elkaar goed begrijpen en er iets passends voorbijkomt. Dat kan weken of maanden duren. Geen druk.",
   },
   {
     question: "Welke rechtsgebieden of functies dekken jullie?",
     answer:
-      "Alle juridische functies op middel- tot senior niveau, in alle rechtsgebieden. Van advocaat-stagiair tot partner, van bedrijfsjurist tot general counsel. Specialisaties zoals compliance, privacy en contractmanagement vallen daar ook onder.",
+      "Alle juridische functies, in alle rechtsgebieden: van advocaat-stagiair tot partner en van bedrijfsjurist tot general counsel. Ook specialisaties als compliance, privacy en contractmanagement, en rollen in legal tech en legal AI, zoals legal engineer.",
   },
   {
     question: "Wat gebeurt er met mijn CV?",
     answer:
-      "Je CV bewaren wij maximaal 2 jaar na het laatste contact, of korter als je dat wenst. We delen het nooit zonder jouw expliciete toestemming per voorstel. Je kunt te allen tijde inzage, wijziging of verwijdering aanvragen — meer hierover in ons privacybeleid.",
+      "We bewaren je CV maximaal 2 jaar na het laatste contact, of korter als je dat wilt. We delen het nooit zonder jouw toestemming per voorstel. Je kunt altijd inzage, wijziging of verwijdering vragen. Meer daarover staat in ons privacybeleid.",
   },
   {
-    question: "Hoe weet ik of een functie écht bij mij past?",
+    question: "Hoe weet ik of een functie bij mij past?",
     answer:
-      "Wij screenen vooraf grondig — wat de werkgever zoekt, hoe de cultuur is, welke ruimte er is om te groeien, en wat de aandachtspunten zijn. Bij een voorstel krijg je deze context volledig, zodat je een eerlijke afweging kunt maken voordat we doorzetten.",
+      "We gaan vooraf bij de werkgever langs en vragen wat ze zoeken, hoe de cultuur is, welke ruimte er is om te groeien en wat de aandachtspunten zijn. Bij een voorstel krijg je dat allemaal te horen, zodat je een eerlijke afweging kunt maken voordat we doorzetten.",
   },
   {
     question: "Helpen jullie ook bij de onderhandelingen?",
     answer:
-      "Ja. Wij begeleiden je bij gesprekken, salarisonderhandeling en de voorwaarden. Onze ervaring met de juridische markt helpt om realistische uitgangspunten te formuleren — voor beide kanten.",
+      "Ja. We begeleiden je bij de gesprekken, de salarisonderhandeling en de voorwaarden. We kennen de juridische markt en helpen realistische uitgangspunten te formuleren, voor beide kanten.",
   },
 ];
 

@@ -11,7 +11,7 @@ export const juridischRecruiterFaqItems = [
     question:
       "Wat is het verschil tussen een juridisch recruiter en een vacaturebank?",
     answer:
-      "Een vacaturebank is zelfservice: je plaatst een advertentie en wacht op reacties. Een juridisch recruiter zoekt actief — ook bij talent dat niet solliciteert. Wij spreken kandidaten, toetsen vakinhoud en cultuur, en komen met een onderbouwde shortlist. Vooral op medior en senior niveau zit het meeste talent niet op jobboards.",
+      "Een vacaturebank is zelfservice: jullie plaatsen een advertentie en wachten op reacties. Een juridisch recruiter zoekt actief, ook bij talent dat niet solliciteert. We spreken kandidaten zelf, toetsen vakinhoud en cultuur en komen met een onderbouwde shortlist. Vooral op medior en senior niveau zit het meeste talent niet op jobboards.",
   },
   {
     question: "Hoe werkt jullie honorarium?",
@@ -49,10 +49,10 @@ export const juridischRecruiterFaqItems = [
   {
     question: "Kost een kennismaking kandidaten iets?",
     answer:
-      "Nee. Wij worden betaald door opdrachtgevers, niet door kandidaten. Een gesprek is vrijblijvend en vertrouwelijk. Staat er nu niets passends open, dan houden we je profiel achter de hand tot er wel iets is.",
+      "Nee. We worden betaald door opdrachtgevers, niet door kandidaten. Een gesprek is vrijblijvend en vertrouwelijk. Staat er nu niets passends open, dan houden we je profiel achter de hand tot er wel iets is.",
     answerNode: (
       <>
-        Nee. Wij worden betaald door opdrachtgevers, niet door kandidaten. Een
+        Nee. We worden betaald door opdrachtgevers, niet door kandidaten. Een
         gesprek is vrijblijvend en vertrouwelijk. Bekijk de{" "}
         <Link href="/vacatures" className={linkClassName}>
           actuele vacatures

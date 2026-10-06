@@ -10,10 +10,10 @@ export const bedrijfsjuristVacatureFaqItems = [
   {
     question: "Hoe werkt een kennismaking?",
     answer:
-      "Een vrijblijvend gesprek — telefonisch, digitaal of op locatie. We willen jouw achtergrond, richting en wat voor jou telt in werk en cultuur begrijpen. Pas daarna kijken we of er een passende bedrijfsjurist vacature of stille opdracht is. Het gesprek verplicht tot niets.",
+      "Een vrijblijvend gesprek, telefonisch, digitaal of op locatie. We willen jouw achtergrond, richting en wat voor jou telt in werk en cultuur begrijpen. Pas daarna kijken we of er een passende bedrijfsjurist vacature of stille opdracht is. Het gesprek verplicht tot niets.",
     answerNode: (
       <>
-        Een vrijblijvend gesprek — telefonisch, digitaal of op locatie. We
+        Een vrijblijvend gesprek, telefonisch, digitaal of op locatie. We
         willen jouw achtergrond, richting en wat voor jou telt in werk en
         cultuur begrijpen. Pas daarna kijken we of er een passende
         bedrijfsjurist vacature of stille opdracht is. Plan het via{" "}
@@ -27,16 +27,16 @@ export const bedrijfsjuristVacatureFaqItems = [
   {
     question: "Blijft mijn oriëntatie vertrouwelijk?",
     answer:
-      "Ja. Wij benaderen je huidige werkgever nooit. We introduceren je alleen na expliciete toestemming, per voorstel. Op verzoek blijven we in de eerste fase bewust vaag over wie je bent richting de opdrachtgever.",
+      "Ja. We benaderen je huidige werkgever nooit. We introduceren je alleen na expliciete toestemming, per voorstel. Op verzoek blijven we in de eerste fase bewust vaag over wie je bent richting de opdrachtgever.",
   },
   {
     question:
       "Wat is het verschil met solliciteren via Indeed of LinkedIn?",
     answer:
-      "Jobboards zijn zelfservice: jij reageert op wat publiek staat. Wij zoeken ook bij rollen die niet online staan, toetsen of niveau en cultuur kloppen, en geven je context voordat je in gesprek gaat. Geen openbare sollicitatie, geen cv dat ongevraagd rondgaat.",
+      "Jobboards zijn zelfservice: jij reageert op wat publiek staat. We zoeken ook bij rollen die niet online staan, toetsen of niveau en cultuur kloppen, en geven je context voordat je in gesprek gaat. Geen openbare sollicitatie, geen cv dat ongevraagd rondgaat.",
     answerNode: (
       <>
-        Jobboards zijn zelfservice: jij reageert op wat publiek staat. Wij
+        Jobboards zijn zelfservice: jij reageert op wat publiek staat. We
         zoeken ook bij rollen die niet online staan, toetsen of niveau en
         cultuur kloppen, en geven je context voordat je in gesprek gaat. Open
         posities die wél zichtbaar mogen:{" "}
@@ -50,18 +50,18 @@ export const bedrijfsjuristVacatureFaqItems = [
   {
     question: "Kost het mij iets om jullie in te schakelen?",
     answer:
-      "Nee. Kandidaten betalen niets. Wij worden betaald door opdrachtgevers, alleen bij een succesvolle plaatsing. Een kennismaking is kosteloos en vrijblijvend.",
+      "Nee. Kandidaten betalen niets. We worden betaald door opdrachtgevers, alleen bij een succesvolle plaatsing. Een kennismaking is kosteloos en vrijblijvend.",
   },
   {
     question:
       "Wat als er nu geen passende bedrijfsjurist vacature openstaat?",
     answer:
-      "Dan zeggen we dat eerlijk. We houden je profiel achter de hand tot er wél iets is dat past — dat kan weken of maanden duren. Geen druk om te solliciteren op een mismatch.",
+      "Dan zeggen we dat eerlijk. We houden je profiel achter de hand tot er iets is dat past. Dat kan weken of maanden duren. Geen druk om te solliciteren op een mismatch.",
     answerNode: (
       <>
         Dan zeggen we dat eerlijk. We houden je profiel achter de hand tot er
-        wél iets is dat past — dat kan weken of maanden duren. Meer over hoe
-        wij kandidaten begeleiden staat op{" "}
+        iets is dat past. Dat kan weken of maanden duren. Meer over hoe
+        we kandidaten begeleiden staat op{" "}
         <Link href="/voor-kandidaten" className={linkClassName}>
           voor kandidaten
         </Link>

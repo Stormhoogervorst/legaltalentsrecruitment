@@ -46,8 +46,8 @@ export default function NotFound() {
         <h1 className="display-lg">Deze pagina / bestaat niet.</h1>
 
         <p className="mx-auto mt-6 max-w-[480px] text-[18px] leading-[1.6] text-foreground-muted">
-          De link die je volgde is verbroken of de pagina is verplaatst. Geen
-          zorgen — hieronder vind je waar je waarschijnlijk naar zocht.
+          De link die je volgde is verbroken of de pagina is verplaatst.
+          Hieronder vind je waar je waarschijnlijk naar zocht.
         </p>
 
         <div className="mt-12 grid gap-4 text-left md:grid-cols-2">
@@ -82,7 +82,7 @@ export default function NotFound() {
         </div>
 
         <p className="mt-16 text-sm leading-[1.5] text-foreground-muted">
-          Klopt er iets niet? Mail ons via storm@legal-talents.nl
+          Klopt er iets niet? Mail ons via marcel@legal-talents.nl
         </p>
       </div>
     </section>

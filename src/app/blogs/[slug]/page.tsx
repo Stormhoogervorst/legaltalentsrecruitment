@@ -19,6 +19,7 @@ import {
   blogHeroImage,
   blogHeroImagePosition,
   blogPostingSchema,
+  blogSocialImage,
   DEFAULT_BLOG_HERO_ALT,
   DEFAULT_BLOG_HERO_IMAGE,
   formatBlogDate,
@@ -57,21 +58,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = post.seoTitle ?? post.title;
   const canonical = `${siteUrl}/blogs/${slug}`;
   const modified = post.updatedAt ?? post.publishedAt;
-  const heroImage = blogHeroImage(post);
-  const socialImage = post.coverImage
-    ? {
-        url: post.coverImage,
-        width: 1200,
-        height: 630,
-        alt: post.coverAlt ?? post.title,
-      }
-    : {
-        url: heroImage,
-        alt:
-          heroImage === DEFAULT_BLOG_HERO_IMAGE
-            ? DEFAULT_BLOG_HERO_ALT
-            : post.title,
-      };
+  // og:image en twitter:image = de hero van de post (er zijn geen losse cover-bestanden).
+  const socialImage = blogSocialImage(post);
 
   return {
     title,
@@ -126,8 +114,15 @@ export default async function BlogArticlePage({ params }: Props) {
           src={heroImage}
           alt={heroIsDefault ? DEFAULT_BLOG_HERO_ALT : ""}
           fill
-          priority
-          sizes="100vw"
+          preload
+          // LCP-afbeelding van de pagina, dus de enige met preload.
+          // object-cover in een kader van 100vw × min-h (50vh / 60vh / 70vh). Bron
+          // foto-lopend.jpg = 2400×1411 (1,70:1). Is het kader smaller dan 1,70:1, dan
+          // bepaalt de hoogte de schaal: nodig = max(kaderbreedte, kaderhoogte × 1,70).
+          //   <768px:     kaderhoogte 50vh → 50vh × 1,70 = 85vh   (390×844: max(390, 717) = 717px)
+          //   768-1023px: kaderhoogte 60vh → 60vh × 1,70 = 102vh
+          //   ≥1024px:    kaderhoogte 70vh → 70vh × 1,70 = 119vh  (1440×900: max(1440, 1071) = 1440px)
+          sizes="(min-width: 1024px) max(100vw, 119vh), (min-width: 768px) max(100vw, 102vh), max(100vw, 85vh)"
           className="object-cover object-[center_15%]"
           style={{ objectPosition: heroImagePosition }}
           role={heroIsDefault ? undefined : "presentation"}
@@ -186,7 +181,7 @@ export default async function BlogArticlePage({ params }: Props) {
                   <SlashPill>/ VERDER</SlashPill>
                   <h2 className="mt-6 font-display text-[24px] font-medium leading-[1.2] tracking-[-0.005em]">
                     {category.audience === "kandidaat"
-                      ? "Klaar voor een volgende stap?"
+                      ? "Praat vertrouwelijk over je volgende stap."
                       : "Talent dat blijft."}
                   </h2>
                   <AudienceCta audience={category.audience} className="mt-6" />

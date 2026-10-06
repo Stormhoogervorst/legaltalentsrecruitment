@@ -11,19 +11,18 @@ export function AboutShort() {
           <div>
             <SlashPill>/ OVER ONS</SlashPill>
             <AnimatedHeadline
-              lines={["Een plan op maat."]}
+              lines={["Begonnen als twee rechtenstudenten."]}
               className="display-md mt-8 max-w-xl"
             />
             <div className="mt-8 max-w-xl space-y-5 text-[16px] leading-[1.6] text-foreground-secondary">
               <p>
-                Storm en Max richtten Legal Talents Recruitment op vanuit één
-                overtuiging: Legal Recruitment aanbieden waarbij persoonlijke
-                aanpak, vertrouwen en kwaliteit ouderwets hoog in het vaandel
-                staat.
+                Storm en Max begonnen Legal Talents Recruitment als
+                rechtenstudenten. Ze wilden legal recruitment waarbij persoonlijk
+                contact en vertrouwen voorop staan.
               </p>
               <p>
                 Met een achtergrond in de juridische wereld en een breed netwerk
-                van advocaten, bedrijfsjuristen en kantoren werken wij als{" "}
+                van advocaten, bedrijfsjuristen en kantoren werken we als{" "}
                 <Link
                   href="/juridisch-recruiter"
                   className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
@@ -42,11 +41,17 @@ export function AboutShort() {
 
           <div className="relative aspect-square overflow-hidden rounded-[24px] bg-background-secondary">
             <Image
-              src="/stock-foto-1.webp"
-              alt="Twee mensen in gesprek aan tafel bij Legal Talents Recruitment"
+              src="/over ons.jpg"
+              alt="Drie mensen in gesprek aan een rode tafel bij Legal Talents Recruitment"
               fill
-              sizes="(max-width: 1024px) 92vw, 540px"
-              quality={90}
+              // Bron is al vierkant bijgesneden (1600×1600) en het kader is
+              // aspect-square, dus er wordt niets meer afgesneden: nodig = kaderbreedte.
+              // Kaderbreedte = (min(vw, 1440px) - 2×48px padding - 64px gap) / 2 vanaf lg
+              //   ≥1440px: (1440 - 96 - 64) / 2 = 640px
+              //   1024-1439px: (100vw - 96px - 64px) / 2 = 50vw - 80px
+              //   768-1023px: 1 kolom, 100vw - 2×48px = 100vw - 96px
+              //   <768px: 1 kolom, 100vw - 2×20px = 100vw - 40px
+              sizes="(min-width: 1440px) 640px, (min-width: 1024px) calc(50vw - 80px), (min-width: 768px) calc(100vw - 96px), calc(100vw - 40px)"
               className="object-cover"
             />
           </div>

@@ -15,7 +15,7 @@ const logos = [
     alt: "Law & Pepper",
   },
   {
-    src: "/Simmons + Simmons logo.png",
+    src: "/Logo Simmons Simmons.png",
     alt: "Simmons + Simmons",
   },
   {
@@ -57,7 +57,12 @@ export function TrustStrip() {
                         alt={logo.alt}
                         width={360}
                         height={100}
-                        sizes="(max-width: 768px) 208px, 260px"
+                        // Bronnen zijn vierkant (500×500). Het img-kader is w-full met
+                        // aspect-ratio 360/100 (3,6) en object-contain, dus de hoogte
+                        // bepaalt de breedte van het logo: nodig = kaderhoogte × (500/500).
+                        //   <768px: kader 208px breed → 208 / 3,6 = 58px hoog → 58 × 1 = 58px
+                        //   ≥768px: kader 260px breed → 260 / 3,6 = 72px hoog → 72 × 1 = 72px
+                        sizes="(max-width: 767px) 58px, 72px"
                         className="h-auto max-h-[72px] w-full object-contain sm:max-h-[72px] md:max-h-20"
                       />
                     </div>

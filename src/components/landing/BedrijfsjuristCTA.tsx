@@ -10,12 +10,12 @@ export function BedrijfsjuristCTA() {
       <SectionShell className="text-center">
         <SlashPill variant="dark">/ INTAKE</SlashPill>
         <h2 className="display-lg mx-auto mt-8 max-w-4xl">
-          Klaar voor een <br />
-          specifiek profiel?
+          Een intake <br />
+          kost niets.
         </h2>
         <p className="mx-auto mt-8 max-w-[480px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-          Vrijblijvende intake voor de juiste in-house jurist. We luisteren,
-          denken mee, en delen marktkennis.
+          We komen bij jullie langs, luisteren en delen marktkennis. De intake
+          is vrijblijvend.
         </p>
         <div className="mt-10">
           <PillButton href="/contact" variant="dark">

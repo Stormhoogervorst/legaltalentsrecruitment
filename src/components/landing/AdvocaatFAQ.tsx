@@ -5,12 +5,12 @@ export const advocaatFaqItems = [
   {
     question: "Werven jullie ook partner-niveau?",
     answer:
-      "Ja. Partner-werving (lateral moves) is een gevoelig proces dat 100% vertrouwelijk verloopt — vaak zonder dat de huidige werkgever weet van het traject. Wij hebben ervaring met portefeuille-overdracht, due diligence rond clienten en de overgangsbegeleiding die deze trajecten vereisen.",
+      "Ja. Partner-werving (lateral moves) is een gevoelig proces dat vertrouwelijk verloopt, vaak zonder dat de huidige werkgever van het traject weet. We begeleiden ook de portefeuille-overdracht en de overgang zelf.",
   },
   {
-    question: "Hoe omgaan met advocaten die niet actief zoeken?",
+    question: "Hoe benaderen jullie advocaten die niet actief zoeken?",
     answer:
-      "Het meeste talent op medior en senior niveau is passief beschikbaar — zij overwegen een overstap maar reageren niet op vacaturesites. Wij benaderen deze advocaten gericht, één-op-één, vanuit een persoonlijk netwerk. Dat is waar onze werkwijze het verschil maakt.",
+      "Het meeste talent op medior en senior niveau is passief beschikbaar: ze overwegen een overstap maar reageren niet op vacaturesites. We benaderen deze advocaten gericht, één-op-één, vanuit een persoonlijk netwerk. Dat is waar onze werkwijze het verschil maakt.",
   },
   {
     question: "Wat is de gemiddelde doorlooptijd?",
@@ -20,17 +20,17 @@ export const advocaatFaqItems = [
   {
     question: "Werken jullie ook met kleinere kantoren?",
     answer:
-      "Ja. Wij werven voor boutique-kantoren, middelgrote firma's en grotere kantoren. Wat telt is de match — niet de omvang. Voor kleinere kantoren is gerichte werving juist vaak doorslaggevend omdat één plaatsing een groot deel van het team beïnvloedt.",
+      "Ja. We werven voor boutique-kantoren, middelgrote firma's en grotere kantoren. Wat telt is de match, niet de omvang. Voor kleinere kantoren is gerichte werving juist vaak doorslaggevend omdat één plaatsing een groot deel van het team beïnvloedt.",
   },
   {
     question: "Hoe gaan jullie om met exclusiviteit?",
     answer:
-      "Wij werken het liefst exclusief — dat geeft ons de ruimte om er echt voor te gaan en de kandidaat-pool optimaal te benutten. Niet-exclusieve opdrachten kunnen wel, maar dan hanteren we soms aangepaste voorwaarden om de inspanning te kunnen waarborgen.",
+      "We werken het liefst exclusief. Dan kunnen we de tijd nemen voor intake en gesprekken en hoeven we niet te racen tegen andere bureaus. Niet-exclusieve opdrachten kunnen wel, maar dan hanteren we soms andere voorwaarden.",
   },
   {
     question: "Kunnen jullie advocaten uit een specifiek kantoor benaderen?",
     answer:
-      "We werken niet met kantoor-specifieke 'doelwitlijsten' van opdrachtgevers. Wel kennen wij de juridische arbeidsmarkt en weten wij welke advocaten waar werken en wat hun specialisme is. De keuze om iemand te benaderen ligt bij ons, op basis van de profielmatch — niet op basis van waar zij toevallig werken.",
+      "We werken niet met kantoor-specifieke 'doelwitlijsten' van opdrachtgevers. Wel kennen we de juridische arbeidsmarkt en weten we welke advocaten waar werken en wat hun specialisme is. De keuze om iemand te benaderen ligt bij ons, op basis van de profielmatch en niet op basis van waar ze toevallig werken.",
   },
 ];
 

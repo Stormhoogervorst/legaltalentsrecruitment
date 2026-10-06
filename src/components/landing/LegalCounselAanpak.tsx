@@ -16,14 +16,16 @@ export function LegalCounselAanpak() {
             counsels werven
           </h2>
           <p className="mt-8 text-[18px] leading-[1.5] text-foreground-secondary">
-            Gerichte, persoonlijke search via ons netwerk van bedrijfsjuristen
-            en advocaten die de overstap naar (of binnen) een in-house rol
-            overwegen. We spreken elke kandidaat zelf voordat we voordragen, en
-            leveren een onderbouwde shortlist in plaats van een stapel cv&apos;s.
-            Bij elke voordracht: wat brengt deze persoon mee, waarom past het
-            inhoudelijk én cultureel, en waar moet je op letten.             Begeleiding tot
-            en met de eerste werkdag, en een vervangingsgarantie op aanvraag. No
-            cure, no pay.
+            We beginnen met een intake bij jullie op locatie. Daarna zoeken we
+            gericht en persoonlijk via ons netwerk van bedrijfsjuristen en
+            advocaten die de overstap naar (of binnen) een in-house rol
+            overwegen. We spreken elke kandidaat zelf voordat we voordragen en
+            leveren een onderbouwde shortlist in plaats van een stapel
+            cv&apos;s. Bij elke voordracht leggen we uit wat de persoon
+            meebrengt, waarom het inhoudelijk en cultureel past en waar jullie
+            op moeten letten. We begeleiden tot en met de eerste werkdag, en er
+            is een vervangingsgarantie als die vooraf schriftelijk is
+            afgesproken. No cure, no pay.
           </p>
           <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
             Ben je zelf legal counsel en oriënteer je je op een volgende rol?

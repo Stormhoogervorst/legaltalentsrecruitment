@@ -53,11 +53,11 @@ export const complianceOfficerVacatureFaqItems: FaqItem[] = [
   {
     question: "Kost het mij iets als kandidaat?",
     answer:
-      "Nee. Kandidaten betalen niets. Een kennismaking is kosteloos en vrijblijvend. Wij worden betaald door opdrachtgevers, alleen bij een succesvolle plaatsing.",
+      "Nee. Kandidaten betalen niets. Een kennismaking is kosteloos en vrijblijvend. We worden betaald door opdrachtgevers, alleen bij een succesvolle plaatsing.",
     answerNode: (
       <>
         Nee. Kandidaten betalen niets. Een kennismaking is kosteloos en
-        vrijblijvend. Wij worden betaald door opdrachtgevers, alleen bij een
+        vrijblijvend. We worden betaald door opdrachtgevers, alleen bij een
         succesvolle plaatsing. Plan het via{" "}
         <Link href="/contact" className={linkClassName}>
           contact
@@ -87,7 +87,7 @@ export const complianceOfficerVacatureFaqItems: FaqItem[] = [
   {
     question: "Waar staan jullie compliance vacatures?",
     answer:
-      "Openstaande posities die publiek mogen, staan bij vacatures. Daarnaast matchen we rollen die niet op een jobboard staan. Zoek je een compliance officer vacature in Amsterdam, Utrecht of Rotterdam, of elders in Nederland: dat bespreken we in de kennismaking. Wij werken landelijk en maken geen aparte stadspagina's.",
+      "Openstaande posities die publiek mogen, staan bij vacatures. Daarnaast matchen we rollen die niet op een jobboard staan. Zoek je een compliance officer vacature in Amsterdam, Utrecht of Rotterdam, of elders in Nederland: dat bespreken we in de kennismaking. We werken landelijk en maken geen aparte stadspagina's.",
     answerNode: (
       <>
         Openstaande posities die publiek mogen, staan bij{" "}
@@ -96,7 +96,7 @@ export const complianceOfficerVacatureFaqItems: FaqItem[] = [
         </Link>
         . Daarnaast matchen we rollen die niet op een jobboard staan. Zoek je
         een compliance officer vacature in Amsterdam, Utrecht of Rotterdam, of
-        elders in Nederland: dat bespreken we in de kennismaking. Wij werken
+        elders in Nederland: dat bespreken we in de kennismaking. We werken
         landelijk en maken geen aparte stadspagina&apos;s.
       </>
     ) as ReactNode,

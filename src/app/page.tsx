@@ -5,19 +5,18 @@ import { BookingSection } from "@/components/home/BookingSection";
 import { FeaturedJobs } from "@/components/home/FeaturedJobs";
 import { Hero } from "@/components/home/Hero";
 import { HomeCTA } from "@/components/home/HomeCTA";
-import { HowWeWork } from "@/components/home/HowWeWork";
 import { PracticeAreas } from "@/components/home/PracticeAreas";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { websiteSchema } from "@/lib/schema";
 
-const title = "Legal Recruitment: bereik 40.000 juristen | Legal Talents";
+const title = "Legal recruitment voor de lange termijn | Legal Talents";
 const description =
-  "Legal recruitment via persoonlijke search: wij verbinden advocaten en juristen met kantoren en corporates die vooruit willen. No cure, no pay.";
+  "Legal recruitment voor advocaten, juristen en legal AI-specialisten. We komen voor de intake langs en stellen alleen kandidaten voor die we zelf spraken.";
 const socialImage = {
   url: "/social%20preview.png",
-  width: 1024,
-  height: 1024,
-  alt: "Legal Recruitment, zoals het hoort.",
+  width: 1200,
+  height: 1200,
+  alt: "Legal recruitment voor de lange termijn.",
 };
 
 export const metadata: Metadata = {
@@ -52,10 +51,9 @@ export default function Home() {
       <Hero />
       <TrustStrip />
       <AudienceSplit />
-      <HowWeWork />
+      <FeaturedJobs />
       <PracticeAreas />
       <AboutShort />
-      <FeaturedJobs />
       <BookingSection />
       <HomeCTA />
       <script

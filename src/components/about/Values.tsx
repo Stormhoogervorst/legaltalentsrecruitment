@@ -4,17 +4,17 @@ const values = [
   {
     index: "/ 001",
     title: "Kwaliteit",
-    body: "Wij spreken alle kandidaten voor wij ze aan je voorstellen. Ons motto is kwaliteit boven kwantiteit: overspoelt worden met CV's is niet prettig. Een aantal top kandidaten wel.",
+    body: "We spreken alle kandidaten voordat we ze aan je voorstellen. Liever een paar topkandidaten dan een stapel cv's.",
   },
   {
     index: "/ 002",
     title: "Service",
-    body: "Wij houden van korte lijnen, snel schakelen, persoonlijk advies en eerlijkheid. Wij zijn 7 dagen in de week te bereiken en kandidaten kunnen ons ook buiten werktijd bellen. Handig toch?",
+    body: "We houden van korte lijnen en snel schakelen, en we zijn eerlijk. We zijn 7 dagen per week bereikbaar en kandidaten mogen ons ook buiten werktijd bellen.",
   },
   {
     index: "/ 003",
     title: "Vertrouwen",
-    body: "Wij begrijpen hoe belangrijk een discreet proces is. Wij zullen nooit ongevraagd je CV delen met een kantoor. Voor bedrijven kunnen wij ook anoniem werven.",
+    body: "Een discreet proces is belangrijk. We delen je cv nooit zonder jouw toestemming. Bedrijven kunnen ook anoniem werven.",
   },
 ];
 

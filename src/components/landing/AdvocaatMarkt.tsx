@@ -3,8 +3,8 @@ import { SectionShell, SlashPill } from "@/components/home/primitives";
 
 const marktItems = [
   "Salaris is niet meer doorslaggevend. Doorgroei, autonomie, dossierkwaliteit en kantoorcultuur wegen voor veel advocaten zwaarder dan een hoger startsalaris.",
-  "Hybride werken is uitgangspunt. Kantoren die nog volledig op locatie verlangen, sluiten zichzelf uit van een groot deel van het talent — vooral op medior en senior niveau.",
-  "Specialisaties zijn schaars. In gebieden zoals mededinging, ondernemingsrecht corporate, IT-recht en fiscaal advies is goed talent moeilijk te vinden — en de marktconforme honorering verschuift snel.",
+  "Hybride werken is uitgangspunt. Kantoren die nog volledig op locatie verlangen, sluiten zichzelf uit van een groot deel van het talent, vooral op medior en senior niveau.",
+  "Specialisaties zijn schaars. In gebieden zoals mededinging, ondernemingsrecht corporate, IT-recht en fiscaal advies is goed talent moeilijk te vinden, en de marktconforme honorering verschuift snel.",
   'Carrière-paden moeten zichtbaar zijn. Vage "doorgroei mogelijk" trekt geen ambitieuze advocaten meer. Concrete partnertracks, specialisatie-paden en mentor-structuren wel.',
   "Reputatie van het kantoor weegt zwaar. Wat zegt voormalig personeel? Hoe is jullie aanwezigheid op LinkedIn? Wat is de cliënt-portfolio? Advocaten doen serieus huiswerk voor ze overstappen.",
 ];
@@ -21,7 +21,7 @@ export function AdvocaatMarkt() {
           </h2>
           <p className="mt-8 text-[18px] leading-[1.5] text-foreground-secondary">
             De juridische arbeidsmarkt is veranderd. Goede advocaten kiezen waar
-            zij willen werken — en kantoren concurreren om hetzelfde talent.
+            ze willen werken en kantoren concurreren om hetzelfde talent.
           </p>
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
             Wat dat in de praktijk betekent voor werving:
@@ -37,7 +37,7 @@ export function AdvocaatMarkt() {
             ))}
           </ul>
           <p className="mt-8 text-[16px] leading-[1.6] text-foreground-muted">
-            Wij brengen deze marktkennis in bij elke opdracht — zodat jullie
+            We brengen deze marktkennis in bij elke opdracht, zodat jullie
             weten waar jullie staan en wat realistisch is om aan te bieden.
             Zoekt jullie kantoor juist iemand die recht en technologie
             combineert? Bekijk onze werving van{" "}

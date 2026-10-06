@@ -16,7 +16,7 @@ const rollen: Array<{
   {
     index: "002",
     title: "Legal counsel bij een scale-up",
-    body: "Eerste of volgende jurist in een groeiend bedrijf. Breed, zelfstandig, dicht op de operatie. Minder hiërarchie, meer trade-offs — en een titel die vaker legal counsel heet dan bedrijfsjurist.",
+    body: "Eerste of volgende jurist in een groeiend bedrijf. Breed, zelfstandig, dicht op de operatie. Minder hiërarchie, meer trade-offs, en een titel die vaker legal counsel heet dan bedrijfsjurist.",
   },
   {
     index: "003",
@@ -31,7 +31,7 @@ const rollen: Array<{
   {
     index: "005",
     title: "Aanpalend: IP, privacy of compliance",
-    body: "Soms grenst een counsel-rol aan IP, privacy of compliance. Die vakken matchen wij alleen als de opdracht dat écht vraagt, niet als losse regel op een cv.",
+    body: "Soms grenst een counsel-rol aan IP, privacy of compliance. Die vakken matchen we alleen als de opdracht dat vraagt, niet als losse regel op een cv.",
   },
   {
     index: "006",

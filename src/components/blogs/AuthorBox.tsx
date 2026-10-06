@@ -12,7 +12,9 @@ export function AuthorBox({ author }: { author: BlogAuthor }) {
           alt={`Portretfoto van ${author.name}`}
           width={160}
           height={160}
-          quality={90}
+          // Weergave is size-20 = 80px breed; bronnen zijn staand (0,75 / 0,90),
+          // dus de breedte bepaalt de schaal: nodig = 80px.
+          sizes="80px"
           className="size-20 shrink-0 rounded-full object-cover"
         />
         <div>

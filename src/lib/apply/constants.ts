@@ -1,5 +1,5 @@
 export const APPLY_FAILURE_MESSAGE =
-  "Er ging iets mis. Probeer opnieuw of mail direct naar storm@legal-talents.nl.";
+  "Er ging iets mis. Probeer opnieuw of mail direct naar marcel@legal-talents.nl.";
 
 export const RECRUITER_ID = "20925a93-0337-405e-ae0e-e0a434bd72c4";
 

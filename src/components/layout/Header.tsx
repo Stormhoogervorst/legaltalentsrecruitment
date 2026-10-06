@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "Vacatures", href: "/vacatures" },
-  { label: "Voor Kandidaten", href: "/voor-kandidaten" },
-  { label: "Voor Opdrachtgevers", href: "/voor-opdrachtgevers" },
-  { label: "Over Ons", href: "/over-ons" },
+  { label: "Voor kandidaten", href: "/voor-kandidaten" },
+  { label: "Voor opdrachtgevers", href: "/voor-opdrachtgevers" },
+  { label: "Over ons", href: "/over-ons" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -79,7 +79,9 @@ export function Header({ variant = "default" }: { variant?: HeaderVariant }) {
               width={56}
               height={56}
               className="block size-full object-contain"
-              priority
+              // Zichtbaar boven de vouw, maar geen preload: de LCP-afbeelding van de pagina
+              // heeft de enige preload. Klein SVG-bestand, dus eager is genoeg.
+              loading="eager"
             />
           </Link>
 
@@ -127,7 +129,7 @@ export function Header({ variant = "default" }: { variant?: HeaderVariant }) {
                   : "bg-foreground text-background hover:shadow-[0_0_0_2px_rgba(88,125,254,0.20)] focus-visible:ring-foreground focus-visible:ring-offset-background",
               )}
             >
-              Plan kennismaking
+              Plan een kennismaking
             </Link>
             <button
               type="button"

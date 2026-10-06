@@ -7,11 +7,12 @@ export function HomeCTA() {
       <SectionShell className="text-center">
         <SlashPill variant="dark">/ KENNISMAKING</SlashPill>
         <AnimatedHeadline
-          lines={["Klaar voor de", "volgende stap?"]}
+          lines={["Een gesprek", "kost niets."]}
           className="display-lg mx-auto mt-8 max-w-4xl"
         />
         <p className="mx-auto mt-8 max-w-[480px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-          Een vrijblijvend gesprek, vertrouwelijk en zonder verplichtingen.
+          Vertrouwelijk en zonder verplichtingen. Praat met ons over je volgende
+          stap, of over jullie vacature.
         </p>
         <div className="mt-10">
           <PillButton href="/contact" variant="dark">

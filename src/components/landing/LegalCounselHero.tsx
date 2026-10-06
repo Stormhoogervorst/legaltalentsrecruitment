@@ -16,9 +16,9 @@ export function LegalCounselHero() {
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
           De legal counsel is de jurist die het werk doet. Contracten opstellen
           en onderhandelen, de business adviseren, compliance bewaken,
-          geschillen begeleiden — de dagelijkse juridische praktijk die een
+          geschillen begeleiden. Dat is de dagelijkse juridische praktijk die een
           organisatie draaiende houdt. Het is vaak de eerste vaste juridische
-          hire, of de uitbreiding van een groeiend team. Wij vinden legal
+          hire, of de uitbreiding van een groeiend team. We vinden legal
           counsels die inhoudelijk sterk zijn en zelfstandig kunnen werken in de
           praktijk.
         </p>

@@ -18,8 +18,8 @@ export function GeneralCounselHero() {
           Het is de persoon die juridische risico&apos;s vertaalt naar zakelijke
           beslissingen, die de directie adviseert bij overnames,
           financieringsrondes en geschillen, en die het legal-team opbouwt en
-          aanstuurt. Het is een hire die je niet vaak doet en niet snel
-          terugdraait. Wij vinden general counsels die inhoudelijk sterk zijn én
+          aanstuurt. Het is een hire die jullie niet vaak doen en niet snel
+          terugdraaien. We vinden general counsels die inhoudelijk sterk zijn en
           op directieniveau meebewegen.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">

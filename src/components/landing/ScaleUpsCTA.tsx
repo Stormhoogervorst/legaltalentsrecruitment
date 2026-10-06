@@ -11,12 +11,12 @@ export function ScaleUpsCTA() {
       <SectionShell className="text-center">
         <SlashPill variant="dark">/ INTAKE</SlashPill>
         <AnimatedHeadline
-          lines={["Klaar om je", "legal-team te bouwen?"]}
+          lines={["Een intake", "kost niets."]}
           className="display-lg mx-auto mt-8 max-w-4xl"
         />
         <p className="mx-auto mt-8 max-w-[480px] text-[18px] leading-[1.5] text-dark-foreground-secondary">
-          Een vrijblijvende intake, vertrouwelijk en zonder verplichtingen. We
-          denken mee over wat je in deze fase nodig hebt.
+          Vertrouwelijk en zonder verplichtingen. We komen bij jullie langs en
+          denken mee over wat jullie in deze fase nodig hebben.
         </p>
         <div className="mt-10">
           <PillButton href="/contact" variant="dark">

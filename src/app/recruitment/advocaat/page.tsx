@@ -14,7 +14,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Werving van advocaten | Legal Talents Recruitment";
 const description =
-  "Werving van advocaten op alle niveaus — van stagiair tot partner. Specialist in juridische recruitment. Persoonlijk netwerk, no cure no pay.";
+  "Werving van advocaten, van stagiair tot partner. Intake op kantoor, alleen kandidaten die we zelf spraken. Persoonlijk netwerk, no cure, no pay.";
 
 export const metadata: Metadata = {
   title: {
@@ -42,22 +42,22 @@ const processSteps = [
   {
     index: "001",
     title: "Intake & profiel",
-    body: "Bij voorkeur op kantoor — om jullie cultuur, dossiers en samenstelling van het team écht te leren kennen. Hoe ziet de ideale collega eruit, zowel vakinhoudelijk als cultureel?",
+    body: "Bij voorkeur op kantoor, zodat we jullie cultuur, dossiers en teamsamenstelling zelf zien. We bespreken hoe de ideale collega eruitziet, vakinhoudelijk en cultureel.",
   },
   {
     index: "002",
     title: "Gerichte search",
-    body: "Geen massa-outreach. Wij benaderen advocaten één-op-één — vaak passief beschikbaar talent dat niet reageert op vacaturesites. Discreet en vertrouwelijk, ook richting hun huidige kantoor.",
+    body: "We benaderen advocaten één-op-één, vaak talent dat niet actief zoekt en niet reageert op vacaturesites. Discreet en vertrouwelijk, ook richting hun huidige kantoor.",
   },
   {
     index: "003",
     title: "Persoonlijke voordracht",
-    body: "Alleen kandidaten die wij zelf gesproken hebben. Bij elke voordracht een onderbouwing: vakinhoudelijke match, cultuurfit, motivatie voor overstap, aandachtspunten.",
+    body: "Alleen kandidaten die we zelf hebben gesproken. Bij elke voordracht leggen we uit hoe de kandidaat vakinhoudelijk past, hoe het zit met de cultuurfit, waarom die wil overstappen en wat de aandachtspunten zijn.",
   },
   {
     index: "004",
     title: "Begeleiding tot indiensttreding",
-    body: "Van eerste gesprek tot het tekenen van de overeenkomst — en tijdens de eerste maanden. Onboarding, garantieregeling en evaluatie.",
+    body: "We begeleiden van het eerste gesprek tot het tekenen van de overeenkomst en tijdens de eerste maanden: onboarding, evaluatie en, als vooraf afgesproken, de garantieregeling.",
   },
 ];
 

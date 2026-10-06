@@ -5,22 +5,22 @@ const reasons = [
   {
     index: "001",
     title: "Alleen legal, en dan de zware rollen",
-    body: "Wij werven geen finance of IT erbij. Onze search zit bij advocatuur en inhouse legal — met extra aandacht voor senioriteit, discretie en de cultuur waarin iemand moet landen.",
+    body: "We werven geen finance of IT erbij. Onze search zit bij advocatuur en inhouse legal, met extra aandacht voor senioriteit, discretie en de cultuur waarin iemand terechtkomt.",
   },
   {
     index: "002",
     title: "Mapping in plaats van database",
-    body: "Legal executive search loopt via persoonlijke benadering en een netwerk in de Nederlandse advocatuur en inhouse praktijk. Geen massa-outreach, geen openbare advertentie tenzij jullie dat willen.",
+    body: "Legal executive search loopt via persoonlijke benadering en een netwerk in de Nederlandse advocatuur en inhouse praktijk. Geen openbare advertentie tenzij jullie dat willen.",
   },
   {
     index: "003",
     title: "Tweezijdig, dus scherper",
-    body: "Omdat wij opdrachtgevers én passieve kandidaten kennen, toetsen we eerder of een overstap écht past — inhoudelijk, cultureel en in tempo.",
+    body: "Omdat we opdrachtgevers en passieve kandidaten kennen, merken we sneller of een overstap past: inhoudelijk, cultureel en qua tempo.",
   },
   {
     index: "004",
     title: "Landelijk, no cure no pay",
-    body: "Onze basis is Nijmegen; we werken als legal headhunter landelijk in Nederland. Intake het liefst op locatie. No cure, no pay: je betaalt bij plaatsing.",
+    body: "Onze basis is Nijmegen, maar we werken als legal headhunter landelijk. De intake doen we het liefst op locatie. No cure, no pay: jullie betalen bij plaatsing.",
   },
 ];
 
@@ -37,14 +37,13 @@ export function HeadhunterAdvocatuurWaarom() {
             </h2>
             <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
               Legal Talents is een compact bureau van mensen met een juridische
-              achtergrond. Wij beloven geen fabricagecijfers — wel een
-              werkwijze die mapping, discretie en een duurzame match voorop
-              zet.
+              achtergrond. We beloven geen cijfers, wel een werkwijze:
+              mapping, discretie en een match voor de lange termijn.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wat je wél mag verwachten: een serieuze intake, kandidaten die
-              wij zelf hebben gesproken, een shortlist met onderbouwing, en
-              begeleiding tot voorbij de eerste werkdag. Hoe werving eruitziet
+              Wat je mag verwachten: een intake op locatie, kandidaten die we
+              zelf hebben gesproken, een shortlist met onderbouwing en
+              begeleiding tot na de eerste werkdag. Hoe werving eruitziet
               voor een breder profiel staat bij{" "}
               <Link
                 href="/juridisch-recruiter"
@@ -52,7 +51,7 @@ export function HeadhunterAdvocatuurWaarom() {
               >
                 juridisch recruiter
               </Link>
-              . Meer over wie wij zijn:{" "}
+              . Meer over wie we zijn:{" "}
               <Link
                 href="/over-ons"
                 className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"

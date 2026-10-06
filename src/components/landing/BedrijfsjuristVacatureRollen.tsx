@@ -16,28 +16,28 @@ const rollen: Array<{
   {
     index: "002",
     title: "Medior bedrijfsjurist",
-    body: "Zelfstandig de business ondersteunen. Twee tot vijf jaar ervaring is gangbaar — vanuit inhouse of als overstap vanuit kantoor.",
+    body: "Zelfstandig de business ondersteunen. Twee tot vijf jaar ervaring is gangbaar, vanuit inhouse of als overstap vanuit kantoor.",
   },
   {
     index: "003",
     title: "Senior bedrijfsjurist / counsel",
-    body: "Zwaardere dossiers, meer autonomie, soms specialisatie (commercieel, corporate, IT). Sparring met management, niet alleen uitvoering.",
+    body: "Zwaardere dossiers, meer autonomie, soms specialisatie (commercieel, corporate, IT). Sparring met management, meer dan uitvoering.",
   },
   {
     index: "004",
     title: "Overstap advocatuur → inhouse",
-    body: "Van kantoor naar de business-kant. Minder uurtjes schrijven, meer trade-offs en context. Niet elke advocaat is daar klaar voor — dat toetsen we expliciet.",
+    body: "Van kantoor naar de business-kant. Minder uurtjes schrijven, meer trade-offs en context. Niet elke advocaat is daar klaar voor. Dat toetsen we expliciet.",
   },
   {
     index: "005",
     title: "Eerste jurist / head of legal",
-    body: "De juridische functie opzetten of leiden in een kleinere organisatie. Vraagt zelfstandigheid en business-gevoel, niet alleen vakinhoud.",
+    body: "De juridische functie opzetten of leiden in een kleinere organisatie. Vraagt zelfstandigheid en business-gevoel, naast vakinhoud.",
     href: "/recruitment/bedrijfsjurist",
   },
   {
     index: "006",
     title: "Aanpalende inhouse-rollen",
-    body: "Privacy, compliance of legal counsel overlappen soms met bedrijfsjurist-werk — maar het is niet dezelfde functie. Die rollen werven wij als eigen profiel, niet als vage extra op een cv.",
+    body: "Privacy, compliance of legal counsel overlappen soms met bedrijfsjurist-werk, maar het is niet dezelfde functie. Die rollen werven we als eigen profiel, niet als vage extra op een cv.",
     href: "/recruitment/legal-counsel",
   },
 ];
@@ -55,7 +55,7 @@ export function BedrijfsjuristVacatureRollen() {
           <p className="mt-5 max-w-[540px] text-[16px] leading-[1.6] text-foreground-muted">
             Van junior tot senior, van eerste jurist tot counsel in een groter
             team. Corporate en commercial komen het vaakst voor; privacy en
-            compliance alleen als de opdracht dat écht vraagt. Actuele
+            compliance alleen als de opdracht dat vraagt. Actuele
             openstaande posities staan bij{" "}
             <Link
               href="/vacatures"

@@ -182,7 +182,7 @@ export function SollicitatieForm({ vacatureTitle }: SollicitatieFormProps) {
       <SlashPill>/ SOLLICITEREN</SlashPill>
       <h2 className="display-md mt-8">Solliciteer direct</h2>
       <p className="mt-6 max-w-[540px] text-[18px] leading-[1.5] text-foreground-secondary">
-        Vul het formulier in. We reageren binnen 5 werkdagen — meestal sneller.
+        Vul het formulier in. We reageren binnen 5 werkdagen, meestal sneller.
         Vertrouwelijk en zonder verplichtingen.
       </p>
       <div className="mt-12">

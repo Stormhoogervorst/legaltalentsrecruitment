@@ -12,7 +12,7 @@ import { TrustStrip } from "@/components/home/TrustStrip";
 
 const title = "Legal Counsel werving | Legal Talents Recruitment";
 const description =
-  "Een legal counsel werven voor contracten, advies en compliance? Wij vinden de juiste jurist via persoonlijke search. No cure, no pay.";
+  "Legal counsel werving via persoonlijke search, voor contracten, advies en compliance. Alleen kandidaten die we zelf spraken. No cure, no pay.";
 
 export const metadata: Metadata = {
   title: {

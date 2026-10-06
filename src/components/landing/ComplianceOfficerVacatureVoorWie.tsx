@@ -29,8 +29,8 @@ const audiences = [
     body: "Organisaties die een compliance officer willen werven: een bank of andere financiële instelling, een fintech, of een inhouse team bij een corporate of kantoor. Die werving heeft een eigen pagina. Hier lezen kandidaten hoe matching werkt.",
     bullets: [
       "Financiële sector, scale-ups en corporates",
-      "Search via netwerk, niet alleen jobboards",
-      "Kandidaten die wij zelf hebben gesproken",
+      "Search via netwerk, ook buiten jobboards",
+      "Kandidaten die we zelf hebben gesproken",
     ],
     primary: {
       label: "Compliance officer werven →",

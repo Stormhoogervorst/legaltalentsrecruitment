@@ -14,12 +14,21 @@ export async function FeaturedJobs() {
     <section className="section-y bg-background-secondary text-foreground">
       <SectionShell>
         <SlashPill>/ UITGELICHTE VACATURES</SlashPill>
-        <AnimatedHeadline
-          lines={["Recent geplaatste", "posities."]}
-          className="display-md mt-8 max-w-3xl"
-        />
+        <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <AnimatedHeadline
+            lines={["Openstaande", "vacatures."]}
+            className="display-md max-w-3xl"
+          />
+          <PillButton
+            href="/vacatures"
+            variant="secondary"
+            className="hidden shrink-0 whitespace-nowrap md:inline-flex"
+          >
+            Alle juridische vacatures →
+          </PillButton>
+        </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid w-full gap-6 lg:grid-cols-3">
           {featured.map((vacature) => (
             <article
               key={vacature.slug}
@@ -44,9 +53,9 @@ export async function FeaturedJobs() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-6 flex justify-start md:hidden">
           <PillButton href="/vacatures" variant="secondary">
-            Bekijk alle vacatures →
+            Alle juridische vacatures →
           </PillButton>
         </div>
       </SectionShell>

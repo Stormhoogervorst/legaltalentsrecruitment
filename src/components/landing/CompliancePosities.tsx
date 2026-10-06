@@ -9,7 +9,7 @@ const posities = [
   {
     index: "002",
     title: "Privacy officer / DPO",
-    body: "Data Protection Officers en privacy specialisten — vaak wettelijk verplicht onder de AVG. Voor organisaties die persoonsgegevens grootschalig verwerken: tech, healthcare, retail, overheid.",
+    body: "Data Protection Officers en privacy specialisten, vaak wettelijk verplicht onder de AVG. Voor organisaties die persoonsgegevens grootschalig verwerken: tech, healthcare, retail, overheid.",
   },
   {
     index: "003",

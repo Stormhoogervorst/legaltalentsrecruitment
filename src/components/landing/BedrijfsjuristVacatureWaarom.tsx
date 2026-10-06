@@ -5,7 +5,7 @@ const reasons = [
   {
     index: "001",
     title: "Alleen legal",
-    body: "Wij werven geen finance of IT erbij. Onze aandacht zit bij advocaten, bedrijfsjuristen en legal teams — en bij de cultuur waarin zij moeten landen.",
+    body: "We werven geen finance of IT erbij. Onze aandacht zit bij advocaten, bedrijfsjuristen en legal teams, en bij de cultuur waarin zij terechtkomen.",
   },
   {
     index: "002",
@@ -15,12 +15,12 @@ const reasons = [
   {
     index: "003",
     title: "Tweezijdig, dus scherper",
-    body: "Omdat wij opdrachtgevers én kandidaten kennen, toetsen we eerder of een overstap écht past — inhoudelijk, cultureel en in tempo.",
+    body: "Omdat we opdrachtgevers en kandidaten kennen, merken we sneller of een overstap past: inhoudelijk, cultureel en qua tempo.",
   },
   {
     index: "004",
     title: "Landelijk, korte lijnen",
-    body: "Onze basis is Nijmegen; we werken landelijk in Nederland. Een gesprek kan telefonisch, digitaal of op locatie. Voor jou als kandidaat is het kosteloos.",
+    body: "Onze basis is Nijmegen, maar we werken landelijk. Een gesprek kan telefonisch, digitaal of op locatie. Voor jou als kandidaat is het kosteloos.",
   },
 ];
 
@@ -37,13 +37,12 @@ export function BedrijfsjuristVacatureWaarom() {
             </h2>
             <p className="mt-12 text-[18px] leading-[1.5] text-foreground-secondary">
               Legal Talents is een compact bureau van mensen met een juridische
-              achtergrond. Wij beloven geen fabricagecijfers — wel een
-              werkwijze die kwaliteit, discretie en een duurzame match voorop
-              zet.
+              achtergrond. We beloven geen cijfers, wel een werkwijze:
+              kwaliteit, discretie en een match voor de lange termijn.
             </p>
             <p className="mt-6 text-[16px] leading-[1.6] text-foreground-muted">
-              Wat je wél mag verwachten: een serieuze intake, context bij elke
-              rol, en begeleiding tot voorbij de eerste werkdag. Hoe dat eruit
+              Wat je mag verwachten: een uitgebreid gesprek vooraf, context bij
+              elke rol en begeleiding tot na de eerste werkdag. Hoe dat eruit
               ziet voor kandidaten staat op{" "}
               <Link
                 href="/voor-kandidaten"
@@ -51,7 +50,7 @@ export function BedrijfsjuristVacatureWaarom() {
               >
                 voor kandidaten
               </Link>
-              . Meer over wie wij zijn:{" "}
+              . Meer over wie we zijn:{" "}
               <Link
                 href="/over-ons"
                 className="font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"

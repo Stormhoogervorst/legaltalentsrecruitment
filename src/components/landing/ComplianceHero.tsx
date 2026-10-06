@@ -12,10 +12,10 @@ export function ComplianceHero() {
           compliance officers.
         </h1>
         <p className="mt-8 max-w-[640px] text-[18px] leading-[1.5] text-foreground-secondary">
-          Specialistische werving voor de regulated markets. Compliance
-          officers, privacy officers, DPO&apos;s en AML-specialisten — voor
-          banken, fintech, IT, healthcare en asset managers. Wij bereiken
-          maandelijks 40.000 juristen.
+          Werving van compliance officers, privacy officers, DPO&apos;s en
+          AML-specialisten voor banken, fintech, IT, healthcare en asset
+          managers. We komen voor de intake bij jullie langs en stellen alleen
+          kandidaten voor die we zelf hebben gesproken.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <PillButton href="/contact">Plan een intake →</PillButton>

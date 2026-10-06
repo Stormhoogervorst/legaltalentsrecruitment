@@ -4,17 +4,17 @@ const expertiseCards = [
   {
     index: "001",
     title: "Discretie is uitgangspunt",
-    body: "Advocaten oriënteren zich vrijwel altijd buiten hun huidige kantoor om. Wij werken volledig vertrouwelijk en introduceren alleen na expliciete toestemming.",
+    body: "Advocaten oriënteren zich vrijwel altijd buiten hun huidige kantoor om. We werken volledig vertrouwelijk en introduceren alleen na expliciete toestemming.",
   },
   {
     index: "002",
     title: "Marktkennis per rechtsgebied",
-    body: "Een ondernemingsrecht-advocaat zoeken vraagt om andere kennis dan een familierechtjurist. Wij kennen de specialistische arbeidsmarkt en welke kantoren waarom interessant zijn.",
+    body: "Een ondernemingsrecht-advocaat zoeken vraagt om andere kennis dan een familierechtjurist. We kennen de specialistische arbeidsmarkt en welke kantoren waarom interessant zijn.",
   },
   {
     index: "003",
-    title: "Cultuur en fit weegt zwaarder",
-    body: "In de advocatuur draait succes meer om kantoorcultuur dan om CV. Wij screenen kandidaten op fit met juridisch niveau én met de persoon achter het kantoor.",
+    title: "Cultuur weegt zwaarder dan het cv",
+    body: "In de advocatuur draait succes meer om kantoorcultuur dan om cv. We screenen kandidaten op juridisch niveau en op hoe ze bij het kantoor passen.",
   },
 ];
 
