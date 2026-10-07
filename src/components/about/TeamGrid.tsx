@@ -39,6 +39,7 @@ const team: {
     role: "Interim directeur",
     bio: "Marcel brengt ruim 30 jaar ervaring in recruitment en HR met zich mee, waarvan 15 jaar als directeur binnen de werving & selectie en uitzendbranche. Deze unieke mix van branchekennis en strategisch leiderschap maakt hem een onmisbare partner voor onze klanten.",
     image: "/marcel.jpg",
+    linkedin: "https://www.linkedin.com/in/marcelhoogervorst",
   },
 ];
 
@@ -106,6 +107,8 @@ export function TeamGrid() {
                   {member.linkedin ? (
                     <a
                       href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={`${member.name} op LinkedIn`}
                       className="mt-1 inline-flex size-8 shrink-0 items-center justify-center rounded-full text-foreground transition-colors hover:bg-pill-light focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     >
