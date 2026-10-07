@@ -61,6 +61,7 @@ export function aboutPageSchema() {
         "@type": "Person",
         name: "Marcel Hoogervorst",
         jobTitle: "Interim directeur",
+        sameAs: ["https://www.linkedin.com/in/marcelhoogervorst"],
       },
       {
         "@type": "Person",
