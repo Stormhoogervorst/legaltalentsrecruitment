@@ -22,7 +22,7 @@ export function CalBooking() {
     <div className="h-[700px] w-full overflow-hidden sm:h-[760px]">
       <Cal
         namespace={CAL_NAMESPACE}
-        calLink="storm-hoogervorst-shiuz1/30min"
+        calLink="marcel-hoogervorst-9btjak/30min"
         style={{ width: "100%", height: "100%", overflow: "scroll" }}
         config={{
           layout: "month_view",
