@@ -241,7 +241,7 @@ export default function PrivacyPage() {
       <h2>16. Contact</h2>
       <p>Voor vragen, verzoeken of klachten kunt u contact opnemen met:</p>
       <p>
-        Legal Talents · marcel@legal-talents.nl · +31 6 85 68 09 98 · Sint
+        Legal Talents · marcel@legal-talents.nl · +31 6 29 09 48 99 · Sint
         Annastraat 198-C, 6531 HZ Nijmegen
       </p>
       <p>

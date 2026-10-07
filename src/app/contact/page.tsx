@@ -49,7 +49,7 @@ export default function ContactPage() {
       "@type": "Organization",
       name: "Legal Talents Recruitment",
       email: "marcel@legal-talents.nl",
-      telephone: "+31 6 85 68 09 98",
+      telephone: "+31 6 29 09 48 99",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Sint Annastraat 198-C",
@@ -110,10 +110,10 @@ export default function ContactPage() {
                     </p>
                     <p>
                       <a
-                        href="tel:+31685680998"
+                        href="tel:+31629094899"
                         className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2"
                       >
-                        +31 6 85 68 09 98
+                        +31 6 29 09 48 99
                       </a>
                     </p>
                     <p>

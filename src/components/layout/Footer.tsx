@@ -144,10 +144,10 @@ export function Footer() {
             <p>Sint Annastraat 198-C, 6531 HZ Nijmegen</p>
             <p>
               <a
-                href="tel:+31685680998"
+                href="tel:+31629094899"
                 className="transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                +31 6 85 68 09 98
+                +31 6 29 09 48 99
               </a>
             </p>
             <p>

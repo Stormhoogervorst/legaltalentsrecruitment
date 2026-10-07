@@ -14,7 +14,7 @@ export function organizationSchema() {
     // PNG 512×512, gerenderd uit public/logo lt.svg. (/logo-lt.svg bestond niet: 404.)
     logo: `${siteUrl}/logo-lt.png`,
     email: "marcel@legal-talents.nl",
-    telephone: "+31 6 85 68 09 98",
+    telephone: "+31 6 29 09 48 99",
     vatID: "NL868649818B01",
     taxID: "98803093",
     areaServed: "NL",
@@ -29,7 +29,7 @@ export function organizationSchema() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      telephone: "+31 6 85 68 09 98",
+      telephone: "+31 6 29 09 48 99",
       email: "marcel@legal-talents.nl",
       areaServed: "NL",
       availableLanguage: ["nl", "en"],
